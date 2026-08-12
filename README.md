@@ -11,23 +11,28 @@
 | 日期 | 章节 | 学习内容 |
 | --- | --- | --- |
 | 2026-08-11 | 预备知识：数据操作 | 环境搭建；Tensor 的创建、运算与索引；`view()`；广播机制 |
+| 2026-08-12 | 预备知识：数据操作 | 完成本节；内存开销；Tensor 与 NumPy 转换；CPU/GPU 间移动 |
 
 ## 目录
 
 ```text
 DeepLearning/
-├── 1.预备知识/
-│   └── 1.数据操作.py      # Tensor 数据操作练习
+├── source/
+│   └── 1.预备知识/
+│       ├── 1.数据操作.py  # Tensor 数据操作练习
+│       └── test_torch.py  # PyTorch 与 CUDA 环境检查
 ├── diary/
 │   └── 1.预备知识/
-│       └── 2026-08-11.md # 第一天学习日志
-└── test_torch.py         # PyTorch 与 CUDA 环境检查
+│       ├── 2026-08-11.md # 第一天学习日志
+│       └── 2026-08-12.md # 数据处理收尾
+└── README.md
 ```
 
 ## 学习日志
 
 - [2026-08-11：深度学习学习第一天](diary/1.预备知识/2026-08-11.md)
+- [2026-08-12：数据处理收尾](diary/1.预备知识/2026-08-12.md)
 
 ## 运行环境
 
-项目使用 Python 和 PyTorch。运行 `test_torch.py` 可以查看本机的 PyTorch 版本、CUDA 可用状态，并执行一段基础 Tensor 运算。
+项目使用 Python 和 PyTorch。运行 `source/1.预备知识/test_torch.py` 可以查看本机的 PyTorch 版本、CUDA 可用状态，并执行一段基础 Tensor 运算。
