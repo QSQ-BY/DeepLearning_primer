@@ -245,9 +245,6 @@ def test09():
         z = x+y
         print(z.to("cpu",torch.double))#to还可以同时更改数据类型
 
-
-
-
 #test01()
 #test02()
 #test03()
