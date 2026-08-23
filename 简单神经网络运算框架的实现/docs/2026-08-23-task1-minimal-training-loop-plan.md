@@ -65,7 +65,7 @@ if __name__ == "__main__":
 Run from `简单神经网络运算框架的实现`:
 
 ```powershell
-python -m unittest tests.test_layers.TestLinear.test_linear_class_is_available -v
+python -m unittest discover -s tests -p "test_layers.py" -v
 ```
 
 Expected: `FAIL` because `mininn.layers` does not yet define `Linear`.
@@ -131,7 +131,7 @@ if __name__ == "__main__":
 Run:
 
 ```powershell
-python -m unittest tests.test_layers.TestLinear -v
+python -m unittest discover -s tests -p "test_layers.py" -v
 ```
 
 Expected: errors because `Linear` does not accept constructor arguments and has no `forward()`.
@@ -254,7 +254,7 @@ Add these methods to `TestLinear` in `tests/test_layers.py`:
 Run:
 
 ```powershell
-python -m unittest tests.test_layers.TestLinear -v
+python -m unittest discover -s tests -p "test_layers.py" -v
 ```
 
 Expected: errors because gradient attributes and backward/access methods do not exist.
@@ -330,7 +330,7 @@ Add this method to `TestLinear`:
 Run:
 
 ```powershell
-python -m unittest tests.test_layers.TestLinear.test_weight_gradient_matches_finite_difference -v
+python -m unittest discover -s tests -p "test_layers.py" -v
 ```
 
 Expected: `OK`; this test verifies existing backward behavior rather than adding a new production feature.
@@ -397,7 +397,7 @@ class TestReLU(unittest.TestCase):
 Run:
 
 ```powershell
-python -m unittest tests.test_layers.TestReLU -v
+python -m unittest discover -s tests -p "test_layers.py" -v
 ```
 
 Expected: import error because `ReLU` is not defined.
@@ -480,7 +480,7 @@ if __name__ == "__main__":
 Run:
 
 ```powershell
-python -m unittest tests.test_losses -v
+python -m unittest discover -s tests -p "test_losses.py" -v
 ```
 
 Expected: `FAIL` because the class is absent.
@@ -884,7 +884,7 @@ class TestTrainingLoop(unittest.TestCase):
 Run:
 
 ```powershell
-python -m unittest tests.test_training.TestTrainingLoop -v
+python -m unittest discover -s tests -p "test_training.py" -v
 ```
 
 Expected: `OK` if the component interfaces compose correctly. If it fails, do not loosen the thresholds; diagnose the first incorrect component with its focused tests.
