@@ -53,11 +53,11 @@ def load_data_fashion_mnist(batch_size:int,resize = None):
     transform_list = []
     if(resize is not None):
         transform_list.append(transforms.Resize(resize))
-    transform_list.append(transforms.ToTensor)
+    transform_list.append(transforms.ToTensor())
     transform = transforms.Compose(transform_list)
 
     data_root = (
-        Path(__file__).resolve.parents[2]/".build"/"datasets"
+        Path(__file__).resolve().parents[2]/".build"/"datasets"
     )
 
     train_dataset = torchvision.datasets.FashionMNIST(
@@ -77,14 +77,14 @@ def load_data_fashion_mnist(batch_size:int,resize = None):
     #设置进程数
     num_workers = 0 if sys.platform.startswith("win") else 4
     #训练集生成器
-    train_iter=torch.utils.data.Dataloader(
+    train_iter=torch.utils.data.DataLoader(
         train_dataset,
         batch_size = batch_size,
         shuffle = True,
         num_workers = num_workers,
     )
     #数据集生成器
-    test_iter=torch.utils.data.Dataloader(
+    test_iter=torch.utils.data.DataLoader(
         test_dataset,
         batch_size = batch_size,
         shuffle = False,
@@ -93,4 +93,46 @@ def load_data_fashion_mnist(batch_size:int,resize = None):
 
     return train_iter,test_iter
 
+#计算分类准确率
+def evaluate_accuracy(data_iter,net):
+    acc_sum,n = 0.0,0
+    with torch.no_grad():
+        for X,y in data_iter:
+            acc_sum += (net(X).argmax(dim=1) == y).float().sum().item()
+            n += y.shape[0]
+    return acc_sum / n
+
+def train_ch3(net,train_iter,test_iter,loss,num_epochs,batch_size,
+                params = None,lr = None,optimizer = None):
+    for epoch in range(num_epochs):
+        train_loss_sum , train_acc_sum ,n = 0.0,0.0,0
+        for X,y in train_iter:
+            #前向传播
+            y_hat = net(X)
+            l = loss(y_hat,y).sum()
+            if optimizer is not None:
+                optimizer.zero_grad()
+            elif params is not None and params[0].grad is not None:
+                for param in params:
+                    param.grad.data.zero_()
+            l.backward()
+            if optimizer is None:
+                sgd(params,lr,y.shape[0])
+            else:
+                optimizer.step()
+
+            train_loss_sum += l.item()
+            train_acc_sum +=(y_hat.argmax(dim=1)==y).sum().float().item()
+            n+=y.shape[0]
+        test_acc = evaluate_accuracy(test_iter,net)
+        print(f"epoch:{epoch+1},loss:{train_loss_sum/n},train accuracy:{train_acc_sum/n},test accuracy:{test_acc}")
+
+from torch import nn
+from torch.nn import init
+#对x的形状转换
+class FlattenLayer(nn.Module):
+    def __init__(self):
+        super().__init__()
+    def forward(self,x):
+        return x.view(x.shape[0],-1)
 

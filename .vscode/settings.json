@@ -1,0 +1,22 @@
+﻿{
+  "files.encoding": "utf8bom",
+  /* AI提示 */
+  "editor.inlineSuggest.enabled": false,
+  /* AI提示 */
+  "python.defaultInterpreterPath": "D:\\Miniconda3\\envs\\d2l-pytorch\\python.exe",
+  "python.envFile": "${workspaceFolder}\\.build\\.env",
+  "python.terminal.activateEnvironment": true,
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "terminal.integrated.env.windows": {
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONPYCACHEPREFIX": "D:\\code\\DeepLearning\\.build\\pycache",
+    "TORCH_EXTENSIONS_DIR": "D:\\code\\DeepLearning\\.build\\torch-extensions",
+    "TORCHINDUCTOR_CACHE_DIR": "D:\\code\\DeepLearning\\.build\\torchinductor",
+    "TRITON_CACHE_DIR": "D:\\code\\DeepLearning\\.build\\triton"
+  },
+  "python-envs.defaultEnvManager": "ms-python.python:conda",
+  "python-envs.defaultPackageManager": "ms-python.python:conda",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/source/3.深度学习基础/通用模板库"
+  ]
+}

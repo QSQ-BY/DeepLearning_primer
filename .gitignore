@@ -1,0 +1,7 @@
+# Local build output, caches, downloaded datasets, and environment files
+.build/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
