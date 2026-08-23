@@ -1,0 +1,135 @@
+﻿import unittest#python标准测试库
+import inspect#用于获取函数、类和对象需要传入的参数名
+import numpy as np#无需多言,yyds
+from mininn import layers
+
+class TestLinearModel(unittest.TestCase):
+    #检测Linear类是否已经存在
+    def test_linear_class_is_available(self):
+        #hasattr(layers, "Linear")它询问 Python：
+        #layers 模块中是否存在一个叫作 Linear 的成员？
+        #如果有就返回True,否则返回False
+        #assertTrue函数要求括号里的内容必须是True，如果是False就会报错
+        self.assertTrue(hasattr(layers,"Linear"))
+
+    #测试构造函数是否长成了我们希望的样子
+    def test_constructor_declares_expected_arguments(self):
+        #inspect函数用于获取函数、类和对象的结构,检查是否有对应的接口
+        #parameters相当于一个集合里面包含了所有的参数名
+        parameters = inspect.signature(layers.Linear).parameters
+        #三个断言用于检查类是否有我们需要的接口
+        self.assertIn("in_features",parameters)#输入的特征数量
+        self.assertIn("out_features",parameters)#输出的特征数量
+        self.assertIn("rng",parameters)#可选的numpy随机数生成器
+
+    def test_constructor_creates_expected_parameter_shapes(self):
+        rng = np.random.default_rng(7)#7为随机种子
+        layer = layers.Linear(2,3,rng = rng)#输入变量是2，输出变量是3
+
+        #这里创建的是：
+        #Linear(in_features=2, out_features=3)
+        #所以未来矩阵形状应该是：
+        #输入 x：            (batch_size, 2)
+        #权重 weight：       (2, 3)
+        #输出：              (batch_size, 3)
+        #偏置 bias：         (3,)
+
+        #矩阵乘法过程：
+        #(batch_size, 2)(2, 3) = (batch_size, 3)
+        #偏置 (3,) 会通过 NumPy 广播，加到每个样本的三个输出上。
+        #前两个 hasattr() 可以确保当前测试得到清晰的断言失败，
+        #而不是直接访问不存在的属性产生错误。
+        self.assertTrue(hasattr(layer,"weight"))
+        self.assertTrue(hasattr(layer,"bias"))
+        self.assertEqual(layer.weight.shape,(2,3))
+        self.assertEqual(layer.bias.shape,(3,))
+
+    #检查随机数生成器是否为我们成功生成了一个随机的权重矩阵，全0的偏置矩阵
+    def test_constructor_uses_rng_for_reproducible_weights(self):
+        #创建第一个 Linear(2, 3)，并提供种子为 7 的随机数生成器。
+        first = layers.Linear(2,3,rng = np.random.default_rng(7))
+        #创建第二个独立的生成器，但种子仍然是 7。
+        second = layers.Linear(2,3,rng = np.random.default_rng(7))
+        #检查两个权重矩阵的对应元素近似相等
+        np.testing.assert_allclose(first.weight,second.weight)
+        self.assertFalse(np.all(first.weight == 0.0))
+        #检查偏置矩阵的元素全为0
+        np.testing.assert_allclose(first.bias,np.zeros(3))
+
+    #测试构造函数在省略 rng 时，会自动创建默认随机数生成器
+    def test_constructor_creates_default_rng_when_omitted(self):
+        try:
+            layer = layers.Linear(2,3,rng = None)
+        #如果 try 中发生 AttributeError，就捕获它，并把错误对象保存到变量 error。
+        except AttributeError as error:
+            #self.fail() 会主动让当前测试失败。
+            self.fail(
+                f"Linear Model should create a default rng when rng is None:{error}"
+            )
+        #创建成功后检查权重
+        self.assertFalse(np.all(layer.weight == 0.0))
+        np.testing.assert_allclose(layer.bias,np.zeros(3))
+
+    #检测前向传播是否能进行正确的计算
+    def test_forward_computes_matrix_product_and_bias(self):
+        layer = layers.Linear(2,2,rng = np.random.default_rng(7),)
+        layer.weight[::] = np.array([
+            [1.0,2.0],
+            [-1.0,3.0],
+        ])
+        layer.bias[::] = np.array([
+            0.5,-0.5
+        ])
+        x = np.array([
+            [1.0, 2.0],
+            [-1.0, 3.0],
+        ])
+        #getattr会在方法不存在时返回 None，随后 callable(forward) 返回 False
+        forward = getattr(layer,"forward",None)
+        self.assertTrue(callable(forward))
+        actual = forward(x)
+        expected = np.array([
+            [-0.5,7.5],
+            [-3.5,6.5],
+        ])
+        np.testing.assert_allclose(actual,expected)
+
+    #查 Linear.forward() 面对错误输入时，能否尽早给出清楚的错误信息
+    def test_forward_rejects_wrong_feature_count(self):
+        #forward() 的结果	                    测试结果
+        #抛出 ValueError，且信息包含指定文字	     测试通过
+        #抛出 ValueError，但信息不包含指定文字	 assertIn() 失败
+        #没有抛出任何异常	                    self.fail() 失败
+        #抛出其他异常，如 TypeError	            测试显示 ERROR
+        layer = layers.Linear(2,3,rng = np.random.default_rng(7))
+        #故意创建错误的输入
+        wrong_x = np.ones((4,5))
+        try:
+            layer.forward(wrong_x)
+        #在forward函数已经抛出了ValueError的时候触发
+        except ValueError as error:
+            self.assertIn(
+                "expected 2 input features",
+                str(error),
+            )
+        else:
+            self.fail(
+                "Linear.forward() should reject the wrong feature count"
+            )
+
+    def test_forward_rejects_non_2d_input(self):
+        layer = layers.Linear(2,3,rng = np.random.default_rng(7))
+        wrong_x = np.ones(2)
+        try:
+            layer.forward(wrong_x)
+        except (ValueError,IndexError) as error:
+            #异常类型：ValueError
+            #异常信息：说明输入必须是 2D array
+            self.assertIsInstance(error,ValueError)
+            self.assertIn(
+                "2D array",str(error)
+            )
+        else:
+            self.fail("Linear.forward() should reject non-2D input")
+if(__name__ == "__main__"):
+    unittest.main()
