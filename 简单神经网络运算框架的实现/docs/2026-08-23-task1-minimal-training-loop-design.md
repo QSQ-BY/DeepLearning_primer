@@ -146,8 +146,10 @@ Linear(2, 16) -> ReLU -> Linear(16, 3)
 
 测试使用 Python 标准库 `unittest`，运行命令为：
 
+从 `简单神经网络运算框架的实现` 目录运行：
+
 ```powershell
-python -m unittest discover -s "简单神经网络运算框架的实现/tests" -v
+python -m unittest discover -s tests -v
 ```
 
 开发严格遵循 Red-Green-Refactor：
