@@ -117,6 +117,7 @@ class TestLinearModel(unittest.TestCase):
                 "Linear.forward() should reject the wrong feature count"
             )
 
+    #检查向前传播是否拒绝了非二维输入
     def test_forward_rejects_non_2d_input(self):
         layer = layers.Linear(2,3,rng = np.random.default_rng(7))
         wrong_x = np.ones(2)
@@ -131,5 +132,126 @@ class TestLinearModel(unittest.TestCase):
             )
         else:
             self.fail("Linear.forward() should reject non-2D input")
+
+    #测试反向传播是否能正确计算输入和参数的梯度
+    def test_backward_computes_input_and_parameter_gradients(self):
+        layer = layers.Linear(2,2,rng = np.random.default_rng(7))
+        layer.weight[::] = np.array([
+            [1.0,2.0],
+            [3.0,4.0],
+        ])
+        x = np.array([
+            [1.0,2.0],
+            [-1.0,3.0],
+        ])
+        #表示损失函数对于Y的梯度，这里直接认为规定
+        grad_output = np.array([
+            [1.0,-1.0],
+            [2.0,3.0],
+        ])
+        layer.forward(x)
+
+        #表示损失函数对x的梯度，认为计算然后机型比较
+        #grad_input = grad_ouput @ W.T（数学推导得出）
+        grad_input = layer.backward(grad_output)
+        np.testing.assert_allclose(grad_input,
+            np.array([
+                [-1.0,-1.0],
+                [8.0,18.0]
+            ]))
+
+        #grad_weight = X.T @ grad_output
+        np.testing.assert_allclose(
+            layer.grad_weight,
+            np.array([
+                [-1.0, -4.0],
+                [8.0, 7.0],
+            ]))
+
+        #grad_bias = sum(grad_output(axis = 0))
+        np.testing.assert_allclose(
+            layer.grad_bias,
+            np.array([3.0, 2.0]),
+        )
+
+    #验证反向传播之前是否有向前传播
+    def test_backward_requires_a_previous_forward_call(self):
+        layer = layers.Linear(2,3,rng = np.random.default_rng(7))
+        #实际行为	                               测试结果
+        #抛出 RuntimeError("...forward...")	        OK
+        #抛出 RuntimeError，但信息没有 "forward"	 FAIL
+        #没有抛出异常	进入 else，                  FAIL
+        #抛出 AttributeError 等其他异常	             未被捕获，ERROR
+        try:
+            layer.backward(np.ones((4,3)))
+        except RuntimeError as error:
+            self.assertIn("forward",str(error))
+        else:
+            self.fail("Linear.backward should requires forward first")
+
+    #验证Linear能否把可训练参数以及对应的梯度以正确的顺序传递给优化器
+    def test_parameters_and_gradients_have_matching_order(self):
+        layer = layers.Linear(2,3,rng = np.random.default_rng(7))
+        #期望接口:
+        #parameters() → [weight, bias]
+        #gradients()  → [grad_weight, grad_bias]
+        #parameters容器和gradient容器里的参数和梯度一一对应
+        parameters = layer.parameters()
+        gradients = layer.gradients()
+
+        self.assertIs(parameters[0],layer.weight)
+        self.assertIs(parameters[1],layer.bias)
+        self.assertIs(gradients[0],layer.grad_weight)
+        self.assertIs(gradients[1],layer.grad_bias)
+
+    def test_backward_rejects_wrong_gradient_shape(self):
+        layer = layers.Linear(2,3,rng = np.random.default_rng(7))
+        layer.forward(np.ones((4,2)))
+        #y = X @ w，所以正确的输出形状应该是(4,3),这里故意传入错误的形状(4,2)
+        wrong_grad_output = np.ones((4,2))
+
+        try:
+            layer.backward(wrong_grad_output)
+        except ValueError as error:
+            self.assertIn(
+                "expected grad_output shape",
+                str(error),
+            )
+        else:
+            self.fail("Linear.backward() should reject the wrong gradient shape")
+
+    #通过“轻微改变权重，观察结果怎么变化”，独立检查 grad_weight 是否正确
+    def test_weight_gradient_matches_finite_difference(self):
+        layer = layers.Linear(2,2,np.random.default_rng(7))
+        x = np.array([
+            [0.2,-0.4],
+            [1.2,0.7],
+        ])
+        grad_output = np.array([
+            [0.3,-0.6],
+            [0.8,0.5],
+        ])
+    #先正常进行正向传播与反向传播并记录下来权重梯度
+        layer.forward(x)
+        layer.backward(grad_output)
+        analytic = layer.grad_weight.copy()
+
+        numerical = np.zeros_like(layer.weight)
+        epsilon = 1e-6
+        #依次估算每个权重的偏导数
+        for index in np.ndindex(layer.weight.shape):
+            original = layer.weight[index]
+
+            layer.weight[index] = original + epsilon
+            plus = np.sum(layer.forward(x)*grad_output)
+
+            layer.weight[index] = original - epsilon
+            minus = np.sum(layer.forward(x)*grad_output)
+
+            layer.weight[index] = original
+            numerical[index] = ((plus - minus)/(2*epsilon))
+
+        np.testing.assert_allclose(analytic,numerical,rtol = 1e-6,atol = 1e-8)
+
 if(__name__ == "__main__"):
     unittest.main()
