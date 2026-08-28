@@ -1,4 +1,4 @@
-﻿import unittest
+import unittest
 import numpy as np
 from mininn import model
 from mininn import layers

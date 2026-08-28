@@ -1,4 +1,4 @@
-﻿class Sequential:
+class Sequential:
     def __init__(self,*layers):
         if(len(layers) == 0):
             raise ValueError(
