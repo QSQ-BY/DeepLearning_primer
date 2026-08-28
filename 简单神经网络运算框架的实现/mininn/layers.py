@@ -73,12 +73,50 @@ class Linear:
             )
 
         #计算梯度
+        #grad_weight = X.T @ grad_output
         self.grad_weight[::] = self.__input.T @ grad_output
+        #grad_bias = sum(grad_output(axis = 0))
         self.grad_bias[::] = grad_output.sum(axis = 0)
         return grad_output @ self.weight.T
+        #grad_input = grad_ouput @ W.T（数学推导得出）
 
     #把参数和其所对应的梯度打包成可迭代容器
     def parameters(self):
         return [self.weight,self.bias]
     def gradients(self):
         return [self.grad_weight,self.grad_bias]
+
+class ReLU:
+    def __init__(self):
+        self.__positive_mask = None
+
+    def forward(self,x):
+        x = np.asarray(x)
+        self.__positive_mask = x>0#正值掩码，一个布尔类型矩阵
+        return np.maximum(0,x)
+
+    def backward(self,grad_output):
+        if(self.__positive_mask is None):
+            raise RuntimeError(
+                "ReLU.backward() requires forward() first"
+            )
+
+        grad_output = np.asarray(grad_output)
+
+        expected_shape = self.__positive_mask.shape
+        actual_shape = grad_output.shape
+        if(actual_shape != expected_shape):
+            raise ValueError(
+                f"ReLU expected grad_output shape {expected_shape}, "
+                f"but received {actual_shape}"
+            )
+        #布尔值参与乘法时，False 相当于 0，True 相当于 1。
+        return grad_output * self.__positive_mask
+
+    #提供空的参数和梯度接口，后续各个层进行链接的时候
+    #有参数的层返回参数数组，没参数的层返回空列表，Sequential 不需要知道当前层究竟是什么类型。
+    #可以直接统一extend
+    def parameters(self):
+        return []
+    def gradients(self):
+        return []

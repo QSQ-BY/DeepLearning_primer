@@ -253,5 +253,76 @@ class TestLinearModel(unittest.TestCase):
 
         np.testing.assert_allclose(analytic,numerical,rtol = 1e-6,atol = 1e-8)
 
+class TestReLU(unittest.TestCase):
+    def test_relu_class_is_available(self):
+        self.assertTrue(hasattr(layers,"ReLU"))
+
+    #检测ReLU模型是否能成功把非正值置为0
+    def test_forward_replaces_nonpositive_values_with_zero(self):
+        layer = layers.ReLU()
+        forward = getattr(layer,"forward",None)
+        self.assertTrue(callable(forward))
+
+        x = np.array([
+            [-2.0,0.0,3.0],
+        ])
+        actual = forward(x)
+        expected = np.array([
+            [0.0,0.0,3.0],
+        ])
+        np.testing.assert_allclose(actual,expected)
+
+    #测试 ReLU 反向传播只保留前向输入为正的位置的梯度
+    def test_backward_keeps_gradient_only_for_positive_inputs(self):
+        layer = layers.ReLU()
+        layer.forward(np.array([
+            [-2.0,0.0,3.0],
+        ]))
+
+        backward = getattr(layer,"backward",None)
+        self.assertTrue(callable(backward))
+
+        grad_output = np.array([
+            [4.0,5.0,6.0],
+        ])
+        actual = backward(grad_output)
+        #前两个输入是非正数，因此只保留最后一个位置的梯度
+        expected = np.array([
+            [0.0,0.0,6.0]
+        ])
+        np.testing.assert_allclose(actual,expected)
+
+    def test_backward_requires_a_previous_forward_call(self):
+        layer = layers.ReLU()
+        try:
+            layer.backward(np.ones((1,3)))
+        except RuntimeError as error:
+            self.assertIn("forward",str(error))
+        else:
+            self.fail("ReLU.backward() should require forward() first")
+
+    def test_backward_rejects_wrong_gradient_shape(self):
+        layer = layers.ReLU()
+        layer.forward(np.ones((2,3)))
+        wrong_grad_output = np.ones(3)
+        try:
+            layer.backward(wrong_grad_output)
+        except ValueError as error:
+            self.assertIn("expected grad_output shape",str(error))
+        else:
+            self.fail("ReLU.backward() should reject wrong grad_output shape")
+
+    #检测 ReLU 是否提供空的参数与梯度接口
+    def test_relu_has_no_trainable_parameters(self):
+        layer = layers.ReLU()
+
+        parameters = getattr(layer,"parameters",None)
+        gradients = getattr(layer,"gradients",None)
+
+        self.assertTrue(callable(parameters))
+        self.assertTrue(callable(gradients))
+        self.assertEqual(parameters(),[])
+        self.assertEqual(gradients(),[])
+
 if(__name__ == "__main__"):
     unittest.main()
