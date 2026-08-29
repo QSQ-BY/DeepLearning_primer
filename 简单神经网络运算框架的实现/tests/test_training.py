@@ -2,6 +2,7 @@ import unittest
 import numpy as np
 from mininn import model
 from mininn import layers
+from mininn import optim
 
 class TestSequential(unittest.TestCase):
     def test_sequential_class_is_available(self):
@@ -191,6 +192,82 @@ class TestSequential(unittest.TestCase):
 
         self.assertIs(parameters[3], second_layer.bias)
         self.assertIs(gradients[3], second_layer.grad_bias)
+
+class TestSGD(unittest.TestCase):
+    def test_sgd_class_is_available(self):
+        self.assertTrue(hasattr(optim,"SGD"))
+
+    #检测类是否能接收必要的变量
+    def test_constructor_accepts_parameters_gradients_and_learning_rate(self):
+        parameters = np.array([1.0,-2.0])
+        gradients = np.array([0.5,-1.5])
+        try:
+            optim.SGD([parameters],[gradients],learning_rate = 0.1,)
+        except TypeError as error:
+            self.fail("SGD should accept parameters,gradients and learning_rate: "f"{error}")
+
+    #检测是否含有step方法
+    def test_step_method_is_available(self):
+        parameter = np.array([1.0,-2.0])
+        gradient = np.array([0.5,-1.5])
+        optimizer = optim.SGD([parameter],[gradient],learning_rate = 0.1)
+        step = getattr(optimizer,"step",None)
+        self.assertTrue(callable(step))
+
+    #检测step函数是否是原地修改变量
+    def test_step_updates_parameters_in_place(self):
+        parameter = np.array([1.0,-2.0])
+        gradient = np.array([0.5,-1.5])
+        optimizer = optim.SGD([parameter],[gradient],learning_rate = 0.1)
+        original_parameter = parameter
+        optimizer.step()
+        #assertIs 用于保证优化器修改的是原数组，而不是创建新数组
+        self.assertIs(parameter,original_parameter)
+        np.testing.assert_allclose(parameter,np.array([0.95,-1.85]))
+
+    #检测传入的参数和梯度数量是否相等
+    def test_constructor_rejects_parameter_gradient_count_mismatch(self):
+        parameters = [
+            np.zeros(2),
+            np.zeros(3),
+        ]
+        gradients = [np.zeros(2)]
+        try:
+            optim.SGD(parameters,gradients,learning_rate = 0.1)
+        except ValueError as error:
+            self.assertIn("equal counts",str(error))
+        else:
+            self.fail(
+                "SGD should reject different parameter and gradient counts"
+            )
+
+    def test_constructor_rejects_parameter_gradient_shape_mismatch(self):
+        parameter = np.zeros((2,2))
+        gradient = np.zeros((3,2))
+        try:
+            optim.SGD([parameter],[gradient],learning_rate = 0.1)
+        except ValueError as error:
+            self.assertIn("shape",str(error))
+        else:
+            self.fail(
+                "SGD should reject parameter and gradient shape mismatch"
+            )
+
+    def test_constructor_rejects_nonpositive_learning_rate(self):
+        parameter = np.zeros(2)
+        gradient = np.zeros(2)
+        for learning_rate in [0.0,-0.1]:
+            #相当于分别测试0.0和-0.1，避免在第一次断言失败之后程序就直接停止
+            #使用它后各组输入可以分别执行和报告
+            with self.subTest(learning_rate = learning_rate):
+                try:
+                    optim.SGD([parameter],[gradient],learning_rate)
+                except ValueError as error:
+                    self.assertIn("positive",str(error))
+                else:
+                    self.fail(
+                        "SGD should reject a nonpositive learning rate"
+                    )
 
 
 
