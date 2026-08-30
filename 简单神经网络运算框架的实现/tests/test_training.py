@@ -3,7 +3,8 @@ import numpy as np
 from mininn import model
 from mininn import layers
 from mininn import optim
-
+from mininn import losses
+import mininn
 class TestSequential(unittest.TestCase):
     def test_sequential_class_is_available(self):
         self.assertTrue(hasattr(model,"Sequential"))
@@ -269,7 +270,149 @@ class TestSGD(unittest.TestCase):
                         "SGD should reject a nonpositive learning rate"
                     )
 
+class TestTrainingLoop(unittest.TestCase):
+    def test_three_class_training_reduces_loss_and_reaches_target_accuracy(self):
+        rng = np.random.default_rng(7)
+        centers = np.array([
+            [-1.0,-1.0],
+            [1.0,-1.0],
+            [0.0,1.0],
+        ])
 
+        #创建初始化训练数据
+        #对三个类别中心进行轻微扰动，每个类别生成100份数据最后拼接起来
+        #类别0数据：(100, 2)
+        #类别1数据：(100, 2)
+        #类别2数据：(100, 2)
+        x = np.vstack([
+            rng.normal(center,0.35,size = (100,2))
+            for center in centers
+        ])
+
+        #标签数据[0, 0, ..., 0, 1, 1, ..., 1, 2, 2, ..., 2]
+        labels = np.repeat(np.arange(3),100)#labels.shape == (300,)
+
+        #创建神经网络，两个线性层中间用ReLU()激活函数进行连接
+        #x (300, 2)
+        #    │
+        #    ▼
+        #Linear(2, 16)
+        #    │ (300, 16)
+        #    ▼
+        #ReLU
+        #    │ (300, 16)
+        #    ▼
+        #Linear(16, 3)
+        #    │
+        #    ▼
+        #logits (300, 3)
+        network = model.Sequential(
+            layers.Linear(2,16,rng = rng),
+            layers.ReLU(),
+            layers.Linear(16,3,rng = rng),
+        )
+
+        #损失函数的创建，使用softmax交叉熵损失函数
+        loss_function = losses.SoftmaxCrossEntropyLoss()
+
+        #创建优化器
+        optimizer = optim.SGD(
+            network.parameters(),
+            network.gradients(),
+            learning_rate = 0.1,
+        )
+
+        #记录训练前的损失
+        initial_loss = loss_function.forward(
+            network.forward(x),
+            labels,
+        )
+
+        #完整训练闭环
+        #第一步：网络前向传播
+        #logits = network.forward(x)
+        #形状变化：
+        #(300, 2)
+        #→ (300, 16)
+        #→ (300, 16)
+        #→ (300, 3)
+        #同时各层会缓存反向传播需要的信息：
+        #- 第一个 Linear 缓存原始输入；
+        #- ReLU 缓存正数位置；
+        #- 第二个 Linear 缓存隐藏层输出。
+        #第二步：损失前向传播
+        #loss_function.forward(logits, labels)
+        #虽然这里没有保存返回的损失值，但这个调用不能省略，因为它还会缓存：
+        #- Softmax概率；
+        #- 正确标签。
+        #这些数据是下一行 backward() 必须使用的。
+        #第三步：反向传播
+        #network.backward(loss_function.backward())
+        #先执行：
+        #loss_function.backward()
+        #得到：
+        #dL/dlogits，形状为 (300, 3)
+        #然后将梯度传给网络：
+        #network.backward(...)
+        #完整传播过程为：
+        #损失函数
+        #dL/dlogits: (300, 3)
+        #        │
+        #        ▼
+        #第二个 Linear.backward()
+        #产生 dW2、db2
+        #返回梯度: (300, 16)
+        #        │
+        #        ▼
+        #ReLU.backward()
+        #返回梯度: (300, 16)
+        #        │
+        #        ▼
+        #第一个 Linear.backward()
+        #产生 dW1、db1
+        #返回梯度: (300, 2)
+        #最后返回的 (300, 2) 输入梯度没有继续使用，因为输入数据 x 不是需要训练的参数。
+        #这个框架也不需要单独调用 zero_grad()，因为每次 Linear.backward() 都会覆盖梯度数组，而不是累加梯度。
+        #第四步：更新参数
+        #optimizer.step()
+        #使用刚刚计算出的四组梯度更新：
+        #W1、b1、W2、b2
+        for _ in range(300):
+            logits = network.forward(x)
+            loss_function.forward(logits,labels)
+            network.backward(loss_function.backward())
+            optimizer.step()
+
+        #计算训练后的结果
+        final_logits = network.forward(x)
+        final_loss = loss_function.forward(
+            final_logits,
+            labels,
+        )
+
+        #计算准确率
+        #从每个样本的三个类别分数中选出最大值所在的类别
+        #300个样本每一行取得最大值，然后与标签进行比较最后取平均值计算准确率
+        accuracy = np.mean(
+            np.argmax(final_logits,axis = 1) == labels
+        )
+
+        self.assertLess(final_loss,initial_loss * 0.5)
+        self.assertGreaterEqual(accuracy,0.85)
+
+class TestPublicAPI(unittest.TestCase):
+    def test_package_exports_training_components(self):
+        expected_names = [
+            "Linear",
+            "ReLU",
+            "SoftmaxCrossEntropyLoss",
+            "Sequential",
+            "SGD",
+        ]
+        for name in expected_names:
+            with self.subTest(name = name):
+                #如果断言时报则会报出错误信息f"mininn should export {name}"
+                self.assertTrue(hasattr(mininn,name),f"mininn should export {name}")
 
 if(__name__ == "__main__"):
     unittest.main()

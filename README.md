@@ -1,4 +1,4 @@
-﻿# DeepLearning
+# DeepLearning
 
 这是我的深度学习入门学习仓库，用来保存练习代码和每日学习日志。
 
@@ -16,6 +16,7 @@
 | 2026-08-18 至 2026-08-20 | 深度学习基础 | 从零实现线性回归及其简洁版本；学习 Softmax 原理与 Fashion-MNIST 数据加载流程 |
 | 2026-08-21 至 2026-08-23 | Softmax 与神经网络框架 | 手动实现 Softmax 分类；搭建 NumPy 神经网络框架，完成 Linear 前向传播和错误输入测试 |
 | 2026-08-24 | 神经网络框架：Linear 反向传播 | 推导输入、权重和偏置梯度；补齐参数接口、错误处理与有限差分梯度检查 |
+| 2026-08-25 至 2026-08-30 | 多层感知机与神经网络框架 | 实现多层感知机的手写版和简洁版；为 NumPy 框架补齐 ReLU、Softmax 交叉熵、Sequential、SGD 与最小训练闭环 |
 
 ## 目录
 
@@ -32,9 +33,12 @@ DeepLearning/
 │   ├── 2.深度学习基础/
 │   │   ├── 1.线性回归/
 │   │   │   └── linear_model.py # 线性回归的手动实现与简洁实现
-│   │   └── 2.sofmtmax/
-│   │       ├── 1.softmax_model.py          # Softmax 的手动实现
-│   │       └── 2.softmax_simple_version.py # Softmax 的简洁实现
+│   │   ├── 2.sofmtmax/
+│   │   │   ├── 1.softmax_model.py          # Softmax 的手动实现
+│   │   │   └── 2.softmax_simple_version.py # Softmax 的简洁实现
+│   │   └── 3.多层感知机/
+│   │       ├── multilayer_perceptron.py                # 多层感知机的手动实现
+│   │       └── multilayer_perceptron_simple_version.py # 基于 nn.Sequential 的简洁实现
 │   └── 通用模板库/
 │       └── d2lzh_pytorch.py # 数据迭代、损失函数与数据集加载工具
 ├── diary/
@@ -43,8 +47,9 @@ DeepLearning/
 │   │   ├── 2026-08-12.md # 数据处理收尾
 │   │   └── 2026-8-14_to_2026-8-16.md # Python、NumPy 与自动求梯度
 │   ├── 2.深度学习基础/
-│       ├── 2026-8-18_to_2026-8-20.md # 线性回归与 Softmax 前的准备
-│       └── 2026-8-21_to_2026-8-23.md # Softmax 与神经网络框架起步
+│   │   ├── 2026-8-18_to_2026-8-20.md       # 线性回归与 Softmax 前的准备
+│   │   ├── 2026-8-21_to_2026-8-23.md       # Softmax 与神经网络框架起步
+│   │   └── 2026-08-25_to_2026-08-30.md     # 多层感知机与最小训练闭环
 │   └── 简单神经网络框架的实现/
 │       ├── 2026-8-23.md  # Task1 神经网络框架搭建
 │       └── 2026-08-24.md # Linear 反向传播与数值梯度检查
@@ -65,7 +70,8 @@ DeepLearning/
 - [2026-08-21 至 2026-08-23：从 Softmax 走到自己的神经网络框架](diary/2.深度学习基础/2026-8-21_to_2026-8-23.md)
 - [2026-08-23：开始搭自己的神经网络运算框架](diary/简单神经网络框架的实现/2026-8-23.md)
 - [2026-08-24：把 Linear 的反向传播接起来](diary/简单神经网络框架的实现/2026-08-24.md)
+- [2026-08-25 至 2026-08-30：从多层感知机到自己的训练闭环](diary/2.深度学习基础/2026-08-25_to_2026-08-30.md)
 
 ## 运行环境
 
-书本练习使用 Python 和 PyTorch。运行 `source/1.预备知识/test_torch.py` 可以查看本机的 PyTorch 版本、CUDA 可用状态，并执行一段基础 Tensor 运算。`简单神经网络运算框架的实现` 只使用 NumPy 和 Python 标准库，单元测试使用 `unittest`。
+书本练习使用 Python 和 PyTorch。运行 `source/1.预备知识/test_torch.py` 可以查看本机的 PyTorch 版本、CUDA 可用状态，并执行一段基础 Tensor 运算。`简单神经网络运算框架的实现` 只使用 NumPy 和 Python 标准库，单元测试使用 `unittest`；目前已经接通 Linear、ReLU、Softmax 交叉熵、Sequential 和 SGD 组成的最小训练闭环。
