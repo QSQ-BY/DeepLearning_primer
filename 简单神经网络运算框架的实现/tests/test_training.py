@@ -403,16 +403,66 @@ class TestTrainingLoop(unittest.TestCase):
 class TestPublicAPI(unittest.TestCase):
     def test_package_exports_training_components(self):
         expected_names = [
-            "Linear",
-            "ReLU",
-            "SoftmaxCrossEntropyLoss",
-            "Sequential",
-            "SGD",
+            "Linear",#线性层
+            "ReLU",#ReLU激活函数
+            "Conv2D",#卷积层
+            "SoftmaxCrossEntropyLoss",#交叉熵损失函数
+            "Sequential",#全连接层
+            "SGD",#随机梯度下降优化器
+            "Flatten",#卷积展平层
         ]
         for name in expected_names:
             with self.subTest(name = name):
                 #如果断言时报则会报出错误信息f"mininn should export {name}"
                 self.assertTrue(hasattr(mininn,name),f"mininn should export {name}")
+                self.assertIn(name,mininn.__all__,f"{name} should be listed in mininn.__all__")
 
+#测试小型CNN网络
+class TestToyCNN(unittest.TestCase):
+    #测试前向传播的输出形状正确
+    def test_forward_return_two_class_logits(self):
+        rng = np.random.default_rng(7)
+        network = model.Sequential(
+            layers.Conv2D(in_channels = 1,out_channels = 2
+                        ,kernel_size = 3,padding = 1,rng = rng),
+            layers.ReLU(),
+            layers.Flatten(),
+            layers.Linear(2*8*8,2,rng = rng),
+        )
+        #(3, 1, 8, 8)
+        #→ Conv2D
+        #(3, 2, 8, 8)
+        #→ Flatten
+        #(3, 128)
+        #→ Linear
+        #(3, 2)
+        x = np.zeros((3,1,8,8),dtype = np.float64)
+        logits = network.forward(x)
+        self.assertEqual(logits.shape, (3, 2))
+
+    ##测试反向传播的输出形状正确
+    def test_backward_returns_nchw_input_gradient(self):
+        rng = np.random.default_rng(7)
+        network = model.Sequential(
+            layers.Conv2D(in_channels = 1,out_channels = 2
+                        ,kernel_size = 3,padding = 1,rng = rng),
+            layers.ReLU(),
+            layers.Flatten(),
+            layers.Linear(2*8*8,2,rng = rng),
+        )
+        x = np.ones((3,1,8,8),dtype = np.float64)
+        logits = network.forward(x)
+        #(3, 2)
+        #→ Linear.backward
+        #(3, 128)
+        #→ Flatten.backward
+        #(3, 2, 8, 8)
+        #→ ReLU.backward
+        #(3, 2, 8, 8)
+        #→ Conv2D.backward
+        #(3, 1, 8, 8)
+        grad_output = np.ones_like(logits)
+        grad_input = network.backward(grad_output)
+        self.assertEqual(grad_input.shape, x.shape)
 if(__name__ == "__main__"):
     unittest.main()

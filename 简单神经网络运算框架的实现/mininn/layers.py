@@ -120,3 +120,282 @@ class ReLU:
         return []
     def gradients(self):
         return []
+
+class Conv2D:
+    #输入通道数，输出通道数，卷积核大小，卷积步长，填充，随机数生成器
+    def __init__(self,in_channels,out_channels,kernel_size,stride = 1,padding = 0,rng = None):
+        #检查传入的参数是否都为整数
+        configuration = {
+            "in_channels":in_channels,
+            "out_channels":out_channels,
+            "kernel_size":kernel_size,
+            "stride":stride,
+            "padding":padding,
+        }
+        for parameter_name,value in configuration.items():
+            #isinstance() 是 Python 的类型检查函数，
+            #用来判断一个对象是否属于指定类型，或者指定类型的子类
+            #如果是指定的类型就返回True否则返回False
+            #因为布尔值是int的子类所以传入True或者False,isinstance(value,int)
+            #都会返回True，所以后面要额外判断是否是布尔值
+            if not isinstance(value,int) or isinstance(value,bool):
+                raise ValueError(
+                    f"{parameter_name} must be an intrger"
+                )
+
+        #检查输入、输出的通道数、卷积核大小和步长是否大于0
+        if (out_channels <= 0):
+            raise ValueError(
+                "out_channels must be a positive integer"
+            )
+        if (in_channels <= 0):
+            raise ValueError(
+                "in_channels must be a positive integer"
+            )
+        if (kernel_size <= 0):
+            raise ValueError(
+                "kernel_size must be a positive integer"
+            )
+        if(stride <= 0):
+            raise ValueError(
+                "stride must be a positive integer"
+            )
+        #检查填充是否非负
+        if(padding < 0):
+            raise ValueError(
+                "padding must be a positive integer or zero"
+            )
+
+        #存入卷积各项配置
+        self.in_channels = in_channels
+        self.out_channels = out_channels
+        self.kernel_size = kernel_size
+        self.stride = stride
+        self.padding = padding
+        self.__input = None#缓存前向传播的结果
+        self.__padded_input = None
+        self.__output_shape = None
+
+        #没有传入生成器就创建默认生成器
+        if(rng is None):
+            rng = np.random.default_rng()
+        #初始化各种参数
+        fan_in = in_channels*kernel_size*kernel_size
+        scale = np.sqrt(2.0 / fan_in)
+        #初始化卷积核
+        self.weight = rng.normal(loc = 0.0,scale = scale,size = (out_channels,in_channels,kernel_size,kernel_size)).astype(np.float64)
+        self.bias = np.zeros(out_channels,dtype = np.float64)
+        self.grad_weight = np.zeros_like(self.weight)
+        self.grad_bias = np.zeros_like(self.bias)
+
+    def parameters(self):
+        return [self.weight,self.bias]
+
+    def gradients(self):
+        return [self.grad_weight,self.grad_bias]
+
+    def forward(self,x):
+        #输入应该为：batch_size,通道数，高度，宽度 四个维度
+        x = np.asarray(x)
+        if(x.ndim != 4):
+            raise ValueError(
+                "Conv2D input must be a 4D NCHW array"
+            )
+
+        #检查传入的通道数是否合法
+        received_channels = x.shape[1]
+        if(received_channels != self.in_channels):
+            raise ValueError(
+                f"Conv2D expected {self.in_channels} input channels, "
+                f"but received {received_channels}"
+            )
+
+        #检查卷积核的尺寸是否已经超过了输入的长宽
+        input_height = x.shape[2]
+        input_width = x.shape[3]
+        padded_height = input_height + 2*self.padding
+        padded_width = input_width + 2*self.padding
+        if(padded_height < self.kernel_size or padded_width<self.kernel_size):
+            raise ValueError(
+                f"Conv2D kernel_size {self.kernel_size} "
+                f"is larger than padded input size "
+                f"({padded_height}, {padded_width})"
+            )
+
+        self.__input = x#检查结束后缓存最新的输入
+
+        #输入形状：
+        #(N, C_in, H, W)
+        #输出形状：
+        #(N, C_out, H_out, W_out)
+        #H_out = floor((H + 2P - K) / S) + 1
+        #W_out = floor((W + 2P - K) / S) + 1
+        #H：输入高度
+        #W：输入宽度
+        #P：padding，扩展的圈数
+        #K：kernel_size，卷积核大小
+        #S：stride，步长
+        #剩余空间不足一次完整移动时，不能把卷积核的一部分放到输入外面
+        #所以要进行向下取整
+        batch_size = x.shape[0]
+        output_height = (padded_height - self.kernel_size)//self.stride + 1
+        output_width = (padded_width - self.kernel_size)//self.stride + 1
+        output = np.zeros(
+            (
+                batch_size,
+                self.out_channels,
+                output_height,
+                output_width,
+            ),
+            dtype = np.float64
+        )
+        self.__output_shape = output.shape#缓存输出的形状
+
+        #进行填充
+        padded_x = np.pad(
+            x,
+            #用 pad_width 明确表示：只填充 H 和 W。
+            pad_width = (
+                (0,0),#N:样本数量维度不进行填充
+                (0,0),#C:通道维度前卫不进行填充
+                (self.padding,self.padding),#H:上面和下面各填充padding行
+                (self.padding,self.padding),#W:左边和右边各填充padding列
+            ),
+            mode = "constant",
+            constant_values = 0,
+        )
+
+        self.__padded_input = padded_x#缓存扩展后的输入
+
+
+        #每个样本 n
+        #└── 每个输出通道 oc
+        #    └── 每个输出行 oh
+        #        └── 每个输出列 ow
+        for batch_index in range(batch_size):
+            for output_channel in range(self.out_channels):
+                for output_row in range(output_height):
+                    for output_column in range(output_width):
+                        row_start = output_row * self.stride
+                        row_end = row_start + self.kernel_size
+                        column_start = output_column * self.stride
+                        column_end = column_start + self.kernel_size
+                        # 从输入中截取卷积核当前覆盖的窗口
+                        input_window = padded_x[batch_index,:,row_start:row_end,column_start:column_end]
+
+                        # 取出对应的输出通道的卷积核
+                        kernel = self.weight[output_channel]
+
+                        #进行卷积的计算
+                        output[batch_index,output_channel,output_row,output_column] = (np.sum(kernel * input_window) + self.bias[output_channel])
+        return output
+
+    #偏置梯度：   上游梯度
+    #权重梯度：   输入窗口 × 上游梯度
+    #输入梯度：   卷积核 × 上游梯度
+    def backward(self,grad_output):
+        if(self.__input is None or
+            self.__padded_input is None or
+            self.__output_shape is None ):
+            raise RuntimeError(
+                "Conv2D.backward should requires forward() first"
+            )
+        #把输入转换为numpy数组
+        grad_output = np.asarray(grad_output)
+        #检查形状是否一致
+        expected_shape = self.__output_shape
+        actual_shape = grad_output.shape
+        if(actual_shape != expected_shape):
+            raise ValueError(
+                f"Conv2D expected grad_output shape {expected_shape}, "
+                f"but received {actual_shape}"
+            )
+
+        #计算偏置的导数
+        #把每一个样本的所有计算值相加，只保留通道维度
+        #axis 0 → N，样本
+        #axis 1 → C_out，输出通道
+        #axis 2 → H_out，输出高度
+        #axis 3 → W_out，输出宽度
+        self.grad_bias[...] = grad_output.sum(axis = (0,2,3))
+
+        #计算卷积核的导数与输入变量的导数
+        self.grad_weight[...] = 0.0
+        grad_padded_input = np.zeros_like(self.__padded_input,dtype = np.float64)
+        #就是把前向传播的窗口再提取出来做一次卷积
+        batch_size = grad_output.shape[0]
+        output_height = grad_output.shape[2]
+        output_width = grad_output.shape[3]
+        for batch_index in range(batch_size):
+            for output_channel in range(grad_output.shape[1]):
+                for output_row in range(output_height):
+                    for output_column in range(output_width):
+                        row_start = output_row*self.stride
+                        row_end = row_start + self.kernel_size
+                        column_start = output_column*self.stride
+                        column_end = column_start + self.kernel_size
+                        input_window = self.__padded_input[
+                            batch_index,
+                            :,
+                            row_start:row_end,
+                            column_start:column_end,
+                        ]
+                        gradient = grad_output[
+                            batch_index,
+                            output_channel,
+                            output_row,
+                            output_column,
+                        ]
+                        self.grad_weight[output_channel] += input_window * gradient
+                        grad_padded_input[
+                            batch_index,
+                            :,
+                            row_start:row_end,
+                            column_start:column_end,
+                        ] += self.weight[output_channel] * gradient
+
+        if(self.padding == 0):
+            return grad_padded_input
+        return grad_padded_input[
+            :,
+            :,
+            self.padding:-self.padding,
+            self.padding:-self.padding,
+        ]
+    #:                              所有样本
+    #:                              所有输入通道
+    #padding:-padding               裁掉顶部和底部
+    #padding:-padding               裁掉左侧和右侧
+
+class Flatten:
+    def __init__(self):
+        self.__input_shape = None
+        self.__output_shape = None
+
+    def forward(self,x):
+        x = np.asarray(x)
+        batch_size = x.shape[0]
+        output = x.reshape(batch_size,-1)
+        self.__input_shape = x.shape
+        self.__output_shape = output.shape
+        return output
+
+    def backward(self,grad_output):
+        if(self.__input_shape is None or self.__output_shape is None):
+            raise RuntimeError("Flatten.backward() requires forward() first")
+        grad_output = np.asarray(grad_output)
+        expected_shape = self.__output_shape
+        actual_shape = grad_output.shape
+        if actual_shape != expected_shape:
+            raise ValueError(
+                f"Flatten expected grad_output shape {expected_shape}, "
+                f"but received {actual_shape}"
+            )
+
+        return grad_output.reshape(self.__input_shape)
+
+    #返回空的参数层
+    def parameters(self):
+        return []
+    def gradients(self):
+        return []
