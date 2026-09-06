@@ -1,5 +1,6 @@
 # Local build output, caches, downloaded datasets, and environment files
 .build/
+.cph/
 __pycache__/
 *.py[cod]
 .env
