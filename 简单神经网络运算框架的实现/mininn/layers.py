@@ -399,3 +399,134 @@ class Flatten:
         return []
     def gradients(self):
         return []
+
+class BatchNorm:
+    def __init__(self,num_features,momentum = 0.9,epsilon = 1e-5):
+        self.num_features = num_features
+        self.momentum = momentum#冲量大小
+        self.epsilon = epsilon
+
+        self.__inv_std = None#缓存标准差的倒数
+        self.__x_hat = None
+        self.__axes = None
+
+        #可训练参数，缩放与平移
+        self.gamma = np.ones(num_features,dtype = np.float64)
+        self.beta = np.zeros(num_features,dtype = np.float64)
+
+        #可训练参数对应的梯度
+        self.grad_gamma = np.zeros(num_features,dtype = np.float64)
+        self.grad_beta = np.zeros(num_features,dtype = np.float64)
+
+        #运行统计
+        self.running_mean = np.zeros(num_features,dtype = np.float64)
+        self.running_var = np.ones(num_features,dtype = np.float64)
+
+        #训练模式，默认处于训练模式
+        self.training = True
+
+    def train(self):
+        self.training = True
+    #切换到推理模式
+    def eval(self):
+        self.training = False
+
+    def forward(self,x):
+        x = np.asarray(x,dtype = np.float64)
+
+        if x.ndim == 2:
+            axes = 0
+            broadcast_shape = (1,self.num_features)
+        elif x.ndim == 4:
+            axes = (0,2,3)
+            broadcast_shape = (1,self.num_features,1,1)
+        else:
+            raise ValueError("BatchNorm input must be 2D or 4D")
+
+        received_features = x.shape[1]
+        if(self.num_features != received_features):
+            raise ValueError(
+                f"BatchNorm expected {self.num_features} features, "
+                f"but received {received_features}"
+            )
+
+        if self.training:
+            mean = np.mean(x,axis = axes,keepdims = True)
+            variance = np.var(x, axis= axes , ddof=0,keepdims = True)
+            #先把数组进行展平，去掉多余的维度
+            batch_mean = mean.reshape(self.num_features)
+            batch_var = variance.reshape(self.num_features)
+            #新的供推理使用的运行统计量需要包含前面所有运行量的统计信息，所以使用当前更新公式
+            # 新运行统计量 = 0.9 * 旧运行统计量 + 0.1 * 当前批次统计量
+            self.running_mean[...] = self.running_mean*self.momentum +batch_mean*(1 - self.momentum)
+            self.running_var[...] = self.running_var*self.momentum + batch_var*(1 - self.momentum) 
+        else:
+            #把之前展平的维度进行还原
+            mean = self.running_mean.reshape(broadcast_shape)
+            variance = self.running_var.reshape(broadcast_shape)
+
+        #标准差的倒数
+        inv_std = 1.0 / np.sqrt(variance + self.epsilon)
+        x_hat = (x - mean)*inv_std
+        gamma = self.gamma.reshape(broadcast_shape)
+        beta = self.beta.reshape(broadcast_shape)
+        output = gamma * x_hat + beta
+        if(self.training):
+            self.__x_hat = x_hat
+            self.__axes = axes
+            self.__inv_std = inv_std
+        else:
+            #推理前后不能使用之前训练留下来的缓存
+            self.__x_hat = None
+            self.__axes = None
+            self.__inv_std = None
+        return output
+
+    def backward(self,grad_output):
+        if(self.__x_hat is None):
+            raise RuntimeError(
+                "BatchNorm.backward() requires a training forward() first"
+            )
+
+        grad_output = np.asarray(grad_output,dtype = np.float64)
+        if(grad_output.shape != self.__x_hat.shape):
+            raise ValueError(
+                f"BatchNorm expected grad_output shape {self.__x_hat.shape}, "
+                f"but received {grad_output.shape}"
+            )
+
+        self.grad_beta[...] = np.sum(grad_output,axis = self.__axes)
+        self.grad_gamma[...] = np.sum(grad_output * self.__x_hat,axis = self.__axes)
+
+        #恢复gamma的广播形状
+        gamma = self.gamma.reshape(self.__inv_std.shape)
+
+        # 每个通道参与归一化的元素数：二维为 N，四维为 N*H*W
+        M = self.__x_hat.size // self.num_features
+
+        # y = gamma * x_hat + beta
+        dx_hat = grad_output * gamma#上游梯度*gamma
+
+        sum_dx_hat = np.sum(
+            dx_hat,
+            axis=self.__axes,
+            keepdims=True,
+        )
+
+        sum_dx_hat_x_hat = np.sum(
+            dx_hat * self.__x_hat,
+            axis=self.__axes,
+            keepdims=True,
+        )
+
+        grad_input = self.__inv_std / M * (
+            M * dx_hat
+            - sum_dx_hat
+            - self.__x_hat * sum_dx_hat_x_hat
+        )
+        return grad_input
+
+    def parameters(self):
+        return [self.gamma,self.beta]
+    def gradients(self):
+        return [self.grad_gamma,self.grad_beta]

@@ -1,17 +1,19 @@
 # Task 1 NumPy 神经网络框架完整教学计划
 
+> 归档说明：本文件记录与 Codex 协作时使用的详细教学路线，项目现已完成。最终架构、实验数据和个人总结以 [`../lab_report.md`](../lab_report.md) 为准。
+
 > **For agentic workers:** 实施本计划时使用逐课 TDD；每个复选项完成后先运行对应测试，再更新进度。本文档的默认协作方式是由 Codex 讲解并给骨架、用户逐步编写，而不是一次性生成全部实现。
 
 **Goal:** 完成一个 NumPy-only 的教学型神经网络框架，并通过 Conv2D、BatchNorm 和 Fashion-MNIST 实验掌握完整的前向传播与反向传播。
 
-**Architecture:** 每一层独立保存本层参数、梯度和反向传播缓存，并通过统一的显式接口组合进 `Sequential`。项目按最小训练闭环、Conv2D、Flatten 与小型 CNN、BatchNorm、Fashion-MNIST 的顺序推进，每个新行为都先测试后实现。
+**Architecture:** 每一层独立保存本层参数、梯度和反向传播缓存，并通过统一的显式接口组合进 `Sequential`。项目按最小训练闭环、Conv2D、Flatten 与小型 CNN、BatchNorm、Fashion-MNIST 的顺序推进；大部分功能先测试后实现，后期批次与训练脚本按用户调整直接实现。
 
-**Tech Stack:** Python、NumPy、Python 标准库 `unittest`；仅独立的最终对比脚本可选用 PyTorch。
+**Tech Stack:** Python、NumPy、Python 标准库 `unittest`。
 
 ## Global Constraints
 
 - 核心 `mininn/` 只能依赖 NumPy 和 Python 标准库。
-- 新功能严格按 RED、GREEN、回归验证的顺序教学和实现。
+- 核心网络层按 RED、GREEN、回归验证的顺序教学和实现；后期脚本遵循用户当次调整。
 - 图像张量统一使用 NCHW，数值梯度检查统一使用 `float64`。
 - 不覆盖工作区中与当前课次无关的用户修改。
 - 已锁定的接口不在每次续接时重新设计。
@@ -28,8 +30,8 @@
 
 1. 基础层与最小训练闭环。
 2. `Conv2D` 前向传播与反向传播；随后提前实现 `Flatten`，并完成离线小型 CNN 训练案例。
-3. `BatchNorm` 的训练/推理状态、反向传播和有限差分梯度检查。
-4. Fashion-MNIST 数据处理、卷积分类实验、性能对比和总结报告。
+3. `BatchNorm` 的训练/推理状态、反向传播和手算确定值梯度验证。
+4. Fashion-MNIST 数据处理、卷积分类实验和总结报告。
 
 项目强调“能解释、能验证、再优化”。第一版卷积使用多重循环，不以运行速度换取难以理解的代码。
 
@@ -65,19 +67,23 @@
 │   ├── layers.py         # Linear、ReLU、Conv2D、BatchNorm、Flatten
 │   ├── losses.py         # SoftmaxCrossEntropyLoss
 │   ├── model.py          # Sequential
-│   └── optim.py          # SGD
+│   ├── optim.py          # SGD
+│   └── data.py           # IDX 图像与标签读取
 ├── tests/
-│   ├── test_layers.py    # Linear、ReLU、Conv2D、Flatten
-│   ├── test_batchnorm.py # BatchNorm
+│   ├── test_layers.py    # Linear、ReLU、Conv2D、Flatten、BatchNorm
 │   ├── test_losses.py    # 损失函数
-│   └── test_training.py  # 组合、优化器与训练闭环
+│   ├── test_training.py  # 组合、优化器与训练闭环
+│   └── test_data.py      # IDX 读取与数据校验
 ├── examples/
 │   ├── train_toy_classifier.py
+│   ├── train_toy_cnn.py
 │   └── train_fashion_mnist.py
 └── docs/
-    ├── 2026-08-23-task1-minimal-training-loop-design.md
-    ├── 2026-08-23-task1-minimal-training-loop-plan.md
-    └── 2026-09-02-task1-complete-teaching-plan.md
+    ├── lab_report.md
+    └── AIGC/
+        ├── 2026-08-23-task1-minimal-training-loop-design.md
+        ├── 2026-08-23-task1-minimal-training-loop-plan.md
+        └── 2026-09-02-task1-complete-teaching-plan.md
 ```
 
 ### 3.2 统一层接口
@@ -125,18 +131,22 @@ rg -n "torch|tensorflow|keras|jax" mininn tests
 | --- | --- | --- |
 | 第一阶段：最小训练闭环 | 已完成 | 现有 50 个相关测试通过；`Linear`、`ReLU`、损失、`Sequential`、`SGD` 已连通 |
 | 第二阶段：Conv2D | 已完成（调整范围） | 75 项测试、玩具训练和依赖检查通过；按用户要求省略 Conv2D 有限差分与梯度引用专门测试 |
-| 第二阶段扩展：Flatten 与小型 CNN | 进行中 | 下一步为课次 2.10：实现 `Flatten` |
-| 第三阶段：BatchNorm | 未开始 | 完成小型 CNN 案例后从课次 3.1 开始 |
-| 第四阶段：Fashion-MNIST | 未开始 | 从课次 4.1 开始 |
+| 第二阶段扩展：Flatten 与小型 CNN | 实现与运行验证通过 | Flatten 前后向、公共 API 与小型 CNN 组合测试通过 |
+| 第三阶段：BatchNorm | 实现与运行验证通过 | 18 项 BatchNorm 测试通过；已接入小型 CNN；概念复述尚未在本次续接中核验 |
+| 第四阶段：Fashion-MNIST 与报告 | 已完成（调整范围） | 完成 IDX 读取、训练/评估脚本和 10 轮正式实验；按用户要求跳过小样本过拟合与 PyTorch 对比，最终报告已写入 `docs/lab_report.md` |
 
-更新规则：每完成一课，将相应复选框改为 `[x]`，并把本表的“当前断点”改成下一个未完成课次。
+2026-09-16 续接核验：完整测试集 101 项通过；BatchNorm 测试实际位于 `tests/test_layers.py` 的 `TestBatchNorm` 中。运行 `python examples/train_toy_cnn.py`，11 轮训练后评估损失由 `0.493895` 降至 `0.060957`，训练与测试准确率均为 `100%`；全连接玩具训练最终损失 `0.013734`、准确率 `99.67%`。`rg -n "torch|tensorflow|keras|jax" mininn tests` 无匹配。以下旧课次复选框尚未逐项回填；本次只能确认当前实现与验证结果，不补记无法核实的历史 RED 过程或用户概念复述。续接从课次 4.1 开始。
+
+2026-09-18 最终核验：正式网络使用 `392→20→10` 分类头，在 2,000/1,000 样本、batch size 32、学习率 0.05、随机种子 42 的配置下训练 10 轮。训练损失由 `1.477389` 降至 `0.372161`，最终测试准确率为 `81.20%`，最高为 `82.10%`；117 项测试全部通过，核心依赖检查无匹配。实验报告与项目日志已经完成。
+
+2026-09-16 后续核验：用户已补齐 `TestFashionMNISTNetwork.test_backward_return_nchw_input_gradient`，检查返回梯度形状与输入 `(2, 1, 28, 28)` 一致且所有元素有限。运行 `python -m unittest discover -s tests -p test_training.py -v`，21 项通过；运行 `python -m unittest discover -s tests`，103 项通过。课次 4.1 的前后向组合检查完成，续接进入课次 4.2；尚未创建 IDX 数据读取器或相应测试。
 
 ## 5. 第一阶段：基础层与最小训练闭环
 
 第一阶段已经完成，详细设计和历史步骤分别保存在：
 
-- `docs/2026-08-23-task1-minimal-training-loop-design.md`
-- `docs/2026-08-23-task1-minimal-training-loop-plan.md`
+- `docs/AIGC/2026-08-23-task1-minimal-training-loop-design.md`
+- `docs/AIGC/2026-08-23-task1-minimal-training-loop-plan.md`
 
 本阶段不重复执行。继续项目时以现有测试作为回归保护。
 
@@ -457,10 +467,12 @@ grad_beta = sum(grad_output)
 - [ ] 扩展到 NCHW，并验证返回形状不变。
 - [ ] 测试未完成训练前向传播时拒绝反向传播。
 
-#### 课次 3.7：有限差分与阶段验收
+#### 课次 3.7：阶段验收（按用户要求省略有限差分）
 
-- [ ] 分别检查输入、`gamma` 和 `beta` 的数值梯度。
-- [ ] 梯度检查期间固定为训练模式，并避免把运行统计量纳入标量目标。
+按用户要求，不再添加或执行 BatchNorm 输入、`gamma` 和 `beta` 的有限差分测试。保留二维和 NCHW 的手算确定值梯度测试及异常调用测试；后续报告不得声称 BatchNorm 已通过数值梯度检查。
+
+按用户要求，省略 `test_batchnorm_parameters_update_through_sgd` 专门测试。后续通过接入 BatchNorm 的离线小型 CNN 示例观察组合训练和推理行为，继续采用讲解、用户编写、运行检查的教学方式。
+
 - [ ] 在 `mininn/__init__.py` 导出 `BatchNorm`。
 - [ ] 运行完整测试集和依赖检查。
 - [ ] 用户能够解释训练统计、运行统计与可训练参数的区别。
@@ -469,15 +481,15 @@ grad_beta = sum(grad_output)
 
 - 二维和 NCHW 输入的训练前向结果正确。
 - 运行统计更新及推理模式结果正确，推理不污染状态。
-- `gamma`、`beta` 和输入梯度通过有限差分检查。
+- `gamma`、`beta` 和输入梯度通过手算确定值测试；按用户要求不执行有限差分检查。
 - `BatchNorm` 能与 `Conv2D`、`ReLU`、`Sequential` 和 `SGD` 组合。
 - 前两阶段全部回归测试继续通过。
 
-## 8. 第四阶段：Fashion-MNIST、对比与报告
+## 8. 第四阶段：Fashion-MNIST 与报告
 
 ### 8.1 阶段边界
 
-核心 `mininn` 仍只依赖 NumPy。Fashion-MNIST 数据文件采用 IDX 格式读取；下载可以使用 Python 标准库，但单元测试必须使用临时构造的小型 IDX 数据，不依赖网络。PyTorch 只允许出现在独立的可选对比脚本中，不能进入 `mininn/` 或核心测试。
+核心 `mininn` 仍只依赖 NumPy。Fashion-MNIST 数据文件采用 IDX 格式读取；下载可以使用 Python 标准库，但单元测试使用临时构造的小型 IDX 数据，不依赖网络。按用户最终调整，本阶段不再加入 PyTorch 对比。
 
 本阶段复用在第二阶段扩展中已经完成的无参数 `Flatten`：
 
@@ -496,63 +508,61 @@ Conv2D(1, 4, kernel_size=3, stride=2, padding=1)
 -> BatchNorm(8)
 -> ReLU()
 -> Flatten()
--> Linear(8 * 7 * 7, 10)
+-> Linear(8 * 7 * 7, 20)
+-> BatchNorm(20)
+-> ReLU()
+-> Linear(20, 10)
 ```
 
-训练采用固定随机种子、打乱后的小批量 SGD。首个可复现实验使用 2,000 个训练样本、1,000 个测试样本、批大小 32、学习率 0.05、5 个 epoch。若机器上的朴素卷积耗时过长，可以缩小用于教学冒烟验证的样本数，但正式报告仍记录上述固定配置或明确记录实际配置，不能混写结果。
+训练采用固定随机种子、打乱后的小批量 SGD。最终可复现实验使用 2,000 个训练样本、1,000 个测试样本、批大小 32、学习率 0.05、10 个 epoch。
 
 ### 8.2 教学课次与 TDD 顺序
 
 #### 课次 4.1：Fashion-MNIST 卷积网络组合检查
 
-- [ ] 复用第二阶段扩展完成的 `Flatten`，不重复实现。
-- [ ] 用随机小批次验证完整 Fashion-MNIST 模型输出形状为 `(N, 10)`。
-- [ ] 验证完整网络反向传播能恢复 `(N, 1, 28, 28)` 输入梯度形状。
+- [x] 复用第二阶段扩展完成的 `Flatten`，不重复实现。
+- [x] 用随机小批次验证完整 Fashion-MNIST 模型输出形状为 `(N, 10)`。
+- [x] 验证完整网络反向传播能恢复 `(N, 1, 28, 28)` 输入梯度形状。
 
 #### 课次 4.2：IDX 数据读取
 
-- [ ] 新建 `mininn/data.py`，接口固定为 `load_idx_images(path)` 和 `load_idx_labels(path)`。
-- [ ] 用 `tempfile` 和 `struct.pack` 生成极小合法 IDX 文件并先写失败测试。
-- [ ] 测试魔数、数据长度和图像/标签样本数不一致时给出清晰错误。
-- [ ] 用户实现 gzip/普通文件读取、头部解析和 NumPy 数组转换。
-- [ ] 图像转换为 `(N, 1, 28, 28)` 的 `float64`，数值缩放到 `[0, 1]`；标签为一维整数数组。
+- [x] 新建 `mininn/data.py`，接口固定为 `load_idx_images(path)` 和 `load_idx_labels(path)`。
+- [x] 用 `tempfile` 和 `struct.pack` 生成极小合法 IDX 文件并先写失败测试（本次观察范围见下方核验记录）。
+- [x] 测试魔数、数据长度和图像/标签样本数不一致时给出清晰错误。
+- [x] 用户实现 gzip/普通文件读取、头部解析和 NumPy 数组转换。
+- [x] 图像转换为 `(N, 1, 28, 28)` 的 `float64`，数值缩放到 `[0, 1]`；标签为一维整数数组。
+
+本次续接核验：普通文件及 gzip 图像/标签读取、图像归一化和 NCHW 形状、文件头与魔数检查、数据长度检查均已通过测试。`examples/train_fashion_mnist.py` 的内部函数 `_load_dataset(image_path, label_path)` 已验证正常返回及拒绝图像/标签样本数不一致。运行 `python -m unittest discover -s tests -p test_data.py -v`，13 项通过；完整回归 116 项通过；`rg -n "torch|tensorflow|keras|jax" mininn tests` 无匹配。续接期间实际观察到标签正常读取、图像/标签 gzip 读取及样本数不匹配测试在功能缺失时失败；首次图像正常读取的历史 RED 过程未核验，不补记。用户已学习读取流程，完整流程复述仍可在后续教学中核验。
 
 #### 课次 4.3：小批量与训练/推理切换
 
-- [ ] 实现实验脚本内部的确定性批次索引生成器，不把数据加载职责放进模型。
-- [ ] 每个训练 epoch 前调用各 BatchNorm 层的 `train()`。
-- [ ] 评估前调用 `eval()`，评估后恢复 `train()`。
-- [ ] 先在几十个样本上过拟合，验证损失能够显著下降，排除完整实验前的链路错误。
+用户调整：移除整个 `TestBatchIndices` 测试类；批次索引生成器改为直接讲解具体实现，不再要求用户编写该类测试。此调整仅针对批次索引部分，保留其他已有测试。
+
+- [x] 实现实验脚本内部的确定性批次索引生成器，不把数据加载职责放进模型。
+- [x] 每个训练 epoch 前调用各 BatchNorm 层的 `train()`。
+- [x] 评估前调用 `eval()`，评估后恢复 `train()`。
+- 按用户选择跳过小样本过拟合，直接运行固定配置正式实验。
 
 #### 课次 4.4：固定配置实验
 
-- [ ] 运行 2,000/1,000 样本配置并记录每个 epoch 的训练损失、训练准确率、测试准确率和耗时。
-- [ ] 验收要求：最终训练损失低于首个 epoch 的训练损失，测试准确率至少达到 70%。
-- [ ] 保存随机种子、Python/NumPy 版本、数据规模和超参数。
-- [ ] 不把 Fashion-MNIST 数据文件提交到 Git。
+- [x] 运行 2,000/1,000 样本配置并记录每个 epoch 的训练损失、训练准确率、测试准确率和耗时。
+- [x] 最终训练损失低于首个 epoch，最终测试准确率为 `81.20%`，达到至少 70% 的要求。
+- [x] 保存随机种子、Python/NumPy 版本、数据规模和超参数。
+- [x] Fashion-MNIST 数据位于 Git 忽略的 `.build/`，未加入版本控制。
 
-#### 课次 4.5：正确性与性能对比
+#### 课次 4.5：最终报告
 
-- [ ] 新建独立脚本 `examples/compare_with_pytorch.py`；只有该脚本允许导入 PyTorch。
-- [ ] 将相同的小张量、权重和偏置复制到 NumPy `Conv2D` 与 PyTorch `Conv2d`，比较前向输出。
-- [ ] 使用相同的标量目标比较输入、权重和偏置梯度。
-- [ ] 预热后分别计时多次，报告中位数；同步或仅使用 CPU，避免异步计时失真。
-- [ ] 将性能差距解释为教学循环实现与优化张量内核的差别，不把速度差距当成正确性问题。
-
-#### 课次 4.6：最终报告
-
-- [ ] 在 `docs/` 下写最终任务报告，包含目标、接口、核心公式、测试方法、实验配置、结果表和局限性。
-- [ ] 报告必须记录实际命令和实际输出，不能写未运行的结果。
-- [ ] 说明朴素循环卷积的复杂度以及 `im2col`、向量化或编译扩展的后续优化方向。
-- [ ] 更新仓库根 `README.md` 的当前进度、目录和运行方法。
-- [ ] 运行完整测试、玩具训练、Fashion-MNIST 实验和依赖边界检查。
+- [x] 在 `docs/lab_report.md` 写最终实验报告，包含架构、实现、个人感受、测试方法、实验配置、结果和局限性。
+- [x] 报告只记录实际运行命令和输出，不写未执行的结果。
+- [x] 说明朴素循环卷积的复杂度以及 `im2col`、向量化或编译扩展方向。
+- [x] 更新仓库根 `README.md` 的当前进度、目录和运行方法。
+- [x] 运行完整测试、玩具训练、Fashion-MNIST 实验和依赖边界检查。
 
 ### 8.3 第四阶段验收标准
 
 - `Flatten` 前后向正确，卷积网络能输出十分类 logits。
 - IDX 读取器有离线单元测试，核心测试不依赖网络。
 - 小批量训练链路可复现，损失下降，固定测试子集准确率至少 70%。
-- NumPy 与 PyTorch 对比在 `float64` 小张量上满足 `rtol=1e-5、atol=1e-7`。
 - 报告中的版本、耗时、损失和准确率均来自实际运行记录。
 - 核心库保持 NumPy-only，完整回归测试通过。
 
@@ -575,6 +585,6 @@ Conv2D(1, 4, kernel_size=3, stride=2, padding=1)
 - 四个阶段的复选项和验收标准全部完成；
 - 所有单元测试通过且没有引入深度学习库到核心框架；
 - 全连接玩具分类、小型 CNN 和 Fashion-MNIST 实验都能从文档命令复现；
-- BatchNorm 的关键梯度通过有限差分检查；Conv2D 按用户调整后的范围使用手算确定值验证；
-- 用户能够独立解释前向传播、链式法则、参数更新、卷积窗口梯度累加以及 BatchNorm 的训练/推理差异；
+- BatchNorm 和 Conv2D 按用户调整后的范围使用手算确定值验证，不执行有限差分检查；
+- 最终报告能够说明前向传播、链式法则、参数更新、卷积窗口梯度累加以及 BatchNorm 的训练/推理差异，并如实记录仍需提示的部分；
 - 最终报告中的所有数据均有对应的实际运行证据。

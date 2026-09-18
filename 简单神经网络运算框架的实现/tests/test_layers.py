@@ -1089,6 +1089,322 @@ class TestFlatten(unittest.TestCase):
         self.assertEqual(parameters(), [])
         self.assertEqual(gradients(), [])
 
+class TestBatchNorm(unittest.TestCase):
+    def test_batchnorm_class_is_availabe(self):
+        self.assertTrue(hasattr(layers,"BatchNorm"))
+
+    def test_constructor_initializes_parameters_and_statistics(self):
+        layer = layers.BatchNorm(num_features = 3)
+
+        self.assertEqual(layer.gamma.shape,(3,))
+        self.assertEqual(layer.beta.shape,(3,))
+        np.testing.assert_array_equal(layer.gamma,np.ones_like(layer.gamma))
+        np.testing.assert_array_equal(layer.beta,np.zeros_like(layer.beta))
+
+        self.assertEqual(layer.running_mean.shape,(3,))
+        self.assertEqual(layer.running_var.shape,(3,))
+        np.testing.assert_array_equal(layer.running_mean,np.zeros_like(layer.running_mean))
+        np.testing.assert_array_equal(layer.running_var,np.ones_like(layer.running_var))
+
+        # 参数梯度初始为 0
+        self.assertEqual(layer.grad_gamma.shape, (3,))
+        self.assertEqual(layer.grad_beta.shape, (3,))
+        np.testing.assert_array_equal(layer.grad_gamma, np.zeros(3))
+        np.testing.assert_array_equal(layer.grad_beta, np.zeros(3))
+
+#模式	training	后续前向传播的行为
+#训练	True	使用当前批次统计量，并更新运行统计
+#推理	False	使用运行统计，不更新它们
+    def test_default_to_training_mode(self):
+        layer = layers.BatchNorm(num_features = 3)
+        self.assertTrue(layer.training)
+
+    def test_train_and_eval_switch_mode(self):
+        layer = layers.BatchNorm(num_features = 3)
+
+        eval = getattr(layer,"eval",None)
+        self.assertTrue(callable(eval))
+        layer.eval()
+        self.assertFalse(layer.training)
+
+        train = getattr(layer,"train",None)
+        self.assertTrue(callable(train))
+        layer.train()
+        self.assertTrue(layer.training)
+
+    def test_forward_normalizes_each_feature_in_training_mode(self):
+        layer = layers.BatchNorm(num_features = 2)
+        x = np.array([
+            [1.0,10.0],
+            [3.0,14.0]
+        ])
+        #每个特征列的均值和方差
+        #mean = [2, 12]
+        #var  = [1,  4]
+        forward = getattr(layer,"forward",None)
+        self.assertTrue(callable(forward))
+
+        actual = layer.forward(x)
+        expected = np.array([
+            [-1.0,-2.0],
+            [1.0,2.0],
+        ])/np.sqrt(np.array([1.0,4.0]) + layer.epsilon)
+
+        self.assertEqual(actual.shape,expected.shape)
+        np.testing.assert_allclose(
+            actual,expected,rtol = 1e-7,atol = 1e-9
+        )
+
+    def test_forward_applies_gamma_and_beta(self):
+        layer = layers.BatchNorm(num_features = 2,epsilon = 3.0)
+        layer.gamma[...] = [2.0,-4.0]
+        layer.beta[...] = [3.0,1.0]
+        
+        #每列均值：[2, 11]
+        #每列方差：[1, 1]
+        #分母：sqrt(1 + 3) = 2
+        #x_hat = [[-0.5, -0.5],
+        #        [ 0.5,  0.5]]
+        x = np.array([
+            [1.0,10.0],
+            [3.0,12.0],
+        ])
+        actual = layer.forward(x)
+        expected = np.array([
+            [2.0,3.0],
+            [4.0,-1.0],
+        ])
+        self.assertEqual(actual.shape,expected.shape)
+        np.testing.assert_allclose(actual,expected)
+
+    def test_forward_normalizes_nchw_per_channel(self):
+        layer = layers.BatchNorm(num_features = 2)
+        layer.gamma[...] = [2.0,-1.0]
+        layer.beta[...] = [0.5,3.0]
+
+        #两个样本，两个通道，高和宽均为2
+        x = np.array([
+            [
+                [
+                    [1.0,2.0],
+                    [3.0,4.0],
+                ],
+                [
+                    [10.0,20.0],
+                    [30.0,40.0],
+                ],
+            ],
+            [
+                [
+                    [5.0,6.0],
+                    [7.0,8.0],
+                ],
+                [
+                    [50.0,60.0],
+                    [70.0,80.0],
+                ],
+            ],
+        ])
+
+        actual = layer.forward(x)
+
+        # 通道 0：数值 1～8，均值 4.5，总体方差 5.25
+        # 通道 1：通道 0 的 10 倍，均值 45，方差 525
+        expected = np.empty_like(x)
+        expected[:,0] = (
+            2.0 * (x[:,0] - 4.5)/np.sqrt(5.25 + layer.epsilon)+0.5
+        )
+        expected[:,1] = (
+            (-1.0) * (x[:,1] - 45.0)/np.sqrt(525.0 + layer.epsilon) + 3.0
+        )
+        self.assertEqual(actual.shape,expected.shape)
+        np.testing.assert_allclose(actual,expected,rtol = 1e-7,atol = 1e-9)
+
+    def test_forward_rejects_invalid_dimensions(self):
+        layer = layers.BatchNorm(num_features = 2)
+        for shape in [(1,),(1,2,3),(1,2,3,4,5)]:
+            with self.subTest(shape = shape):
+                try:
+                    layer.forward(np.zeros(shape))
+                except ValueError as error:
+                    self.assertIn("2D or 4D",str(error))
+                else:
+                    self.fail("BatchNorm.forward() should rejects invalid dimensions")
+
+    def test_forward_rejects_wrong_feature_count(self):
+        layer = layers.BatchNorm(num_features = 2)
+        for shape in [(2, 1), (2, 3), (2, 1, 2, 3), (2, 3, 2, 3)]:
+            with self.subTest(expected_features = layer.num_features,actual_features = shape[1]):
+                try:
+                    layer.forward(np.zeros(shape))
+                except ValueError as error:
+                    self.assertIn("feature",str(error))
+                else:
+                    self.fail("BatchNorm.forward() should reject wrong feature count")
+
+    def test_training_forward_updates_running_statistics(self):
+        layer = layers.BatchNorm(num_features = 2,momentum = 0.9)
+        # 第一批：均值 [2, 12]，总体方差 [1, 4]
+        x1 = np.array([
+            [1.0, 10.0],
+            [3.0, 14.0],
+        ])
+        layer.forward(x1)
+        np.testing.assert_allclose(layer.running_mean, [0.2, 1.2])
+        np.testing.assert_allclose(layer.running_var, [1.0, 1.3])
+
+        # 第二批：均值 [7, 24]，总体方差 [4, 16]
+        x2 = np.array([
+            [5.0, 20.0],
+            [9.0, 28.0],
+        ])
+        layer.forward(x2)
+
+        self.assertEqual(layer.running_mean.shape, (2,))
+        self.assertEqual(layer.running_var.shape, (2,))
+        np.testing.assert_allclose(layer.running_mean, [0.88, 3.48])
+        np.testing.assert_allclose(layer.running_var, [1.3, 2.77])
+
+    #测试使用推理模式的时候，归一化层有没有更新参数
+    def test_eval_uses_running_statistics_without_updating_them(self):
+        layer = layers.BatchNorm(num_features = 2,epsilon = 3.0)
+        # 手动设置统计量，单独验证推理行为
+        layer.running_mean[...] = [2.0, 10.0]
+        layer.running_var[...] = [1.0, 6.0]
+        layer.gamma[...] = [2.0, 3.0]
+        layer.beta[...] = [1.0, -1.0]
+        mean_before = layer.running_mean.copy()
+        var_before = layer.running_var.copy()
+
+        layer.eval()
+        x = np.array([[4.0,13.0]])
+        actual = layer.forward(x)
+
+        np.testing.assert_allclose(actual,[[3.0,2.0]])
+        np.testing.assert_array_equal(layer.running_mean, mean_before)
+        np.testing.assert_array_equal(layer.running_var, var_before)
+
+    def test_backward_computes_parameter_gradients(self):
+        layer = layers.BatchNorm(num_features = 2,epsilon = 3.0)
+        x = np.array([
+            [1.0,10.0],
+            [3.0,12.0],
+        ])
+        #x_hat = [
+        #    [-0.5, -0.5],
+        #    [ 0.5,  0.5],
+        #]
+        layer.forward(x)
+
+        #grad_beta = [1 + 3, 2 + 4]= [4, 6]
+        #grad_gamma = [1×(-0.5) + 3×0.5, 2×(-0.5) + 4×0.5]= [1, 1]
+        grad_output = np.array([
+            [1.0,2.0],
+            [3.0,4.0], 
+        ])
+        backward = getattr(layer,"backward",None)
+        self.assertTrue(callable(backward))
+
+        layer.backward(grad_output)
+        np.testing.assert_allclose(layer.grad_beta, [4.0, 6.0])
+        np.testing.assert_allclose(layer.grad_gamma, [1.0, 1.0])
+
+    def test_backward_computes_input_gradient(self):
+        layer = layers.BatchNorm(num_features=2, epsilon=3.0)
+        layer.gamma[...] = [2.0, -1.0]
+
+        x = np.array([
+            [1.0, 10.0],
+            [3.0, 12.0],
+        ])
+        layer.forward(x)
+
+        grad_output = np.array([
+            [1.0, 2.0],
+            [3.0, 4.0],
+        ])
+        actual = layer.backward(grad_output)
+
+        expected = np.array([
+            [-0.75,  0.375],
+            [ 0.75, -0.375],
+        ])
+
+        self.assertIsInstance(actual, np.ndarray)
+        self.assertEqual(actual.shape, x.shape)
+        np.testing.assert_allclose(actual, expected)
+
+    def test_backward_computes_nchw_gradients(self):
+        layer = layers.BatchNorm(num_features=2, epsilon=3.0)
+        layer.gamma[...] = [2.0, -1.0]
+
+        # 基础形状：(1, 2, 1, 2)
+        # 两个通道分别包含 [1, 3]、[10, 12]
+        base_x = np.array([[
+            [[1.0, 3.0]],
+            [[10.0, 12.0]],
+        ]])
+        base_grad = np.array([[
+            [[1.0, 3.0]],
+            [[2.0, 4.0]],
+        ]])
+
+        # N 复制两份，H 复制两份，得到 (2, 2, 2, 2)
+        x = np.tile(base_x, (2, 1, 2, 1))
+        grad_output = np.tile(base_grad, (2, 1, 2, 1))
+
+        layer.forward(x)
+        actual = layer.backward(grad_output)
+
+        base_expected = np.array([[
+            [[-0.75, 0.75]],
+            [[0.375, -0.375]],
+        ]])
+        expected = np.tile(base_expected, (2, 1, 2, 1))
+
+        self.assertEqual(actual.shape, x.shape)
+        np.testing.assert_allclose(actual, expected)
+        np.testing.assert_allclose(layer.grad_beta, [16.0, 24.0])
+        np.testing.assert_allclose(layer.grad_gamma, [4.0, 4.0])
+
+    def test_backward_requires_training_forward(self):
+        layer = layers.BatchNorm(num_features=2)
+
+        with self.assertRaisesRegex(RuntimeError, "training forward"):
+            layer.backward(np.ones((2, 2)))
+
+    def test_backward_rejects_eval_forward_after_training(self):
+        layer = layers.BatchNorm(num_features=2)
+        x = np.array([[1.0, 10.0], [3.0, 12.0]])
+
+        layer.forward(x)  # 先建立训练缓存
+        layer.eval()
+        layer.forward(x)  # 推理前向应清除缓存
+
+        with self.assertRaisesRegex(RuntimeError, "training forward"):
+            layer.backward(np.ones_like(x))
+
+    def test_backward_rejects_wrong_gradient_shape(self):
+        layer = layers.BatchNorm(num_features=2)
+        layer.forward(np.ones((2, 2)))
+
+        with self.assertRaisesRegex(ValueError, "expected grad_output shape"):
+            layer.backward(np.ones((2, 3)))
+
+    def test_parameters_and_gradients_have_matching_order(self):
+        layer = layers.BatchNorm(num_features=2)
+    
+        parameters = layer.parameters()
+        gradients = layer.gradients()
+    
+        self.assertEqual(len(parameters), 2)
+        self.assertEqual(len(gradients), 2)
+    
+        self.assertIs(parameters[0], layer.gamma)
+        self.assertIs(parameters[1], layer.beta)
+        self.assertIs(gradients[0], layer.grad_gamma)
+        self.assertIs(gradients[1], layer.grad_beta)
+
 
 
 if(__name__ == "__main__"):

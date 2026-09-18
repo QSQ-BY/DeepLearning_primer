@@ -1,5 +1,5 @@
 ﻿
-from .layers import Linear, ReLU, Conv2D, Flatten
+from .layers import Linear, ReLU, Conv2D, Flatten,BatchNorm
 from .losses import SoftmaxCrossEntropyLoss
 from .model import Sequential
 from .optim import SGD
@@ -12,4 +12,5 @@ __all__ = [
     "Sequential",
     "SGD",
     "Flatten",
+    "BatchNorm"
 ]

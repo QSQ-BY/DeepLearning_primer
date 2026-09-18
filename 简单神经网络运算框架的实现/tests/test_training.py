@@ -5,6 +5,7 @@ from mininn import layers
 from mininn import optim
 from mininn import losses
 import mininn
+from examples import train_fashion_mnist
 class TestSequential(unittest.TestCase):
     def test_sequential_class_is_available(self):
         self.assertTrue(hasattr(model,"Sequential"))
@@ -410,6 +411,7 @@ class TestPublicAPI(unittest.TestCase):
             "Sequential",#全连接层
             "SGD",#随机梯度下降优化器
             "Flatten",#卷积展平层
+            "BatchNorm",#批量归一化层
         ]
         for name in expected_names:
             with self.subTest(name = name):
@@ -464,5 +466,119 @@ class TestToyCNN(unittest.TestCase):
         grad_output = np.ones_like(logits)
         grad_input = network.backward(grad_output)
         self.assertEqual(grad_input.shape, x.shape)
+
+class TestFashionMNISTNetwork(unittest.TestCase):
+    def test_forward_return_correct_classes_logits(self):
+        rng = np.random.default_rng(7)
+        #输出                   (2, 10)
+        #→ Linear.backward      (2, 392)
+        #→ Flatten.backward     (2, 8, 7, 7)
+        #→ ReLU、BatchNorm      (2, 8, 7, 7)
+        #→ 第二层 Conv2D         (2, 4, 14, 14)
+        #→ ReLU、BatchNorm      (2, 4, 14, 14)
+        #→ 第一层 Conv2D         (2, 1, 28, 28)
+        network = model.Sequential(
+            layers.Conv2D(
+                out_channels = 4,
+                in_channels = 1,
+                kernel_size = 3,
+                stride = 2,
+                padding = 1,
+            ),
+            layers.BatchNorm(
+                num_features = 4,
+            ),
+            layers.ReLU(),
+            layers.Conv2D(
+                out_channels = 8,
+                in_channels = 4,
+                kernel_size = 3,
+                stride = 2,
+                padding = 1,
+            ),
+            layers.BatchNorm(
+                num_features = 8,
+            ),
+            layers.ReLU(),
+            layers.Flatten(),
+            layers.Linear(
+                in_features = 392,
+                out_features=10,
+            )
+        )
+        x = rng.normal(size = (2,1,28,28))
+        logits = network.forward(x)
+        self.assertEqual(logits.shape,(2,10))
+
+    def test_backward_return_nchw_input_gradient(self):
+        rng = np.random.default_rng(7)
+        network = model.Sequential(
+            layers.Conv2D(
+                out_channels = 4,
+                in_channels = 1,
+                kernel_size = 3,
+                stride = 2,
+                padding = 1,
+            ),
+            layers.BatchNorm(
+                num_features = 4,
+            ),
+            layers.ReLU(),
+
+            layers.Conv2D(
+                out_channels = 8,
+                in_channels = 4,
+                kernel_size = 3,
+                stride = 2,
+                padding = 1,
+            ),
+            layers.BatchNorm(
+                num_features = 8,
+            ),
+            layers.ReLU(),
+
+            layers.Flatten(),
+            layers.Linear(
+                in_features = 392,
+                out_features=10,
+            )
+        )
+        x = rng.normal(size = (2,1,28,28))
+        logits = network.forward(x)
+
+        grad_output = np.ones_like(logits)
+        grad_input = network.backward(grad_output)
+
+        self.assertEqual(grad_input.shape,x.shape)
+        self.assertTrue(np.all(np.isfinite(grad_input)))
+
+class TestFashionMNISTTraining(unittest.TestCase):
+    def test_train_one_epoch_returns_finite_metrics(self):
+        rng = np.random.default_rng(7)
+        network = model.Sequential(
+            layers.Linear(2,2,rng = rng)
+        )
+        loss_function = losses.SoftmaxCrossEntropyLoss()
+        optimizer = optim.SGD(
+            network.parameters(),
+            network.gradients(),
+            learning_rate = 0.05,
+        )
+
+        images = np.array([
+            [2.0,0.0],
+            [0.0,2.0],
+            [1.5,0.5],
+            [0.5,1.5], 
+        ])
+
+        labels = np.array([0,1,0,1])
+        loss_value,accuracy = train_fashion_mnist._train_one_epoch(
+            network,images,labels,loss_function,optimizer,batch_size=2,rng = np.random.default_rng(11),
+        )
+
+        self.assertTrue(np.isfinite(loss_value))
+        self.assertGreaterEqual(accuracy,0.0)
+        self.assertLessEqual(accuracy,1.0)
 if(__name__ == "__main__"):
     unittest.main()

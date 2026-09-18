@@ -12,6 +12,7 @@ from mininn import (
     SGD,
     Sequential,
     SoftmaxCrossEntropyLoss,
+    BatchNorm,
 )
 
 def make_dataset(rng,samples_per_class = 50,noise_std = 0.1):
@@ -60,6 +61,7 @@ def main():
     print(f"test: {test_images.shape} , {test_labels.shape}")
 
     #构建网络
+    bn = BatchNorm(num_features = 2)
     network = Sequential(
         Conv2D(
             in_channels=1,
@@ -68,6 +70,7 @@ def main():
             padding=1,
             rng=rng,
         ),
+        bn,
         ReLU(),
         Flatten(),
         Linear(2 * 8 * 8, 2, rng=rng),
@@ -83,6 +86,7 @@ def main():
     #train_logits (80, 2)
     #→ SoftmaxCrossEntropyLoss
     #标量损失
+    bn.eval()
     train_logits = network.forward(train_images)
     initial_loss = loss_function.forward(
         train_logits,
@@ -104,6 +108,8 @@ def main():
     #→ optimizer.step
     epochs = 11
     for epoch in range(epochs):
+        #进行参数更新，使用训练模式
+        bn.train()
         train_logits = network.forward(train_images)
         loss_value = loss_function.forward(train_logits,train_labels)
 
@@ -111,6 +117,8 @@ def main():
         network.backward(grad_logits)
         optimizer.step()
 
+        # 参数更新结束，接下来只评估
+        bn.eval()
         train_logits = network.forward(train_images)
         current_loss = loss_function.forward(train_logits,train_labels)
         train_accuracy = np.mean(
