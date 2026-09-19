@@ -88,7 +88,7 @@ Y=XW+b
 \frac{\partial L}{\partial b}=\sum_n\frac{\partial L}{\partial Y_n}.
 \]
 
-`Linear.backward()` 中对应的计算很短，下面节选自 `mininn/layers.py`：
+`Linear.backward()` 中对应的计算很短：
 
 ```python
 #计算梯度
@@ -101,13 +101,32 @@ return grad_output @ self.weight.T
 
 `[::]` 在原数组上写入梯度，优化器保存的梯度引用因此仍然有效。
 
-ReLU 前向把非正数变为 0，反向只保留前向输入大于 0 的位置。Softmax 交叉熵先让 logits 减去每行最大值，再计算指数和对数，避免大数指数溢出。SGD 最后按照
+ReLU 前向把非正数变为 0，反向只保留前向输入大于 0 的位置。Softmax 交叉熵先让 logits 减去每行最大值，再计算指数和对数，避免大数指数溢出。得到每行的指数和后，逐样本计算正确类别的损失：
+
+```python
+for sample_index in range(logits.shape[0]):
+    class_index = labels[sample_index]
+    correct_shifted_logits = shifted_logits[sample_index][class_index]
+    log_normalizer = np.log(sums[sample_index,0])
+    sample_loss = (log_normalizer - correct_shifted_logits)
+    sample_losses.append(sample_loss)
+return float(np.mean(sample_losses))
+```
+
+`log_normalizer` 减去正确类别的平移后 logit，等价于该类别概率的负对数；最后对批次取平均。SGD 按照
 
 \[
 \theta \leftarrow \theta-\eta\nabla_\theta L
 \]
 
-原地更新参数。
+原地更新参数，对应的 `step()` 只有几行：
+
+```python
+def step(self):
+    #向梯度的反方向更新参数
+    for parameter,gradient in zip(self.parameters,self.gradients):
+        parameter -= self.learning_rate * gradient
+```
 
 ### 3.2 卷积、展平与批量归一化
 
