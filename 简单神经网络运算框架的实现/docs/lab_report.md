@@ -4,7 +4,7 @@
 
 这是我目前写过的最长、规模也最大的一个项目。它只依赖 Python、NumPy 和标准库，实现了一个很小的神经网络运算框架。框架里有线性层、ReLU、二维卷积、Flatten、BatchNorm、Softmax 交叉熵、SGD 和顺序模型，也能读取 IDX 格式的 Fashion-MNIST 数据，完成前向传播、反向传播、参数更新和模型评估。
 
-它离成熟框架还很远。项目没有池化层、自动求导、GPU、模型保存，也没有对卷积做向量化。不过，这次实验的目的本来就不是重新做一个 PyTorch，而是把平时写在纸上的公式拆开，确认每个中间量怎样落到 NumPy 数组上，梯度又怎样沿着网络一层层传回来。
+它离成熟框架还很远。项目没有池化层、模型保存、以及更高级的非顺序模型，也没有对卷积做向量化。不过，这次实验的目的本来就不是重新做一个 PyTorch，而是把平时写在纸上的公式拆开，确认每个中间量怎样落到 NumPy 数组上，梯度又怎样沿着网络一层层传回来。
 
 ## 2. 目录与阅读顺序
 
@@ -60,7 +60,7 @@ IDX 文件
 
 `Sequential.forward()` 按保存顺序调用每一层，`backward()` 则倒序调用。无参数层返回空的参数列表，所以优化器只会收到真正需要更新的权重、偏置、`gamma` 和 `beta`。这套接口很简单，但它让全连接层、卷积层、激活函数和 BatchNorm 能用同一种方式组合。
 
-实际的反向遍历只有几行，节选自 [`mininn/model.py`](../mininn/model.py)：
+实际的反向遍历只有几行：
 
 ```python
 for layer_index in range(len(self.layers)-1,-1,-1):
@@ -68,7 +68,7 @@ for layer_index in range(len(self.layers)-1,-1,-1):
     gradient = layer.backward(gradient)
 ```
 
-本项目的设计亮点，是让所有层遵守同一套接口，再用单层测试和训练案例分别检查它们能否独立工作、能否接到一起。
+我个人认为本项目的设计亮点是让所有层遵守同一套接口，再用单层测试和训练案例分别检查它们能否独立工作、能否接到一起。
 
 ### 3.1 基础层与损失函数
 
@@ -87,6 +87,19 @@ Y=XW+b
 \qquad
 \frac{\partial L}{\partial b}=\sum_n\frac{\partial L}{\partial Y_n}.
 \]
+
+`Linear.backward()` 中对应的计算很短，下面节选自 `mininn/layers.py`：
+
+```python
+#计算梯度
+#grad_weight = X.T @ grad_output
+self.grad_weight[::] = self.__input.T @ grad_output
+#grad_bias = sum(grad_output(axis = 0))
+self.grad_bias[::] = grad_output.sum(axis = 0)
+return grad_output @ self.weight.T
+```
+
+`[::]` 在原数组上写入梯度，优化器保存的梯度引用因此仍然有效。
 
 ReLU 前向把非正数变为 0，反向只保留前向输入大于 0 的位置。Softmax 交叉熵先让 logits 减去每行最大值，再计算指数和对数，避免大数指数溢出。SGD 最后按照
 
@@ -108,7 +121,7 @@ H_{out}=\left\lfloor\frac{H+2P-K}{S}\right\rfloor+1,
 
 BatchNorm 同时支持二维和四维输入。训练时使用当前批次的均值与方差，并更新运行统计量；推理时只使用运行统计量。二维输入按批次轴统计，NCHW 输入则跨 `N、H、W` 对每个通道分别统计。这个模式切换后来也进入了 Fashion-MNIST 的训练和评估循环。
 
-统计轴和参数广播形状在 [`mininn/layers.py`](../mininn/layers.py) 中由输入维数决定：
+统计轴和参数广播形状由输入维数决定：
 
 ```python
 if x.ndim == 2:
@@ -151,8 +164,6 @@ grad_padded_input[
 
 BatchNorm 又是一个很大的难点。它的公式更集中，这里我偷了一点小懒，直接找的现成的公式，并没有像线性层和卷积层那样去想它具体的复杂推导，但后续的实现还是很不容易，训练和推理走的是两套统计量，二维输入与四维输入的归约轴也不同。我必须同时处理广播形状、运行均值、运行方差和反向传播缓存。以前看到“按通道归一化”时觉得意思很清楚，实际写代码才知道这句话至少还缺少统计轴、参数形状和模式状态。
 
-我处理这两个难点的方法也不同。卷积层先把输出位置映射回输入窗口，再对重复覆盖的位置累加梯度；BatchNorm 则先确定二维和四维输入各自的统计轴及广播形状，训练时更新运行统计量，评估时切换为使用运行统计量。这样拆开后，我能逐项检查哪里算错，而不用同时盯着整段公式。
-
 这次实验最直接地改变了我对“理解”的判断。现在如果我只会复述公式，却说不清数组是什么形状、梯度要沿哪些轴求和，我不会再觉得自己已经真正掌握了这一层。
 
 ## 5. 测试也是实现过程的一部分
@@ -165,7 +176,22 @@ BatchNorm 又是一个很大的难点。它的公式更集中，这里我偷了�
 
 测试花了我不少时间。按当前 Python 文件的物理行数统计，`tests/` 有 2,536 行，`mininn/` 和 `examples/` 合计 1,208 行。读者不需要逐行看测试，但写用例时，我得先弄清楚一层网络怎样使用、必须满足哪些输入条件、错误输入该怎样报错。这个过程既练了代码，也是在重新想一遍框架的行为。
 
-我还在测试里接触了 `unittest.TestCase`、`with self.subTest(...)`、用 `with tempfile.TemporaryDirectory()` 管理临时文件，以及用 `try/except/else` 检查异常。它们不是额外凑出来的代码：例如检查错误梯度形状时，我需要确认抛出的是 `ValueError`，提示中也说清了预期形状。
+我还在测试里接触了 `unittest.TestCase`、`with self.subTest(...)`、用 `with tempfile.TemporaryDirectory()` 管理临时文件，以及用 `try/except/else` 检查异常。
+
+`tests/test_data.py` 中的这个用例会在完整图像数据后多写一个字节，检查读取器是否拒绝它：
+
+```python
+with tempfile.TemporaryDirectory() as temp_dir:
+    path = Path(temp_dir) / "images.idx3-ubyte"
+
+    # 在完整数据后额外添加一个字节
+    path.write_bytes(header + images.tobytes() + b"\x00")
+
+    with self.assertRaisesRegex(ValueError, "pixels"):
+        load_idx_images(path)
+```
+
+写这样的用例时，我得先明确 IDX 文件允许多少像素字节，以及数据不符合头部信息时应报什么错。
 
 ## 6. 这不是我独立从零写出的项目
 
@@ -261,8 +287,3 @@ python -m examples.train_fashion_mnist `
 框架本身也只覆盖了最基础的一组功能，甚至没有池化，更别说其他的非顺序模型以及SGD以外的优化器了。Fashion-MNIST 实验只用了完整数据集的一小部分，结果不能与成熟框架的标准训练结果直接比较，但也算是非常扎实的一次深度学习入门项目。
 
 完成这个项目以后，我最确定的一件事是：把神经网络写出来，比把公式抄在笔记上难得多。至于这些实现有多少已经真正成为我自己的能力，现在还不能只凭一次训练成功下结论。至少下一次再遇到四维张量、广播和梯度累加时，我知道应该从形状、缓存和最小测试开始，而不是只盯着最后一条公式。
-
-## 资料与代码来源
-
-- 神经网络基础概念主要参考[《动手学习深度学习（PyTorch 版本）》](https://tangshusen.me/Dive-into-DL-PyTorch/)。本文没有直接摘录书中的文字或代码。
-- 文中的实现代码片段节选自本项目的 [`mininn/model.py`](../mininn/model.py) 和 [`mininn/layers.py`](../mininn/layers.py)，完整实现随仓库提供。Codex 辅助形成的设计与教学记录见 [`docs/AIGC/`](AIGC/)。
