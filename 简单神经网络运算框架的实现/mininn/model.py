@@ -14,7 +14,6 @@ class Sequential:
         output = x
         for layer in self.layers:
             output = layer.forward(output)
-
         return output
 
     def backward(self,grad_output):
