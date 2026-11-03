@@ -1,0 +1,53 @@
+{
+  "experiment_name": "textcnn_k237_word2vec128_20261103",
+  "seed": 42,
+  "data": {
+    "dataset_name": "fancyzhx/ag_news",
+    "cache_dir": "../.build/task2/data",
+    "val_ratio": 0.1,
+    "max_vocab_size": 50000,
+    "min_freq": 2,
+    "max_length": 256,
+    "pad_id": 0,
+    "unk_id": 1
+  },
+  "model": {
+    "name": "textcnn",
+    "embed_dim": 128,
+    "num_filters": 128,
+    "kernel_sizes": [
+      2,
+      3,
+      7
+    ],
+    "dropout": 0.5,
+    "num_classes": 4
+  },
+  "training": {
+    "batch_size": 64,
+    "epochs": 20,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "device": "auto",
+    "num_workers": 0,
+    "scheduler": {
+      "name": "reduce_on_plateau",
+      "factor": 0.5,
+      "patience": 1,
+      "min_lr": 1e-05
+    }
+  },
+  "output": {
+    "run_dir": "../.build/task2/runs/textcnn_k237_word2vec128_20261103",
+    "checkpoint_name": "best_loss.pt",
+    "accuracy_checkpoint_name": "best_accuracy.pt",
+    "log_name": "metrics.csv"
+  },
+  "experiment": {
+    "clean_text": false,
+    "vocabulary": "fixed_baseline_training_only",
+    "cleaning_version": "known_html_tags_v2",
+    "embedding_initialization": "word2vec_ag_news_train_128d",
+    "freeze_embeddings": false
+  }
+}

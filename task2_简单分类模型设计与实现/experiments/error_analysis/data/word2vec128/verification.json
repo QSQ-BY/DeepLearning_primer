@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "models": {
+    "original128": {
+      "samples": 7600,
+      "errors": 607,
+      "metrics_independently_recomputed": true
+    },
+    "random128": {
+      "samples": 7600,
+      "errors": 607,
+      "metrics_independently_recomputed": true
+    },
+    "word2vec128": {
+      "samples": 7600,
+      "errors": 619,
+      "metrics_independently_recomputed": true
+    }
+  },
+  "official_test_rows_checked": 22800,
+  "pretraining_corpus_rows_rehashed": 108000,
+  "pretraining_corpus_tokens": 4285153,
+  "same_architecture_and_training_configuration": true,
+  "same_random_and_non_embedding_initialization": true,
+  "no_validation_or_test_text_in_word2vec_training": true,
+  "embedding_finetuning_confirmed": true,
+  "portable_pretrained_model_matches_all_42394_imported_vectors": true,
+  "original_control_prediction_disagreements": 0,
+  "all_new_runs_completed_20_epochs": true,
+  "validation_only_checkpoint_selection": true
+}

@@ -18,7 +18,7 @@ from news_classifier.engine import evaluate
 from news_classifier.model import TextCNN
 
 
-entry = importlib.import_module("news_classifier.evaluate")
+entry = importlib.import_module("news_classifier.evaluation.evaluate")
 
 
 class EvaluateCheckpointTests(unittest.TestCase):

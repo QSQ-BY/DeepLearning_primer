@@ -13,7 +13,7 @@ from news_classifier.config import load_config
 from news_classifier.data import DataBundle
 from news_classifier.engine import EpochMetrics
 
-entry = importlib.import_module("news_classifier.train")
+entry = importlib.import_module("news_classifier.training.train")
 
 
 class TrainExperimentTests(unittest.TestCase):

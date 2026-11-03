@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "samples": 7600,
+  "correct": 6993,
+  "errors": 607,
+  "source_texts_checked": 7600,
+  "confusion_matrix": [
+    [
+      1734,
+      45,
+      66,
+      55
+    ],
+    [
+      21,
+      1859,
+      12,
+      8
+    ],
+    [
+      61,
+      12,
+      1676,
+      151
+    ],
+    [
+      55,
+      13,
+      108,
+      1724
+    ]
+  ],
+  "feature_partitions_reconciled": 4,
+  "occlusion_cases": 607,
+  "occlusion_predictions": 22910,
+  "checkpoint_unchanged": true,
+  "missing_error_ids": 0
+}

@@ -37,7 +37,8 @@
 
 - [项目代码](task2_简单分类模型设计与实现/)
 - [实验报告与运行方式](task2_简单分类模型设计与实现/docs/report.md)
-- [调参实验记录](task2_简单分类模型设计与实现/experiments/README.md)
+- [调参实验记录](task2_简单分类模型设计与实现/experiments/tuning/README.md)
+- [错误分析与后续对照](task2_简单分类模型设计与实现/experiments/error_analysis/README.md)
 
 ## 目录
 

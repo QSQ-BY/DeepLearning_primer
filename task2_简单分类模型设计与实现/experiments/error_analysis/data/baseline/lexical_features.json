@@ -1,0 +1,50 @@
+[
+  {
+    "feature": "finance_actions",
+    "scope": "all",
+    "pattern": "\\b(?:shares?|stocks?|earnings|profits?|revenues?|quarter(?:ly)?|merger|acquisition|takeover|buyout)\\b",
+    "samples": 821,
+    "errors": 71,
+    "error_rate": 0.08647990255785627
+  },
+  {
+    "feature": "finance_actions",
+    "scope": "business_scitech",
+    "pattern": "\\b(?:shares?|stocks?|earnings|profits?|revenues?|quarter(?:ly)?|merger|acquisition|takeover|buyout)\\b",
+    "samples": 738,
+    "errors": 56,
+    "error_rate": 0.07588075880758807
+  },
+  {
+    "feature": "technology_names",
+    "scope": "all",
+    "pattern": "\\b(?:microsoft|google|intel|ibm|apple|oracle|yahoo|dell|cisco|hp|hewlett|samsung|nokia|sony)\\b",
+    "samples": 760,
+    "errors": 84,
+    "error_rate": 0.11052631578947368
+  },
+  {
+    "feature": "technology_names",
+    "scope": "business_scitech",
+    "pattern": "\\b(?:microsoft|google|intel|ibm|apple|oracle|yahoo|dell|cisco|hp|hewlett|samsung|nokia|sony)\\b",
+    "samples": 752,
+    "errors": 80,
+    "error_rate": 0.10638297872340426
+  },
+  {
+    "feature": "law_government",
+    "scope": "all",
+    "pattern": "\\b(?:courts?|lawsuit|sued|sues|antitrust|judges?|regulators?|regulatory|government|minister|federal)\\b",
+    "samples": 860,
+    "errors": 80,
+    "error_rate": 0.09302325581395349
+  },
+  {
+    "feature": "law_government",
+    "scope": "business_scitech",
+    "pattern": "\\b(?:courts?|lawsuit|sued|sues|antitrust|judges?|regulators?|regulatory|government|minister|federal)\\b",
+    "samples": 445,
+    "errors": 60,
+    "error_rate": 0.1348314606741573
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\textcnn_k237_plateau20\\best_accuracy.pt",
+  "checkpoint_sha256": "1d4ddd8cb68a8462577b9b35519c454513176843ed6b295ddb3e65682441f712",
+  "epoch": 8,
+  "config": {
+    "experiment_name": "textcnn_k237_plateau20",
+    "seed": 42,
+    "data": {
+      "dataset_name": "fancyzhx/ag_news",
+      "cache_dir": "D:\\code\\DeepLearning\\.build\\task2\\data",
+      "val_ratio": 0.1,
+      "max_vocab_size": 50000,
+      "min_freq": 2,
+      "max_length": 256,
+      "pad_id": 0,
+      "unk_id": 1
+    },
+    "model": {
+      "name": "textcnn",
+      "embed_dim": 128,
+      "num_filters": 128,
+      "kernel_sizes": [
+        2,
+        3,
+        7
+      ],
+      "dropout": 0.5,
+      "num_classes": 4
+    },
+    "training": {
+      "batch_size": 64,
+      "epochs": 20,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "device": "auto",
+      "num_workers": 0,
+      "scheduler": {
+        "name": "reduce_on_plateau",
+        "factor": 0.5,
+        "patience": 1,
+        "min_lr": 1e-05
+      }
+    },
+    "output": {
+      "run_dir": "D:\\code\\DeepLearning\\.build\\task2\\runs\\textcnn_k237_plateau20",
+      "checkpoint_name": "best_loss.pt",
+      "accuracy_checkpoint_name": "best_accuracy.pt",
+      "log_name": "metrics.csv"
+    }
+  },
+  "official_test_arrow": "D:\\code\\DeepLearning\\.build\\task2\\data\\fancyzhx___ag_news\\default\\0.0.0\\eb185aade064a813bc0b7f42de02595523103ca4\\ag_news-test.arrow",
+  "test_arrow_sha256": "33cbb4fa4de197827f77ea4ce4e06d6fbeac710480c8156b34543bebd461ea94",
+  "test_fingerprint": "e98d0751b8b3fa1b",
+  "python": "3.12.13",
+  "pytorch": "2.13.0+cu130",
+  "device": "cuda",
+  "index_convention": "test:i is the original zero-based row in the cached official test split",
+  "scope": "Single saved TextCNN k237 checkpoint; error case diagnosis only; no retraining or architecture comparison",
+  "prior_metrics": {
+    "loss": 0.2495449842277326,
+    "accuracy": 0.9201315789473684,
+    "num_samples": 7600
+  },
+  "check_result": "607 errors and 6993 correct reproduced; checkpoint unchanged"
+}

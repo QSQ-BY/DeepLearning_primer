@@ -1,0 +1,319 @@
+{
+  "n": 7600,
+  "correct": 6993,
+  "errors": 607,
+  "accuracy": 0.9201315789473684,
+  "loss": 0.24954499304294586,
+  "label_names": [
+    "World",
+    "Sports",
+    "Business",
+    "Sci/Tech"
+  ],
+  "confusion_matrix": [
+    [
+      1734,
+      45,
+      66,
+      55
+    ],
+    [
+      21,
+      1859,
+      12,
+      8
+    ],
+    [
+      61,
+      12,
+      1676,
+      151
+    ],
+    [
+      55,
+      13,
+      108,
+      1724
+    ]
+  ],
+  "per_class": [
+    {
+      "label": "World",
+      "support": 1900,
+      "correct": 1734,
+      "errors": 166,
+      "precision": 0.9267771245323356,
+      "recall": 0.9126315789473685,
+      "f1": 0.9196499602227527
+    },
+    {
+      "label": "Sports",
+      "support": 1900,
+      "correct": 1859,
+      "errors": 41,
+      "precision": 0.9637117677553136,
+      "recall": 0.978421052631579,
+      "f1": 0.9710107077565945
+    },
+    {
+      "label": "Business",
+      "support": 1900,
+      "correct": 1676,
+      "errors": 224,
+      "precision": 0.9001074113856069,
+      "recall": 0.8821052631578947,
+      "f1": 0.8910154173312068
+    },
+    {
+      "label": "Sci/Tech",
+      "support": 1900,
+      "correct": 1724,
+      "errors": 176,
+      "precision": 0.8895768833849329,
+      "recall": 0.9073684210526316,
+      "f1": 0.8983845752996352
+    }
+  ],
+  "confusion_pairs": [
+    {
+      "true_label": "Business",
+      "predicted_label": "Sci/Tech",
+      "count": 151
+    },
+    {
+      "true_label": "Sci/Tech",
+      "predicted_label": "Business",
+      "count": 108
+    },
+    {
+      "true_label": "World",
+      "predicted_label": "Business",
+      "count": 66
+    },
+    {
+      "true_label": "Business",
+      "predicted_label": "World",
+      "count": 61
+    },
+    {
+      "true_label": "World",
+      "predicted_label": "Sci/Tech",
+      "count": 55
+    },
+    {
+      "true_label": "Sci/Tech",
+      "predicted_label": "World",
+      "count": 55
+    },
+    {
+      "true_label": "World",
+      "predicted_label": "Sports",
+      "count": 45
+    },
+    {
+      "true_label": "Sports",
+      "predicted_label": "World",
+      "count": 21
+    },
+    {
+      "true_label": "Sci/Tech",
+      "predicted_label": "Sports",
+      "count": 13
+    },
+    {
+      "true_label": "Sports",
+      "predicted_label": "Business",
+      "count": 12
+    },
+    {
+      "true_label": "Business",
+      "predicted_label": "Sports",
+      "count": 12
+    },
+    {
+      "true_label": "Sports",
+      "predicted_label": "Sci/Tech",
+      "count": 8
+    }
+  ],
+  "segments": [
+    {
+      "feature": "token_count",
+      "lower": 0,
+      "upper": 20,
+      "samples": 162,
+      "errors": 28,
+      "error_rate": 0.1728395061728395,
+      "share_of_errors": 0.04612850082372323
+    },
+    {
+      "feature": "token_count",
+      "lower": 21,
+      "upper": 40,
+      "samples": 4300,
+      "errors": 361,
+      "error_rate": 0.08395348837209303,
+      "share_of_errors": 0.5947281713344317
+    },
+    {
+      "feature": "token_count",
+      "lower": 41,
+      "upper": 60,
+      "samples": 2844,
+      "errors": 192,
+      "error_rate": 0.06751054852320675,
+      "share_of_errors": 0.3163097199341021
+    },
+    {
+      "feature": "token_count",
+      "lower": 61,
+      "upper": 256,
+      "samples": 294,
+      "errors": 26,
+      "error_rate": 0.08843537414965986,
+      "share_of_errors": 0.042833607907743
+    },
+    {
+      "feature": "token_count",
+      "lower": 257,
+      "upper": 100000000,
+      "samples": 0,
+      "errors": 0,
+      "error_rate": null,
+      "share_of_errors": 0.0
+    },
+    {
+      "feature": "oov_ratio",
+      "lower": 0,
+      "upper": 1e-08,
+      "samples": 5825,
+      "errors": 432,
+      "error_rate": 0.07416309012875537,
+      "share_of_errors": 0.7116968698517299
+    },
+    {
+      "feature": "oov_ratio",
+      "lower": 1e-08,
+      "upper": 0.05,
+      "samples": 1305,
+      "errors": 122,
+      "error_rate": 0.09348659003831418,
+      "share_of_errors": 0.20098846787479407
+    },
+    {
+      "feature": "oov_ratio",
+      "lower": 0.05,
+      "upper": 0.1,
+      "samples": 386,
+      "errors": 45,
+      "error_rate": 0.11658031088082901,
+      "share_of_errors": 0.07413509060955518
+    },
+    {
+      "feature": "oov_ratio",
+      "lower": 0.1,
+      "upper": 1.000001,
+      "samples": 84,
+      "errors": 8,
+      "error_rate": 0.09523809523809523,
+      "share_of_errors": 0.013179571663920923
+    },
+    {
+      "feature": "confidence",
+      "lower": 0,
+      "upper": 0.6,
+      "samples": 371,
+      "errors": 165,
+      "error_rate": 0.444743935309973,
+      "share_of_errors": 0.27182866556836904
+    },
+    {
+      "feature": "confidence",
+      "lower": 0.6,
+      "upper": 0.8,
+      "samples": 577,
+      "errors": 187,
+      "error_rate": 0.3240901213171577,
+      "share_of_errors": 0.30807248764415157
+    },
+    {
+      "feature": "confidence",
+      "lower": 0.8,
+      "upper": 0.9,
+      "samples": 557,
+      "errors": 85,
+      "error_rate": 0.1526032315978456,
+      "share_of_errors": 0.1400329489291598
+    },
+    {
+      "feature": "confidence",
+      "lower": 0.9,
+      "upper": 1.000001,
+      "samples": 6095,
+      "errors": 170,
+      "error_rate": 0.02789171452009844,
+      "share_of_errors": 0.2800658978583196
+    },
+    {
+      "feature": "top2_margin",
+      "lower": 0,
+      "upper": 0.1,
+      "samples": 121,
+      "errors": 55,
+      "error_rate": 0.45454545454545453,
+      "share_of_errors": 0.09060955518945635
+    },
+    {
+      "feature": "top2_margin",
+      "lower": 0.1,
+      "upper": 0.2,
+      "samples": 143,
+      "errors": 66,
+      "error_rate": 0.46153846153846156,
+      "share_of_errors": 0.10873146622734761
+    },
+    {
+      "feature": "top2_margin",
+      "lower": 0.2,
+      "upper": 0.5,
+      "samples": 448,
+      "errors": 175,
+      "error_rate": 0.390625,
+      "share_of_errors": 0.2883031301482702
+    },
+    {
+      "feature": "top2_margin",
+      "lower": 0.5,
+      "upper": 1.000001,
+      "samples": 6888,
+      "errors": 311,
+      "error_rate": 0.04515098722415795,
+      "share_of_errors": 0.5123558484349259
+    }
+  ],
+  "wrong_mean_length": 37.74299835255354,
+  "correct_mean_length": 39.58630058630059,
+  "wrong_mean_oov": 0.012557690369682597,
+  "correct_mean_oov": 0.0092733145036132,
+  "high_confidence_errors": 170,
+  "low_margin_errors": 121,
+  "truncated_samples": 0,
+  "artifact_samples": 2430,
+  "artifact_errors": 149,
+  "duplicated_test_rows": 0,
+  "conflicting_test_texts": 0,
+  "feature_tags": {
+    "商业与科技边界": 259,
+    "需结合语义人工复核": 77,
+    "世界与商业边界": 127,
+    "前两类接近:概率差<0.2": 121,
+    "高置信错误>=0.9": 170,
+    "含HTML实体或编码痕迹": 149,
+    "短文本<=20词": 28,
+    "未知词比例>=10%": 8
+  },
+  "occlusion": {
+    "masked_predictions": 22910,
+    "errors_fixed_by_at_least_one_single_token_mask": 261
+  }
+}

@@ -1,0 +1,3717 @@
+# Word2Vec 128维 TextCNN：全部预测错误
+
+使用官方测试行号，保留原始标签；按测试顺序排列。
+
+## test:20：Sci/Tech → Business
+
+预测置信度：0.5448
+
+IBM to hire even more new workers By the end of the year, the computing giant plans to have its biggest headcount since 1991.
+
+## test:23：Sci/Tech → Business
+
+预测置信度：0.7529
+
+Some People Not Eligible to Get in on Google IPO Google has billed its IPO as a way for everyday people to get in on the process, denying Wall Street the usual stranglehold it's had on IPOs. Public bidding, a minimum of just five shares, an open process with 28 underwriters - all this pointed to a new level of public participation. But this isn't the case.
+
+## test:24：Sci/Tech → Business
+
+预测置信度：0.8726
+
+Rivals Try to Turn Tables on Charles Schwab By MICHAEL LIEDTKE     SAN FRANCISCO (AP) -- With its low prices and iconoclastic attitude, discount stock broker Charles Schwab Corp. (SCH) represented an annoying stone in Wall Street's wing-tipped shoes for decades...
+
+## test:55：Sci/Tech → World
+
+预测置信度：0.7201
+
+Promoting a Shared Vision As Michael Kaleko kept running into people who were getting older and having more vision problems, he realized he could do something about it.
+
+## test:79：World → Sports
+
+预测置信度：0.9941
+
+Live: Olympics day four Richard Faulds and Stephen Parry are going for gold for Great Britain on day four in Athens.
+
+## test:83：Business → Sci/Tech
+
+预测置信度：0.9934
+
+Intel to delay product aimed for high-definition TVs SAN FRANCISCO -- In the latest of a series of product delays, Intel Corp. has postponed the launch of a video display chip it had previously planned to introduce by year end, putting off a showdown with Texas Instruments Inc. in the fast-growing market for high-definition television displays.
+
+## test:110：Business → Sci/Tech
+
+预测置信度：0.9082
+
+Yahoo! Ups Ante for Small Businesses Web giant Yahoo! is gambling that price cuts on its domain name registration and Web hosting products will make it more competitive with discounters in the space -- which means that small businesses looking to move online get a sweeter deal through ...
+
+## test:111：Sci/Tech → Business
+
+预测置信度：0.5495
+
+IBM Buys Two Danish Services Firms IBM said Tuesday it has acquired a pair of Danish IT services firms as part of its effort to broaden its presence in Scandinavia. As a result of the moves, IBM will add about 3,700 IT staffers to its global head count. Financial terms of ...
+
+## test:120：World → Business
+
+预测置信度：0.9871
+
+Oil prices bubble to record high The price of oil has continued its sharp rise overnight, closing at a record high. The main contract in New York, light sweet crude for delivery next month, has closed at a record \$US46.75 a barrel - up 70 cents on yesterday #39;s close. 
+
+## test:125：Business → World
+
+预测置信度：0.6546
+
+SUVs: Live And Let Die NEW YORK - The newly released traffic crash fatality data have something for everyone in the debate about the safety of sport utility vehicles. 
+
+## test:155：World → Sci/Tech
+
+预测置信度：0.8199
+
+Future Doctors, Crossing Borders Students at the Mount Sinai School of Medicine learn that diet and culture shape health in East Harlem.
+
+## test:234：Business → Sci/Tech
+
+预测置信度：0.5301
+
+Justices to debate mail-order wine Being freelance wine critics may sound like a sweet gig, but Ray and Eleanor Heald have soured on it. Because their home state, Michigan, blocks direct shipments from out-of-state 
+
+## test:240：Sci/Tech → Business
+
+预测置信度：0.8844
+
+Bill Clinton Helps Launch Search Engine Former president Bill Clinton on Monday helped launch a new Internet search company backed by the Chinese government which says its technology uses artificial intelligence to produce better results than Google Inc.
+
+## test:241：Sports → World
+
+预测置信度：0.7953
+
+Harris #39; three-run double in ninth sinks Gagne LOS ANGELES - Paul Lo Duca never got to moonwalk to home plate, though he did skip gleefully to the dugout moments after facing former batterymate Eric Gagne for the first time. 
+
+## test:248：Sci/Tech → Business
+
+预测置信度：0.8384
+
+Caterpillar snaps up another remanufacturer of engines PEORIA - Caterpillar Inc. said Wednesday it will acquire a South Carolina remanufacturer of engines and automatic transmissions, increasing its US employment base by 500 people. 
+
+## test:258：Sci/Tech → Business
+
+预测置信度：0.4932
+
+Ciena Posts a Loss, Forecasts Flat Sales &lt;p&gt;&lt;/p&gt;&lt;p&gt; By Deborah Cohen&lt;/p&gt;&lt;p&gt; CHICAGO (Reuters) - Telecommunications equipment makerCiena Corp. &lt;CIEN.O&gt; on Thursday reported a wider loss for thefiscal third quarter due to slack demand and forecast sales inthe current quarter would be little changed from the thirdquarter.&lt;/p&gt;
+
+## test:262：Sci/Tech → Business
+
+预测置信度：0.6621
+
+Ecuadorean Lawsuit Vs Texaco Boils Down to Science (Reuters) Reuters - After a decade\of court battles, lawyers on Wednesday took a lawsuit by\Ecuadorean Indians accusing U.S. oil firm ChevronTexaco Corp..\of polluting the Amazon jungle into the field.
+
+## test:264：Sci/Tech → World
+
+预测置信度：0.7564
+
+Atlantis "Evidence" Found in Spain, Ireland In 360 B.C. the Greek philosopher Plato described an island he called Atlantis. Now contradicting new evidence claims the fabled city-state was based on a real place.
+
+## test:267：Sci/Tech → Business
+
+预测置信度：0.8611
+
+Court: File-swapping software not liable for copyright violations The makers of two leading file-sharing programs are not legally liable for the songs, movies and other copyright works swapped online by their users, a federal appeals court ruled Thursday in a stinging blow to the entertainment industry. 
+
+## test:288：Business → World
+
+预测置信度：0.7321
+
+Vt. sues over importing drugs Vermont's Republican governor challenged the Bush administration's prescription drug policy in federal court yesterday, marking the first time a state has chosen a legal avenue in the expanding battle over Canadian imports.
+
+## test:295：World → Business
+
+预测置信度：0.9957
+
+Producer sues for Rings profits Hollywood producer Saul Zaentz sues the producers of The Lord of the Rings for \$20m in royalties.
+
+## test:305：Sports → World
+
+预测置信度：0.4317
+
+Don #39;t expect Tiger to relinquish his top ranking without a fight They #39;re calling Ohio a  quot;battleground state, quot; one of the two or three places likely to decide November #39;s presidential election. On local TV, the Bush and Kerry ads air so frequently that it #39;s easy to forget it #39;s Bob Costas who actually runs the country. 
+
+## test:310：Business → Sci/Tech
+
+预测置信度：0.8393
+
+Clicking on Profits The latest data from the US Department of Commerce further bolsters what we have all suspected: E-commerce sales are increasing. Not only might one suspect that consumer confidence has been bolstered since last year, there ...
+
+## test:311：Sports → World
+
+预测置信度：0.5235
+
+French Take Gold, Bronze in Single Kayak ATHENS, Greece - Winning on whitewater runs in the family for Frenchman Benoit Peschier, though an Olympic gold is something new. Peschier paddled his one-man kayak aggressively but penalty free in both his semifinal and final runs on the manmade Olympic ...
+
+## test:312：Sci/Tech → World
+
+预测置信度：0.6377
+
+Dogs in Training to Sniff Out Cancer Experts have trained unwanted dogs into supersniffers that can detect drugs or bombs. Now they're focusing on a new threat #151;prostate cancer.
+
+## test:316：World → Business
+
+预测置信度：0.5886
+
+Crude Price Spike May Send Gas Higher (AP) AP - Amid soaring crude oil prices, gasoline costs have been dropping. But don't expect that to last, economists say.
+
+## test:317：Business → Sci/Tech
+
+预测置信度：0.9997
+
+Amazon Snaps Up China's Largest Web Retailer (NewsFactor) NewsFactor - Amazon.com (Nasdaq: AMZN) has said it will buy Joyo.com Limited -- a British Virgin Islands company that operates the largest Internet retail Web site in China -- for US #36;75 million.
+
+## test:327：World → Business
+
+预测置信度：0.4437
+
+Italian PM #39;s transplant confirmed After days of speculation sparked by the white bandanna worn by Mr Berlusconi on holiday in Sardinia, Piero Rosati said the results of the operation would show in a couple of months.
+
+## test:344：Sports → Sci/Tech
+
+预测置信度：0.4708
+
+Glory Comes Amid Empty Seats and Closed Shutters HERE in Old Europe, people install shutters outside their windows to keep out the heat, the pollution, the daylight, the noise. They also lock the shutters tight when they go away on holiday.
+
+## test:346：Sci/Tech → Business
+
+预测置信度：0.7486
+
+Salesforce.com 2Q Profit Up Sharply Software developer Salesforce.com Inc. posted a sharp rise in second-quarter profit on better-than-expected revenue during its first quarter as a public company, but investors shunned the stock in late trading 
+
+## test:348：World → Sports
+
+预测置信度：0.9982
+
+Unknown Nesterenko Makes World Headlines (Reuters) Reuters - Belarus' Yuliya Nesterenko won the top\women's athletics gold medal at the Olympics on Saturday,\triumphing over a field stripped of many big names because of\doping woes to win the 100 meters.
+
+## test:355：World → Sports
+
+预测置信度：0.9503
+
+Greek weightlifter awaits verdict Greek weightlifter Leonidas Sampanis will find out on Sunday if he is to be stripped of his medal.
+
+## test:363：World → Business
+
+预测置信度：0.9014
+
+A Founding Father? Give the guy some credit. Tung Chee-hwa, Hong Kong #39;s embattled Chief Executive, gets precious little of it from his people these daysand heaps of 
+
+## test:379：World → Sports
+
+预测置信度：0.6757
+
+Labor: Anti-Peres meetings scheduled for Sunday Labor members have scheduled two  #39;rebel #39; anti-Peres conferences for Sunday, one to be headed by MK Matan Vilnai and the second by MK Binyamin Ben-Eliezer.
+
+## test:397：Sci/Tech → Business
+
+预测置信度：0.5527
+
+Wiretapping on the Net: Who pays? NEW YORK At first glance, it might seem like the simple extension of a standard tool in the fight against the bad guys. But in fact, wiretapping Internet phones to monitor criminals and terrorists is costly 
+
+## test:399：Business → Sci/Tech
+
+预测置信度：0.8268
+
+Nortel Downsizes Again Aug. 23, 2004 (TheDeal.com) Problem-plagued Nortel Networks Corp. announced plans Thursday, Aug. 19, to eliminate an additional 3,500 jobs and fire seven more senior executives as the company labors to reinvent 
+
+## test:408：Business → World
+
+预测置信度：0.7649
+
+Chavez rejects CD as opposition Venezuela #39;s President Hugo Chavez has announced that he will no longer recognize the Democratic Coordination or CD as the opposition coalition.
+
+## test:415：Sports → Sci/Tech
+
+预测置信度：0.6109
+
+Hamm should support Yang Paul Hamm needs a new marketing strategy. Either that, or he needs a clue. One harmless gesture separates him from lionization in America and canonization in South Korea, and 
+
+## test:436：Business → World
+
+预测置信度：0.5671
+
+Students Pay More for Beer Than Books British students spend about \$1.8 billion on drink every year, nearly three times as much as they cough up for books, a survey released on Monday showed.
+
+## test:437：Business → Sports
+
+预测置信度：0.4833
+
+Leeds students figure high on working curve Undergraduates in the city earn more than 90 a week on average, just behind Glasgow, Cambridge and Cardiff. Their hard-earned cash is likely to be spent on looking good and socialising, the 
+
+## test:440：Business → Sci/Tech
+
+预测置信度：0.3462
+
+Northrop Grumman Gets \$408 Million Pact Defense contractor Northrop Grumman Corp. on Monday said it received a 10-year, \$408 million Army contract to provide simulated battle command training support to Army corps commanders - the latest award in 
+
+## test:441：Sci/Tech → World
+
+预测置信度：0.6154
+
+Record biz hammers  #39;ostrich #39; downloaders The music industry in the US is making great strides in its campaign against people it says have illegally downloaded music, with courts awarding huge settlements in many cases.
+
+## test:443：Business → World
+
+预测置信度：0.5747
+
+Oil price down as Iraq fears ease The price of oil has fallen as fears about interruptions to supplies being pumped out of Iraq eased slightly.
+
+## test:448：Business → World
+
+预测置信度：0.5906
+
+Oil Eases as Iraq Resumes Exports &lt;p&gt;\&lt;/p&gt;&lt;p&gt; By Andrew Mitchell&lt;/p&gt;&lt;p&gt; LONDON (Reuters) - High-flying oil prices eased for a\second session on Monday as Iraq resumed exports from both its\northern and southern outlets after lengthy disruption, despite\fierce fighting in the holy city of Najaf.&lt;/p&gt;
+
+## test:453：Sci/Tech → Business
+
+预测置信度：0.7605
+
+Wiretaps may mute Nextel rivals Fed up with technical excuses, FBI wants carriers to support eavesdropping capabilities for push-to-talk technology now.
+
+## test:467：Business → Sci/Tech
+
+预测置信度：0.5476
+
+Deal has S2io champing at the gigabit OTTAWA -- A local firm that says it can help shrink backup times at large data centres is growing its business thanks to an alliance with Sun Microsystems Inc.
+
+## test:511：World → Business
+
+预测置信度：0.7989
+
+Mich. Elephant Gets Therapy for Arthritis ROYAL OAK, Mich. - Like any patient, Wanda needs positive reinforcement to wrestle through her physical therapy...
+
+## test:527：World → Sports
+
+预测置信度：0.7067
+
+ #39;Somebody please save my dad #39; Nick du Toit #39;s wife and stepdaughter are distraught that there is nothing they can do to help him. On Monday his stepdaughter, Marilise Bezuidenhout, was forced to convey the news of his possible death sentence 
+
+## test:553：Sports → World
+
+预测置信度：0.6446
+
+Careening Indians Fall Slumping Cleveland lost a three-run lead while Derek Jeter homered and stole two ninth-inning bases as New York sent the Indians to their ninth consecutive loss, 5-4, Tuesday.
+
+## test:556：Sci/Tech → World
+
+预测置信度：0.8553
+
+Site security gets a recount at Rock the Vote Grassroots movement to register younger voters leaves publishing tools accessible to outsiders.
+
+## test:563：Sci/Tech → Business
+
+预测置信度：0.4630
+
+Jamaican Government to Provide Free Internet Access in Poor &lt;b&gt;...&lt;/b&gt; Jamaica #39;s government on Tuesday announced a US\$5 million (Jamaican \$308 million) plan to provide free Internet access in poor communities across the island.
+
+## test:565：World → Business
+
+预测置信度：0.9874
+
+India's Tata makes powerful debut Shares  in Indian software services giant Tata Consultancy close 16 higher on their market debut, raising \$1.2bn for the company.
+
+## test:574：World → Sports
+
+预测置信度：0.5486
+
+Bryant Prosecutors Say Some Data Tainted DENVER - Crucial DNA evidence tested by defense experts in the Kobe Bryant sexual assault case might have been contaminated, prosecutors said in a court filing released Wednesday, just two days before jury selection is to begin.    Prosecutors said they had found contamination in DNA "control" samples intended to ensure testing was accurate...
+
+## test:582：Business → Sci/Tech
+
+预测置信度：0.9343
+
+MOM 2005 Released to Manufacturing Microsoft on Wednesday announced the release to manufacturing of Microsoft Operations Manager (MOM) 2005 and MOM 2005 Workgroup Edition, a new edition that the company previously called MOM 2005 Express.
+
+## test:584：World → Sports
+
+预测置信度：0.6120
+
+Jones Advances in Long Jump; Johnson Out ATHENS, Greece - Marion Jones made her Athens debut in virtual anonymity, quietly advancing to the long jump final. Allen Johnson had the attention of everyone in the stadium, for all the wrong reasons...
+
+## test:600：Business → World
+
+预测置信度：0.9999
+
+Belarus Bank Denies Money Laundering Charge A bank in Belarus has denied US charges that it laundered money for former Iraqi leader Saddam Hussein. Infobank, in a statement, said it has strictly followed international agreements related to the fight against illegal transactions.
+
+## test:602：Sci/Tech → Business
+
+预测置信度：0.7411
+
+Global server sales on the rise Sales of server systems rose 7.7 percent globally in the second quarter to \$11.55 billion as demand for Information Technology remained strong after a three year downturn, market research firm Gartner said in a statement.
+
+## test:636：Sci/Tech → Business
+
+预测置信度：0.7146
+
+Report: Intel Logs Big Gains In Flash Market Intel #39;s share of the booming flash market jumped 40.8 percent in the second quarter, according to market-research firm iSuppli Corp.
+
+## test:638：Sports → World
+
+预测置信度：0.5417
+
+McClaren happy with striking duo Middlesbrough boss Steve McClaren believes Mark Viduka and Jimmy Floyd Hasselbaink could forge one of the most dangerous strike partnerships in the Barclays Premiership.
+
+## test:642：Sci/Tech → World
+
+预测置信度：0.5137
+
+U.N. Urges Funds to Curb African Locusts (AP) AP - With swarms of locusts threatening crops in a number of African countries, a U.N. agency appealed for an additional  #36;70 million in assistance Thursday to prevent the upsurge from becoming a full-scale plague.
+
+## test:643：Business → World
+
+预测置信度：0.9993
+
+Nepal blockade 'blow to tourism' Nepal tour operators say tourists cancelled millions of  dollars of bookings due to the rebel blockade of Kathmandu.
+
+## test:654：Sci/Tech → World
+
+预测置信度：0.5408
+
+Olympics: High-Flying Holm Aims to Defy Science (Reuters) Reuters - Sweden's gold medal-winning high\jumper Stefan Holm reckons he can leap even higher but\scientists say he and other athletes were already close to the\limit of what they can achieve.
+
+## test:655：World → Business
+
+预测置信度：0.5944
+
+Japan Won't Have U.S. Beef Anytime Soon (Reuters) Reuters - Japan's lucrative market for U.S.\beef, ruptured by mad cow disease worries, is likely to remain\closed for the rest of this year, U.S. meat industry officials\said on Thursday.
+
+## test:664：Sci/Tech → Business
+
+预测置信度：0.9801
+
+TiVo loss widens SAN FRANCISCO (CBS.MW) - TiVo said its second-quarter loss widened from a year earlier on higher customer acquisition costs. Free!
+
+## test:676：World → Sports
+
+预测置信度：0.9994
+
+US edge out Brazil for gold The United States beat Brazil 2-1 in extra time to win the women's Olympic football tournament.
+
+## test:677：World → Sci/Tech
+
+预测置信度：0.8057
+
+Breast scans 'fail' in some women Some women with breast cancer are less likely to have their tumours picked up by scans, say experts.
+
+## test:680：Sci/Tech → Business
+
+预测置信度：0.6687
+
+Govt. to Test New Air Passenger Screening Program The US government unveiled plans on Thursday for a revised computer-based program using personal information to identify airline passengers who may pose a threat to air travel.
+
+## test:685：Business → Sci/Tech
+
+预测置信度：0.6079
+
+PeopleSoft customers reassured Oracle Corp. President Charles Phillips on Monday said PeopleSoft Inc. customers have become more comfortable with the prospect of a merger between the two software firms even as the proposed transaction awaits a critical ruling from a Delaware court.
+
+## test:687：Business → World
+
+预测置信度：0.7217
+
+Union leaders held under ESMA on Day 6 of strike New Delhi, August 26: The sixth day of the truckers strike on Thursday saw 12 more truckers being arrested under the Essential Services Maintenance Act (ESMA)in the Capital.
+
+## test:707：Business → Sci/Tech
+
+预测置信度：0.2998
+
+Dominicans' Swift Step Into Crisis SANTO DOMINGO, Dominican Republic -- When Sandro Batista smashed his banana truck into a tree in April, leaving him with two hideously shattered legs and a broken arm, his orthopedic surgeon sent his sister shopping.
+
+## test:714：Sports → Business
+
+预测置信度：0.4769
+
+CSKA sponsor rejects criticism RUSSIAN oil giant Sibneft today rejected any suggestion of a conflict of interest existing between Chelsea and CSKA Moscow who are due to meet in the Champions League.
+
+## test:717：Sports → World
+
+预测置信度：0.5831
+
+United States 66, Russia 62 Frustrated by fouls, turnovers and a feisty opponent, the United States desperately looked for help. Then along came Sheryl Swoopes to set things right.
+
+## test:719：World → Business
+
+预测置信度：0.9930
+
+US economic growth slips to 2.8 Annual US economic growth fell to 2.8 in the second quarter of 2004, marking a slowdown from the 3 estimated a month ago.
+
+## test:727：World → Business
+
+预测置信度：0.8899
+
+Japanese Utility Plans IPO in October (AP) AP - Electric Power Development Co., a former state-run utility, said Friday it is planning an initial public offering on the Tokyo Stock Exchange in October, a deal that could be the country's biggest new stock listing in six years.
+
+## test:744：Business → Sci/Tech
+
+预测置信度：0.9505
+
+HP to tempt holiday shoppers with sights and sounds The computer-hardware giant, best known for products such as PCs and printers, on Friday laid out its plan to become a brand-name in consumer electronics products such as flat-screen TVs, music players and the devices that move content between them.
+
+## test:747：World → Sports
+
+预测置信度：1.0000
+
+Argentina Beats U.S. Men's Basketball Team Argentina defeated the United States team of National Basketball Association stars 89-81 here Friday in the Olympic semi-finals, dethroning the three-time defending champions.
+
+## test:762：Business → Sci/Tech
+
+预测置信度：0.9631
+
+Siemens Says Cellphone Flaw May Hurt Users and Its Profit Siemens, the world #39;s fourth-largest maker of mobile phones, said Friday that a software flaw that can create a piercing ring in its newest phone models might hurt earnings in its handset division.
+
+## test:777：Sports → World
+
+预测置信度：0.7025
+
+Hamm flap, Dream Team just wrong ATHENS, Greece -- Look at it this way: At least the US basketball team won #39;t be asked to give back its gold medal. On a day that was Olympic in scope both for its shock value and its intrinsic weirdness, the 
+
+## test:816：Business → Sci/Tech
+
+预测置信度：0.4671
+
+Apology, refund from cruise line In a move almost unheard of in its industry, Norwegian Cruise Line has apologized for service problems during the Pride of Aloha #39;s first two months of sailing around Hawaii, and is refunding a portion of the service charge to everyone who has cruised on 
+
+## test:819：World → Business
+
+预测置信度：0.9426
+
+Terror is below radar in Russia It took 2 days for Russia #39;s security service to announce what virtually everyone else believed from the moment two domestic passenger airlines plunged to earth simultaneously 
+
+## test:833：World → Sports
+
+预测置信度：0.8814
+
+Conn. Man, 70, Oldest to Swim Channel LONDON - A retired Connecticut pilot has become the oldest person to swim the English Channel. George Brunstad, 70, left Dover, England, Saturday morning heading for the French Coast...
+
+## test:835：Business → Sci/Tech
+
+预测置信度：0.6596
+
+US Bells Do Video on Path Blazed by Small Telcos The three largest US local telephone corporations made a splash this summer with plans to sell video services on their voice and data lines in a few years.
+
+## test:839：Sci/Tech → Business
+
+预测置信度：0.9997
+
+Our mobile margins will fall: Telstra TELSTRA chief financial officer John Stanhope has admitted Telstra #39;s margins in its \$4.5 billion a year mobile phone business will shrink this year in the face of increased price competition and the growing cost of acquiring new customers.
+
+## test:855：Sports → Business
+
+预测置信度：0.7263
+
+A  #39;new Greece #39; beams after success of Games As Greeks get a boost, it remains unclear if success will mean higher stature in Europe. By Peter Ford  Staff writer of The Christian Science Monitor.
+
+## test:877：Business → Sci/Tech
+
+预测置信度：0.5899
+
+For Now, Unwired Means Unlisted. That May Change. In October, most major cellphone carriers plan to start compiling a publicly accessible listing of wireless phone numbers.
+
+## test:881：Business → World
+
+预测置信度：0.8490
+
+Scaffold collapse survivors improving One of the men who survived Friday #39;s fatal scaffold collapse is in guarded condition at Detroit Receiving Hospital and the two other survivors were released on Sunday, a hospital spokeswoman said.
+
+## test:887：Business → Sci/Tech
+
+预测置信度：0.9371
+
+On TV -- from the Internet  SAN MATEO, Calif. -- The promise of Internet-based video has long been hamstrung by copyright and piracy worries, slow dial-up connections, technical challenges, and consumer disdain for watching blotchy videos on their home computers.
+
+## test:892：Business → Sci/Tech
+
+预测置信度：0.9886
+
+Intel in new chip breakthrough Intel creates a more powerful memory chip without increasing its size, confounding the firm's critics.
+
+## test:912：Sci/Tech → Sports
+
+预测置信度：0.9994
+
+Bryant Makes First Appearance at Trial (AP) AP - NBA star Kobe Bryant arrived at his sexual assault trial Monday as attorneys in the case who spent the weekend poring over questionnaires prepared to question potential jurors individually.
+
+## test:922：Business → World
+
+预测置信度：0.7478
+
+Stocks Dip on Consumer Income Report News (AP) AP - An unsettling report on consumer incomes set off a spate of profit-taking on Wall Street Monday as investors worried that a tepid economy would erode companies' third-quarter earnings. Another drop in oil prices failed to shake the gloom from the market.
+
+## test:927：Sci/Tech → Business
+
+预测置信度：0.5120
+
+Survey: IT spending to grow modestly next year CIO confidence is up in third quarter, according to Forrester poll.
+
+## test:930：World → Business
+
+预测置信度：0.7522
+
+Iraqi oil exports slump: report NEAR daily attacks on pipelines and pumping stations had pushed down Iraq #39;s oil exports to their lowest point in nearly a year, Britain #39;s Financial Times newspaper reported today.
+
+## test:942：World → Business
+
+预测置信度：0.9197
+
+Japan should outsource more The Japanese information services industry clocked up sales of 13,703.9 billion yen in fiscal 2001, according to a report on selected service industries for 2001 released by the Ministry of Economy, Trade and Industry (METI).
+
+## test:951：Sci/Tech → Sports
+
+预测置信度：0.6710
+
+Hall of Shame   Hall of Fame We spotlight people and products that pester us...and the heroes saving us from annoyances.
+
+## test:967：World → Sports
+
+预测置信度：0.9954
+
+Maddux Wins No. 302, Baker Wins No. 1,000 Greg Maddux pitched the Chicago Cubs into the lead in the NL wild-card race and gave Dusty Baker a win to remember. Maddux threw seven shutout innings for his 302nd career win, Baker got his 1,000th victory as a manager and Chicago beat the Montreal Expos 5-2 on Monday night...
+
+## test:1011：Sci/Tech → World
+
+预测置信度：0.7409
+
+China's Lenovo in talks with 'major IT firm' for acquisition (AFP) AFP - China's largest manufacturer of personal computers Lenovo Group said it is in negotiations with a major information technology company, believed to be US-based IBM.
+
+## test:1017：World → Sci/Tech
+
+预测置信度：0.7346
+
+Paris Tourists Search for Key to 'Da Vinci Code' (Reuters) Reuters - A funny thing happened on the way to the\Mona Lisa. Visitors to the Louvre museum in Paris, home of the\world's most famous painting, started quizzing tour guides\about Dan Brown's best-selling novel "The Da Vinci Code."
+
+## test:1019：Sci/Tech → World
+
+预测置信度：0.9775
+
+China Reports Births of Two Giant Pandas (AP) AP - For pandas, it's practically a baby boom. Two giant pandas were born this week, and mothers and cubs were doing fine, the official Xinhua News Agency reported Wednesday.
+
+## test:1042：Sci/Tech → Business
+
+预测置信度：0.5996
+
+Make hotels just like home HOTEL operators, take note: Todays hotel guests are making a nonsense of room-pricing strategies with their aggressive, Internet-aided discount-hunting.
+
+## test:1043：Sci/Tech → World
+
+预测置信度：0.5321
+
+Strong Hurricane Roars Over Bahamas Toward Florida (Reuters) Reuters - Hurricane Frances battered the\southeastern Bahamas islands with 140 mph winds on Wednesday as\it roared toward the United States and put millions of people\on alert along Florida's heavily populated east coast.
+
+## test:1051：Business → Sci/Tech
+
+预测置信度：0.9993
+
+Software Service Aims to Outfox Caller ID A new computerized service enables customers to create phony outbound phone numbers in order to mask their telephone identities.
+
+## test:1062：Business → Sci/Tech
+
+预测置信度：0.8895
+
+Red Hat replaces CFO Red Hat on Thursday named Charles Peters Jr. as executive vice president and chief financial officer. Peters replaces Kevin Thompson, who unexpectedly announced his resignation in June, a few days before the 
+
+## test:1074：Sci/Tech → Business
+
+预测置信度：0.7997
+
+Appeals court faults Oracle in shareholder suit Judges send case back to lower court to sort out allegations of improper bookkeeping and "suspicious" stock sales.
+
+## test:1080：World → Sports
+
+预测置信度：0.9473
+
+Davenport Advances at U.S. Open NEW YORK - Lindsay Davenport's summer of success stayed on course Thursday when the fifth-seeded former U.S. Open champion defeated Arantxa Parra Santonja 6-4, 6-2 and advanced to the third round of the season's final Grand Slam event...
+
+## test:1084：Business → World
+
+预测置信度：0.8418
+
+Megawati kicks off 36th ASEAN economic meeting JAKARTA (Agencies): President Megawati Soekarnoputri opened high-level economic talks between members of the Association of Southeast Asian Nations (ASEAN) on Friday with a warning to ASEAN leaders that they must stay the course on their agreed 
+
+## test:1087：Sci/Tech → Business
+
+预测置信度：0.9688
+
+Semiconductor Manufacturing to Boost Capacity by Half (Update2) Semiconductor Manufacturing International Corp., China #39;s biggest supplier of made-to-order chips, said its factory capacity will rise by more than half in the second half as the company brings more plants on line.
+
+## test:1098：Sci/Tech → Sports
+
+预测置信度：0.9919
+
+The Bahamas - the real medal winner of the Athens Olympics A different way of calculating the medal standings brings some interesting results.
+
+## test:1101：Business → Sci/Tech
+
+预测置信度：0.7787
+
+Del Monte Needs 9Lives The leading private and branded food and pet products marketer is spending to revamp its image.
+
+## test:1110：Business → World
+
+预测置信度：0.9914
+
+EU foreign ministers hope to break deadlock over ASEM summit The European Union said Friday it  quot;hoped to reach a conclusion quot; at a meeting of foreign ministers on the participation of military-ruled Myanmar in an upcoming summit of Asian and European nations.
+
+## test:1124：Business → Sci/Tech
+
+预测置信度：0.8891
+
+Judge: Geico can sue Google, Overture over ads A federal judge in Virginia has ruled that a trademark infringement suit filed by the Government Employees Insurance Co. (GEICO) against Internet search giants Google Inc. and Overture Services Inc. can proceed.
+
+## test:1168：World → Business
+
+预测置信度：0.7593
+
+ASEAN moves closer to single market with  #39;road map #39;, global trade &lt;b&gt;...&lt;/b&gt; JAKARTA : ASEAN finance ministers ended a meeting which saw Southeast Asia edge closer to a Europe-style single market, laying out a  quot;road map quot; for integration and opening doors to wider global trade.
+
+## test:1183：Sci/Tech → Business
+
+预测置信度：0.7365
+
+Global sales of mobile phones hit record levels PARIS Global cellphone sales rose to record levels in the second quarter as Nokia clawed back some of its lost market share, according to figures released Thursday.
+
+## test:1197：Business → World
+
+预测置信度：0.9590
+
+World briefs LONDON - A man wielding a machete and a knife attacked two security guards at the building housing the headquarters of the British domestic intelligence service MI5 on Friday, police said.
+
+## test:1204：Business → World
+
+预测置信度：0.6239
+
+Labor situation deserves honest talk For a moment last week, President Bush escaped the White House spin chamber and was the plainspoken man much of the nation came to like four years ago.
+
+## test:1269：Sci/Tech → World
+
+预测置信度：0.9984
+
+Philippines mourns dead in Russian school siege The Philippines Saturday expressed quot;deepest sympathy quot; to the families of the dead in the Russian school siege on Friday, in which 322 people were killed when Russian troops stormed 
+
+## test:1292：Sci/Tech → Business
+
+预测置信度：0.6588
+
+Working Long Hours? Take a Massage Break, Courtesy of Your Boss Companies across the country are offering yoga and meditation classes to help employees relax, reduce stress and recharge.
+
+## test:1296：Business → World
+
+预测置信度：0.8961
+
+Israel to close Erez industrial zone before March Israel would start liquidating the Erez industrial zone in the northern Gaza Strip before launching the first stage of the disengagement plan in March 2005,local newspaper Ha #39;aretz reported on Tuesday.
+
+## test:1307：Sci/Tech → World
+
+预测置信度：0.8822
+
+Tribe challenges American origins Some of the earliest settlers of America may have been from Australia, southern Asia, and the Pacific, not northern Asia, research suggests.
+
+## test:1317：Sports → World
+
+预测置信度：0.7601
+
+Florida deaths blamed on Hurricane Frances State and local officials Tuesday said nine people have died in Florida because of Hurricane Frances. The following describes those deaths: - A 15-year-old grandson and a former son 
+
+## test:1326：Sci/Tech → Business
+
+预测置信度：0.8742
+
+Lexmark recalls 40,000 printers Lexmark International Inc. recalled 39,431 printers from the market on Tuesday, according to a statement by Consumer Product Safety Commission.
+
+## test:1340：Sports → Business
+
+预测置信度：0.6662
+
+Study: Athletic success doesn #39;t pay off in donations Success in big-time sports has little, if any, effect on a college #39;s alumni donations or the academic quality of its applicants, according to a study made under the direction of the Knight Commission on Intercollegiate Athletics.
+
+## test:1343：Sci/Tech → Business
+
+预测置信度：0.8425
+
+Matsushita Unveils DVD Recorders, Eyes Higher Share  TOKYO (Reuters) - Panasonic brand products maker Matsushita  Electric Industrial unveiled five new DVD recorders on  Wednesday and said it was aiming to boost its share of the  domestic market to over 40 percent from around 35 percent.
+
+## test:1361：Business → Sci/Tech
+
+预测置信度：0.7549
+
+Movies in a snap: Netflix and TiVo discuss downloads Bee Staff Writer. The high-tech ground is shifting underfoot again, amid rumblings of a new Silicon Valley alliance that would let owners of TiVo Inc.
+
+## test:1364：Sci/Tech → Business
+
+预测置信度：0.9408
+
+Hyundai signs deal for China truck plant Hyundai Motor Co. said yesterday that it has signed an agreement with a Chinese company, Jianghuai Automobile Corp., to build a commercial vehicle and engine plant in China #39;s Anhui province.
+
+## test:1377：Sci/Tech → World
+
+预测置信度：0.9060
+
+Groups Offers Beer for Blood Donations (AP) AP - Some in Michigan who roll up their sleeves to donate blood will get a racetrack T-shirt, hat and pin. Sponsors in San Diego have given away whale-watching trips. On Wednesday, the Cleveland Regional Transit Authority handed out vouchers for a pint of any beverage, including beer, in exchange for a pint of blood.
+
+## test:1388：Business → Sci/Tech
+
+预测置信度：0.5399
+
+Ex-WorldCom CEO Wants Witness Immunity (Reuters) Reuters - Lawyers for former WorldCom  Chief\Executive Bernard Ebbers are seeking immunity for two witnesses\who they believe could clear their client of fraud charges\related to the company's  #36;11 billion accounting scandal,\according to court papers filed on Wednesday.
+
+## test:1411：Business → World
+
+预测置信度：0.5528
+
+Stocks Higher on Drop in Jobless Claims A sharp drop in initial unemployment claims and bullish forecasts from Nokia and Texas Instruments sent stocks slightly higher in early trading Thursday.
+
+## test:1416：Business → World
+
+预测置信度：0.4500
+
+Stocks Higher on Drop in Jobless Claims A sharp drop in initial unemployment claims and bullish forecasts from Nokia and Texas Instruments sent stocks higher in early trading Thursday.
+
+## test:1421：World → Sci/Tech
+
+预测置信度：0.5502
+
+Groups Petition U.S. on China Policies (AP) AP - A group of industry, farm and labor groups, seeking to put pressure on the Bush administration before the presidential election, petitioned the government on Thursday to file an unfair trade practices case against China.
+
+## test:1447：Sci/Tech → Business
+
+预测置信度：0.8195
+
+Florida Starts To Recover in the Wake of Hurricane Frances President Bush will travel to Florida Wednesday to survey damage from Hurricane Frances. He sent a letter to Congress asking for \$2 billion to help with recovery efforts.
+
+## test:1466：World → Sports
+
+预测置信度：0.9433
+
+Colts Lead Pats Early in Third Quarter FOXBORO, Mass. - Peyton Manning reached the 25,000-yard passing mark faster than anyone but Dan Marino, and the Indianapolis Colts shredded the New England Patriots for a 17-13 halftime lead Thursday night...
+
+## test:1477：World → Business
+
+预测置信度：0.7004
+
+Grenada In Crisis - Friday 10, September-2004 DESPAIR is setting in among the 80 000 homeless Grenadians who, ravaged and traumatised by the damage done to them by Hurricane Ivan, exist each day with no food, no water and no hope.
+
+## test:1494：World → Sci/Tech
+
+预测置信度：0.9720
+
+Telescope snaps distant 'planet' The first direct image of a planet circling another star may have been obtained by a US-European team of astronomers.
+
+## test:1515：Sports → World
+
+预测置信度：0.5628
+
+ESPN Soccernet.com news services CARSON, Calif. -- The Los Angeles Galaxy signed forward Alan Gordon on loan from the Portland Timbers of the A-League on Friday. A Galaxy selection in the 2004 MLS SuperDraft, the club will have the option 
+
+## test:1527：Business → Sci/Tech
+
+预测置信度：0.6631
+
+Storms Seem to Cure Floridians of Hurricane Amnesia The state #39;s East Coast hadn #39;t been hit by a hurricane since 1999. That, and the fact that Florida hasn #39;t had its historic share of such storms in recent decades, has led to some complacency about their effects.
+
+## test:1531：Business → World
+
+预测置信度：0.8120
+
+Stocks in a rut According to the FTSE World Index Japan has been best performer of the major markets with a 6 per cent rise in dollar terms while Germany, down 7.7 per cent, was the worst.
+
+## test:1533：World → Sports
+
+预测置信度：0.8622
+
+Collingwood anchors England (AFP) AFP - Paul Collingwood's unbeaten 80 took England to 299 for seven against Zimbabwe in their opening Champions Trophy Pool D match at Edgbaston here.
+
+## test:1541：Sci/Tech → Sports
+
+预测置信度：0.4357
+
+Tough to predict a hurricane landfall this season #39;s busy season of landfalling Atlantic hurricanes has seen a few less-than-perfect calls by tropical 
+
+## test:1548：Business → World
+
+预测置信度：0.9124
+
+Post-Olympic Greece tightens purse, sells family silver to fill budget holes (AFP) AFP - Squeezed by a swelling public deficit and debt following last month's costly Athens Olympics, the Greek government said it would cut defence spending and boost revenue by 1.5 billion euros (1.84 billion dollars) in privatisation receipts.
+
+## test:1552：Business → Sci/Tech
+
+预测置信度：0.8840
+
+Restoring an Original At Charles Schwab, executives plan a return to the firm's original mission of serving mom-and-pop, buy-and-hold investors.
+
+## test:1594：Sports → World
+
+预测置信度：0.6584
+
+Carpentier regains focus for win MONTEREY, Calif. -- As Patrick Carpentier cruised toward his second straight dominating victory at Mazda Raceway Laguna Seca, he let his mind wander.
+
+## test:1599：World → Sports
+
+预测置信度：0.7106
+
+Two gored to death in Spanish bull-run Two Spanish men were gored to death by fighting bulls yesterday during the bull-run at the local fiestas in Ampuero, a town 30 miles east of the northern port city of Santander.
+
+## test:1603：Business → Sci/Tech
+
+预测置信度：0.9793
+
+Let a Thousand Ideas Flower: China Is a New Hotbed of Research In recent years, hundreds of multinational companies have set up research laboratories in China.
+
+## test:1612：Business → Sci/Tech
+
+预测置信度：0.6232
+
+Microsoft vs Sendo: It #39;s over The legal battle between UK phone manufacturer Sendo and Microsoft has been settled, the companies announced on Monday morning. Sendo had been suing Microsoft for the alleged theft of trade secrets, fraud 
+
+## test:1617：World → Sports
+
+预测置信度：0.7853
+
+At Last, Success on the Road for Lions The Detroit Lions went three full seasons without winning an away game, setting an NFL record for road futility. They ended that ignominious streak Sunday in their first opportunity of the season, beating the Chicago Bears 20-16 at Soldier Field...
+
+## test:1632：Sci/Tech → Sports
+
+预测置信度：0.6289
+
+Meditation Practice Helping Arthritis Patients By ALEX DOMINGUEZ    BALTIMORE (AP) -- Dalia Isicoff knows pain. A lifelong sufferer of rheumatoid arthritis, she has had seven hip replacement surgeries...
+
+## test:1658：World → Sci/Tech
+
+预测置信度：0.7619
+
+FDA Approves Lens Implant to Sharpen Sight WASHINGTON - There's a new option for people who suffer from extreme nearsightedness, whose world loses its crisp edge just a few inches from their noses. The first implantable lens for nearsightedness was approved Monday by the Food and Drug Administration...
+
+## test:1662：Business → World
+
+预测置信度：0.8514
+
+Sony-Led Group to Acquire MGM for \$3B LOS ANGELES Sept. 13, 2004 - A consortium led by Sony Corp. has agreed in principle to acquire famed Hollywood studio Metro-Goldwyn-Mayer Inc.
+
+## test:1668：Business → World
+
+预测置信度：0.9403
+
+EU increases pressure for rights in Myanmar EU foreign ministers agreed Monday to tighten sanctions against Myanmar if it does not improve its human rights record by Oct. 8, when an EU meeting with Asian countries starts in Vietnam.
+
+## test:1688：Sci/Tech → Business
+
+预测置信度：0.5371
+
+Help wanted by IT services firms The growing services industry is hiring, but tech workers looking for a job may need to do more than brush up on their coding.
+
+## test:1689：Sci/Tech → Business
+
+预测置信度：0.9868
+
+Sun trims fourth-quarter earnings by \$12 million Sun Microsystems Inc. trimmed its fourth quarter and full-year 2004 results this week, to account for final accounting of asset retirement obligations and its settlement with Microsoft Corp.
+
+## test:1691：World → Business
+
+预测置信度：0.9555
+
+German investor confidence slumped in September BERLIN - German investor confidence dropped sharply in September, a key economic indicator released Tuesday showed amid concerns about the impact of high oil prices on consumer demand and the outlook for the global economy.
+
+## test:1712：Sports → Business
+
+预测置信度：0.5969
+
+Tyncastle sale gets official go ahead Of the votes received by proxy and from shareholders in the room at a stormy extraordinary general meeting last night, 62.5 were in favour of the resolution.
+
+## test:1713：Business → Sci/Tech
+
+预测置信度：0.7808
+
+IBM, LG Electronics to End Joint Venture International Business Machines Corp. and LG Electronics Inc. will end an eight-year alliance that helped expand the US computer maker #39;s presence in the booming South Korean PC market.
+
+## test:1742：World → Sci/Tech
+
+预测置信度：0.8067
+
+LETTER FROM EUROPE The All-Too-Human Hitler, on Your Big Screen The release of a major movie about Hitler is, by definition, a remarkable event in Germany, especially if it portrays one of history #39;s great monsters as a human being, given 
+
+## test:1743：Sci/Tech → Business
+
+预测置信度：0.9119
+
+Sony Set to Exert Influence on Discs As the leader of the group that plans to buy Metro-Goldwyn-Mayer, Sony is poised to gain considerable power in its fight to set the format for the next generation of digital video discs.
+
+## test:1755：World → Sci/Tech
+
+预测置信度：0.9229
+
+Same-sex divorce rules still hazy Now that an Ontario couple has been given Canada #39;s first same-sex divorce, experts are divided over just how easy it will be for gays and lesbians in other provinces to end their marriages.
+
+## test:1770：Business → Sci/Tech
+
+预测置信度：0.6984
+
+Study: 400K Fewer Tech Jobs Since 2001 The US information tech sector lost 403,300 jobs between March 2001 and this past April, and the market for tech workers remains bleak, according to a new report.
+
+## test:1774：Sci/Tech → Business
+
+预测置信度：0.6450
+
+Slowing population 'lacks funds' Rich countries are giving only half the amount they promised to help to slow world population growth, the UN says.
+
+## test:1781：Sci/Tech → World
+
+预测置信度：0.9998
+
+'Cities in crisis' leaders warn World leaders warn that rapid urbanisation will become one of the biggest challenges of the 21st Century.
+
+## test:1790：Business → Sci/Tech
+
+预测置信度：0.9697
+
+HP Wins Defense Contract HP (Quote, Chart) was awarded a \$290 million, 10-year outsourcing contract with the Defense Logistics Agency #39;s (DLA) Enterprise Data Center (EDC) program, officials announced Wednesday.
+
+## test:1791：World → Sci/Tech
+
+预测置信度：0.4217
+
+World Population to Rise to 8.9 Billion Although world families are getting smaller in many regions, the 50 poorest countries are expected to triple in size to 1.7 billion people by 2050, posing many challenges for world countries.
+
+## test:1798：Sports → Sci/Tech
+
+预测置信度：0.2949
+
+GM Plans to Use Woods More Creatively (AP) AP - General Motors Corp. is thrilled that Tiger Woods will promote Buick for the next five years, but GM chairman Rick Wagoner says the automaker could make better use of the world's best-known golfer.
+
+## test:1823：Business → Sci/Tech
+
+预测置信度：0.9918
+
+Infineon to Pay a Fine in the Fixing Of Chip Prices Federal prosecutors announced on Wednesday that they had cracked a global cartel that had illegally fixed prices of memory chips in personal computers and servers for 
+
+## test:1835：World → Sci/Tech
+
+预测置信度：0.8277
+
+Mexico Migrant Smugglers Turning to Sea (AP) AP - Migrant smugglers are skirting heightened security along the border by using small boats to shuttle people from the under-supervised Baja coast into Southern California marinas and harbors, already jammed with legal commercial ships and pleasure boat traffic.
+
+## test:1840：Sports → Business
+
+预测置信度：0.6453
+
+Icing call Out of money, out of patience, out of time, and for the foreseeable future, out of business.
+
+## test:1845：Business → Sci/Tech
+
+预测置信度：0.6548
+
+Infineon admits conspiracy in DRAM cartel GIANT MEMORY company Infineon will plead guilty to price fixing of DRAM chips and will pay \$160 million in fines to the US government.
+
+## test:1893：Sci/Tech → Business
+
+预测置信度：0.7442
+
+Texas Instruments Plans Buyback (Reuters) Reuters - Texas Instruments Inc., the\largest maker of chips for cellular phones, on Thursday said it\plans to buy back  #36;1 billion in stock and boost its quarterly\dividend by more than 17 percent, becoming the latest\technology company to return extra cash to investors.
+
+## test:1897：Business → Sci/Tech
+
+预测置信度：0.5024
+
+Airbus denies backing Microsoft in EU case Aircraft maker Airbus insisted on Thursday it had no intention of taking sides in a Microsoft antitrust case, even though it filed a brief in an EU court on the software giant #39;s side.
+
+## test:1899：Sci/Tech → Business
+
+预测置信度：0.5169
+
+-Posted by dave.rosenberg  1:51 pm (PDT) In what seems to be one of the more bizarre and confusing aspects of the unholy alliance between Sun and Microsoft, Sun #39;s recent 10k filingincludes previously unseen legalese from the settlement agreement.
+
+## test:1909：World → Sci/Tech
+
+预测置信度：0.5635
+
+Parliament Invasion Spurs Security Concern (AP) AP - Silver buckled shoes, stockings and a ceremonial sword? Time, some say, for Parliament's archaic security measures to be dragged into the 21st century after what was called the worst security breach at the House of Commons since 1642.
+
+## test:1961：Business → Sci/Tech
+
+预测置信度：0.5898
+
+Boxer Begs Bush to Back Bum Bill Members of California's congressional team make one last effort to look good for the tech industry back home.
+
+## test:1974：Business → Sports
+
+预测置信度：0.4228
+
+Pen can pick some bike U-locks That U-shaped bike lock that you thought was so secure may be easy pickings for thieves who have nothing more sophisticated than a Bic pen.
+
+## test:1976：World → Sports
+
+预测置信度：0.9796
+
+Show lights up Paralympics The XII Paralympics begins in Athens, after a spectacular opening ceremony.
+
+## test:2028：World → Sports
+
+预测置信度：0.7267
+
+Ryder Cup: Europe close on victory Another good day at Oakland Hills sees Europe move 11-5 clear of the USA going into Sunday's Ryder Cup singles.
+
+## test:2032：Sports → World
+
+预测置信度：0.6198
+
+Europe Puts U.S. in Big Hole at Ryder Cup (AP) AP - Backed by the clutch performance from its English rookies and reliable play from Sergio Garcia and Lee Westwood, Europe put the United States in another huge hole Saturday by taking an 11-5 lead at the Ryder Cup and making victory Sunday seem like a mere formality.
+
+## test:2036：Sports → Business
+
+预测置信度：0.7687
+
+Pitchers finally getting job done? At least it #39;s a start This is a mirage or a sight to behold. This is something you can #39;t trust with your own eyes, or maybe what you #39;re watching is real.
+
+## test:2046：Business → World
+
+预测置信度：0.7314
+
+Malls setting curfews for unchaperoned teens COLUMBUS, Ohio -- It's 10 on a Friday night, and all 15-year-old Sylvia Fallon wants is to hang out with her friends at the mall.
+
+## test:2053：World → Business
+
+预测置信度：0.9750
+
+EU transport chief hails Alitalia accord (AFP) AFP - EU transport and energy commissioner Loyola de Palacio hailed the accord reached between Alitalia management and staff on a major restructuring plan aimed at keeping the struggling airline in the air.
+
+## test:2062：Business → Sci/Tech
+
+预测置信度：0.9985
+
+VoIP becomes new option Jackson is one of the first to take advantage of Time Warner Cable #39;s new venture into Voice over Internet Provider (VoIP) telephone service here and she says it works great.
+
+## test:2094：Sci/Tech → World
+
+预测置信度：0.8980
+
+The battle for DR Congo's wildlife As donors pledge \$40m to save DR Congo's wildlife, life in Virunga Park remains a battle ground.
+
+## test:2101：Sci/Tech → World
+
+预测置信度：0.4800
+
+'Cure' a 4-Letter Word for Cancer Doctors At a time when more people are cured of cancer than ever before, fewer doctors seem willing to say so. They call the cancer undetectable, or in remission. They tell patients they can quit seeing cancer specialists. They quote statistics and say chances are slim that the disease will come back.
+
+## test:2105：World → Business
+
+预测置信度：0.9188
+
+Malaysia expects to resume poultry exports to Singapore soon By Channel NewsAsia #39;s Malaysia Correspondent Melissa Goh. KUALA LUMPUR : Malaysia expects to resume export of poultry and eggs from two states to Singapore by the end of this month but only after meeting conditions set by the island.
+
+## test:2115：Sci/Tech → Business
+
+预测置信度：0.6440
+
+Viruses keep on growing Most IT Managers won #39;t question the importance of security, but this priority has been sliding between the third and fourth most important focus for companies.
+
+## test:2120：Business → Sci/Tech
+
+预测置信度：0.9878
+
+Rogers Wireless Whistles and Fido Responds Its official. Microcell Telecommunications Fido wireless service will be the new dog in Rogers Wireless Communications Canadian kennel, and that puppy wasnt cheap.
+
+## test:2122：Sci/Tech → Business
+
+预测置信度：0.9685
+
+Hyperion targets broader base New Essbase 7X is intended to draw customers beyond Hyperion's usual corporate-finance crowd.
+
+## test:2124：Business → Sci/Tech
+
+预测置信度：0.6900
+
+AOL pushes into Internet shopping Looking for new ways to boost its revenue, America Online is launching an online shopping service that won #39;t require an AOL account to access.
+
+## test:2126：Sci/Tech → World
+
+预测置信度：0.9874
+
+Bush Scraps Most U.S. Sanctions on Libya (Reuters) Reuters - President Bush on Monday formally\ended the U.S. trade embargo on Libya to reward it for giving\up weapons of mass destruction but left in place U.S.\terrorism-related sanctions.
+
+## test:2138：Sci/Tech → World
+
+预测置信度：0.7061
+
+Study: Wrecks Jump 3 Days After Terrorism Fatal traffic accidents increase sharply in Israel on the third day after a terrorist attack, and researchers are searching for an explanation why.
+
+## test:2145：Sci/Tech → Business
+
+预测置信度：0.6255
+
+A  #39;Plan B #39; for PeopleSoft customers com September 20, 2004, 6:13 PM PT. This fourth priority #39;s main focus has been improving or obtaining CRM and ERP software for the past year and a half.
+
+## test:2168：Business → Sci/Tech
+
+预测置信度：0.9846
+
+Clouds darken PeopleSoft conference SAN FRANCISCO -- PeopleSoft Inc. is trying to create a party-like atmosphere at its annual customer conference, but this week's gathering may feel more like a wake with rival Oracle Corp.'s \$7.7 billion takeover bid looming larger than ever.
+
+## test:2169：Business → Sci/Tech
+
+预测置信度：0.9996
+
+Ask Jeeves retools search engine in bid to catch Google, Yahoo SAN FRANCISCO -- Hoping to emerge from the shadow of its more popular rivals, Ask Jeeves Inc. is adding new tools for visitors to save and organize links to Web pages they find through the company's online search engine.
+
+## test:2173：World → Sports
+
+预测置信度：0.7420
+
+India seeks new TV bids The Indian Board re-opens the bidding for TV rights after Australian threaten to cancel their tour.
+
+## test:2186：Business → Sci/Tech
+
+预测置信度：0.8885
+
+Jolly Online Shoppers Making Cash Registers Jingle Online holiday shoppers this year are making cash registers jingle and meeting analysts #39; expectations as they spent \$8.8 billion in November, researchers said Monday.
+
+## test:2191：Sci/Tech → World
+
+预测置信度：0.9406
+
+Noah's Ark Quest Dead in Water -- Was It a Stunt? In April a Christian activist announced a summer 2004 expedition to search for Noah's ark. The quest didn't happen, and now critics are questioning the project's credibility.
+
+## test:2207：Business → Sci/Tech
+
+预测置信度：0.9724
+
+PeopleSoft CEO Conway maintains defiant tone SEPTEMBER 21, 2004 (IDG NEWS SERVICE) - With 15,000 attendees at PeopleSoft Inc. #39;s Connect 2004 user show waiting to hear how the company would handle Oracle Corp.
+
+## test:2219：World → Sci/Tech
+
+预测置信度：0.9884
+
+Senate Panel Gives NASA Extra Money (AP) AP - NASA would get  #36;16.4 billion next year under a bill a Senate committee approved Tuesday, reversing a decision by House lawmakers to cut the space agency's budget below this year's levels.
+
+## test:2221：Sports → World
+
+预测置信度：0.5646
+
+Giants Give Up Right to Void Bonds' Deal (AP) AP - Barry Bonds will have two more seasons to break Hank Aaron's career home run record with the San Francisco Giants, who decided Tuesday to drop their right to void the final year of his contract.
+
+## test:2233：Business → Sci/Tech
+
+预测置信度：0.5904
+
+Guilty Plea Seen in Computer Associates Case Steven Woghin, the former general counsel of Computer Associates, will plead guilty to criminal charges.
+
+## test:2234：Business → World
+
+预测置信度：0.7568
+
+Spread of GM grass raises fears of crossbreeding Pollen from a genetically modified grass was found 21 kilometres from where it was planted, scientists reported in a study published Tuesday, raising fears of transgenic crossbreeding.
+
+## test:2247：World → Business
+
+预测置信度：0.6498
+
+Asia to outperform this year, lower growth seen in 2005: ADB (AFP) AFP - Developing Asia is set to outperform this year with higher-than-expected growth of 7.0 percent despite high oil prices but it will slow in 2005 in tandem with the developed world, the Asian Development Bank (ADB) said.
+
+## test:2283：Sci/Tech → Business
+
+预测置信度：0.6935
+
+Toyota: Some security firms promise too much If "it sounds like you are being offered a panacea, then it's time to change the conversation," says an exec for the firm.
+
+## test:2285：Sci/Tech → Business
+
+预测置信度：0.7144
+
+Mobile boom draws telecom manufacturing to India BANGALORE, INDIA - An anticipated boom in mobile telephony use in India is attracting multinational and local companies to establish manufacturing operations in the country.
+
+## test:2295：Sports → World
+
+预测置信度：0.5026
+
+CBS Fined  #36;550,000 for Jackson Stunt (AP) AP - CBS got the bill Wednesday for Janet Jackson's eye-catching flash dance during the Super Bowl halftime show: a record  #36;550,000.
+
+## test:2296：Business → Sci/Tech
+
+预测置信度：0.5875
+
+PeopleSofts big bash See you next year in Las Vegas , proclaimed a marquee at the PeopleSoft user conference in San Francisco in late September. It was one of many not-so-subtle attempts by the company to reassure its customers 
+
+## test:2306：World → Business
+
+预测置信度：0.7492
+
+Deal in Congress to Keep Tax Cuts, Widening Deficit Republican and Democratic leaders agreed to extend \$150 billion worth of tax cuts sought by President Bush without trying to pay for them.
+
+## test:2333：Business → Sci/Tech
+
+预测置信度：0.9705
+
+Rumours surround Google browser The search giant Google is rumoured to be working on its own web browser.
+
+## test:2343：Business → Sci/Tech
+
+预测置信度：0.6782
+
+PeopleSoft Plays Defense The business software maker inks a deal with IBM, but it isn't likely to dissuade Oracle.
+
+## test:2357：Sports → World
+
+预测置信度：0.5564
+
+Mass. court denies new trial for convict BOSTON -- The state appeals court on Thursday declined to allow a new trial for a father convicted of beating a man to death at their sons #39; hockey practice.
+
+## test:2379：Sci/Tech → Business
+
+预测置信度：0.5250
+
+BLOG That #39;s the most look-ed up world on Merriam-Webster #39;s &lt;b&gt;...&lt;/b&gt; A FOUR-LETTER term that came to symbolise the difference between old and new media tops US dictionary publisher Merriam-Webster #39;s list of the 10 words of the year.
+
+## test:2397：Sci/Tech → World
+
+预测置信度：0.5712
+
+Islands press Govt to reverse phone call decision Diplomats from a number of islands in the South Pacific are reported to be pressing the Government to reverse a decision to block all phone calls made to the islands.
+
+## test:2400：World → Sci/Tech
+
+预测置信度：0.6894
+
+Dogs said to smell cancer signs  LONDON -- It has long been suspected that man's best friend has a special ability to sense when something is wrong with us. Now, the first experiment to verify that scientifically has demonstrated that dogs are able to smell cancer.
+
+## test:2417：Sci/Tech → World
+
+预测置信度：0.6049
+
+Baby for ovary transplant woman A Belgian cancer patient made infertile by chemotherapy has given birth following revolutionary treatment.
+
+## test:2427：Business → World
+
+预测置信度：0.6075
+
+Strikes at London airports London - A 48-hour strike by aircraft refuellers at London Heathrow airport got under way on Friday, with baggage handlers at Gatwick airport also preparing to walk out, threatening a weekend of travel disruptions.
+
+## test:2428：Sci/Tech → World
+
+预测置信度：0.8597
+
+Security firm justifies virus writer's job SecurePoint says the alleged Sasser author was "just an immature boy with mindless intent" who wants to make amends.
+
+## test:2435：Sci/Tech → Business
+
+预测置信度：0.8144
+
+Airbus drops out of Microsoft appeal Aircraft builder withdraws its request to intervene in Microsoft's antitrust appeal; Boeing also forgoes intervention.
+
+## test:2438：Sci/Tech → World
+
+预测置信度：0.8303
+
+Mom Hugs 'Miracle' Baby After Ovarian Transplant (Reuters) Reuters - Ouarda Touirat, her day-old baby\daughter nestling in her arms, said Friday she had never lost\hope that she could conceive after cancer treatment left her\infertile.
+
+## test:2442：Sports → World
+
+预测置信度：0.8835
+
+Calvin Murphy removed as Rockets broadcaster Murphy will go to trial Nov. 4 on charges he molested his daughters, a state district judge said Tuesday. Murphy is charged with three counts of indecency with a child and three counts of aggravated sexual assault, punishable by up to life in prison.
+
+## test:2443：World → Business
+
+预测置信度：0.7456
+
+Bush, Kerry Economic Budgets Exceed \$1T WASHINGTON - President Bush and Democratic Sen. John Kerry have starkly different economic priorities with a common thread: price tags exceeding \$1 trillion that could pump already huge deficits skyward over the next decade...
+
+## test:2446：Sci/Tech → World
+
+预测置信度：0.8462
+
+Locusts Encroach on West African Rice-Growing Area (Reuters) Reuters - West Africa's worst locust plague for 15\years has encroached on one of the region's largest\rice-growing areas, authorities in Mali said on Friday.
+
+## test:2449：World → Sci/Tech
+
+预测置信度：0.3780
+
+Calif. OKs World's Toughest Smog Rules LOS ANGELES - California air regulators Friday unanimously approved the world's most stringent rules to reduce auto emissions that contribute to global warming - a move that could affect car and truck buyers from coast to coast.    Under the regulations, the auto industry must cut exhaust from cars and light trucks by 25 percent and from larger trucks and sport utility vehicles by 18 percent...
+
+## test:2451：Business → Sci/Tech
+
+预测置信度：0.9392
+
+CA, Partners Move On As Kumar Faces Charges Concern over the fate of former Computer Associates International chairman and CEO Sanjay Kumar accompanied the collective sigh of relief felt by CA partners last week when federal prosecutors settled a two-year-old accounting fraud investigation with the 
+
+## test:2468：World → Sports
+
+预测置信度：0.9817
+
+Dodgers Nip Giants 3-2 in Crucial Series SAN FRANCISCO - Shawn Green can sit out Saturday knowing he was a huge help to the Dodgers during their crucial series against San Francisco. Green hit a two-run homer in Los Angeles' 3-2 victory over the Giants on Friday night, a day before the first baseman will miss a game to observe the Jewish holiday Yom Kippur...
+
+## test:2491：World → Sci/Tech
+
+预测置信度：0.9893
+
+Men, Women More Different Than Thought CHICAGO - Beyond the tired cliches and sperm-and-egg basics taught in grade school science class, researchers are discovering that men and women are even more different than anyone realized.    It turns out that major illnesses like heart disease and lung cancer are influenced by gender and that perhaps treatments for women ought to be slightly different from the approach used for men...
+
+## test:2496：Sports → Business
+
+预测置信度：0.5465
+
+Robby Gordon Planning to Proceed With Caution Robby Gordon plans to join the oil spills, the tire chunks, the sharp pieces of debris and the other typical racetrack hazards on Sunday.
+
+## test:2502：Sports → World
+
+预测置信度：0.9754
+
+Cricket swings to Calypso once again From the time you touch down in the British Isles, you get an overwhelming sense of grey. The skies are almost always leaden, the clothes people wear are generally either black or neutral shades guaranteed 
+
+## test:2521：Sci/Tech → World
+
+预测置信度：0.9416
+
+Soldiers' War Blogs Detail Life in Iraq Iraq war blogs are as varied as the soldiers who write them. Some sites feature practical news, war pictures and advice. Some are overtly political, with more slanting to the right than to the left. Some question the war, some cheer it.
+
+## test:2545：Business → Sci/Tech
+
+预测置信度：0.5431
+
+Bill Gates is the richest for 11 years successively Bill Gates, the founder of Microsoft, still remains the richest person in the USA, according to Forbes Magazine. Gates has been keeping the first place for already 11 year in a raw among the richest Americans.
+
+## test:2566：Business → Sci/Tech
+
+预测置信度：0.6363
+
+A wandering Congress trips over the US Constitution That is the one-word message of advice that citizens wanted to send to members of Congress at the end of last week. Both the House of Representatives and the Senate looked as if they are having trouble seizing 
+
+## test:2574：Business → Sci/Tech
+
+预测置信度：0.7333
+
+Adobe updates RAW plug-in with digital negative format Adobe has updated Photoshop #39;s support for digital cameras #39; RAW image formats. The new plug-in adds to the number of camera models supported and includes a utility for converting images into the DNG, digital negative format.
+
+## test:2577：Sci/Tech → Business
+
+预测置信度：0.9307
+
+Plan B Proposes Its Own Alternatives Donnie Downs, president and chief executive of Plan B Technologies Inc., said the company itself is a "plan B."
+
+## test:2579：Sports → Business
+
+预测置信度：0.7561
+
+SC to hear Zee petition tommorrow Five judges of the top court will hear a petition filed by Zee Telefilms on Tuesday. A three-judge panel of the Supreme Court said a five-judge bench would hear the dispute that threatens the rights of India #39;s 
+
+## test:2591：World → Sports
+
+预测置信度：0.9881
+
+Sports Court Hears Hamm Gold Medal Appeal LAUSANNE, Switzerland - Paul Hamm appeared before the sports world's highest court Monday to argue why he should he keep his Olympic gymnastics gold medal.    The Court of Arbitration for Sport convened to hear the appeal from a South Korean gymnast who believes he was unfairly deprived of the gold in the men's all-around event in Athens last month because of a scoring error...
+
+## test:2596：Business → Sci/Tech
+
+预测置信度：0.8307
+
+Microsoft Lawyer Says Company Able To Comply with EU Antitrust &lt;b&gt;...&lt;/b&gt; Microsoft attorney Brad Smith, said:  quot;We will certainly be prepared to comply with the court #39;s order whatever it may be. We have invested a tremendous amount of time and energy and spent millions 
+
+## test:2607：World → Sci/Tech
+
+预测置信度：0.7716
+
+Holiday Stamps to Be Issued in Oct. (AP) AP - Holiday postage stamps celebrating Christmas, Hanukkah and Kwanzaa will be issued next month, the U.S. Postal Service announced Monday.
+
+## test:2610：Business → Sci/Tech
+
+预测置信度：0.9314
+
+Dell, AOL team up in schools initiative ROUND ROCK, Texas -- Dell Inc. and America Online Inc. announced a partnership Monday to provide 5,000 low-income students with free refurbished personal computers and a year #39;s worth of Internet access.
+
+## test:2612：Sci/Tech → World
+
+预测置信度：0.5876
+
+Gold Indian Coin Expected to Fetch  #36;27,000 (Reuters) Reuters - An Indian gold coin which is nearly\1,900 years old and shows one of the earliest depictions of\Buddha is to be sold at auction where it is expected to fetch\up to 15,000 pounds ( #36;27,000).
+
+## test:2613：World → Business
+
+预测置信度：0.9936
+
+Embattled Mortgage Giant Agrees to Meet New Standards Fannie Mae agreed to keep more cash on hand while it corrects accounting problems, a U.S. regulator said.
+
+## test:2656：World → Sports
+
+预测置信度：0.9998
+
+Cowboys Defeat Redskins 21-18 LANDOVER, Md. - Bill Parcells celebrated the touchdown with a big smile and his fist thrust high in the air...
+
+## test:2660：Sci/Tech → Business
+
+预测置信度：0.9657
+
+Gas prices up 5 cents after Hurricane Ivan CAMARILLO, Calif. - Gas prices jumped more than 5 cents a gallon in the past two weeks, largely because of supply problems related to Hurricane Ivan, an industry analyst said.
+
+## test:2670：World → Business
+
+预测置信度：0.9540
+
+Nigerian oil flows despite rebel threat-companies Oil should continue to flow from Nigeria, the world #39;s seventh largest exporter, despite a rebel threat to attack foreign oil workers in an  quot;all-out war quot; due to start on Friday, multinational energy companies said.
+
+## test:2683：World → Business
+
+预测置信度：0.5116
+
+Oil Companies In Nigeria Say They Won #39;t Give In To Threats Major oil companies operating in Nigeria #39;s oil-rich southern region say they will not give in to threats of attacks on their facilities and employees by militias.
+
+## test:2694：Sci/Tech → Business
+
+预测置信度：0.7447
+
+Virgin Starts (70) Mile-High Club With the misery that has plagued the airline industry recently, the last place you #39;d expect to see some inspiring -- heck, potentially rule-breaking -- thinking would be from an airline entrepreneur.
+
+## test:2718：Business → Sci/Tech
+
+预测置信度：0.9657
+
+Amazon sues spammers for misleading consumers SEATTLE -- Amazon.com has filed three lawsuits in King County Superior Court against unidentified defendants who allegedly forged e-mails and Web sites to fool consumers into thinking they are doing business with the Internet retailer.
+
+## test:2750：Business → Sci/Tech
+
+预测置信度：0.6472
+
+New \$50 bill designed to counter counterfeits WASHINGTON - The green is still there, but with touches of blue, red and yellow. A stylized image of the Stars and Stripes now waves in the background.
+
+## test:2752：Business → Sci/Tech
+
+预测置信度：0.9719
+
+BlueGene sneaks past Earth Simulator The Earth Simulator, an NEC supercomputer, is surpassed, at last. IBM announced yesterday that its Blue Gene/L supercomputer had achieved a sustained performance of 36.
+
+## test:2758：World → Sports
+
+预测置信度：0.8097
+
+Cricket: Dubai global academy The International Cricket Council are to open a global cricket academy designed to improve standards of lesser nations.
+
+## test:2766：Sci/Tech → Business
+
+预测置信度：0.7200
+
+Invading Bullfrogs Appear Nearly Unstoppable The North American bullfrog population is booming. That may sound like good news, but it isn't #151;not when the frog has leaped far beyond its native habitat.
+
+## test:2805：Sci/Tech → Business
+
+预测置信度：0.8457
+
+I.B.M. Agrees to Settle Part of Giant Pension Case I.B.M. said that it had agreed to pay \$320 million to its employees to settle in part a class-action lawsuit over its pension plan.
+
+## test:2806：Sci/Tech → Business
+
+预测置信度：0.9283
+
+Immunity in Ebbers Case Opposed in U.S. Filing NEW YORK, Sept. 29 -- Federal prosecutors told a judge in a filing late Tuesday night that they have evidence that former WorldCom Inc. chief executive Bernard J. Ebbers knew company officials had improperly tinkered with the telecommunications firm's accounting to boost its publicly reported profits.
+
+## test:2822：World → Business
+
+预测置信度：0.9750
+
+Poor? Who #39;s poor? Poverty is down The proportion of people living on less than \$1 a day decreased from 40 to 21 per cent of the global population between 1981 and 2001, says the World Bank #39;s latest annual report.
+
+## test:2828：Business → Sci/Tech
+
+预测置信度：0.9806
+
+IBM Claims Its BlueGene Supercomputer Is the Fastest IBM Corp. on Wednesday said it has developed the world #39;s fastest computer - a 16,000-processor version of its BlueGene/L supercomputer.
+
+## test:2833：Sci/Tech → World
+
+预测置信度：0.9628
+
+Man arrested for fatally stabbing elderly parents SAITAMA -- A middle-aged man who fatally stabbed his parents has been arrested, police said. Hideo Nakajima, an unemployed man from Soka, Saitama Prefecture, apparently called police shortly before 8 pm, Wednesday.
+
+## test:2848：Sci/Tech → Business
+
+预测置信度：0.9236
+
+Pharma Groups Work on EPC Issues Sept. 30, 2004Reacting to calls from pharmaceutical retailers, distributors and manufacturers, EPCglobal has added a new action group to specifically study the pharmaceutical industry 
+
+## test:2850：Sci/Tech → Business
+
+预测置信度：0.7027
+
+Net firms: Don't tax VoIP The Spanish-American War is over and a "temporary" tax created to pay for it should not be extended to Internet phone calls, industry groups tell the IRS
+
+## test:2856：Sci/Tech → Business
+
+预测置信度：0.6996
+
+August Chip Sales Growth Slows on High Inventory  SAN FRANCISCO (Reuters) - Global semiconductor sales growth  slowed to 1 percent in August as electronics makers reacted to  growing inventories in Asia by limiting orders of chips, an  industry trade group said on Thursday.
+
+## test:2857：Business → Sci/Tech
+
+预测置信度：0.7857
+
+Hasbro's No Conehead Its Saturday Night Live version of "Trivial Pursuit" is good strategy for staying ahead of age compression.
+
+## test:2887：Sports → World
+
+预测置信度：0.9480
+
+Singer: Minaya returns home NEW YORK -- Omar Minaya stood behind a small lectern in a danky room in the bowels of Shea Stadium, and allowed his life to flash before his eyes.
+
+## test:2914：Business → Sci/Tech
+
+预测置信度：0.7123
+
+Netflix, TiVo sign VoD alliance Netflix, the online DVD rental company, and TiVo yesterday said they will work together to deliver movies digitally down the wires, presumably specifically to the latter #39;s PVR equipment.
+
+## test:2919：Sci/Tech → Business
+
+预测置信度：0.9420
+
+EU Accuses Microsoft of Paternal View Microsoft Corp. said Friday that small companies and their customers would suffer most if it is forced to remove its digital media software from Windows, while the European Union accused it of being "paternalistic" in trying to decide what's best for everyone.
+
+## test:2932：Business → Sci/Tech
+
+预测置信度：0.8255
+
+Siemens in 2.69bn deal with BBC German industrial giant Siemens has signed a 2.69bn contract to deliver technology services around the world to the BBC, a deal that will see it acquire the broadcasters technology subsidiary.
+
+## test:2952：Business → Sci/Tech
+
+预测置信度：0.6526
+
+Fortune's 100 Most Doomed? Your company made it to Fortune's 100 Fastest Growing Companies list. Is that a good thing?
+
+## test:2976：World → Sci/Tech
+
+预测置信度：0.6214
+
+Bangkok animal trade talks open The rules controlling the trade in many at-risk wildlife species may change at a Bangkok meeting starting on Saturday. The 166 member states of the Convention on International Trade in Endangered Species of 
+
+## test:3027：Sci/Tech → Business
+
+预测置信度：0.5031
+
+The C.E.O. Vanishes, and Other Mysteries Why did PeopleSoft, in the midst of a takeover fight with Oracle, fire its chief executive and president? Who knows? And that's a problem.
+
+## test:3035：Business → Sci/Tech
+
+预测置信度：0.8993
+
+Lucent's history a case study in wild rides If you've ever wondered what ignited America's late-1990s obsession with telecom and tech stocks, you could well argue it all started with Lucent Technologies .
+
+## test:3043：Sports → World
+
+预测置信度：0.5595
+
+Ichiro with 260 hits, Writes First New Chapter in 84 Years Japans  quot;Baseball talent quot; Suzuki Ichiro (31,Seattle Mariners) has leapfrogged 84 years of outdated records of most hits in a season and stepped into the 260-hit peak.
+
+## test:3044：World → Business
+
+预测置信度：0.6955
+
+Brown calls for Labour unity Chancellor Gordon Brown has sought to quell speculation over who should run the Labour Party and turned the attack on the opposition Conservatives.
+
+## test:3057：Sci/Tech → World
+
+预测置信度：0.9727
+
+Mobile phone network reaches last of China's ethnic minorities (AFP) AFP - China has brought its mobile phone network to the last of its ethnic minority regions previously cut off from communication with the outside world, state media reported.
+
+## test:3060：Sci/Tech → Business
+
+预测置信度：0.9549
+
+You have mail, always, with a BlackBerry Washington lawyer William Wilhelm knows from experience that not everybody loves his BlackBerry as much as he does. The girlfriend was fed up with a relationship 
+
+## test:3063：World → Sports
+
+预测置信度：0.9103
+
+US football: Patriots' historic win New England win a record-tying 18th straight game - plus an NFL round-up.
+
+## test:3077：Business → Sports
+
+预测置信度：0.9963
+
+Brewers buyer expected to step out of the shadows Monday MILWAUKEE - Paul Attanasio says the story of his brother buying a baseball team is like a script straight out of Hollywood. He should know.
+
+## test:3090：Sci/Tech → Business
+
+预测置信度：0.6164
+
+Worldpay struck by online attack Net payment system Worldpay is under attack from hackers delaying transaction times for hundreds of online retailers.
+
+## test:3091：Sci/Tech → Sports
+
+预测置信度：0.9974
+
+Fable; Nascar 2005: Chase For The Cup Fable comes with a big reputation behind it -- it was developed by Peter Molyneux, creator of such involved, engrossing games as Populous and Black and White.
+
+## test:3116：Sci/Tech → Business
+
+预测置信度：0.9417
+
+OPM Delving Deeper Into Employees #39; Backgrounds which sets hiring and employment standards for the government -- is reviewing its employees to ensure that they are suitable for jobs involving the  quot;public trust.
+
+## test:3130：Business → Sci/Tech
+
+预测置信度：0.7057
+
+Taking Advantage of the Terminally Stupid Would you pay \$4 for something that, at best, is worth a dime? Concord Communications shareholders would.
+
+## test:3141：Sci/Tech → Business
+
+预测置信度：0.7650
+
+It #39;s Time for Tech Firms to Bet on Growth Industry leaders have been offering too few innovations and too many marginal upgradesat not-so-marginal prices. There #39;s a joke going around that our lives have become so boring that we #39;ve taken up watching people play cards on TV.
+
+## test:3146：Sci/Tech → Business
+
+预测置信度：0.5113
+
+Judge Challenges EU Position on Microsoft (Reuters) Reuters - A top European Union judge\challenged the EU executive's reasoning in its antitrust court\battle with Microsoft Corp. Friday, questioning why it opposed\the U.S. software giant's setting industry standards.
+
+## test:3155：Sci/Tech → Business
+
+预测置信度：0.9836
+
+PeopleSoft down on testimony, forecast Investors react to a disappointing earnings projection and to testimony that dampens hopes of negotiations with Oracle.
+
+## test:3156：Business → Sci/Tech
+
+预测置信度：0.9613
+
+New Siebel Chief Outlines Chapter 2 For CRM Vendor After 10 years of focusing on product development and delivery, CEO Michael Lawrie says Siebel had to recognize that technology is only one part of the CRM equation.
+
+## test:3163：World → Business
+
+预测置信度：0.8225
+
+U.S. Seeks Reconciliation with Oil-Rich Venezuela  SAO PAULO, Brazil (Reuters) - The United States said on  Monday it will seek better ties with oil-rich Venezuela in the  clearest sign since President Hugo Chavez won a recall  referendum in August that Washington is looking for  reconciliation with the firebrand populist.
+
+## test:3170：Business → Sci/Tech
+
+预测置信度：0.6714
+
+Feds kick off digital TV consumer campaign WASHINGTON - It #39;s one of the biggest technical changes in television since color TV: the digital transition. And because many Americans remain in the dark about it, federal regulators began an education campaign Monday to enlighten them.
+
+## test:3178：Business → World
+
+预测置信度：0.9685
+
+SEC considering civil action over 3 AIG press releases American International Group Inc. said it has been informed by the Securities and Exchange Commission that it could face a civil action over three of the company's press releases, two of which came out in recent weeks.
+
+## test:3180：Sci/Tech → World
+
+预测置信度：0.8148
+
+Russia May Ratify Kyoto Protocol in Oct. -- Minister (Reuters) Reuters - The Russian government expects\parliament to ratify the Kyoto Protocol this month in a move\allowing the long-delayed climate change treaty to come into\force worldwide, a senior minister said Monday.
+
+## test:3183：Business → Sci/Tech
+
+预测置信度：0.6287
+
+webcrawler: A9.com is cool NOW heres something else thats off the mind. Theres no more need to make mental or computer notes while searching the Internet.
+
+## test:3186：World → Sports
+
+预测置信度：0.9974
+
+Tennis: Night final for Aus Open The centenary Australian Open will be the first Grand Slam event to stage its final at night.
+
+## test:3217：Sci/Tech → Business
+
+预测置信度：0.5335
+
+Is PeopleSoft waiting for the right price? A company board member testifies in trial that a sale would be possible if Oracle ups its offer.
+
+## test:3220：Business → Sci/Tech
+
+预测置信度：0.6418
+
+Chip and PC Stocks Mixed on Warnings Semiconductor stocks were mixed Tuesday after Advanced Micro Devices Inc. warned quarterly revenue would be lower than expected due to sluggish sales of flash memory chips used in mobile phones and other devices.
+
+## test:3264：Business → Sci/Tech
+
+预测置信度：0.5859
+
+CA aquires computer security firm Computer Associates International Inc., as promised, is back in the acquisition game, scooping up its second computer security company in as many months with an agreement to buy Netegrity Inc.
+
+## test:3265：Sci/Tech → Sports
+
+预测置信度：0.9654
+
+How to take the perfect penalty A sports psychologist says how footballers should prepare themselves for the high-pressure penalties.
+
+## test:3269：Business → World
+
+预测置信度：0.8311
+
+Pacific Oil Link Is Best for Russia, Ambassador Says (Update1) Russia, the world #39;s second-biggest oil exporter, will benefit most from a Siberian crude oil pipeline to the Pacific rather than to China as energy resources are needed to develop the 
+
+## test:3306：World → Sci/Tech
+
+预测置信度：0.9836
+
+Ex-Bush Official on Cybersecurity Returns (AP) AP - Howard Schmidt, a highly regarded technology executive who was former special adviser to President Bush for cybersecurity, is returning to work with the Homeland Security Department on efforts to protect the nation's computer networks.
+
+## test:3312：World → Business
+
+预测置信度：0.7385
+
+Howard Stern Says He Plans to Jump to Satellite Radio After heavy F.C.C. fines, Howard Stern expects to deliver "my show my way" in the mostly unregulated medium.
+
+## test:3334：Business → Sci/Tech
+
+预测置信度：0.9946
+
+34 tech firms sued for alleged LCD patent theft Honeywell has issued lawsuits against 34 companies, including Dell, Apple, Sony and Toshiba alleging LCD panels used in their products infringe a 1992 patent the company holds.
+
+## test:3343：Sci/Tech → Business
+
+预测置信度：0.7040
+
+Unisys to lay off 1,400 workers Unisys Corp. plans to cut 1,400 jobs, primarily in general and administrative areas, and consolidate its office space worldwide, it announced Wednesday. The cuts represent 3.8 percent of the company's staff of 37,000.
+
+## test:3354：Business → Sci/Tech
+
+预测置信度：0.9192
+
+Nintendo to Unveil Handheld Upgrade Facing its biggest threat ever from the arrival of Sony Corp. in the portable video-game machine market, Japanese game-maker Nintendo Co.
+
+## test:3356：Sci/Tech → Business
+
+预测置信度：0.5315
+
+Fujitsu Siemens profit grows 60 percent Fujitsu Siemens Computers (Holding) BV, Europe #39;s largest remaining computer manufacturer, posted a 60 percent leap in profit for the first half of its fiscal year on higher sales of laptops and servers to business customers, the company said Wednesday.
+
+## test:3384：World → Business
+
+预测置信度：0.7830
+
+Employment Picture Expected to Improve NEW YORK - A rash of job cuts - more than 10,000 layoffs just this week from a handful of companies - has created some gloom on the jobs front. But Friday's release of jobs data for September was expected to show a steady unemployment rate and creation between about 50,000 to 250,000 new jobs, though uncertainties such as the effects of last month's hurricanes kept the estimates all over the map, said Wachovia Corp...
+
+## test:3406：Business → Sci/Tech
+
+预测置信度：0.5846
+
+Advanced Micro Devices meets reduced forecast for third quarter SAN FRANCISCO - Advanced Micro Devices Inc. reported a third-quarter profit from a loss a year-earlier on today, but sales fell from the second quarter in line with the chip maker #39;s recently reduced outlook.
+
+## test:3409：Business → Sci/Tech
+
+预测置信度：0.6141
+
+Skyboxes May Reach A Limit Verizon Communications Inc. would seem to be a prime candidate to snap up a luxury suite at the \$440 million ballpark being planned for Washington's Major League Baseball team.
+
+## test:3419：Business → World
+
+预测置信度：0.8198
+
+Aisin finishes deal for Michigan land HANDY TOWNSHIP -- A Japanese auto supplier said Thursday it completed the purchase of about 750 acres of Michigan land for a proving ground.
+
+## test:3422：Business → World
+
+预测置信度：0.9928
+
+Woman's death probed Public health officials are investigating why a 38-year-old woman died two weeks after undergoing gastric bypass surgery at Saint Anne's Hospital in Fall River. The hospital has stopped offering the surgery during the state probe and an internal review.
+
+## test:3423：Business → Sci/Tech
+
+预测置信度：0.5025
+
+Danaher to Make Offer for Linx Printing Danaher Corp., a maker of Sears Craftsman tools and environmental testing products, said Wednesday that it plans to make a cash tender offer to purchase Linx Printing Technologies PLC for \$158 million, including transaction costs.
+
+## test:3455：Business → Sci/Tech
+
+预测置信度：0.9996
+
+Sun settles Kodak patent suit Sun Microsystems says it will pay Kodak \$92 million to settle a high-profile patent suit involving Sun #39;s Java programming technology.
+
+## test:3495：Business → Sci/Tech
+
+预测置信度：0.5720
+
+Trading blows When a can of worms is opened, all manner of slimy things crawl out. So it was when the US government fired the first shots in a fusillade against the European Union - by complaining to the World Trade Organisation 
+
+## test:3538：Business → World
+
+预测置信度：0.6292
+
+American Economist Expected to Win Nobel (AP) AP - Americans have dominated the annual Nobel Memorial Prize in Economic Sciences five years running, and it may not surprise Nobel watchers if the trend continues.
+
+## test:3546：World → Sci/Tech
+
+预测置信度：0.8512
+
+Study: Few Americans Buy Drugs Online NEW YORK - Only 4 percent of Americans have ever used the Internet to buy prescription drugs - and even fewer do so through foreign pharmacies - despite Web sites maintained by a handful of states to help citizens import medicines more cheaply from Canada, a new study finds.    A majority - 62 percent - believe drugs bought online are less safe than those purchased from a local pharmacy, accepting the federal government's stated concerns in opposing drug imports, the Pew Internet and American Life Project said in a report Sunday...
+
+## test:3548：Business → World
+
+预测置信度：0.4184
+
+New pension 'would help millions' Britain's pension system could easily be replaced by a new payment that would make millions better off, a report says.
+
+## test:3553：Business → World
+
+预测置信度：0.7063
+
+Labour has failed on pensions, commission will report A report on pensions commissioned by the Government will be highly critical of Labour #39;s record on the issue, saying that people are saving far less for retirement than official figures show 
+
+## test:3556：Business → Sci/Tech
+
+预测置信度：0.5081
+
+Complex Brings Work, Shops Close to Home Tucked on a side street, just a block from the cars and trucks that whiz along Rockville Pike, sits a new complex of 404 luxury apartments, renovated restaurants and stores that some planners and developers are calling the optimum in compact urban redevelopment.
+
+## test:3561：World → Business
+
+预测置信度：0.8311
+
+Cellphone Industry Hits Snag as It Woos Untapped Market The mobile phone industry is turning its attention to the last untapped demographic - people over 65.
+
+## test:3563：World → Sports
+
+预测置信度：0.9981
+
+Ken Caminiti, 1996 NL MVP, Dies at Age 41 NEW YORK - Ken Caminiti, the 1996 National League MVP who later admitted using steroids during his major league career, died Sunday. He was 41...
+
+## test:3570：World → Sports
+
+预测置信度：0.9998
+
+Legendary all-rounder Miller dies Keith Miller, arguably Australia's greatest  all-rounder in Test cricket, has died in Melbourne aged 84.
+
+## test:3580：Business → Sci/Tech
+
+预测置信度：0.7584
+
+T-Online returns to Deutsche Telekom mothership German incumbent telco Deutsche Telekom announced over the weekend it is to begin taking its internet division, T-Online, back entirely within the mother corporation.
+
+## test:3590：World → Sci/Tech
+
+预测置信度：0.9896
+
+Finnish Watchdog Raps TV Game Operators (Reuters) Reuters - Finland's consumer watchdog said on\Monday it had reprimanded broadcasters for causing children to\run up huge mobile phone bills with interactive television game\and chat programs.
+
+## test:3616：Business → World
+
+预测置信度：0.6067
+
+Cocoa farmers issue strike threat Unions are threatening a general strike in the Ivory Coast in a protest against the prices farmers are paid for their cocoa supplies.
+
+## test:3617：Business → Sci/Tech
+
+预测置信度：0.9919
+
+Linux: Paris weighs a shift to open-source camp PARIS The open-source computer system known as Linux won a tough battle over Microsoft earlier this year when the city of Munich decided to change the operating software of 14,000 government computers, despite the personal intervention of Steve Ballmer 
+
+## test:3627：World → Sci/Tech
+
+预测置信度：0.9377
+
+SKorea's Samsung to invest 24 billion dollars in new chip lines (AFP) AFP - South Korea's Samsung Electronics Co., the world's largest memory chipmaker, said it would invest some 24 billion dollars in building new chip production lines over the next six years.
+
+## test:3638：World → Sports
+
+预测置信度：0.9501
+
+Highlights of What Congress Has Done (AP) AP - Highlights of what Congress has done  #151; and has not done  #151; this year.
+
+## test:3643：Sci/Tech → World
+
+预测置信度：0.9986
+
+Kenyan Laureate Urges Rich Nations to Ratify Kyoto (Reuters) Reuters - Kenya's Nobel Peace Prize winner,\Wangari Maathai, on Monday urged wealthy nations to ratify the\Kyoto protocol on climate change to ease the burden of\pollution on poor countries.
+
+## test:3664：Sci/Tech → Business
+
+预测置信度：0.7296
+
+Oracle vs. PeopleSoft: Lies and Lying CEOs Who Tell Them PeopleSoft #39;s board knew that CEO Craig Conway had erred in his comments, so it filed a corrected version of the meeting transcript with the Securities and Exchange Commission.
+
+## test:3671：Business → Sci/Tech
+
+预测置信度：0.9829
+
+Microsoft Launches New Media Center PC Microsoft Corp. MSFT.O on Tuesday unveiled a new version of its Windows XP Media Center, adding features such as instant messaging and high-definition television to a personal computer designed for the living room.
+
+## test:3672：Business → Sci/Tech
+
+预测置信度：0.9802
+
+Rumors Suggest Photo Ability To Be Added to iPod  quot;Apple has invested heavily in technology to edit pictures. Not having a portable device to show them seemed an obvious oversight that would be corrected once the price of the displays 
+
+## test:3675：Sci/Tech → Business
+
+预测置信度：0.9988
+
+DreamWorks Animation IPO Set at 29M Shares Underwriters for DreamWorks Animation SKG Inc., producer of the blockbuster "Shrek" movies, Tuesday set the terms of the company's pending initial public offering at 29 million common shares, with an estimated price range of \$23 to \$25 a share.
+
+## test:3684：Business → World
+
+预测置信度：0.6353
+
+Lazard adversaries edge closer to a deal Bruce Wasserstein, head of Lazard, could reach an agreement as early as this week with Michel David-Weill, the chairman, extending the deadline for 
+
+## test:3688：World → Sports
+
+预测置信度：0.9916
+
+Ljubicic Downs Hanescu at Open De Moselle Top-seeded Ivan Ljubicic of Croatia beat Victor Hanescu of Romania 6-4, 6-4 Tuesday in the first round of the Open de Moselle.
+
+## test:3689：Sci/Tech → Business
+
+预测置信度：0.6685
+
+Will your phone become your credit card? Motorola is working with MasterCard to introduce a "lifestyle changing" credit card phone by year's end.
+
+## test:3702：Sci/Tech → Business
+
+预测置信度：0.9322
+
+Intel Posts Higher Profit, Sales Computer-chip maker Intel Corp. said yesterday that earnings for its third quarter were \$1.9 billion -- up 15 percent from the same quarter a year ago -- but the company cautioned that computer-processor demand in the United States is likely to remain low.
+
+## test:3708：Sci/Tech → World
+
+预测置信度：0.8367
+
+Thailand Shows No Easy War Against Wildlife Crime (Reuters) Reuters - With an AK-47 assault rifle slung over\his shoulder, Sompong Prajobjan roamed one of Thailand's lush\national parks for more than a decade.
+
+## test:3715：Sci/Tech → Sports
+
+预测置信度：0.4133
+
+New Year, New Notebooks For All T.C. Williams High School is handing out laptops to make sure students of all backgrounds have the latest equipment in an increasingly computerized world.
+
+## test:3718：World → Sports
+
+预测置信度：0.9889
+
+'Sherlock' Is Bicycling Across Australia PERTH, Australia - A former British soccer player raising money for a leukemia charity set off Wednesday on a coast-to-coast ride across Australia on a Victorian-era bicycle that is older than the country.    Leukemia survivor Lloyd Scott dressed up as fictional British supersleuth Sherlock Holmes, complete with tweed coat, deerstalker hat and a fake mustache for the 2,700-mile trip from Perth to Sydney...
+
+## test:3723：Business → Sci/Tech
+
+预测置信度：0.6591
+
+SICK KIDS VS. DISNEY IN  #39;PETER PAN #39; DUSTUP It #39;s a story that would make Peter Pan glad that he never grew up. Walt Disney Co. is caught in a feud with a UK children #39;s hospital over the copyright to JM Barrie #39;s classic novel,  quot;Peter Pan.
+
+## test:3728：Business → Sci/Tech
+
+预测置信度：0.8962
+
+Excess chips a drag on 3rd-quarter Intel results Intel on Tuesday released third-quarter financial results showing that it continues to struggle to sell a substantial stockpile of computer chips as demand for personal computers remains slow.
+
+## test:3746：World → Sports
+
+预测置信度：0.8636
+
+Football: Azerbaijan 0-1 England Michael Owen heads England's winner in the World Cup qualifier against Azerbaijan.
+
+## test:3747：World → Business
+
+预测置信度：0.9953
+
+Ban for former Ahold executives Dutch  retailer Ahold's former chairman and its ex-finance officer are barred from executive posts as part of a US fraud case settlement.
+
+## test:3777：Sci/Tech → World
+
+预测置信度：0.9391
+
+Thai minister says zoo #39;s illegal orangutans to be moved JAKARTA/BANGKOK (DPA): Thailand, under growing pressure to repatriate some 100 orangutans allegedly smuggled into the country from Indonesia, plans to shift the apes from a private zoo to a safe centre, probably in Chiang Mai, a minister said on Thursday.
+
+## test:3790：World → Business
+
+预测置信度：0.9739
+
+Oil exports flow as strike woes ease A general strike in Nigeria, which has raised fears over oil supply from the world #39;s seventh-largest exporter, will likely end its first phase on Thursday  quot;all going well quot;, union leaders said.
+
+## test:3797：Business → World
+
+预测置信度：0.8839
+
+Transport strike hits Netherlands Public transport grinds to a halt in the Netherlands as workers strike against the government's planned welfare cuts.
+
+## test:3805：World → Sports
+
+预测置信度：0.9987
+
+Munro, Morris Face Off in NLCS Game 2 ST. LOUIS - The Houston Astros put their hopes in a pitcher untested in the postseason when they give Pete Munro the ball to start Game 2 of the NL Championship series on Thursday, one night after dropping the opener to the St...
+
+## test:3813：Business → Sci/Tech
+
+预测置信度：0.8107
+
+FCC exempts fiber-to-curb from sharing requirements The Federal Communications Commission Thursday voted to allow incumbent telephone carriers from sharing fiber-to-the-curb deployments from competitors, prompting one incumbent to announce an accelerated fiber rollout.
+
+## test:3856：World → Business
+
+预测置信度：0.9992
+
+September Retail Sales Up by 1.5 Percent WASHINGTON - Shoppers got their buying groove back last month, propelling sales at the nation's retailers by a strong 1.5 percent. It was the best showing since March...
+
+## test:3882：World → Business
+
+预测置信度：0.8999
+
+For Many Airline Pilots, the Thrill Is Gone While pilots still feel in command in the air, they increasingly are feeling slighted on the ground, as airlines extract salary and benefits concessions from them.
+
+## test:3887：Sci/Tech → Business
+
+预测置信度：0.8056
+
+Blockbuster Cuts Online Price, Challenges Netflix (Reuters) Reuters - Video chain Blockbuster Inc on\Friday said it would lower the price of its online DVD rentals\to undercut a similar move by Netflix Inc. that sparked a stock\a sell-off of both companies' shares.
+
+## test:3888：Sci/Tech → World
+
+预测置信度：0.9814
+
+Great White Shark Loses Monitor Tag (AP) AP - A great white shark that was tagged with a data-gathering device in shallow waters off Cape Cod has apparently reclaimed its privacy.
+
+## test:3895：Sci/Tech → Business
+
+预测置信度：0.2950
+
+Playing with the traumas of war Are games based on the Vietnam conflict making us immune to realities of history?
+
+## test:3899：World → Sports
+
+预测置信度：0.9225
+
+Warne takes six but India establish handy lead (Reuters) Reuters - World test wicket record holder Shane Warne grabbed six wickets as India established a handy 141-run first innings lead in the second test on Saturday.
+
+## test:3900：World → Sports
+
+预测置信度：0.9778
+
+Rugby: Kiwis earn draw New Zealand hold Australia 16-16 in the first game of the 2004 Tri-Nations series.
+
+## test:3949：Business → Sports
+
+预测置信度：0.4436
+
+Florida #39;s prepaid tuition program thriving Already the biggest of its kind in the country, Florida #39;s popular prepaid-tuition program expects to count its millionth customer during a sign-up period that runs Monday through Jan. 31.
+
+## test:3953：Sci/Tech → Sports
+
+预测置信度：0.7246
+
+Toughest athlete is female and unknown You probably haven't heard about one of the toughest endurance sports around: the deca-ironman. That's 38 km swimming, immediately followed by an 1800 km bicycle ride and a 420 km run. Currently, the world record stands at about 187 hours, held by a German housewife. Nobody else has ever finished the course below 192 hours.  
+
+## test:3968：Business → Sci/Tech
+
+预测置信度：0.9796
+
+US consumers unaware of spyware The findings come in a report from the newly formed Consumer Spyware Initiative, a joint effort by Dell and the non-profit Internet Education Foundation that aims to increase awareness of spyware.
+
+## test:3970：Business → Sci/Tech
+
+预测置信度：0.9973
+
+Wi-Fi successor is called high-speed hype -- for now SAN FRANCISCO -- At virtually every turn, Intel Corp. executives are heaping praise on an emerging long-range wireless technology known as WiMAX, which can blanket entire cities with high-speed Internet access.
+
+## test:3973：Sports → Sci/Tech
+
+预测置信度：0.9799
+
+Ramirez should be taking it to heart When it comes down to this, when it's worse than you could have possibly imagined, if you are any kind of ballplayer at all, you look within and ask yourself what you can do to make it better.
+
+## test:3974：Business → Sports
+
+预测置信度：0.7424
+
+Stanley set sights on Elland Road for casino Stanley Leisure plc has announced a Stanley Casinos Limited plan to develop a casino complex on land adjacent to Leeds United #39;s Elland Road stadium.
+
+## test:3992：World → Sci/Tech
+
+预测置信度：0.7088
+
+5 EU ministers back digital passports FLORENCE Interior ministers from the five largest West European countries have agreed to adopt digital fingerprinting on passports, officials here said, but a second day of talks on Monday found them still deadlocked on a plan to create migrant holding 
+
+## test:3998：Sci/Tech → World
+
+预测置信度：0.7165
+
+UN 'must ignore cloning ban call' The UK's Royal Society urges the UN to ignore a call by President Bush to ban all forms of human cloning.
+
+## test:4000：Business → Sci/Tech
+
+预测置信度：0.9523
+
+Google puts desktop search privacy up front Google has announced a new desktop search application that enables users to search their e-mail, files, web history, and chats. Perhaps learning from previous mistakes, Google says it has designed the product  quot;from the ground up to respect user privacy.
+
+## test:4027：World → Sports
+
+预测置信度：0.9238
+
+Tennis: Davenport to play on Lindsay Davenport says she plans to play in the Australian Open next January.
+
+## test:4029：World → Sports
+
+预测置信度：0.9814
+
+USC, Miami Top BCS Standings, Not Okla. Southern California took the top spot Monday in the season's first Bowl Championship Series standings, and surprisingly Miami is ahead of Oklahoma in a close race for the second spot.    Oklahoma is No...
+
+## test:4030：Sci/Tech → Business
+
+预测置信度：0.8763
+
+IBM posts broad Q3 revenue growth NEW YORK - IBM Corp. posted quarterly results on Monday showing 9 percent revenue growth from last year and slight earnings growth, despite a \$320 million charge it took during the quarter to settle some claims in a lawsuit over its pension plan.
+
+## test:4036：Business → Sci/Tech
+
+预测置信度：0.9613
+
+BASS moving headquarters to Florida The Bass Anglers Sportsman Society is moving its headquarters to Central Florida. The bass fishing organization, based in Montgomery since its inception in 1967, announced Monday 
+
+## test:4057：Sci/Tech → World
+
+预测置信度：0.6005
+
+New Jersey Lawsuit Challenges Electronic Voting A coalition of private citizens and local elected officials in New Jersey plan to file a lawsuit to block the state's use of electronic voting machines.
+
+## test:4058：Sci/Tech → Business
+
+预测置信度：0.8099
+
+Regulators Approve Artificial Heart The Food and Drug Administration approved the use of an artificial heart made by SynCardia Systems as a temporary device for people awaiting transplants.
+
+## test:4065：Business → World
+
+预测置信度：0.9259
+
+GM Protests Spread Across Europe Tens of thousands of General Motors workers across Europe were set to stop working on Tuesday in a sign of solidarity with their German colleagues, who face massive job cuts.
+
+## test:4088：World → Sports
+
+预测置信度：0.9299
+
+Glazer stake in Man Utd nears 30 US tycoon Malcolm Glazer lifts his stake in Manchester Utd to 28.11, one day after spending 17m on  further share buys.
+
+## test:4097：Sci/Tech → Business
+
+预测置信度：0.9999
+
+Greenspan: Debt, home prices not dangerous The record level of debt carried by American households and soaring home prices do not appear to represent serious threats to the US economy, Federal Reserve Chairman Alan Greenspan said Tuesday.
+
+## test:4102：World → Sci/Tech
+
+预测置信度：0.9846
+
+Ancient fungus 'revived' in lab Fungus from a deep-sea sediment core that is hundreds of thousands of years old will grow when placed in culture, scientists discover.
+
+## test:4114：Sci/Tech → World
+
+预测置信度：0.7990
+
+Chirac: Europe Can Do More in Science Race (AP) AP - A European laboratory that was the birthplace of the World Wide Web and home of Nobel prize-winning developments in understanding the origins of the universe celebrated its 50th birthday Tuesday. But French President Jacques Chirac warned that despite those illustrious achievements, European scientists are falling behind.
+
+## test:4135：Sports → Sci/Tech
+
+预测置信度：0.7326
+
+Logjam at the point Doc Rivers does not subscribe to the mad scientist, mix-and-match method when it comes to selecting a backup point guard. He does not want a rotation of Marcus Banks, Jiri Welsch, and Delonte West picking up the minutes Gary Payton leaves behind. He does not want the trio of young, inexperienced guards wondering about playing time in addition ...
+
+## test:4137：World → Sports
+
+预测置信度：0.9487
+
+F1: British Grand Prix ruled out Jackie Stewart rejects Bernie Ecclestone's claims that the British Grand Prix is dead.
+
+## test:4138：Business → Sci/Tech
+
+预测置信度：0.8737
+
+Web-based kidney match raises ethics questions A Colorado man who placed a  quot;transplant wanted quot; ad on a Massachusetts-based Internet site is expected today to receive a kidney donated by a total stranger who simply wanted to do  quot;something big. quot; The transaction marks the first time an organ transplant has been brokered by a commercial web company.
+
+## test:4148：Sci/Tech → Business
+
+预测置信度：0.5893
+
+Motorola Quarterly Earnings Rise Motorola Inc., the world's No. 2 maker of cell phones, on Tuesday said its quarterly profit\more than tripled, as sales rose 26 percent, driven in part by a host of new handset models and cost controls.
+
+## test:4200：Sci/Tech → World
+
+预测置信度：0.7491
+
+Court: Whales Have No Standing to Sue (AP) AP - A federal appeals court decided Wednesday that marine mammals have no standing to sue to stop the U.S. Navy from using sonar.
+
+## test:4241：Business → Sci/Tech
+
+预测置信度：0.4385
+
+Alaska #39;s summer tourism pegged at 1.4 million visitors The number of summer visitors to Alaska rose from the year before, prompting the president of the Alaska Travel Industry Association to say tourism appeared to be back on track since leveling off after the 2001 terrorist attacks.
+
+## test:4273：Sports → World
+
+预测置信度：0.6722
+
+America #39;s curse There is an all but unanswerable case for asserting that the biggest story out of the United States this week has nothing to do with the presidential election, has no connection with the flu vaccine shortage and that it does not involve a gay bishop either 
+
+## test:4275：Business → World
+
+预测置信度：0.8697
+
+Erdogan Believes European Council #39;s Decision Will Be A Milestone PARIS - Turkish PM Recep Tayyip Erdogan expressed belief on Thursday that the decision that the European Council would make on December 17th (on whether and when to open negotiations with Turkey) would be a milestone for not only Turkey-(EU) relations 
+
+## test:4300：Sports → Business
+
+预测置信度：0.6760
+
+City Series-ly wounded With the Yanks out of the World Series, the city #39;s economy loses out on at least \$40 million, according to studies by the controller #39;s office and other city agencies.
+
+## test:4302：World → Sci/Tech
+
+预测置信度：0.4434
+
+Sri Lanka off to positive start Kumar Sangakkara's unbeaten fifty revives Sri Lanka's chances against Pakistan.
+
+## test:4319：Sci/Tech → Business
+
+预测置信度：0.9331
+
+Avis blames IT for multimillion-dollar loss The car rental company takes a major hit because of problems with IT, including high costs associated with an ERP project.
+
+## test:4323：Sci/Tech → Business
+
+预测置信度：0.6791
+
+Amazon.com net sales jump 29; Google reports \$52M in net income OCTOBER 22, 2004 (IDG NEWS SERVICE) - Amazon.com Inc. fell a penny short of analysts #39; per-share earnings expectations, while reporting net sales of \$1.
+
+## test:4359：Business → Sci/Tech
+
+预测置信度：0.7081
+
+Google #39;s New PC Search Tool Poses Risks NEW YORK Oct. 18, 2004 - People who use public or workplace computers for e-mail, instant messaging and Web searching have a new privacy risk to worry about: Google #39;s free new tool that indexes a PC #39;s contents for quickly locating data.
+
+## test:4441：Sci/Tech → Business
+
+预测置信度：0.9905
+
+Approval Expected for Big Cellphone Deal Federal regulators will formally approve Cingular Wireless #39;s \$41 billion purchase of AT amp;T Wireless today, company officials briefed on the matter said over the weekend.
+
+## test:4451：Sci/Tech → Business
+
+预测置信度：0.9737
+
+Regulators Let Cingular Buy AT amp;T Wireless The \$41 billion merger between Cingular Wireless LLC and AT amp;T Wireless Services Inc. won approval from the Federal Communications Commission yesterday, according to federal sources close to 
+
+## test:4481：World → Sci/Tech
+
+预测置信度：0.9147
+
+Hynix's 3Q Profit More Than Triples (AP) AP - South Korea's Hynix Semiconductor Inc. said Monday its third-quarter net profit more than tripled from same period last year thanks to steady global prices for memory chips.
+
+## test:4501：Business → Sci/Tech
+
+预测置信度：0.8430
+
+Classmates agrees to \$100M buyout United Online Inc., a California-based provider of low-cost Internet subscription services, has agreed to buy Internet networking company Classmates Online Inc.
+
+## test:4508：Business → Sci/Tech
+
+预测置信度：0.9573
+
+Spyware opponents win another battle The Federal Trade Commission won an important victory last week in its fight to protect consumers from spyware, the software that tracks unsuspecting Web surfers, bombards them with advertisements and sometimes even steal login information and passwords.
+
+## test:4520：World → Sci/Tech
+
+预测置信度：0.7624
+
+Broadcaster Donates  #36;325,000 to GOP (AP) AP - One of the state's biggest broadcasters has given 13 Republican county committees  #36;325,000 worth of free air time to promote candidates on its radio and television stations throughout California.
+
+## test:4540：Sports → World
+
+预测置信度：0.9869
+
+Miss Peru takes Miss World crown Twenty-year-old Miss Peru has been crowned Miss World in a southern Chinese resort town, as China looks to become the regular host of an event that would have once been deemed heretical by its Communist leaders.
+
+## test:4549：World → Sports
+
+预测置信度：0.9707
+
+Australia 362-7 v India, third test - close (Reuters) Reuters - Australia were 362 for seven wickets at the close of play on the first day of their third cricket test against India on Tuesday.
+
+## test:4550：Sci/Tech → Business
+
+预测置信度：0.7672
+
+Lockheed Profit Jumps on IT, Jet Demand &lt;p&gt;\&lt;/p&gt;&lt;p&gt; NEW YORK (Reuters) - No. 1 U.S. defense contractor Lockheed\Martin Corp. &lt;LMT.N&gt; reported a 41 percent rise in quarterly\profit on Tuesday, beating Wall Street forecasts, as demand\soared for its combat aircraft and information technology\services.&lt;/p&gt;
+
+## test:4564：Sci/Tech → Business
+
+预测置信度：0.9389
+
+E.U. Regulators Approve Oracle's PeopleSoft Bid European Union antitrust regulators on Tuesday cleared Oracle Corp.'s hostile \$7.7 billion bid for rival business software maker PeopleSoft Inc., removing one of the last major hurdles to the contested takeover proposal.
+
+## test:4571：Business → Sci/Tech
+
+预测置信度：0.9980
+
+Microsoft Readies Next Business IM Server A little over a year after introducing the first version of Office Live Communications Server, Microsoft says it plans to release the next version of its enterprise instant messaging software, in December.
+
+## test:4573：Sports → Business
+
+预测置信度：0.4912
+
+26/10/04 Savabeel Compared To Dubai Millennium The man who says he didn #39;t have a pair of shoes until he was 12 is now fielding offers in the millions for a horse he compares to the late Dubai Millennium, the best in the world a few years ago.
+
+## test:4580：Business → Sci/Tech
+
+预测置信度：0.9947
+
+FaceTime, IMlogic Back Live Communications Server 2005 Hard on the heels of Microsoft announcing that it #39;s taken Live Communications Server 2005 gold, instant messaging management software vendors IMlogic and FaceTime on Tuesday both touted their support for the communication product.
+
+## test:4591：Business → Sci/Tech
+
+预测置信度：0.6834
+
+Cingular Closes  #36;41 Bln ATT Wireless Deal (Reuters) Reuters - Cingular Wireless on Tuesday closed\its  #36;41 billion cash purchase of AT T Wireless Services Inc.\, creating the biggest U.S. mobile service with more\than 46 million customers.
+
+## test:4620：World → Sports
+
+预测置信度：0.5027
+
+Indonesia at a crossroad At midnight on Saturday, the dance floor in the Hard Rock Cafe (HRC) in Bali was heaving. Apart from a careful pat down at the door for guests, the scene was no different from two years ago, before Islamist 
+
+## test:4623：Sci/Tech → Business
+
+预测置信度：0.5640
+
+DMCA Limited by Sixth Circuit Appeals Court The Fine Print: The following comments are owned by whoever posted them. We are not responsible for them in any way. I really dont know why a printer manufacturer should have exclusive rights on producing ink that work with their printers.
+
+## test:4648：Sci/Tech → World
+
+预测置信度：0.7521
+
+Singapore Telecom ties up with Malaysia's TIME dotcom (AFP) AFP - Singapore Telecommunications (SingTel) said it has entered into an agreement with Malaysia's TIME dotCom to link their corporate customers through private leased line circuits.
+
+## test:4650：World → Business
+
+预测置信度：0.7349
+
+BHP Billiton, Alcoa sell Integris Metals for 359 million pounds (AFP) AFP - Anglo-Australian mining giant BHP Billiton and Alcoa, the world's largest aluminium producer, have agreed to sell their metal services joint venture Integris Metals for 660 million dollars (359 million pounds) including debt, a joint statement said.
+
+## test:4677：World → Sci/Tech
+
+预测置信度：0.9992
+
+Black Market in British Treasure Sold on EBay (Reuters) Reuters - Pieces of Britain's past, including a\second-century silver ring and a 500-year-old Tudor trade\weight, are among artifacts being peddled daily on the Internet\to the alarm of experts at the British Museum.
+
+## test:4681：Business → Sci/Tech
+
+预测置信度：0.8449
+
+Report finds handheld device market in continued decline The worldwide market for handheld devices saw its third successive quarter of year-over-year decline in the third quarter of 2004, according to a new report released by IDC.
+
+## test:4684：Business → World
+
+预测置信度：0.9582
+
+Faces From The 1929 Crash NEW YORK - The people who will forever be associated with the Great Crash of 1929 were all white, male and wealthy, but their occupations and ethics varied considerably.
+
+## test:4687：Business → Sci/Tech
+
+预测置信度：0.7758
+
+Will Tellabs Push Its Luck? Perhaps the optical network supplier should call off its merger with AFC.
+
+## test:4689：Business → Sci/Tech
+
+预测置信度：0.8932
+
+Yahoo Debuts Mobile Search SAN FRANCISCO -- Yahoo (Quote, Chart) expanded its search empire to the mobile arena with the launch of some additional services. The company was one of the original content providers for mobile devices running 
+
+## test:4691：Business → Sci/Tech
+
+预测置信度：0.8923
+
+Lexmark Loss Good for Consumers Lexmark's loss in court on Tuesday may mean that consumer electronics companies won't try to use the Digital Millenium Copyright Act as an all-purpose competition shield anymore, consumer advocates say. By Katie Dean.
+
+## test:4720：World → Sci/Tech
+
+预测置信度：0.9657
+
+Stability Control Systems Can Save Lives (AP) AP - Stability control systems could save up to 7,000 lives each year if they were standard equipment on all vehicles, according to a study by the insurance industry.
+
+## test:4722：Business → Sci/Tech
+
+预测置信度：0.5001
+
+AirTran #39;s plan may aid city If the airline acquires some ATA assets, Wichita Mid-Continent could see expanded AirTran service, especially to Chicago. BY PHYLLIS JACOBS GRIEKSPOOR.
+
+## test:4732：Sports → World
+
+预测置信度：0.6440
+
+Lowe's road to glory For Derek Lowe, two roads diverged not in a yellow wood, as New England's poet laureate Robert Frost had it, but on the greenswards of Fenway Park, Yankee Stadium, and Busch Stadium.
+
+## test:4764：World → Sports
+
+预测置信度：0.4173
+
+Remark on Homosexuality Delays Seating of European Panel The European Union #39;s normally yawn-inducing institutions raised eyebrows on Wednesday when a spat over comments about homosexuality made by an Italian bureaucrat led to the 
+
+## test:4766：Business → World
+
+预测置信度：0.7426
+
+Ryanair agrees to repay 4M in an escrow account for the Walloon &lt;b&gt;...&lt;/b&gt; vueling writes  quot;Ryanair confirmed it had written to the Walloon authorities and agreed to repay 4M in an escrow account until Ryanairs appeal is heard and the European Courts make a definitive decision on this matter.
+
+## test:4773：Business → Sci/Tech
+
+预测置信度：0.7355
+
+AOL Files Lawsuit Against IM  #39;Spim #39; America Online Inc. said Thursday it had filed a federal lawsuit accusing numerous unnamed defendants of violating federal and state laws by sending bulk messages known as  quot;spim quot; to instant message accounts and Internet chat rooms.
+
+## test:4783：Business → Sci/Tech
+
+预测置信度：0.9935
+
+AOL, E-Mail Companies Sue Spammers The nation #39;s largest e-mail providers today filed a new round of lawsuits against Internet spammers allegedly responsible for shoveling millions of junk e-mail messages into computer users #39; in-boxes and their instant messaging screens.
+
+## test:4789：Sci/Tech → Business
+
+预测置信度：0.7188
+
+Gateway Reports Smaller Quarterly Loss Gateway Inc. reported a narrowed net loss in the first quarter as it continues to restructure its operations and integrate its acquisition of eMachines. Still, the personal computer and electronics company posted a tiny operating profit -- its first in nearly three years.
+
+## test:4815：Sci/Tech → Sports
+
+预测置信度：0.9277
+
+Blame player, not game It was like nothing youd ever exercised your thumbs to before. You could do whatever you wanted, whenever you wanted. The game seemed endless.
+
+## test:4824：Business → Sports
+
+预测置信度：0.6434
+
+Sign off, then sign in  G. Michael Caggiano Jr. lies awake at night thinking about bank signs. He ponders them during breakfast, while brushing his teeth, and  quot;constantly quot; during the day, he says.
+
+## test:4846：World → Sci/Tech
+
+预测置信度：0.6088
+
+EU Clears Flextronics Purchase of Units (AP) AP - European Union regulators Friday cleared Singapore's Flextronics International Ltd., the world's largest contract electronics manufacturer, to acquire factories from Canada's Nortel Networks Corp.
+
+## test:4850：Sci/Tech → Business
+
+预测置信度：0.6632
+
+Optimism Drives Google Shares to New Highs (Reuters) Reuters - Stock of Google Inc.  powered\to new highs on Friday, buoyed by the web search leader's new\products and growth prospects, which complement its recent\strong financial results, analysts said.
+
+## test:4854：Sports → Sci/Tech
+
+预测置信度：0.6540
+
+Times to Scrap Broadsheet Edition The Times is to scrap its broadsheet edition and go tabloid from Monday, it was confirmed today. The decision was made after a trial run of the compact edition proved a success, said editor Robert Thomson.
+
+## test:4862：Business → Sci/Tech
+
+预测置信度：0.9814
+
+AOL's Viral Marketing America Online will now provide gratis antivirus protection to its subscribers.
+
+## test:4880：World → Business
+
+预测置信度：0.5798
+
+Danish group #39;s gift criticized A Danish group has caused controversy in Colombia by publicly donating money to the country #39;s largest Marxist guerrilla organization.
+
+## test:4895：Sports → World
+
+预测置信度：0.5135
+
+Four pay price for India defeats India have dropped wicket-keeper Parthiv Patel and batsman Yuvraj Singh for the final Test against Australia. Opening batsman Aakash Chopra and seamer Ajit Agarkar were also left out after India conceded the 
+
+## test:4900：World → Sports
+
+预测置信度：0.6997
+
+THE UNFOLDING UNIFORM Pakistan is inherently unstable. Dealing with them is like playing with matches in a forest. - Larry Pressler. That statement from Larry Pressler, made during his recent visit to India, coincided with 
+
+## test:4902：Business → Sci/Tech
+
+预测置信度：0.8595
+
+FasTrak Toll Bridge Discounts End Monday About 70,000 motorists signed up for FasTrak, the electronic toll collection system, since July 1, when tolls went up from \$2 to \$3.
+
+## test:4940：Business → Sci/Tech
+
+预测置信度：0.8925
+
+Med school move delayed to 2007 The MSU College of Human Medicine won #39;t be relocated to Grand Rapids until at least 2007, and could cost only half as much as university officials originally estimated.
+
+## test:5003：Sci/Tech → Business
+
+预测置信度：0.4671
+
+Windows-Based Treo On the Way? Earlier today, Engadget broke the story that PalmONE might be looking at possibly making a Windows-based Treo. Not dumping the PalmSource Treo #39;s that run PalmOS, merely adding to the line.
+
+## test:5006：Sci/Tech → Business
+
+预测置信度：0.5333
+
+PalmOne to play with Windows Mobile? Rumors of Treo #39;s using a Microsoft operating system have been circulating for more than three years. Now an investment bank reports that PalmOne will use a 
+
+## test:5045：Sci/Tech → Sports
+
+预测置信度：0.7206
+
+Gateway Can Party Like It #39;s 1999 Those were heady days, they were, back in 1999. The bull market was still roaring. We hadn #39;t yet heard of hanging or dimpled chads.
+
+## test:5051：Business → World
+
+预测置信度：0.3546
+
+Delta #39;s Aborted Crash Landing If you #39;ve ever been in an airplane that has to abort a landing, you know that it is a completely hair-raising, disorienting experience.
+
+## test:5064：Business → Sci/Tech
+
+预测置信度：0.5047
+
+SIA: Chip sales to hit record, flatten Worldwide semiconductor sales will hit an all-time high in 2004 but stay relatively flat in 2005 before climbing again over the next two years, according to the Semiconductor Industry Association.
+
+## test:5067：Business → World
+
+预测置信度：0.8367
+
+Quick end to US election crucial US President George W. Bush is on the verge of a re-election victory, but Democratic challenger John Kerry is not conceding defeat, at least not now.
+
+## test:5127：Sci/Tech → World
+
+预测置信度：0.9747
+
+Another homicide in Holland  It is a sad day.      In what seems to be another politically inspired homicide in Holland, Dutch filmmaker, and controversial columnist Theo van Gogh was brutally murdered in the streets of Amsterdam this morning.
+
+## test:5128：World → Sports
+
+预测置信度：0.9987
+
+Argentina Basketball Coach Magnano Quits Ruben Magnano, who coached Argentina to the Olympic basketball gold medal in Athens, resigned Thursday to accept a coaching job in Italy.
+
+## test:5129：Business → Sci/Tech
+
+预测置信度：0.9966
+
+Product Previews palmOneUpgrades Treo With Faster Chip, Better Display\With more than 600,000 units shipped, the Treo 600 is one of the big smartphone success stories. Last week, palmOne introduced the follow-on Treo 650 with a higher resolution 320-by-320-pixel TFT screen, which the company claims increases the visible area of the display and makes pictures and documents much clearer. The 650 also carries a removable battery; 32MB of flash memory, and a faster 312MHz, Intel XScale processor. Improved multimedia features include a built-in MP3 player, a digital camera with improved low-light capabilities, as well as video capture and playback functionality. Products are expected to ship by years end from some carriers who will add their own services, and will be priced at about \$499.\ Treo 650, palmOne
+
+## test:5134：Sci/Tech → World
+
+预测置信度：0.9768
+
+10 O'Clock News goes interactive BBC One's 10 O'Clock News is launching the first interactive news television bulletin on Tuesday.
+
+## test:5145：Sci/Tech → World
+
+预测置信度：0.9711
+
+Serial HIV Assault Verdict Expected Mon. (AP) AP - A verdict will be announced Monday in the trial of a man charged with intentionally exposing 17 women to HIV, a county judge said.
+
+## test:5151：Sci/Tech → World
+
+预测置信度：0.4452
+
+Contradiction in Terms : How to make beer It's been around for thousands of years. It has been worshiped, reviled, banned, and made the cornerstone of economies. It has helped us celebrate, weep, relax, and get laid. And now we're going to make some. A pint, a glass, an ale, a lager, a beer.
+
+## test:5152：Sci/Tech → World
+
+预测置信度：0.5735
+
+Hope Fades for Saving 2 Boys Stuck in Mexico Cave (Reuters) Reuters - Hopes of rescuing two small boys\trapped for five days in a jungle cave faded fast on Friday\after contact was lost with the brothers and as the cavern\flooded in overnight rains.
+
+## test:5164：World → Sci/Tech
+
+预测置信度：0.9152
+
+Atomic Power Station Halted in Russia, No Radiation  MOSCOW (Reuters) - One reactor at a Russian nuclear power  station was closed down after a malfunction, but there was no  leak of radiation at the site near the city of Saratov on the  Volga river, Russian news agencies reported on Friday.
+
+## test:5192：Sci/Tech → Business
+
+预测置信度：0.6537
+
+Record Breaking Supercomputer Performance US Secretary of Energy Spencer Abraham announced that a supercomputer developed for the nation #39;s Stockpile Stewardship Program has attained a record breaking performance of 70.
+
+## test:5265：Sci/Tech → Business
+
+预测置信度：0.9165
+
+Travelocity Says Speed Is the Ticket For Growth Sam Gilliand, the chief executive of Travelocity, talks about the online travel industry, the Cendant-Orbitz merger and the woes of the airline industry.
+
+## test:5272：World → Business
+
+预测置信度：0.6593
+
+UK Train Line to Be Closed for Days #39; After Fatal Derailment A main rail line between London and southwest England will remain closed for a number of days #39; #39; as UK police investigate the weekend derailment of a FirstGroup Plc train, in which seven people lost their lives.
+
+## test:5285：Business → Sci/Tech
+
+预测置信度：0.9583
+
+Study raises stent doubts Heart patients aren #39;t more likely to live long term after getting the artery-opening tubes called stents, according to a study released yesterday by researchers at Duke University.
+
+## test:5291：World → Sci/Tech
+
+预测置信度：0.5880
+
+Website posts video of suicide attack against British troops A video purportedly showing a suicide attack against British troops last week was posted on an Islamic website. Soldiers from Britain #39;s Black Watch regiment were manning a vehicle checkpoint south of Baghdad 
+
+## test:5293：Sci/Tech → Business
+
+预测置信度：0.7090
+
+Flat-screen TV But the booming demand isn #39;t proving profitable for the companies that make the high-resolution video panels. For electronics retailers, it will be the holiday season of the flat-screen TV.
+
+## test:5295：Business → World
+
+预测置信度：0.8897
+
+PM welcomes EU partnership Prime Minister Manmohan Singh arrived in the Hague last night to participate in the India-European summit.  quot;In recognition of Indias growing stature and influence, the EU has proposed a strategic partnership with India.
+
+## test:5305：Sci/Tech → Business
+
+预测置信度：0.8884
+
+Microsoft settles antitrust cases with Novell, CCIA Microsoft Corp on Monday announced antitrust settlements with Novell Inc. and the Computer and Communications Industry Association (CCIA), ending years of legal wrangling.
+
+## test:5312：Sci/Tech → Business
+
+预测置信度：0.5201
+
+Microsoft Makes Another Antitrust Deal Software giant settles with Novell and the CCIA, ending years of legal wrangling.
+
+## test:5321：Business → Sci/Tech
+
+预测置信度：0.6944
+
+Microsoft Settles Novell Antitrust Suit (Reuters) Reuters - Microsoft Corp.  said\on Monday it agreed to settle antitrust lawsuits with Novell\Inc.  and an industry trade group, marking the end of a\decade-long antitrust battle.
+
+## test:5322：Sci/Tech → World
+
+预测置信度：0.5539
+
+Cellphones outstrip landlines in India (AFP) AFP - Mobile phone users have outstripped traditional landline connections in India, the government announced.
+
+## test:5324：Sci/Tech → Business
+
+预测置信度：0.8025
+
+Conversion Rates Between PPC (Paid) and Organic (Free) Results Conversion Rates Between PPC (Paid) and Organic (Free) Results\\In a thread over at Cre8asite Forums named Organic vs Paid traffic ROI?, there is a discussion going on about the different conversion rates and ROI seen between the pay per click traffic (paid traffic) and organic traffic (free traffic). I have ...
+
+## test:5337：World → Business
+
+预测置信度：0.6119
+
+Colombia Accuses Cos. of Illegal Imports The Colombian government has filed a lawsuit accusing Pernod Ricard SA, Diageo PLC and Seagram Export Sales Co. of illegally importing spirits via Colombian companies that launder drug money.
+
+## test:5339：Sci/Tech → World
+
+预测置信度：0.8566
+
+Postal Service to Use Motorola Devices (AP) AP - Motorola Israel Ltd. said Monday it will provide the U.S. Postal Service with new hand-held scanning devices under a three-year deal worth about  #36;300 million.
+
+## test:5357：Sci/Tech → World
+
+预测置信度：0.5371
+
+Australia in grip of water crisis There is a warning that some of Australia's major cities could run out of drinking water.
+
+## test:5376：Sci/Tech → Sports
+
+预测置信度：0.7360
+
+Supreme Court Asked To Hear File-Sharing Arguments The file-sharing legal battle has moved to the Supreme Court, with a group composed of labor unions, sports leagues and state attorneys general asking for a hearing on a claim brought 
+
+## test:5379：World → Business
+
+预测置信度：0.9563
+
+Cocoa prices down but Ivorian exports still blocked World cocoa prices were down on Tuesday but off the day #39;s lows as exports remained on hold after mob violence and military clashes in Ivory Coast, the key global supplier, traders said.
+
+## test:5381：Business → World
+
+预测置信度：0.5718
+
+US rate rise locked in for Wednesday (AFP) AFP - The unexpected boom in US job creation in October has locked in an interest rate rise and will likely encourage another tightening in December, analysts said.
+
+## test:5384：World → Sci/Tech
+
+预测置信度：0.5129
+
+The Bag of Aeolus  quot;Aeolus was keeper of the winds. He gave a bag of evil winds to Odysseus, instructing him to keep it closed while a good breeze wafted him home.
+
+## test:5402：Sci/Tech → World
+
+预测置信度：0.9223
+
+Fusion reactor decision must wait Six nations planning to build the world's biggest nuclear fusion reactor fail to agree where to site the facility.
+
+## test:5410：Sci/Tech → Business
+
+预测置信度：0.8305
+
+PeopleSoft revises third-quarter profit Oracle target adds \$2.6 million to bottom line after tax adjustment related to ex-CEO's severance package.
+
+## test:5431：Business → Sci/Tech
+
+预测置信度：0.8216
+
+Vodafone begins 3G service Vodafone launches its third-generation services for mobile phones, offering video calls, music downloads and games.
+
+## test:5433：Business → Sci/Tech
+
+预测置信度：0.7813
+
+(B)old new frontiers Northrop Grumman Corp. and Boeing Co. yesterday announced plans to team up to design a vehicle to take astronauts back to the moon and even beyond, but they #39;ve got to make one stop first 
+
+## test:5444：World → Business
+
+预测置信度：0.5958
+
+India will never become an international liability: Manmohan Singh &lt;b&gt;...&lt;/b&gt; India News  gt; The Hague: The Indian Prime Minister, Dr Manmohan Singh, has said that despite three changes in government in the past 14 years since the economic reforms were introduced in the country, there has been no roll back in the reforms programme.
+
+## test:5465：Business → World
+
+预测置信度：0.4149
+
+Toile Gets A Makeover The traditional pattern shakes its fussy image as designers give it a new look
+
+## test:5470：Business → Sci/Tech
+
+预测置信度：0.6049
+
+Residents Protest Nation #39;s First Hydrogen Refueling Station Two dozen protesters greeted Mayor Tony Williams and top executives of Shell, who came to open North America #39;s first hydrogen refueling station.
+
+## test:5479：Business → Sci/Tech
+
+预测置信度：0.9598
+
+Halo 2 scores record sales of \$125 million in first 24 hours Halo 2 broke entertainment retail records in its first 24 hours. Microsoft Game Studios said that the video game sold through 2.4 million stores in the US and Canada raking in \$125 million in sales.
+
+## test:5532：Business → Sci/Tech
+
+预测置信度：0.9968
+
+Prized Fossil Just a Rock? With positive and negative results, it remains to be seen what type of Fossil this company really is.
+
+## test:5537：Sci/Tech → World
+
+预测置信度：0.9832
+
+Hit TV series 24 goes from small screen to smaller screen (AFP) AFP - The hit US television show  quot;24 quot; is going from the small screen to the smaller after 20th Century Fox and Vodaphone struck a groundbreaking deal to distribute the drama on mobile telephones.
+
+## test:5559：Business → Sci/Tech
+
+预测置信度：0.6025
+
+Intel dauphin Otellini becomes king Intel #39;s board has given the go ahead for the long anticipated shift in power from current CEO Craig Barrett to current President Paul Otellini Come May 18, Otellini will take over the chipmaker and become its fifth ever CEO.
+
+## test:5588：World → Business
+
+预测置信度：0.6938
+
+China's inflation rate slows sharply but problems remain (AFP) AFP - China's inflation rate eased sharply in October as government efforts to cool the economy began to really bite, with food prices, one of the main culprits, showing some signs of slowing, official data showed.
+
+## test:5592：Business → World
+
+预测置信度：0.5446
+
+France joins Germany, Japan in economic slide (AFP) AFP - The French economy hit a rough patch in the third quarter, throwing the government's full-year growth target into question amid signs of an economic slowdown in the 12-nation eurozone.
+
+## test:5597：World → Sci/Tech
+
+预测置信度：0.6425
+
+BSkyB sees profits rise after strong subscriber growth (AFP) AFP - British satellite broadcaster BSkyB said profit rose by 16 percent in the first quarter as the group enjoyed strong subscriber growth in the run-up to the key Christmas trading period.
+
+## test:5602：Business → World
+
+预测置信度：0.9755
+
+Donors seek clarity on PA finances Donors to the Palestinians are asking  whether the change of leadership can let more light into Palestinian finances.
+
+## test:5625：Sci/Tech → World
+
+预测置信度：0.5307
+
+Coalition asks US Congress to kill copyright bill WASHINGTON - A coalition of technology and advocacy groups on Friday asked the U.S. Senate to kill copyright legislation that might result in jail time for people who trade copyrighted files online.
+
+## test:5656：Sports → World
+
+预测置信度：0.3748
+
+Don King Productions Presents:  quot;Battle For Supremacy quot; On Saturday November 13th, ten misfits, nomads and upstarts seek to wage war or settle the score at the famed Madison Square Garden in New York, New York.
+
+## test:5674：Business → Sports
+
+预测置信度：0.5119
+
+Will Hutton There were two stories last week that will have world-shaping implications. The first was in a Paris hospital and a compound in Ramallah.
+
+## test:5683：Sci/Tech → World
+
+预测置信度：0.7846
+
+Final Round in Cable-ISP Fight The U.S. Supreme Court has agreed to hear whether cable operators must give access to their lines to third-party ISPs. Michael Grebb reports from Washington.
+
+## test:5685：World → Business
+
+预测置信度：0.9553
+
+Safety Group Closely Echoes Rail Industry Documents show that the nation's most influential rail-safety group is tightly bound to the railroad industry.
+
+## test:5686：Sci/Tech → World
+
+预测置信度：0.5533
+
+GAME UNDER FIRE Attacking police officers, racial slurs, bloody beatings of innocent bystanders ... is it really just a game? In four and a half minutes, 14-year-old Ryan Mason ran over a police officer, stole his gun and shot and killed three innocent bystanders.
+
+## test:5690：Business → Sci/Tech
+
+预测置信度：0.9044
+
+Where have all the people gone? While media and political attention is on the threat of outsourcing, the reality is that outsourcing is a sideshow in a much larger event.
+
+## test:5692：Sports → Business
+
+预测置信度：0.9498
+
+Boston archbishop reveals anguish of closings BOSTON Boston #39;s Archbishop is telling catholics that the church #39;s financial footing is  quot;much worse than people realize.
+
+## test:5726：World → Business
+
+预测置信度：0.5223
+
+In Taipei, Talk of Arms -- and Amity Premier Yu Shyi-Kun hopes economic ties to the mainland will guarantee peace. If not,  quot;Taiwan has to have to ability to defend itself quot;.
+
+## test:5740：World → Business
+
+预测置信度：0.9654
+
+Dow Jones Agrees to Buy MarketWatch in \$519 Million Deal Dow Jones   Company, the publisher of The Wall Street Journal, has agreed to buy MarketWatch, the parent company of the financial news Web site CBS MarketWatch, for approximately \$519 million, the companies said today.
+
+## test:5748：Business → Sci/Tech
+
+预测置信度：0.8874
+
+Microsoft signs two Indian deals The announcement came as Microsoft chief executive Steve Ballmer opened the group #39;s new Indian headquarters in the city of Hyderabad.
+
+## test:5757：Sci/Tech → Business
+
+预测置信度：0.8533
+
+Dell touts new blades #39; bang for the buck Organizations are replacing aging servers with newer more-powerful boxes, often Linux--based, and theyre also investing in storage.
+
+## test:5797：World → Sci/Tech
+
+预测置信度：0.8467
+
+Microsoft open new software development unit in India (AFP) AFP - Microsoft said it will join with India's second-largest software firm, Infosys Technologies, to provide software and consulting to manufacturing, banking and automobile companies.
+
+## test:5813：Business → Sci/Tech
+
+预测置信度：0.6542
+
+ScanSoft to acquire 3 software firms ScanSoft Inc. said it plans three acquisitions. The company will acquire Phonetic Systems Ltd., a provider of automated directory assistance and voice-based programs, for \$35 million in cash, and an additional consideration of up to \$35 million, based on the achievement of performance targets and the potential vesting of a warrant to buy 750,000 common shares. ART Advanced Recognition Technologies ...
+
+## test:5845：Sci/Tech → Business
+
+预测置信度：0.8752
+
+Oil Company on Trial in Madagascar Over Pollution (Reuters) Reuters - The operator of Madagascar's\privatized oil refinery went on trial on Tuesday, accused of\polluting the environment around the Indian Ocean island's main\international port, officials said.
+
+## test:5851：Business → Sci/Tech
+
+预测置信度：0.6437
+
+Update 2: EDS Reports Third-Quarter Loss Electronic Data Systems Corp. finally settled a dispute with outside auditors and reported a third-quarter loss of \$153 million due to the write-down of a huge contract to build a computer network for the Navy.
+
+## test:5862：Business → Sci/Tech
+
+预测置信度：0.9141
+
+You Say Sell, I Say Potato Disgruntled shareholders file suit to force talks with Oracle while PeopleSoft's two largest shareholders agree to disagree.
+
+## test:5871：Business → Sci/Tech
+
+预测置信度：0.6442
+
+Motorola buys wireless network developer, eyes defense contracts CHICAGO - Motorola Inc. is acquiring MeshNetworks Inc., developer of a Wi-Fi based technology that is expected to help land more contracts for its growing government contracting business.
+
+## test:5874：World → Sci/Tech
+
+预测置信度：0.5323
+
+Quietly, tide of opinion turns on Chechen war Although discussion of the war has been marginalized, many experts say Russians may not prefer it that way.
+
+## test:5884：World → Business
+
+预测置信度：0.9318
+
+Argentina gets China investment China is to invest nearly \$20bn (11bn) in Argentina over the next 10 years, Argentine officials say.
+
+## test:5886：World → Business
+
+预测置信度：0.9945
+
+Producer Price Surge Fuels Inflation Fears Producer prices surged 1.7 percent in October, their sharpest monthly increase in nearly 15 years.
+
+## test:5900：Business → World
+
+预测置信度：0.9107
+
+China, Argentina sign 5 cooperation documents China and Argentina signed five agreements in Buenos Aires Tuesday that will allow them to expand cooperation in the areas of trade, space, education, tourism and railways.
+
+## test:5901：Business → Sci/Tech
+
+预测置信度：0.5470
+
+Judge asked to penalize Microsoft over e-mails Burst.com asked a US judge to penalize Microsoft for destroying e-mails it says the world #39;s largest software company should have preserved as evidence in antitrust suits.
+
+## test:5902：Sci/Tech → World
+
+预测置信度：0.6694
+
+Press review 0850CET--The seizure of fake Nike sportswear by the Customs Department was one of the main stories on Wednesday #39;s newspapers. L-Orizzont published 
+
+## test:5916：World → Business
+
+预测置信度：0.9750
+
+ConocoPhillips boosts LUKoil stake to 10 percent (AFP) AFP - US oil major ConocoPhillips has boosted its stake in Russia's second-largest oil producer LUKoil to 10 percent, giving Conoco at least one representative on LUkoil's board.
+
+## test:5935：World → Sci/Tech
+
+预测置信度：0.9967
+
+Swedes beam poetry into outer space (Reuters) Reuters - Swedish poets have broadcast their work into outer space by radio to give alien life forms -- if they exist -- a taste\of earthling literature.
+
+## test:5937：Business → Sports
+
+预测置信度：0.7280
+
+TV's Passport Stamp of Approval The sixth season of a popular reality television show is ready to rock the world.
+
+## test:5956：World → Business
+
+预测置信度：0.7313
+
+APEC Ministers Urge New Effort on Trade Talks Pacific Rim trading nations said on Wednesday they should pool their influence to energize talks to free up world trade. As trade and foreign ministers from the 21-member Asia-Pacific 
+
+## test:5973：World → Sci/Tech
+
+预测置信度：0.9300
+
+Nursery rhymes more violent than TV (Reuters) Reuters - Children's nursery rhymes contain 10 times more violence than television shows broadcast before the\9 p.m. "watershed" after which more adult content can be shown, research has said.
+
+## test:5981：World → Business
+
+预测置信度：0.8090
+
+India desperate for jobs, infrastructure despite economic boom (AFP) AFP - Despite India's economic boom in software and outsourcing services, economists have warned the government needs more reforms to create jobs in manufacturing to cut poverty.
+
+## test:5982：World → Business
+
+预测置信度：0.4384
+
+Australia, US seal free trade agreement (AFP) AFP - Australia and the United States sealed a free trade agreement to start January 1, 2005 after clearing last-minute obstacles.
+
+## test:6006：Business → World
+
+预测置信度：0.7811
+
+Russia #39;s Putin Defends Reforms, Worries About Clans Russian President Vladimir Putin said on Thursday he had no plans to grab more power or change the constitution when reforming Russia #39;s government structure.
+
+## test:6028：Business → Sci/Tech
+
+预测置信度：0.6418
+
+Suspect Animal Tested for Mad Cow Disease  WASHINGTON (Reuters) - Government scientists are chasing a  possible new case of mad cow disease in the United States, with  final results on a suspicious slaughtered animal expected in  coming days, officials said on Thursday.
+
+## test:6035：Sci/Tech → Business
+
+预测置信度：0.7154
+
+Epiphany looks to beef up call center CRM software maker Epiphany Inc. this week is rolling out new analytical software, including two new products and vertical-specific bundles aimed at the communications and retail finance industries.
+
+## test:6058：World → Business
+
+预测置信度：0.8945
+
+A Bit of Wall St. on the Tigris The 150 brokers and traders on the Iraq Stock Exchange are not waiting for the war to end, buying and selling orders a few hundred yards away from the fighting.
+
+## test:6067：Business → Sci/Tech
+
+预测置信度：0.7623
+
+Aussies battle EU over cheese, champagne AP - The United States and Australia have prevailed in an interim ruling by World Trade Organisation (WTO) in a dispute over the protection given by the European Union to its regional goods such as Champagne wine and Feta cheese, trade officials said.
+
+## test:6068：Sci/Tech → Business
+
+预测置信度：0.7753
+
+A Fair Tax Some say a "fair tax" that removes the need to file tax returns from the vast majority of the citizenry is a national sales tax.  This doesn't seem to be very fair to people trying to feed, house and clothe themselves and seems to subsidize large land holders (Bush's favorite constituency).  There is a tax that lives up to the promises broken by Bush's proposal for a national sales tax.
+
+## test:6084：Business → Sci/Tech
+
+预测置信度：0.8436
+
+Yahoo and SBC extend partnership and plan new services Yahoo and SBC Communications have agreed to collaborate to extend some of the online services and content they currently provide to PC users to mobile phones and home entertainment devices.
+
+## test:6089：World → Sports
+
+预测置信度：0.5981
+
+Football: Brazil legend's UK debut Brazil football great Socrates is set to make his debut for non-league Garforth Town on Saturday.
+
+## test:6100：Business → Sci/Tech
+
+预测置信度：0.9765
+
+Lazarus-like virus hits computers A new computer virus is catching people out by coming back from the dead.
+
+## test:6105：Business → Sci/Tech
+
+预测置信度：0.7168
+
+California employee pension fund tenders PeopleSoft shares to &lt;b&gt;...&lt;/b&gt; NOVEMBER 19, 2004 (IDG NEWS SERVICE) - The California Employees #39; Retirement System (Calpers) is tendering its 1.5 million PeopleSoft Inc.
+
+## test:6115：Sci/Tech → Business
+
+预测置信度：0.4207
+
+Congress Sends 'Net Access Ban to White House The U.S. Congress on Friday reinstated a ban on Internet access taxes after the House of Representatives agreed to extend it for another three years rather than make it permanent.
+
+## test:6141：Sci/Tech → Business
+
+预测置信度：0.5585
+
+System glitch hits HSBC A glitch leaves customers of HSBC bank unable to use its internet services as well as cash machines.
+
+## test:6150：World → Sports
+
+预测置信度：0.9868
+
+England humble Sprinboks Charlie Hodgson scores 27 points as England overwhelm the Springboks at Twickenham.
+
+## test:6185：Business → Sports
+
+预测置信度：0.9664
+
+Special to ESPN.com It #39;s the age old question:  quot;What do you give to the man who #39;s been everything? quot;. Only time will tell whether Phil Knight #39;s retirement will be as long-lived as so many players he paid to endorse Nike.
+
+## test:6226：Business → Sci/Tech
+
+预测置信度：0.6568
+
+Google targets software giant  SEATTLE -- Not too long ago, Google Inc. seemed little more than a pesky insect to Microsoft Corp.'s 800-pound gorilla.
+
+## test:6247：Sci/Tech → Business
+
+预测置信度：0.9977
+
+Before-the-Bell: GenCorp Falls 5.6 Pct. (Reuters) Reuters - Shares of GenCorp Inc.  fell 5.6\percent before the opening bell on Monday after investment fund\Steel Partners withdrew its proposal to acquire the aerospace\and real estate company.
+
+## test:6260：Sci/Tech → Business
+
+预测置信度：0.8781
+
+Thomson joins takeover bid for ContentGuard Thomson joined Microsoft and Time Warner on Monday in trying to take control of U.S. digital rights management (DRM) company ContentGuard Holdings.
+
+## test:6262：Sci/Tech → Business
+
+预测置信度：0.7801
+
+Google Founders Selling Off Stock Google Founders Selling Off Stock\\Is this a sign that Google stack is overpriced? Or does it just mean that since there is so much interest in Google and its shares right now that the founders decided to sell off a big part of their holdings with the search engine. Dow ...
+
+## test:6266：World → Business
+
+预测置信度：0.8940
+
+Ivory Coast violence deals economic blow Burned, looted shops dot the commercial capital. European airlines have suspended flights. And only a few ships remain in what was one of West Africa #39;s busiest ports.
+
+## test:6267：Business → Sports
+
+预测置信度：0.9703
+
+Banks seek court ruling over F1 Three banks go to the High Court in London seeking a ruling which could lead to Bernie Ecclestone losing control of Formula One racing.
+
+## test:6276：Business → Sci/Tech
+
+预测置信度：0.9891
+
+Federal CISOs Rank Patch Management As Biggest Obstacle Survey by Intelligent Decisions indicates that patch management leaves less time for chief information security officers to work on improving overall security.
+
+## test:6278：Sci/Tech → Business
+
+预测置信度：0.5712
+
+Update: PeopleSoft board won't negotiate Oracle takeover PeopleSoft executives said over the weekend that they won't discuss a sale to Oracle at a price of \$24 per share but would consider an offer at a higher price.
+
+## test:6293：Business → World
+
+预测置信度：0.4163
+
+The Handbag? Total Knockoff. The Price Tag? All Too Real. It is as much a rite of the New York holiday season as sidewalk Santas or crowded Fifth Avenue sidewalks: the proliferation of hawkers selling counterfeit products like the fake Fendi handbag, the replica Rolex watch and the pirated DVD.
+
+## test:6319：Sports → Business
+
+预测置信度：0.3673
+
+Arrowhead: It still is pointing the way In comparison to its contemporaries it could be termed a modern marvel, an example of how to do things right when everyone else was doing things wrong.
+
+## test:6327：World → Sci/Tech
+
+预测置信度：0.7259
+
+EasyGroup close to launching low-cost mobile phone service (AFP) AFP - EasyGroup, the holding company of no-frills British airline easyJet, is close to striking a deal to launch a low-cost mobile telephone service in Britain, the Financial Times reported.
+
+## test:6344：Sci/Tech → Business
+
+预测置信度：0.6466
+
+Elderly 'need digital TV funds' Vulnerable groups such as the elderly should be helped to buy digital TV equipment, a report says.
+
+## test:6354：Business → Sci/Tech
+
+预测置信度：0.6018
+
+Ruling delayed in Peoplesoft case A crucial legal ruling in Oracle's takeover bid for Peoplesoft is delayed after a judge says he needs to hear more evidence.
+
+## test:6372：Sci/Tech → Business
+
+预测置信度：0.7241
+
+Streamlined Cable TV in a Card An innovation called the CableCard, which slides into a slot on the back of many new TV sets, is meant to eliminate the cable box. So why aren't cable customers hearing more about it?
+
+## test:6385：Business → World
+
+预测置信度：0.5765
+
+Judge: MCI may have violated court order on certain fees NEW YORK A federal judge in Manhattan says MCI may have violated a court order by paying more than 25 (m) million dollars in professional services fees as part of its bankruptcy proceedings in excess of caps on such fees.
+
+## test:6427：Business → Sci/Tech
+
+预测置信度：0.6890
+
+Douglas, Fraser, and blue await you Jim McLeod has a great day job, but a seasonal sideline is his  #39; #39;tree #39; #39; calling. Throughout the year, he #39;s president and owner of a software company called InfoCode Corp.
+
+## test:6438：Business → Sci/Tech
+
+预测置信度：0.5655
+
+Four Hurricanes Hurting Florida Economy (AP) AP - Normally at this time of the year, labor contractor Jose Luis Avalos would be assembling a crew of workers who could each earn  #36;1,500 to  #36;2,000 a week in the area's abundant citrus groves.
+
+## test:6462：Business → Sci/Tech
+
+预测置信度：0.6477
+
+Land Rover aims new model at US Land Rover will launch a sports tourer next year in a what is likely to be a test of British carmakers #39; ability to compete in the US.
+
+## test:6471：Sports → Business
+
+预测置信度：0.3168
+
+Gray was selected tourney MVP Justin Gray went down to the Madison Square Garden court as soon as Mustafa Shakur inadvertently kicked him in the face while going for a loose ball.
+
+## test:6490：Sports → Business
+
+预测置信度：0.6608
+
+Sixers-Wizards matinee doesn #39;t disappoint Still home in Philly for the Thanksgiving holiday, we decided to hit the Sixers/Wizards matinee yesterday. One of the best decisions we #39;ve made in a long time.
+
+## test:6500：Sci/Tech → World
+
+预测置信度：0.9889
+
+The Shockwaves of Sumatra The Indian Ocean earthquake of December 2004 produced     a shockwave that created tsunamis all across the Indian Ocean. The tsunamis hammered nearby Indonesia and struck as far as     the coast of East Africa. The death toll has climbed over 100,000 and continues to grow.    It also created social shockwaves.  
+
+## test:6512：World → Sci/Tech
+
+预测置信度：0.5752
+
+SAY NEIGHBORS #39; WEAPONS LEAVE THEM VULNERABLE Electrical engineering student Roozbeh Rahimi reflects a common sentiment among Iranians when he expresses hope that this famous tourist city will gain fame soon for its nuclear technology.
+
+## test:6516：World → Sci/Tech
+
+预测置信度：0.5669
+
+FDA OKs Scientist Publishing Vioxx Data (AP) AP - The Food and Drug Administration has given a whistle-blower scientist permission to publish data indicating that as many as 139,000 people had heart attacks that may be linked to Vioxx, the scientist's lawyer said Monday.
+
+## test:6539：Sci/Tech → Business
+
+预测置信度：0.7084
+
+Signs of a Glut and Lower Prices on Thin TV's Dont buy that high-definition TV yet. Competition may force the prices down further.
+
+## test:6542：Business → Sci/Tech
+
+预测置信度：0.8048
+
+Discovery Channel Tests Power of Licensing By rushing more than 700 products under the American Chopper brand as part of a new in-house licensing program, the cable channel is relying more heavily on licensing to market shows.
+
+## test:6566：Business → World
+
+预测置信度：0.6146
+
+More buyers choose artificial Renee McDonald remembers the Christmas trees of her youth: spindly, fake and out of a box. They were hard to put up, and they just didn #39;t smell right.
+
+## test:6572：Business → Sci/Tech
+
+预测置信度：0.7146
+
+MetroPCS obtains Cingular air com November 29, 2004, 8:33 AM PT. Wired  amp; Wireless continues its reign as the top IT priority among IT managers due to widespread IP telephony deployment and other network infrastructure upgrades.
+
+## test:6574：Business → Sci/Tech
+
+预测置信度：0.9887
+
+Is this the end of IT as we know it? Halsey Minor, CEO of hosted integration provider grand central Communications, has a powerful message for IT: In four years, ... basically the whole notion of enterprise application software is going to be dead. He believes application functionality will instead be available as hosted, pay-per-use services delivered by companies such as Salesforce.com. Putting his money where his mouth is, Minor has recently launched a \$50 million venture capital fund with his own money to fuel on-demand startups. For its part, Grand Central will handle data and process integration between enterprises and multiple on-demand services.
+
+## test:6576：World → Sci/Tech
+
+预测置信度：0.9961
+
+Toshiba claims Hollywood backing in war for next DVD standard (AFP) AFP - Toshiba said four major Hollywood studios had thrown their crucial weight behind High Definition DVD (HD-DVD), one of two disc formats contending to be the standard in next-generation DVDs.
+
+## test:6589：Sci/Tech → World
+
+预测置信度：0.5734
+
+A U.S. brain drain? A drop in engineering degrees combined with a fall-off in foreign students matriculating at U.S. colleges spells big trouble ahead.
+
+## test:6592：Business → Sci/Tech
+
+预测置信度：0.9998
+
+Sony, IBM, Toshiba Give Details of 'Cell' Chip (Reuters) Reuters - IBM , Sony Corp. (6758.T) and\Toshiba Corp. (6502.T) on Monday revealed their plans for the\powerful new "Cell" processor the three are jointly producing\to run next-generation computers, game consoles and\televisions.
+
+## test:6614：Sci/Tech → Business
+
+预测置信度：0.7358
+
+ #39;Breakthrough #39; on hydrogen fuel US scientists had made a breakthrough in their quest to make low-cost hydrogen, a technology key to finding new sources of energy to end US dependence on foreign oil, they said.
+
+## test:6623：Business → Sci/Tech
+
+预测置信度：0.4769
+
+With work, Dana-Farber learns from '94 mistakes Nurse Teresa Mazeika has known the woman knitting in the blue reclining chair for months. But she asks Carolyn Harlow her name and birthday anyway, as she approaches with chemotherapy for Harlow's blood cancer. Mazeika, a 17-year nursing veteran at Dana-Farber Cancer Institute, isn't taking any chances that she is about to give the drug to the wrong patient.
+
+## test:6669：World → Business
+
+预测置信度：0.7927
+
+Panel Urges N.Y. to Pay \$14 Billion More for City Schools Court-appointed referees recommended the state pay an additional \$14 billion over four years to improve New York City schools.
+
+## test:6698：World → Sports
+
+预测置信度：0.9565
+
+Terms of Endearment   Seems that the Bush administration, unlike previous White Houses, is not necessarily averse to allowing its ambassadors to have second tours. For example, word is that    John     Thomas "Tom    " Schieffer , the Texas oilman who brought    President Bush  into the Texas Rangers baseball club partnership and who is now ambassador to Australia, is to hang out in the Pacific a while longer, this time as ambassador to Japan.
+
+## test:6710：World → Sci/Tech
+
+预测置信度：0.7925
+
+Murdoch novel reveals Alzheimer's The last novel by the author Iris Murdoch reveals the first signs of Alzheimer's disease, experts say.
+
+## test:6711：Business → Sci/Tech
+
+预测置信度：0.9956
+
+Local group joins suit to de-list endangered species Bob Briggs wifes family has owned about 1,000 acres of redwood forest off Waddell Creek since 1913. He doesnt clearcut, and logs about once a decade.
+
+## test:6718：World → Sci/Tech
+
+预测置信度：0.9994
+
+Why 2004 was the year of the blog A US dictionary publisher declares "blog" as one of the words of the year.
+
+## test:6734：World → Business
+
+预测置信度：0.9755
+
+Turkey eyes \$15 billion investment years ANKARA: Turkey is hoping to attract \$15 billion of foreign investment between 2005 and 2007 through reforms designed to overhaul its economy and ease the country #39;s entry into 
+
+## test:6746：Sports → World
+
+预测置信度：0.7769
+
+Judge Declines to Dismiss Steroid Case (AP) AP - A judge declined to dismiss charges against four men accused of distributing steroids to top athletes amid accusations that prosecutors illegally searched a nutritional supplement lab and the house and car of Barry Bonds' trainer.
+
+## test:6748：Business → Sci/Tech
+
+预测置信度：0.9895
+
+Intel planning Centrino-like brand for desktops Intel is preparing a marketing strategy that will brand desktop PCs with a similar label that made its Centrino notebook technology a household name, according to sources familiar with the company's plans.
+
+## test:6766：World → Business
+
+预测置信度：0.5238
+
+India's low-cost airline eyes business travel (AFP) AFP - India's pioneer low-cost carrier Air Deccan plans to raise 50 million dollars in private equity by shedding a 26 percent stake and also aims to enter the corporate business jet segment, its chairman said.
+
+## test:6772：Sci/Tech → Business
+
+预测置信度：0.7524
+
+Plus: Cendant reported to buy Ebookers SAN FRANCISCO (CBS.MW) -- Not only did the word  quot;blog quot; enter Merriam-Webster #39;s dictionary this year, but Microsoft is getting on the personalized e-journal bandwagon.
+
+## test:6794：World → Sci/Tech
+
+预测置信度：0.9632
+
+HAYLEY MICK: Hayley Mick is a journalist currently based in Vancouver. She has broadcast experience with CBC Radio #39;s Quirks and Quarks and has reported for the Vancouver Sun, CBC Online, and the Canadian Press #39;s Ontario and Vancouver bureaus.
+
+## test:6796：Business → World
+
+预测置信度：0.6169
+
+Setback for asbestos settlement at ABB ABB said it was aware of the ruling, but remained confident that a settlement would be reached. ABB is naturally surprised and disappointed at todays decision, but remains confident that it can resolve.
+
+## test:6830：Sports → Sci/Tech
+
+预测置信度：0.6598
+
+Conte goes on TV and names names As the bassist for the pop-funk band Tower of Power, Victor Conte laid down a song #39;s backbone by playing a predetermined series of notes.
+
+## test:6831：Sci/Tech → Business
+
+预测置信度：0.7128
+
+Christmas clash over gift choices Children would like expensive hi-tech gifts for Christmas, but few parents are happy to buy these, research suggests.
+
+## test:6842：Sci/Tech → Business
+
+预测置信度：0.4010
+
+Iraq's Neighbors to Get Little for Environment Loss (Reuters) Reuters - Iraq's neighbors want tens of billions\of dollars for environmental damage done in the 1990-1 Gulf\conflict, but are set to get only paltry funds from the United
+
+## test:6847：Business → Sci/Tech
+
+预测置信度：0.6299
+
+IBM Quitting Computer Business An era will come to an end when IBM sells off its computer manufacturing business, according to The New York Times. A Chinese company seems the likely buyer and the deal should fetch upward of \$2 billion.
+
+## test:6849：Business → Sci/Tech
+
+预测置信度：0.6723
+
+Two top Nokia executives resign HELSINKI: Nokia said the respected head of its networks unit had resigned and another top networks official left in the second major departure of top management in two weeks at the world #39;s largest mobile phone maker.
+
+## test:6893：Business → World
+
+预测置信度：0.9990
+
+Germans plan mass welfare rallies Nationwide protests are set to take place in Germany as cuts in unemployment benefit take effect.
+
+## test:6910：Sci/Tech → Business
+
+预测置信度：0.6094
+
+Supreme Court Hears Wine Sales Case Winemakers who want to ship directly to consumers across state lines got a sympathetic hearing at the Supreme Court today, as the justices heard oral arguments in a case that could have a dramatic effect on Internet commerce and states' power to regulate the alcohol trade.
+
+## test:6914：World → Business
+
+预测置信度：0.7439
+
+BBC 'must keep up' BBC boss Mark Thompson says the corporation must keep up with change, after announcing nearly 3,000 job cuts.
+
+## test:6919：World → Business
+
+预测置信度：0.4473
+
+Court Hears Interstate Wine Sales Case (AP) AP - The Supreme Court considered Tuesday whether state alcoholic beverage regulations put in place 70 years ago, after Prohibition was lifted, should remain the law of the land in the Internet age.
+
+## test:6931：Business → Sci/Tech
+
+预测置信度：0.6473
+
+Bipartisan Panel Seeks Greenhouse Gas Limits A bipartisan commission that includes energy industry executives, environmentalists and academics will issue a report Wednesday that calls on the nation to adopt mandatory limits on greenhouse gas emissions linked to global warming, set stricter fuel economy standards and promote nuclear power, renewable energy and oil exploration.
+
+## test:6936：Sci/Tech → Business
+
+预测置信度：0.7919
+
+China's Lenovo to buy IBM's PC business TOKYO - China's Lenovo Group Ltd. signed a definitive agreement on Wednesday to acquire IBM Corp.'s personal computing division. Lenovo will pay US\$1.25 billion in cash for the business, which is expected to transform it into the world's number three PC maker, the companies announced.
+
+## test:6951：Sci/Tech → World
+
+预测置信度：0.8529
+
+Hawks Evicted From New York City Perch (AP) AP - Pale Male the city hawk was evicted from his nest, and the flap has already begun.
+
+## test:6959：Business → Sports
+
+预测置信度：0.4202
+
+Virgin dips its toe into the Pacific SIR Richard Branson did not disappoint with his stunts yesterday, flying into Sydney to promote his international airline Virgin Atlantic.
+
+## test:6973：World → Business
+
+预测置信度：0.8460
+
+Schwarzenegger Vows to Defend Emissions Law Toyota, General Motors and seven other automakers filed suit to block California's new greenhouse gas regulation, which was approved by the state in September.
+
+## test:6991：Sci/Tech → Business
+
+预测置信度：0.7972
+
+Siebel looks to midmarket to bolster revenues CRM software giant Siebel Systems said yesterday that it is launching a new program that will cater to small and midsize businesses in a bid to help it boost flat revenues.
+
+## test:6992：Sci/Tech → Business
+
+预测置信度：0.9192
+
+Nortel to file restated results next year Nortel Networks said today that after months of trying to untangle faulty financial results, it won't file its 2003 and first-half 2004 results until early next year.
+
+## test:7013：Business → Sci/Tech
+
+预测置信度：0.9202
+
+Ellison: Data Hubs Could #39;ve Prevented 9/11 SAN FRANCISCO -- Oracle CEO Larry Ellison is convinced that had the intelligence community used a unified database from Oracle, the terrorist attacks on 9/11 would never have happened.
+
+## test:7017：World → Sci/Tech
+
+预测置信度：0.6206
+
+English 'world language' forecast A third of people on the planet will be learning English in the next decade, \says a report.
+
+## test:7024：World → Business
+
+预测置信度：0.8063
+
+IRA Willing to Disarm by Month #39;s End The Irish Republican Army abandoned its longtime opposition to disarmament on Thursday, pledging to get rid of its weapons by the end of the month.
+
+## test:7030：Business → World
+
+预测置信度：0.5182
+
+Without Batting An Eyelash : A very French welcome for a new &lt;b&gt;...&lt;/b&gt; THAT night, it seemed as if three or four parties were going on at once in Cosmo Manille. Wrong, palanggas. Actually, there were five in Makati alone, and one of them had a stream of traffic 
+
+## test:7031：Sci/Tech → World
+
+预测置信度：0.8959
+
+Large Gambian Rats Worry Fla. Officials (AP) AP - The Florida Keys, already dealing with invasive exotics from melaleuca to iguanas, have added another to the list of unwanted newcomers: the African Gambian pouch rat.
+
+## test:7051：Business → Sci/Tech
+
+预测置信度：0.7875
+
+Amazon #39;s UK DVD Rentals Might Presage War with Netflix Analysts said Amazon #39;s launch of the DVD rental service in the UK might be to test its approach and streamline the logistically difficult process of handling DVDs through the mail.
+
+## test:7061：Business → Sci/Tech
+
+预测置信度：0.4632
+
+Opel to cut payroll by 9,500 Opel gets by without layoffs. Readers taking in these and similar headlines earlier this week were well advised to read the fine print.
+
+## test:7065：World → Business
+
+预测置信度：0.8308
+
+Prime minister says Australia faces tough economic year in 2005 (AFP) AFP - Prime Minister John Howard warned that Australia's strong dollar, high world oil prices and the lingering effects of prolonged drought would dampen the country's long-buoyant economy in 2005.
+
+## test:7068：Sci/Tech → Business
+
+预测置信度：0.9951
+
+Nextel, Sprint Talk Merger Nextel Communications Inc. and Sprint Corp. are negotiating a possible merger, according to a source familiar with the discussions.
+
+## test:7100：Business → Sci/Tech
+
+预测置信度：0.6533
+
+Ford to Recall 474,000 SUVs Worldwide (Reuters) Reuters - Ford Motor Co  said on Friday it\was recalling about 474,000 Escape and Mazda Tribute sport\utility vehicles globally because the accelerator cable may\prevent the engine from returning to the idle position, which\could increase stopping distance and result in a crash.
+
+## test:7122：Sci/Tech → World
+
+预测置信度：0.5545
+
+US Supreme Court to Decide Grokster Case The US Supreme Court on Friday agreed to consider whether Internet file-trading networks should be held responsible when their users copy music, movies and other protected works without permission.
+
+## test:7132：World → Sci/Tech
+
+预测置信度：0.8516
+
+Plant a tree at Easter urges Nobel laureate world to plant trees at Easter as a symbol of renewal and to protect the planet. planted, quot; Maathai told Reuters Television in Oslo, where she received the 2004 Nobel Peace Prize.
+
+## test:7148：Sci/Tech → Business
+
+预测置信度：0.9871
+
+Sources: Sprint, Nextel closing in on \$36B deal Sprint Corp. is in advanced talks to buy Nextel Communications Inc. for more than \$36 billion in a mostly stock deal, sources familiar with the situation said today.
+
+## test:7157：Sci/Tech → World
+
+预测置信度：0.7697
+
+Launcher eyes shuttle succession Boeing's huge Delta 4-Heavy rocket, set for lift-off on Saturday, may play a role in life after the space shuttle.
+
+## test:7164：Sports → Business
+
+预测置信度：0.9257
+
+Cuts offered, issue remains tax or cap The union #39;s proposal to end the lockout, made Thursday at the league #39;s Canadian headquarters, calls for a tax that would penalize -- and perhaps deter -- high-end payrolls.
+
+## test:7215：Sci/Tech → Business
+
+预测置信度：0.4536
+
+The Kid Stays in His Home, Dressed in PJ's, With a Live Mike Robert Evans, the fabled Hollywood producer and man about town, will be enjoying his latest gig, as a satellite radio talk-show host, from the comfort of his home.
+
+## test:7228：Business → World
+
+预测置信度：0.9933
+
+Indonesian diplomats asked to help improve RI #39;s bad image JAKARTA (Antara): President Susilo Yudhoyono asked Indonesian diplomats on Monday to help the government improve Indonesia #39;s bad image.
+
+## test:7238：World → Sports
+
+预测置信度：0.8491
+
+Bangladesh boss slams detractors Bangladesh's coach says they still deserve Test status after their 30th defeat, to India.
+
+## test:7239：World → Sci/Tech
+
+预测置信度：0.9201
+
+Week's delay for Delta launcher Boeing's new heavy-lift Delta 4 rocket must wait a further week before making its maiden flight.
+
+## test:7262：Sci/Tech → World
+
+预测置信度：0.7220
+
+Travel Column: Australia Through Aboriginal Eyes This week's TravelWatch column profiles Anangu Tours, an Aborigine-owned tour company in Australia's Red Center.
+
+## test:7290：Business → Sci/Tech
+
+预测置信度：0.8784
+
+Symantec Said to Be in Talks for Veritas Symantec, which produces the Norton line of computer products, is in talks to acquire Veritas Software, a maker of data backup programs.
+
+## test:7305：Sci/Tech → Business
+
+预测置信度：0.9059
+
+Take Two Torts and Call Me in the Morning The friction that sometimes strains the patient-doctor relationship when lawyers seek medical care is at an all-time high.
+
+## test:7306：Sci/Tech → Business
+
+预测置信度：0.5503
+
+US Supreme Court To Hear File-Sharing Case WASHINGTON -- The US Supreme Court will take up one of the key arguments about the use of file-sharing services. The justices will consider whether peer-to-peer Internet file-sharing services can be held responsible 
+
+## test:7307：Sci/Tech → Business
+
+预测置信度：0.5297
+
+Sony and Samsung to Cross-License Patents Sony Corp. and Samsung Electronics said on Tuesday they had agreed to share patents on basic technology to speed up product development and avoid adding to a growing number of cross-border patent disputes.
+
+## test:7326：Sports → Sci/Tech
+
+预测置信度：0.7783
+
+EA Signs Five-Year Exclusive NFL Deal Electronic Arts announced an exclusive licensing relationships with the National Football League and PLAYERS INC to develop, publish and distribute interactive football games.
+
+## test:7369：Business → World
+
+预测置信度：0.8598
+
+China succeeds in cooling economy, but 2005 likely to prove just as tough (AFP) AFP - China can claim some success in the battle to cool its roaring economy in 2004 with a series of macro policies helping prevent another boom-bust cycle, but much remains to be done if Beijing is to avoid increasing wrangles with trade partners.
+
+## test:7387：Business → Sci/Tech
+
+预测置信度：0.7672
+
+Time warner in \$600m setttlement Time Warner is to announce today that it will pay between \$500 and \$600 million to settle federal investigations into irregularities at America Online, according to reports in the American press.
+
+## test:7413：Business → World
+
+预测置信度：0.6435
+
+Bush Pledges Strong-Dollar Policy President Bush meets with Italian Prime Minister Silvio Berlusconi in the Oval Office of the White House, Wednesday, Dec. 15, 2004, in Washington.
+
+## test:7418：Sci/Tech → Business
+
+预测置信度：0.9475
+
+MicroStrategy Turnover Draws Analyst Scrutiny MicroStrategy Inc. said yesterday that president and chief financial officer Eric F. Brown had resigned and that founder Michael J. Saylor would again hold the company's top three jobs, prompting some analysts to raise concerns about the company's stock.
+
+## test:7426：Sci/Tech → World
+
+预测置信度：0.5182
+
+R.I.P. Gary Webb -- Unembedded Reporter The finest journalist ever to get fired for telling the truth is dead at age 49. The official cause of death on the death certificate will be suicide. But, as we shall see, he had much help getting to that point. The story of the life and death of Gary Webb says much about the state of American politics and what passes as "journalism" in today's America. 
+
+## test:7440：Sci/Tech → World
+
+预测置信度：0.6956
+
+A Distraction as a Deadline Approaches As the holidays approach, Christmas spirit is a bargain-hunting essential.
+
+## test:7446：Business → World
+
+预测置信度：0.6823
+
+Japan govt body to call for 5.7 billion dollar aid to Daiei (AFP) AFP - A Japanese government-backed organization will ask financial institutions to provide troubled retailer Daiei with 600 billion yen (5.7 billion dollars) in financial assistance.
+
+## test:7455：Business → Sci/Tech
+
+预测置信度：0.8001
+
+BT cuts prices for telecom rivals Ofcom is cutting the price BT can charge its rivals for putting their broadband equipment in its exchanges by up to 60.
+
+## test:7470：Business → Sci/Tech
+
+预测置信度：0.9250
+
+Broadband charges set to tumble The cost of broadband internet access is likely to fall after Ofcom ordered British Telecom to cut the amount it charges internet providers.
+
+## test:7476：World → Sci/Tech
+
+预测置信度：0.5213
+
+Britons still prefer fish n'chips (AFP) AFP - Traditional fish-and-chips along with cherished pub grub remain the dishes of choice for Britons outstripping Chinese or Indian take-aways.
+
+## test:7492：Business → Sci/Tech
+
+预测置信度：0.9429
+
+FCC Mulls Airborne Mobile Phone Use Although there may have been technical limitations at the time the cell phone ban was established, according to IDC #39;s Shiv Bakhshi, it is unclear why the ban has remained in place, given that 
+
+## test:7522：Sci/Tech → Business
+
+预测置信度：0.7488
+
+Panasonic Races to Meet Plasma Demand Company is expanding production to deliver more flat-panel TVs.
+
+## test:7539：World → Sci/Tech
+
+预测置信度：0.9986
+
+Mars water tops science honours The discovery that salty, acidic water once flowed across the surface of Mars has topped a list of the 10 key scientific advances of 2004.
+
+## test:7542：Sci/Tech → Business
+
+预测置信度：0.8507
+
+Boeing casts eyes on live TV over Connexion service The Boeing Co. is planning to add live television to its Connexion by Boeing service during 2005, a company executive said in a recent interview.
+
+## test:7561：Business → Sci/Tech
+
+预测置信度：0.6948
+
+Whitman: EBay To Buy Rent.com; Compliments Craigslist Stake Without reserve. EBay (nasdaq: EBAY - news - people ) on Friday said it is buying Rent.com. The latter, which is privately held, provides online listings of apartment and house rentals.
+
+## test:7567：Sci/Tech → Business
+
+预测置信度：0.8700
+
+This week in merger news This week saw three merger deals worth about \$60 billion--including one that ranks as the largest software merger in history.
+
+## test:7585：World → Business
+
+预测置信度：0.9785
+
+Pricey Drug Trials Turn Up Few New Blockbusters The \$500 billion drug industry is stumbling badly in its core business of finding new medicines, while aggressively marketing existing drugs.
+
+## test:7589：Sports → World
+
+预测置信度：0.7626
+
+The Newest Hope ; Marriage of Necessity Just Might Work Out NEW YORK - The TV lights were on, the cameras rolled and the symphony of cameras flashing in his face blinded Pedro Martinez - but not for long.

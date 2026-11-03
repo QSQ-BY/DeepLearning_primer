@@ -1,0 +1,112 @@
+[
+  {
+    "sample_id": "test:1011",
+    "neighbor_id": "test:6905",
+    "jaccard": 0.7272727272727273,
+    "true_label": "Sci/Tech",
+    "predicted_label": "Business",
+    "neighbor_true_label": "Business",
+    "neighbor_correct": "True",
+    "text": "China's Lenovo in talks with 'major IT firm' for acquisition (AFP) AFP - China's largest manufacturer of personal computers Lenovo Group said it is in negotiations with a major information technology company, believed to be US-based IBM.",
+    "neighbor_text": "Lenovo confirms acquisition talks CHINA #39;S largest manufacturer of personal computers Lenovo Group has confirmed it is in acquisition negotiations with a major information technology company, widely believed to be IBM."
+  },
+  {
+    "sample_id": "test:1662",
+    "neighbor_id": "test:1678",
+    "jaccard": 0.5384615384615384,
+    "true_label": "Business",
+    "predicted_label": "World",
+    "neighbor_true_label": "Business",
+    "neighbor_correct": "True",
+    "text": "Sony-Led Group to Acquire MGM for \\$3B LOS ANGELES Sept. 13, 2004 - A consortium led by Sony Corp. has agreed in principle to acquire famed Hollywood studio Metro-Goldwyn-Mayer Inc.",
+    "neighbor_text": "Sony group to buy MGM A consortium led by Sony Corp. has agreed in principle to acquire famed Hollywood studio Metro-Goldwyn-Mayer Inc. for nearly \\$3 billion, MGM said late yesterday."
+  },
+  {
+    "sample_id": "test:2115",
+    "neighbor_id": "test:2760",
+    "jaccard": 0.6666666666666666,
+    "true_label": "Sci/Tech",
+    "predicted_label": "Business",
+    "neighbor_true_label": "Sci/Tech",
+    "neighbor_correct": "True",
+    "text": "Viruses keep on growing Most IT Managers won #39;t question the importance of security, but this priority has been sliding between the third and fourth most important focus for companies.",
+    "neighbor_text": "JPEG exploit could beat antivirus software Most IT Managers won #39;t question the importance of security, but this priority has been sliding between the third and fourth most important focus for companies."
+  },
+  {
+    "sample_id": "test:2145",
+    "neighbor_id": "test:2287",
+    "jaccard": 0.6,
+    "true_label": "Sci/Tech",
+    "predicted_label": "Business",
+    "neighbor_true_label": "Sci/Tech",
+    "neighbor_correct": "True",
+    "text": "A  #39;Plan B #39; for PeopleSoft customers com September 20, 2004, 6:13 PM PT. This fourth priority #39;s main focus has been improving or obtaining CRM and ERP software for the past year and a half.",
+    "neighbor_text": "Yahoo: Internet withdrawal anguishing com September 22, 2004, 12:36 PM PT. This fourth priority #39;s main focus has been improving or obtaining CRM and ERP software for the past year and a half."
+  },
+  {
+    "sample_id": "test:3546",
+    "neighbor_id": "test:3605",
+    "jaccard": 0.5573770491803278,
+    "true_label": "World",
+    "predicted_label": "Sci/Tech",
+    "neighbor_true_label": "Sci/Tech",
+    "neighbor_correct": "True",
+    "text": "Study: Few Americans Buy Drugs Online NEW YORK - Only 4 percent of Americans have ever used the Internet to buy prescription drugs - and even fewer do so through foreign pharmacies - despite Web sites maintained by a handful of states to help citizens import medicines more cheaply from Canada, a new study finds.    A majority - 62 percent - believe drugs bought online are less safe than those purchased from a local pharmacy, accepting the federal government's stated concerns in opposing drug imports, the Pew Internet and American Life Project said in a report Sunday...",
+    "neighbor_text": "Study: Few Americans Buy Drugs Online Only 4 percent of Americans have ever used the Internet to buy prescription drugs - and even fewer do so through foreign pharmacies - despite Web sites maintained by a handful of states to help citizens import medicines more cheaply from Canada, a new study finds."
+  },
+  {
+    "sample_id": "test:3563",
+    "neighbor_id": "test:3584",
+    "jaccard": 0.59375,
+    "true_label": "World",
+    "predicted_label": "Sports",
+    "neighbor_true_label": "Sports",
+    "neighbor_correct": "True",
+    "text": "Ken Caminiti, 1996 NL MVP, Dies at Age 41 NEW YORK - Ken Caminiti, the 1996 National League MVP who later admitted using steroids during his major league career, died Sunday. He was 41...",
+    "neighbor_text": "Ken Caminiti, Former NL MVP, Dies of Heart Attack at Age 41 Ken Caminiti, the 1996 National League Most Valuable Player who admitted to using steroids during his Major League Baseball career, died yesterday of a heart attack, his agent said."
+  },
+  {
+    "sample_id": "test:4359",
+    "neighbor_id": "test:4047",
+    "jaccard": 0.8571428571428571,
+    "true_label": "Business",
+    "predicted_label": "Sci/Tech",
+    "neighbor_true_label": "Sci/Tech",
+    "neighbor_correct": "True",
+    "text": "Google #39;s New PC Search Tool Poses Risks NEW YORK Oct. 18, 2004 - People who use public or workplace computers for e-mail, instant messaging and Web searching have a new privacy risk to worry about: Google #39;s free new tool that indexes a PC #39;s contents for quickly locating data.",
+    "neighbor_text": "Google's New PC Search Tool Poses Risks (AP) AP - People who use public or workplace computers for e-mail, instant messaging and Web searching have a new privacy risk to worry about: Google's free new tool that indexes a PC's contents for quickly locating data."
+  },
+  {
+    "sample_id": "test:4571",
+    "neighbor_id": "test:4557",
+    "jaccard": 0.76,
+    "true_label": "Business",
+    "predicted_label": "Sci/Tech",
+    "neighbor_true_label": "Sci/Tech",
+    "neighbor_correct": "True",
+    "text": "Microsoft Readies Next Business IM Server A little over a year after introducing the first version of Office Live Communications Server, Microsoft says it plans to release the next version of its enterprise instant messaging software, in December.",
+    "neighbor_text": "Microsoft prepares to ship new corporate IM server A little over a year after introducing the first version of Office Live Communications Server, Microsoft Corp. in December plans to release the next version of its enterprise instant messaging software, it said Monday."
+  },
+  {
+    "sample_id": "test:4789",
+    "neighbor_id": "test:4794",
+    "jaccard": 0.5357142857142857,
+    "true_label": "Sci/Tech",
+    "predicted_label": "Business",
+    "neighbor_true_label": "Business",
+    "neighbor_correct": "True",
+    "text": "Gateway Reports Smaller Quarterly Loss Gateway Inc. reported a narrowed net loss in the first quarter as it continues to restructure its operations and integrate its acquisition of eMachines. Still, the personal computer and electronics company posted a tiny operating profit -- its first in nearly three years.",
+    "neighbor_text": "Gateway reports smaller net loss as restructuring continues Gateway Inc. reported a narrowed net loss in the first quarter as it continues to restructure its operations and integrate its acquisition of eMachines."
+  },
+  {
+    "sample_id": "test:6592",
+    "neighbor_id": "test:6567",
+    "jaccard": 0.5294117647058824,
+    "true_label": "Business",
+    "predicted_label": "Sci/Tech",
+    "neighbor_true_label": "Sci/Tech",
+    "neighbor_correct": "True",
+    "text": "Sony, IBM, Toshiba Give Details of 'Cell' Chip (Reuters) Reuters - IBM , Sony Corp. (6758.T) and\\Toshiba Corp. (6502.T) on Monday revealed their plans for the\\powerful new \"Cell\" processor the three are jointly producing\\to run next-generation computers, game consoles and\\televisions.",
+    "neighbor_text": "Chip power, times 10 IBM, Sony Corp. and Toshiba Corp. on Monday unveiled some key details on the powerful new  quot;Cell quot; processor the three are jointly producing to run next-generation computers, game consoles and TVs."
+  }
+]

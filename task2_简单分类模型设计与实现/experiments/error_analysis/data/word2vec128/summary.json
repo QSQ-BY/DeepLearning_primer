@@ -1,0 +1,594 @@
+{
+  "models": {
+    "original128": {
+      "num_samples": 7600,
+      "correct": 6993,
+      "errors": 607,
+      "accuracy": 0.9201315789473684,
+      "macro_f1": 0.9200151651525473,
+      "business_scitech_confusions": 259,
+      "confusion_matrix": [
+        [
+          1734,
+          45,
+          66,
+          55
+        ],
+        [
+          21,
+          1859,
+          12,
+          8
+        ],
+        [
+          61,
+          12,
+          1676,
+          151
+        ],
+        [
+          55,
+          13,
+          108,
+          1724
+        ]
+      ],
+      "per_class": [
+        {
+          "label": "World",
+          "support": 1900,
+          "errors": 166,
+          "precision": 0.9267771245323356,
+          "recall": 0.9126315789473685,
+          "f1": 0.9196499602227527
+        },
+        {
+          "label": "Sports",
+          "support": 1900,
+          "errors": 41,
+          "precision": 0.9637117677553136,
+          "recall": 0.978421052631579,
+          "f1": 0.9710107077565945
+        },
+        {
+          "label": "Business",
+          "support": 1900,
+          "errors": 224,
+          "precision": 0.9001074113856069,
+          "recall": 0.8821052631578947,
+          "f1": 0.8910154173312068
+        },
+        {
+          "label": "Sci/Tech",
+          "support": 1900,
+          "errors": 176,
+          "precision": 0.8895768833849329,
+          "recall": 0.9073684210526316,
+          "f1": 0.8983845752996352
+        }
+      ],
+      "loss": 0.24954499304294586,
+      "epoch": 8,
+      "val_accuracy": 0.92025,
+      "parameters": 5625220,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\textcnn_k237_plateau20\\best_accuracy.pt",
+      "checkpoint_sha256": "1d4ddd8cb68a8462577b9b35519c454513176843ed6b295ddb3e65682441f712"
+    },
+    "random128": {
+      "num_samples": 7600,
+      "correct": 6993,
+      "errors": 607,
+      "accuracy": 0.9201315789473684,
+      "macro_f1": 0.9200151651525473,
+      "business_scitech_confusions": 259,
+      "confusion_matrix": [
+        [
+          1734,
+          45,
+          66,
+          55
+        ],
+        [
+          21,
+          1859,
+          12,
+          8
+        ],
+        [
+          61,
+          12,
+          1676,
+          151
+        ],
+        [
+          55,
+          13,
+          108,
+          1724
+        ]
+      ],
+      "per_class": [
+        {
+          "label": "World",
+          "support": 1900,
+          "errors": 166,
+          "precision": 0.9267771245323356,
+          "recall": 0.9126315789473685,
+          "f1": 0.9196499602227527
+        },
+        {
+          "label": "Sports",
+          "support": 1900,
+          "errors": 41,
+          "precision": 0.9637117677553136,
+          "recall": 0.978421052631579,
+          "f1": 0.9710107077565945
+        },
+        {
+          "label": "Business",
+          "support": 1900,
+          "errors": 224,
+          "precision": 0.9001074113856069,
+          "recall": 0.8821052631578947,
+          "f1": 0.8910154173312068
+        },
+        {
+          "label": "Sci/Tech",
+          "support": 1900,
+          "errors": 176,
+          "precision": 0.8895768833849329,
+          "recall": 0.9073684210526316,
+          "f1": 0.8983845752996352
+        }
+      ],
+      "loss": 0.24954499304294586,
+      "epoch": 8,
+      "val_accuracy": 0.92025,
+      "parameters": 5625220,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\textcnn_k237_random128_20261103\\best_accuracy.pt",
+      "checkpoint_sha256": "bc71d6423a38bfae9c0b3d16a97c831cf9bda454a63c12937d5572dbe2efdd67"
+    },
+    "word2vec128": {
+      "num_samples": 7600,
+      "correct": 6981,
+      "errors": 619,
+      "accuracy": 0.9185526315789474,
+      "macro_f1": 0.9184585459871416,
+      "business_scitech_confusions": 272,
+      "confusion_matrix": [
+        [
+          1743,
+          47,
+          61,
+          49
+        ],
+        [
+          25,
+          1852,
+          15,
+          8
+        ],
+        [
+          58,
+          11,
+          1679,
+          152
+        ],
+        [
+          61,
+          12,
+          120,
+          1707
+        ]
+      ],
+      "per_class": [
+        {
+          "label": "World",
+          "support": 1900,
+          "errors": 157,
+          "precision": 0.9236883942766295,
+          "recall": 0.9173684210526316,
+          "f1": 0.9205175600739371
+        },
+        {
+          "label": "Sports",
+          "support": 1900,
+          "errors": 48,
+          "precision": 0.963579604578564,
+          "recall": 0.9747368421052631,
+          "f1": 0.9691261119832548
+        },
+        {
+          "label": "Business",
+          "support": 1900,
+          "errors": 221,
+          "precision": 0.8954666666666666,
+          "recall": 0.8836842105263157,
+          "f1": 0.8895364238410596
+        },
+        {
+          "label": "Sci/Tech",
+          "support": 1900,
+          "errors": 193,
+          "precision": 0.8909185803757829,
+          "recall": 0.8984210526315789,
+          "f1": 0.8946540880503145
+        }
+      ],
+      "loss": 0.26504838466644287,
+      "epoch": 8,
+      "val_accuracy": 0.9210833333333334,
+      "parameters": 5625220,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\textcnn_k237_word2vec128_20261103\\best_accuracy.pt",
+      "checkpoint_sha256": "5b137b0c124eae6bd59acd73917f6153475b318583ebe3a38b1e8aee690497ad"
+    }
+  },
+  "comparisons": {
+    "original128_to_random128": {
+      "both_correct": 6993,
+      "fixed": 0,
+      "both_wrong": 607,
+      "new_errors": 0
+    },
+    "random128_to_word2vec128": {
+      "both_correct": 6869,
+      "fixed": 112,
+      "both_wrong": 495,
+      "new_errors": 124
+    },
+    "original128_to_word2vec128": {
+      "both_correct": 6869,
+      "fixed": 112,
+      "both_wrong": 495,
+      "new_errors": 124
+    }
+  },
+  "common_490_followup": {
+    "original128": {
+      "corrected": 0,
+      "remaining_wrong": 490
+    },
+    "random128": {
+      "corrected": 0,
+      "remaining_wrong": 490
+    },
+    "word2vec128": {
+      "corrected": 48,
+      "remaining_wrong": 442
+    }
+  },
+  "feature_segments": [
+    {
+      "model": "original128",
+      "segment": "不超过20词",
+      "samples": 162,
+      "errors": 28,
+      "error_rate": 0.1728395061728395
+    },
+    {
+      "model": "original128",
+      "segment": "超过20词",
+      "samples": 7438,
+      "errors": 579,
+      "error_rate": 0.07784350631890292
+    },
+    {
+      "model": "original128",
+      "segment": "没有未知词",
+      "samples": 5825,
+      "errors": 432,
+      "error_rate": 0.07416309012875537
+    },
+    {
+      "model": "original128",
+      "segment": "至少一个未知词",
+      "samples": 1775,
+      "errors": 175,
+      "error_rate": 0.09859154929577464
+    },
+    {
+      "model": "random128",
+      "segment": "不超过20词",
+      "samples": 162,
+      "errors": 28,
+      "error_rate": 0.1728395061728395
+    },
+    {
+      "model": "random128",
+      "segment": "超过20词",
+      "samples": 7438,
+      "errors": 579,
+      "error_rate": 0.07784350631890292
+    },
+    {
+      "model": "random128",
+      "segment": "没有未知词",
+      "samples": 5825,
+      "errors": 432,
+      "error_rate": 0.07416309012875537
+    },
+    {
+      "model": "random128",
+      "segment": "至少一个未知词",
+      "samples": 1775,
+      "errors": 175,
+      "error_rate": 0.09859154929577464
+    },
+    {
+      "model": "word2vec128",
+      "segment": "不超过20词",
+      "samples": 162,
+      "errors": 27,
+      "error_rate": 0.16666666666666666
+    },
+    {
+      "model": "word2vec128",
+      "segment": "超过20词",
+      "samples": 7438,
+      "errors": 592,
+      "error_rate": 0.07959128798063995
+    },
+    {
+      "model": "word2vec128",
+      "segment": "没有未知词",
+      "samples": 5825,
+      "errors": 442,
+      "error_rate": 0.07587982832618026
+    },
+    {
+      "model": "word2vec128",
+      "segment": "至少一个未知词",
+      "samples": 1775,
+      "errors": 177,
+      "error_rate": 0.09971830985915493
+    }
+  ],
+  "embedding": {
+    "matched_words": 42394,
+    "ordinary_vocab_size": 42394,
+    "type_coverage": 1.0,
+    "embedding_dim": 128,
+    "source": {
+      "method": "word2vec_skipgram_negative_sampling",
+      "parameters": {
+        "vector_size": 128,
+        "window": 5,
+        "min_count": 2,
+        "sg": 1,
+        "hs": 0,
+        "negative": 5,
+        "ns_exponent": 0.75,
+        "sample": 0.001,
+        "alpha": 0.025,
+        "min_alpha": 0.0001,
+        "epochs": 10,
+        "workers": 1,
+        "seed": 42,
+        "sorted_vocab": 1,
+        "shrink_windows": true
+      },
+      "tokenizer": "lowercase_regex_[a-z0-9]+",
+      "corpus_split": "training_only",
+      "labels_used": false,
+      "external_corpus_used": false,
+      "corpus_rows": 108000,
+      "corpus_tokens": 4285153,
+      "corpus_sha256": "a09ca102e1f5c06464cbf9aebed5e52f9f5a61c7c8715f4edfd791b92a03dbfe",
+      "train_indices_sha256": "1cd790e01cc4db4bd613510344bb67e165a556b5bd78e2792396cbe59663a98a",
+      "vector_vocab_size": 42394,
+      "vectors_sha256": "796fd511eec093468f2c13bac76d2c76fa79af9767f1498aa6d615a05960029c",
+      "model_sha256": "e1a7ced009ee71113063daf8853fc42cf67a241c9581323f21749be420a9bd66",
+      "gensim": "4.4.0",
+      "numpy": "2.4.4",
+      "python": "3.12.13",
+      "hash_function": "sha256_first_4_bytes_little_endian",
+      "elapsed_seconds": 121.61650750000263,
+      "source_checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\textcnn_k237_plateau20\\best_accuracy.pt",
+      "source_checkpoint_sha256": "1d4ddd8cb68a8462577b9b35519c454513176843ed6b295ddb3e65682441f712",
+      "validation_indices_sha256": "5f895010fc821c3db50728c6d6befbef73da9034e099542d4a999411dc148769"
+    },
+    "vector_path": "D:\\code\\DeepLearning\\.build\\task2\\pretrained\\word2vec_ag_news128_20261103\\vectors.txt"
+  },
+  "pretrained_source_manifest": {
+    "method": "word2vec_skipgram_negative_sampling",
+    "parameters": {
+      "vector_size": 128,
+      "window": 5,
+      "min_count": 2,
+      "sg": 1,
+      "hs": 0,
+      "negative": 5,
+      "ns_exponent": 0.75,
+      "sample": 0.001,
+      "alpha": 0.025,
+      "min_alpha": 0.0001,
+      "epochs": 10,
+      "workers": 1,
+      "seed": 42,
+      "sorted_vocab": 1,
+      "shrink_windows": true
+    },
+    "tokenizer": "lowercase_regex_[a-z0-9]+",
+    "corpus_split": "training_only",
+    "labels_used": false,
+    "external_corpus_used": false,
+    "corpus_rows": 108000,
+    "corpus_tokens": 4285153,
+    "corpus_sha256": "a09ca102e1f5c06464cbf9aebed5e52f9f5a61c7c8715f4edfd791b92a03dbfe",
+    "train_indices_sha256": "1cd790e01cc4db4bd613510344bb67e165a556b5bd78e2792396cbe59663a98a",
+    "vector_vocab_size": 42394,
+    "vectors_sha256": "796fd511eec093468f2c13bac76d2c76fa79af9767f1498aa6d615a05960029c",
+    "model_sha256": "e1a7ced009ee71113063daf8853fc42cf67a241c9581323f21749be420a9bd66",
+    "gensim": "4.4.0",
+    "numpy": "2.4.4",
+    "python": "3.12.13",
+    "hash_function": "sha256_first_4_bytes_little_endian",
+    "elapsed_seconds": 121.61650750000263,
+    "source_checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\textcnn_k237_plateau20\\best_accuracy.pt",
+    "source_checkpoint_sha256": "1d4ddd8cb68a8462577b9b35519c454513176843ed6b295ddb3e65682441f712",
+    "validation_indices_sha256": "5f895010fc821c3db50728c6d6befbef73da9034e099542d4a999411dc148769",
+    "portable_model_file": "word2vec_portable.model",
+    "portable_model_sha256": "e760e42c5ebac53917b3a7f61e958424e1edf01c42a1b46ddce0d3ba9eb33d9e",
+    "serialization_note": "Repacked stable hash function reference only; vectors and syn1neg unchanged; no retraining."
+  },
+  "selected_cases": [
+    {
+      "sample_id": "test:139",
+      "true_label": "World",
+      "predictions": {
+        "original128": "Business",
+        "random128": "Business",
+        "word2vec128": "World"
+      },
+      "text": "Sharon orders 1,000 homes in West Bank Israel announced plans for 1,000 houses in the West Bank yesterday, accelerating the expansion of the settlements. "
+    },
+    {
+      "sample_id": "test:1011",
+      "true_label": "Sci/Tech",
+      "predictions": {
+        "original128": "Business",
+        "random128": "Business",
+        "word2vec128": "World"
+      },
+      "text": "China's Lenovo in talks with 'major IT firm' for acquisition (AFP) AFP - China's largest manufacturer of personal computers Lenovo Group said it is in negotiations with a major information technology company, believed to be US-based IBM."
+    },
+    {
+      "sample_id": "test:1840",
+      "true_label": "Sports",
+      "predictions": {
+        "original128": "Business",
+        "random128": "Business",
+        "word2vec128": "Business"
+      },
+      "text": "Icing call Out of money, out of patience, out of time, and for the foreseeable future, out of business."
+    },
+    {
+      "sample_id": "test:4359",
+      "true_label": "Business",
+      "predictions": {
+        "original128": "Sci/Tech",
+        "random128": "Sci/Tech",
+        "word2vec128": "Sci/Tech"
+      },
+      "text": "Google #39;s New PC Search Tool Poses Risks NEW YORK Oct. 18, 2004 - People who use public or workplace computers for e-mail, instant messaging and Web searching have a new privacy risk to worry about: Google #39;s free new tool that indexes a PC #39;s contents for quickly locating data."
+    },
+    {
+      "sample_id": "test:5467",
+      "true_label": "Sports",
+      "predictions": {
+        "original128": "Sci/Tech",
+        "random128": "Sci/Tech",
+        "word2vec128": "Sports"
+      },
+      "text": "Andreas Herzog Retires From Pro Soccer (AP) AP - Los Angeles Galaxy midfielder Andreas Herzog, who played for Austria in the 1990 and 1998 World Cups, retired from professional soccer Wednesday."
+    },
+    {
+      "sample_id": "test:6592",
+      "true_label": "Business",
+      "predictions": {
+        "original128": "Sci/Tech",
+        "random128": "Sci/Tech",
+        "word2vec128": "Sci/Tech"
+      },
+      "text": "Sony, IBM, Toshiba Give Details of 'Cell' Chip (Reuters) Reuters - IBM , Sony Corp. (6758.T) and\\Toshiba Corp. (6502.T) on Monday revealed their plans for the\\powerful new \"Cell\" processor the three are jointly producing\\to run next-generation computers, game consoles and\\televisions."
+    }
+  ],
+  "bank_probe": {
+    "original128": [
+      {
+        "variant": "original",
+        "prediction": "Business",
+        "probabilities": [
+          0.42792779207229614,
+          0.0018433716613799334,
+          0.5461097359657288,
+          0.024119101464748383
+        ]
+      },
+      {
+        "variant": "bank_at_7_to_UNK",
+        "prediction": "World",
+        "probabilities": [
+          0.6288613080978394,
+          0.0072031705640256405,
+          0.29817238450050354,
+          0.06576311588287354
+        ]
+      },
+      {
+        "variant": "bank_at_18_to_UNK",
+        "prediction": "World",
+        "probabilities": [
+          0.5696859359741211,
+          0.0015681841177865863,
+          0.3971564769744873,
+          0.03158937767148018
+        ]
+      }
+    ],
+    "random128": [
+      {
+        "variant": "original",
+        "prediction": "Business",
+        "probabilities": [
+          0.42792779207229614,
+          0.0018433716613799334,
+          0.5461097359657288,
+          0.024119101464748383
+        ]
+      },
+      {
+        "variant": "bank_at_7_to_UNK",
+        "prediction": "World",
+        "probabilities": [
+          0.6288613080978394,
+          0.0072031705640256405,
+          0.29817238450050354,
+          0.06576311588287354
+        ]
+      },
+      {
+        "variant": "bank_at_18_to_UNK",
+        "prediction": "World",
+        "probabilities": [
+          0.5696859359741211,
+          0.0015681841177865863,
+          0.3971564769744873,
+          0.03158937767148018
+        ]
+      }
+    ],
+    "word2vec128": [
+      {
+        "variant": "original",
+        "prediction": "World",
+        "probabilities": [
+          0.5211355686187744,
+          0.004616183694452047,
+          0.45828261971473694,
+          0.015965517610311508
+        ]
+      },
+      {
+        "variant": "bank_at_7_to_UNK",
+        "prediction": "World",
+        "probabilities": [
+          0.6789249777793884,
+          0.010247638449072838,
+          0.29506948590278625,
+          0.015757905319333076
+        ]
+      },
+      {
+        "variant": "bank_at_18_to_UNK",
+        "prediction": "World",
+        "probabilities": [
+          0.7077146768569946,
+          0.002790585858747363,
+          0.26283329725265503,
+          0.026661504060029984
+        ]
+      }
+    ]
+  }
+}

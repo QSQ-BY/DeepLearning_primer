@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "models": {
+    "k345": {
+      "samples": 7600,
+      "errors": 618,
+      "accuracy": 0.9186842105263158,
+      "source_rows_checked": 7600,
+      "checkpoint_hash_unchanged": true
+    },
+    "k246": {
+      "samples": 7600,
+      "errors": 623,
+      "accuracy": 0.9180263157894737,
+      "source_rows_checked": 7600,
+      "checkpoint_hash_unchanged": true
+    },
+    "k237": {
+      "samples": 7600,
+      "errors": 607,
+      "accuracy": 0.9201315789473684,
+      "source_rows_checked": 7600,
+      "checkpoint_hash_unchanged": true
+    },
+    "cleaning": {
+      "samples": 7600,
+      "errors": 622,
+      "accuracy": 0.9181578947368421,
+      "source_rows_checked": 7600,
+      "checkpoint_hash_unchanged": true
+    },
+    "random100": {
+      "samples": 7600,
+      "errors": 623,
+      "accuracy": 0.9180263157894737,
+      "source_rows_checked": 7600,
+      "checkpoint_hash_unchanged": true
+    },
+    "glove100": {
+      "samples": 7600,
+      "errors": 632,
+      "accuracy": 0.9168421052631579,
+      "source_rows_checked": 7600,
+      "checkpoint_hash_unchanged": true
+    }
+  },
+  "source_rows_compared": 45600,
+  "all_three_new_runs_completed_20_epochs": true,
+  "shared_train_validation_indices": true,
+  "random100_glove100_non_embedding_initialization_identical": true,
+  "missing_markdown_links": 0,
+  "tuning_reports_preserved": 12,
+  "no_generated_pdf": true
+}
