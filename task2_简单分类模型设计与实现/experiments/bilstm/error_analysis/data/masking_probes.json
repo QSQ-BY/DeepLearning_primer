@@ -1,0 +1,428 @@
+[
+  {
+    "model": "TextCNN",
+    "sample_id": "test:139",
+    "variant": "original",
+    "masked_positions": [],
+    "prediction": "Business",
+    "probabilities": {
+      "World": 0.42792779207229614,
+      "Sports": 0.0018433716613799334,
+      "Business": 0.5461097359657288,
+      "Sci/Tech": 0.024119101464748383
+    }
+  },
+  {
+    "model": "TextCNN",
+    "sample_id": "test:139",
+    "variant": "mask_bank",
+    "masked_positions": [
+      {
+        "position": 7,
+        "token": "bank"
+      },
+      {
+        "position": 18,
+        "token": "bank"
+      }
+    ],
+    "prediction": "World",
+    "probabilities": {
+      "World": 0.8055221438407898,
+      "Sports": 0.009003572165966034,
+      "Business": 0.11479313671588898,
+      "Sci/Tech": 0.07068107277154922
+    }
+  },
+  {
+    "model": "TextCNN",
+    "sample_id": "test:139",
+    "variant": "mask_west",
+    "masked_positions": [
+      {
+        "position": 6,
+        "token": "west"
+      },
+      {
+        "position": 17,
+        "token": "west"
+      }
+    ],
+    "prediction": "Business",
+    "probabilities": {
+      "World": 0.3113534450531006,
+      "Sports": 0.0011635452974587679,
+      "Business": 0.6576219797134399,
+      "Sci/Tech": 0.0298610907047987
+    }
+  },
+  {
+    "model": "TextCNN",
+    "sample_id": "test:139",
+    "variant": "mask_political_cues",
+    "masked_positions": [
+      {
+        "position": 0,
+        "token": "sharon"
+      },
+      {
+        "position": 8,
+        "token": "israel"
+      },
+      {
+        "position": 25,
+        "token": "settlements"
+      }
+    ],
+    "prediction": "Business",
+    "probabilities": {
+      "World": 0.02765876241028309,
+      "Sports": 0.020619502291083336,
+      "Business": 0.9151566028594971,
+      "Sci/Tech": 0.036565255373716354
+    }
+  },
+  {
+    "model": "TextCNN",
+    "sample_id": "test:4825",
+    "variant": "original",
+    "masked_positions": [],
+    "prediction": "Sci/Tech",
+    "probabilities": {
+      "World": 0.004346135072410107,
+      "Sports": 0.34485384821891785,
+      "Business": 0.08716634660959244,
+      "Sci/Tech": 0.5636336803436279
+    }
+  },
+  {
+    "model": "TextCNN",
+    "sample_id": "test:4825",
+    "variant": "mask_tech",
+    "masked_positions": [
+      {
+        "position": 3,
+        "token": "tech"
+      },
+      {
+        "position": 5,
+        "token": "tech"
+      }
+    ],
+    "prediction": "Sports",
+    "probabilities": {
+      "World": 0.05670749768614769,
+      "Sports": 0.7172448635101318,
+      "Business": 0.15679079294204712,
+      "Sci/Tech": 0.06925689429044724
+    }
+  },
+  {
+    "model": "TextCNN",
+    "sample_id": "test:4825",
+    "variant": "mask_sports_cues",
+    "masked_positions": [
+      {
+        "position": 15,
+        "token": "turnovers"
+      },
+      {
+        "position": 19,
+        "token": "plays"
+      },
+      {
+        "position": 33,
+        "token": "randall"
+      },
+      {
+        "position": 36,
+        "token": "hokies"
+      }
+    ],
+    "prediction": "Sci/Tech",
+    "probabilities": {
+      "World": 0.00468500517308712,
+      "Sports": 0.28449225425720215,
+      "Business": 0.08109903335571289,
+      "Sci/Tech": 0.6297237277030945
+    }
+  },
+  {
+    "model": "TextCNN",
+    "sample_id": "test:172",
+    "variant": "original",
+    "masked_positions": [],
+    "prediction": "Business",
+    "probabilities": {
+      "World": 0.007486215326935053,
+      "Sports": 6.148637794467504e-07,
+      "Business": 0.5308400392532349,
+      "Sci/Tech": 0.46167314052581787
+    }
+  },
+  {
+    "model": "TextCNN",
+    "sample_id": "test:172",
+    "variant": "mask_computer",
+    "masked_positions": [
+      {
+        "position": 31,
+        "token": "computer"
+      }
+    ],
+    "prediction": "Business",
+    "probabilities": {
+      "World": 0.019606061279773712,
+      "Sports": 9.553813470120076e-06,
+      "Business": 0.8854362368583679,
+      "Sci/Tech": 0.09494810551404953
+    }
+  },
+  {
+    "model": "TextCNN",
+    "sample_id": "test:172",
+    "variant": "mask_financial_cues",
+    "masked_positions": [
+      {
+        "position": 2,
+        "token": "profit"
+      },
+      {
+        "position": 9,
+        "token": "retailer"
+      },
+      {
+        "position": 16,
+        "token": "profit"
+      },
+      {
+        "position": 24,
+        "token": "quarter"
+      },
+      {
+        "position": 45,
+        "token": "demand"
+      }
+    ],
+    "prediction": "Sci/Tech",
+    "probabilities": {
+      "World": 0.019246792420744896,
+      "Sports": 2.636252247611992e-06,
+      "Business": 0.019841991364955902,
+      "Sci/Tech": 0.9609085917472839
+    }
+  },
+  {
+    "model": "BiLSTM",
+    "sample_id": "test:139",
+    "variant": "original",
+    "masked_positions": [],
+    "prediction": "World",
+    "probabilities": {
+      "World": 0.5481266975402832,
+      "Sports": 0.004237451124936342,
+      "Business": 0.44150078296661377,
+      "Sci/Tech": 0.006135066505521536
+    }
+  },
+  {
+    "model": "BiLSTM",
+    "sample_id": "test:139",
+    "variant": "mask_bank",
+    "masked_positions": [
+      {
+        "position": 7,
+        "token": "bank"
+      },
+      {
+        "position": 18,
+        "token": "bank"
+      }
+    ],
+    "prediction": "World",
+    "probabilities": {
+      "World": 0.9811713695526123,
+      "Sports": 0.0017589166527613997,
+      "Business": 0.01437690481543541,
+      "Sci/Tech": 0.002692792098969221
+    }
+  },
+  {
+    "model": "BiLSTM",
+    "sample_id": "test:139",
+    "variant": "mask_west",
+    "masked_positions": [
+      {
+        "position": 6,
+        "token": "west"
+      },
+      {
+        "position": 17,
+        "token": "west"
+      }
+    ],
+    "prediction": "Business",
+    "probabilities": {
+      "World": 0.18032148480415344,
+      "Sports": 0.0031587963458150625,
+      "Business": 0.8091834187507629,
+      "Sci/Tech": 0.007336259353905916
+    }
+  },
+  {
+    "model": "BiLSTM",
+    "sample_id": "test:139",
+    "variant": "mask_political_cues",
+    "masked_positions": [
+      {
+        "position": 0,
+        "token": "sharon"
+      },
+      {
+        "position": 8,
+        "token": "israel"
+      },
+      {
+        "position": 25,
+        "token": "settlements"
+      }
+    ],
+    "prediction": "Business",
+    "probabilities": {
+      "World": 0.01689370535314083,
+      "Sports": 0.003944671247154474,
+      "Business": 0.9676854610443115,
+      "Sci/Tech": 0.011476177722215652
+    }
+  },
+  {
+    "model": "BiLSTM",
+    "sample_id": "test:4825",
+    "variant": "original",
+    "masked_positions": [],
+    "prediction": "Sports",
+    "probabilities": {
+      "World": 9.04418047866784e-05,
+      "Sports": 0.9965512752532959,
+      "Business": 0.0020229769870638847,
+      "Sci/Tech": 0.001335248234681785
+    }
+  },
+  {
+    "model": "BiLSTM",
+    "sample_id": "test:4825",
+    "variant": "mask_tech",
+    "masked_positions": [
+      {
+        "position": 3,
+        "token": "tech"
+      },
+      {
+        "position": 5,
+        "token": "tech"
+      }
+    ],
+    "prediction": "Sports",
+    "probabilities": {
+      "World": 7.632884080521762e-05,
+      "Sports": 0.998967170715332,
+      "Business": 0.000682660611346364,
+      "Sci/Tech": 0.0002739090414252132
+    }
+  },
+  {
+    "model": "BiLSTM",
+    "sample_id": "test:4825",
+    "variant": "mask_sports_cues",
+    "masked_positions": [
+      {
+        "position": 15,
+        "token": "turnovers"
+      },
+      {
+        "position": 19,
+        "token": "plays"
+      },
+      {
+        "position": 33,
+        "token": "randall"
+      },
+      {
+        "position": 36,
+        "token": "hokies"
+      }
+    ],
+    "prediction": "Sports",
+    "probabilities": {
+      "World": 0.00020537989621516317,
+      "Sports": 0.9883280396461487,
+      "Business": 0.006252346094697714,
+      "Sci/Tech": 0.005214240401983261
+    }
+  },
+  {
+    "model": "BiLSTM",
+    "sample_id": "test:172",
+    "variant": "original",
+    "masked_positions": [],
+    "prediction": "Sci/Tech",
+    "probabilities": {
+      "World": 0.1231609508395195,
+      "Sports": 0.0005711615085601807,
+      "Business": 0.3755616247653961,
+      "Sci/Tech": 0.5007063150405884
+    }
+  },
+  {
+    "model": "BiLSTM",
+    "sample_id": "test:172",
+    "variant": "mask_computer",
+    "masked_positions": [
+      {
+        "position": 31,
+        "token": "computer"
+      }
+    ],
+    "prediction": "Business",
+    "probabilities": {
+      "World": 0.11473860591650009,
+      "Sports": 0.0005918414681218565,
+      "Business": 0.7635635137557983,
+      "Sci/Tech": 0.1211061105132103
+    }
+  },
+  {
+    "model": "BiLSTM",
+    "sample_id": "test:172",
+    "variant": "mask_financial_cues",
+    "masked_positions": [
+      {
+        "position": 2,
+        "token": "profit"
+      },
+      {
+        "position": 9,
+        "token": "retailer"
+      },
+      {
+        "position": 16,
+        "token": "profit"
+      },
+      {
+        "position": 24,
+        "token": "quarter"
+      },
+      {
+        "position": 45,
+        "token": "demand"
+      }
+    ],
+    "prediction": "Sci/Tech",
+    "probabilities": {
+      "World": 0.0802290067076683,
+      "Sports": 0.0006520704482682049,
+      "Business": 0.016435133293271065,
+      "Sci/Tech": 0.9026837944984436
+    }
+  }
+]

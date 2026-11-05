@@ -1,0 +1,228 @@
+{
+  "seed": 3407,
+  "metrics": {
+    "textcnn": {
+      "num_samples": 7600,
+      "correct": 6978,
+      "errors": 622,
+      "accuracy": 0.9181578947368421,
+      "macro_f1": 0.9180783275436859,
+      "business_scitech_confusions": 275,
+      "confusion_matrix": [
+        [
+          1744,
+          45,
+          56,
+          55
+        ],
+        [
+          25,
+          1852,
+          14,
+          9
+        ],
+        [
+          64,
+          11,
+          1682,
+          143
+        ],
+        [
+          58,
+          10,
+          132,
+          1700
+        ]
+      ],
+      "per_class": [
+        {
+          "label": "World",
+          "support": 1900,
+          "errors": 156,
+          "precision": 0.9222633527234267,
+          "recall": 0.9178947368421052,
+          "f1": 0.9200738591400685
+        },
+        {
+          "label": "Sports",
+          "support": 1900,
+          "errors": 48,
+          "precision": 0.9655891553701773,
+          "recall": 0.9747368421052631,
+          "f1": 0.9701414353064431
+        },
+        {
+          "label": "Business",
+          "support": 1900,
+          "errors": 218,
+          "precision": 0.8927813163481954,
+          "recall": 0.8852631578947369,
+          "f1": 0.8890063424947147
+        },
+        {
+          "label": "Sci/Tech",
+          "support": 1900,
+          "errors": 200,
+          "precision": 0.8914525432616676,
+          "recall": 0.8947368421052632,
+          "f1": 0.8930916732335172
+        }
+      ],
+      "loss": 0.2746676206588745,
+      "epoch": 12,
+      "val_accuracy": 0.9190833333333334,
+      "parameters": 5625220,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\random_seeds_20261103\\seed_3407\\textcnn\\best_accuracy.pt",
+      "checkpoint_sha256": "0c817e653727621ac9b7bf463b67e589df623a1e6a81e6149eeef83939a44566"
+    },
+    "bilstm": {
+      "num_samples": 7600,
+      "correct": 6996,
+      "errors": 604,
+      "accuracy": 0.9205263157894736,
+      "macro_f1": 0.920301835145378,
+      "business_scitech_confusions": 263,
+      "confusion_matrix": [
+        [
+          1756,
+          42,
+          53,
+          49
+        ],
+        [
+          16,
+          1867,
+          11,
+          6
+        ],
+        [
+          69,
+          15,
+          1678,
+          138
+        ],
+        [
+          63,
+          17,
+          125,
+          1695
+        ]
+      ],
+      "per_class": [
+        {
+          "label": "World",
+          "support": 1900,
+          "errors": 144,
+          "precision": 0.9222689075630253,
+          "recall": 0.9242105263157895,
+          "f1": 0.9232386961093586
+        },
+        {
+          "label": "Sports",
+          "support": 1900,
+          "errors": 33,
+          "precision": 0.9618753219989696,
+          "recall": 0.9826315789473684,
+          "f1": 0.9721426711793804
+        },
+        {
+          "label": "Business",
+          "support": 1900,
+          "errors": 222,
+          "precision": 0.8987680771290841,
+          "recall": 0.8831578947368421,
+          "f1": 0.8908946110963633
+        },
+        {
+          "label": "Sci/Tech",
+          "support": 1900,
+          "errors": 205,
+          "precision": 0.8977754237288136,
+          "recall": 0.8921052631578947,
+          "f1": 0.8949313621964098
+        }
+      ],
+      "loss": 0.2511526942253113,
+      "epoch": 11,
+      "val_accuracy": 0.922,
+      "parameters": 5691908,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\random_seeds_20261103\\seed_3407\\bilstm\\best_accuracy.pt",
+      "checkpoint_sha256": "2902dc0d787a8d38a3a9a6f9d9e7dbef830c2dd7fa2d1c3de062eee37912a64e"
+    }
+  },
+  "training": {
+    "textcnn": {
+      "selected_epoch": 12,
+      "elapsed_seconds": 229.9678389999899,
+      "val_accuracy": 0.9190833333333334,
+      "val_loss": 0.2603903320233027,
+      "summary": {
+        "completed_epochs": 20,
+        "max_epochs": 20,
+        "stopped_early": false,
+        "best_val_loss": 0.24297989575068155,
+        "best_val_accuracy": 0.9190833333333334,
+        "initial_parameter_sha256": "f15fcbc180b5f9adca254af5609093905bdb81dd328ba131f6da0fa8a780471e",
+        "early_stopping": null
+      },
+      "data_audit": {
+        "split_seed": 42,
+        "vocab_size": 42396,
+        "vocab_sha256": "27823966617ebe76b5ba353ad602a5b74a94c6cf356052b79380903b6fdede92",
+        "train_samples": 108000,
+        "train_encoded_sha256": "191ab845d5ee6a6a567b8c0b65de443fc03fdb89005f72ff2fe4eb1f8aa72366",
+        "train_sampler_seed": 3407,
+        "val_samples": 12000,
+        "val_encoded_sha256": "bb58f0e971b9c4b19dc9efdf9ffd442520b03908b8ef964424e16b78bc96705a",
+        "val_sampler_seed": 3407,
+        "test_samples": 7600,
+        "test_encoded_sha256": "12b98f3b06832a3ffbd493ed43e9ea7d54c8ff99d542bd30d2297e5a2de72dc3",
+        "test_sampler_seed": 3407
+      }
+    },
+    "bilstm": {
+      "selected_epoch": 11,
+      "elapsed_seconds": 322.6986135999905,
+      "val_accuracy": 0.922,
+      "val_loss": 0.24189033257961273,
+      "summary": {
+        "completed_epochs": 11,
+        "max_epochs": 20,
+        "stopped_early": true,
+        "best_val_loss": 0.23072685853640237,
+        "best_val_accuracy": 0.922,
+        "initial_parameter_sha256": "d4e3e353df4f4c44b974278ca5c1377f63b58adc2119c645150954f665172020",
+        "early_stopping": {
+          "monitor": "val_loss",
+          "patience": 3,
+          "min_delta": 0.001,
+          "reference_loss": 0.23072685853640237,
+          "bad_epochs": 3
+        }
+      },
+      "data_audit": {
+        "split_seed": 42,
+        "vocab_size": 42396,
+        "vocab_sha256": "27823966617ebe76b5ba353ad602a5b74a94c6cf356052b79380903b6fdede92",
+        "train_samples": 108000,
+        "train_encoded_sha256": "191ab845d5ee6a6a567b8c0b65de443fc03fdb89005f72ff2fe4eb1f8aa72366",
+        "train_sampler_seed": 3407,
+        "val_samples": 12000,
+        "val_encoded_sha256": "bb58f0e971b9c4b19dc9efdf9ffd442520b03908b8ef964424e16b78bc96705a",
+        "val_sampler_seed": 3407,
+        "test_samples": 7600,
+        "test_encoded_sha256": "12b98f3b06832a3ffbd493ed43e9ea7d54c8ff99d542bd30d2297e5a2de72dc3",
+        "test_sampler_seed": 3407
+      }
+    }
+  },
+  "groups": {
+    "both_correct": 6779,
+    "fixed": 217,
+    "both_wrong": 405,
+    "new_errors": 199
+  },
+  "accuracy_delta_pp": 0.23684210526315752,
+  "macro_f1_delta_pp": 0.22235076016920985,
+  "mcnemar_exact_p": 0.4045954769139296
+}

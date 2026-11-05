@@ -8,6 +8,7 @@ from torch.utils.data import DataLoader
 import re
 from collections import Counter
 from functools import partial
+from ..config import min_sequence_length
 LABEL_NAMES = ("World", "Sports", "Business", "Sci/Tech")
 
 
@@ -123,7 +124,7 @@ def prepare_data(config: dict) -> DataBundle:
     # 2. 只从官方训练集中划分验证集，保持类别比例。
     split = dataset["train"].train_test_split(
         test_size=data_config["val_ratio"],
-        seed=config["seed"],
+        seed=data_config.get("split_seed", config["seed"]),
         stratify_by_column="label",
     )
 
@@ -139,7 +140,7 @@ def prepare_data(config: dict) -> DataBundle:
     vocab = build_vocab(train_samples, config)
 
     # 4. 固定批次填充函数所需的最小长度。
-    min_length = max(config["model"]["kernel_sizes"])
+    min_length = min_sequence_length(config["model"])
     collate_fn = partial(collate_batch, min_length=min_length)
 
     # 5. 编码指定数据集，并创建 DataLoader。

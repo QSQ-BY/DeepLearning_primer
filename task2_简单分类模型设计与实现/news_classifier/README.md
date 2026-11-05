@@ -8,7 +8,9 @@ news_classifier/
 │   ├── preprocessing.py      # 对照实验使用的统一文本清洗
 │   └── embeddings.py         # 按训练词表导入预训练词向量
 ├── models/
-│   └── textcnn.py            # TextCNN模型
+│   ├── textcnn.py            # 独立保留的TextCNN模型
+│   ├── bilstm.py             # 变长序列BiLSTM模型
+│   └── __init__.py           # 按model.name构建模型
 ├── training/
 │   ├── engine.py             # 单轮训练与评估
 │   └── train.py              # 训练流程、学习率调度与最佳权重保存
@@ -31,6 +33,21 @@ python -m news_classifier.evaluate --checkpoint ../.build/task2/runs/textcnn_k23
 python -m news_classifier.predict --checkpoint ../.build/task2/runs/textcnn_k237_plateau20/best_accuracy.pt --text "The team won the championship."
 ```
 
+BiLSTM 使用同一套数据处理、训练、评估和预测流程，独立配置为 `configs/bilstm_ag_news.json`：
+
+```powershell
+python -m news_classifier.train --config configs/bilstm_ag_news.json --check-config
+python -m news_classifier.train --config configs/bilstm_ag_news.json
+```
+
+TextCNN 归档位置、BiLSTM 结构与验证状态见 [BiLSTM 实验说明](../experiments/bilstm/README.md)。两个模型使用不同输出目录，训练入口拒绝覆盖已有权重和指标；重复实验需在配置中指定新的 `output.run_dir`。
+
+共享训练入口支持可选早停，在 `training.early_stopping` 中设置 `enabled=true`、`monitor="val_loss"`、`patience=3`、`min_delta=0.001`。它只控制何时停止，原有两种最佳权重仍按真实指标分别保存；结果写入 `training_summary.json`。旧配置不设置该字段时仍训练全部轮次。
+
+BiLSTM 的 `model.embedding_dropout` 控制词嵌入进入 LSTM 前的 Dropout，默认 0；它与分类前的 `model.dropout` 独立。已有权重无需转换。早停、WD 与词嵌入 Dropout 的单因素配置和约定见[实验协议](../experiments/bilstm/regularization_protocol.md)。
+
+六组实验已完成，[对比结果](../experiments/bilstm/regularization/README.md)选出 `configs/bilstm_es_dropout02_20261103.json`。其最佳准确率权重位于 `../.build/task2/runs/bilstm_es_dropout02_20261103/best_accuracy.pt`，可以直接用于现有预测和评估入口。
+
 对照实验使用独立入口，默认保留已有输出、拒绝覆盖训练日志：
 
 ```powershell
@@ -42,8 +59,8 @@ python -m news_classifier.experiments.controlled --mode random128 --run-dir ../.
 python -m news_classifier.experiments.controlled --mode word2vec128 --vectors ../.build/task2/pretrained/word2vec_repro/vectors.txt --run-dir ../.build/task2/runs/word2vec128_repro
 ```
 
-`glove100`需要本地官方GloVe 6B 100维词向量与来源清单。数据缓存、预训练词向量和训练权重均放在仓库`.build/task2/`。实验报告与错误清单见[错误分析目录](../experiments/error_analysis/README.md)。代码目录不保存生成的数据和训练日志。
+`glove100`需要本地官方GloVe 6B 100维词向量与来源清单。数据缓存、预训练词向量和训练权重均放在仓库`.build/task2/`。实验报告与错误清单见[错误分析目录](../experiments/textcnn/error_analysis/README.md)。代码目录不保存生成的数据和训练日志。
 
 清洗组权重会记录`experiment.clean_text`和`cleaning_version`；独立测试、单条预测和错误导出都会恢复同一处理规则。当前规则只去除常见HTML标签，保留`<CIEN.O>`等股票代码；初版权重仍可按其原始规则复核。导入包不会触发训练或下载。
 
-Word2Vec预训练需要`gensim==4.4.0`，可用`python -m pip install gensim==4.4.0`安装。它只使用108000条固定训练文本，不读取验证、测试文本或标签；分类阶段保留原TextCNN结构、128维度和微调设置。向量导入会核对训练行号摘要与文件哈希。默认正式预训练目录中的可加载模型是`word2vec_portable.model`；新复现实验直接生成`word2vec.model`。正式结果见[Word2Vec实验报告](../experiments/error_analysis/2026-11-03_word2vec_textcnn.md)。
+Word2Vec预训练需要`gensim==4.4.0`，可用`python -m pip install gensim==4.4.0`安装。它只使用108000条固定训练文本，不读取验证、测试文本或标签；分类阶段保留原TextCNN结构、128维度和微调设置。向量导入会核对训练行号摘要与文件哈希。默认正式预训练目录中的可加载模型是`word2vec_portable.model`；新复现实验直接生成`word2vec.model`。正式结果见[Word2Vec实验报告](../experiments/textcnn/error_analysis/2026-11-03_word2vec_textcnn.md)。

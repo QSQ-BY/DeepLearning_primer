@@ -1,0 +1,49 @@
+{
+  "experiment_name": "bilstm_es_wd3e4_20261103",
+  "seed": 42,
+  "data": {
+    "dataset_name": "fancyzhx/ag_news",
+    "cache_dir": "../.build/task2/data",
+    "val_ratio": 0.1,
+    "max_vocab_size": 50000,
+    "min_freq": 2,
+    "max_length": 256,
+    "pad_id": 0,
+    "unk_id": 1
+  },
+  "model": {
+    "name": "bilstm",
+    "embed_dim": 128,
+    "hidden_size": 128,
+    "num_layers": 1,
+    "dropout": 0.5,
+    "num_classes": 4,
+    "embedding_dropout": 0.0
+  },
+  "training": {
+    "batch_size": 64,
+    "epochs": 20,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0003,
+    "device": "auto",
+    "num_workers": 0,
+    "scheduler": {
+      "name": "reduce_on_plateau",
+      "factor": 0.5,
+      "patience": 1,
+      "min_lr": 1e-05
+    },
+    "early_stopping": {
+      "enabled": true,
+      "monitor": "val_loss",
+      "patience": 3,
+      "min_delta": 0.001
+    }
+  },
+  "output": {
+    "run_dir": "../.build/task2/runs/bilstm_es_wd3e4_20261103",
+    "checkpoint_name": "best_loss.pt",
+    "accuracy_checkpoint_name": "best_accuracy.pt",
+    "log_name": "metrics.csv"
+  }
+}

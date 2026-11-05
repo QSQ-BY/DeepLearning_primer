@@ -16,7 +16,7 @@ from news_classifier.data import LABEL_NAMES, collate_batch, encode, tokenize
 from news_classifier.evaluation.analysis import error_groups, write_csv, write_json
 from news_classifier.models import TextCNN
 
-DATA = PROJECT / 'experiments/error_analysis/data'
+DATA = PROJECT / 'experiments/textcnn/error_analysis/data'
 
 
 def load(folder):
@@ -150,7 +150,7 @@ def main():
     axes[1].set_title('Validation loss across the same 20 epochs')
     axes[0].legend(frameon=False)
     figure.suptitle('AG-news TextCNN: fixed split and seed 42')
-    figure.savefig(PROJECT / 'experiments/assets/word2vec_validation.png', dpi=180)
+    figure.savefig(PROJECT / 'experiments/textcnn/assets/word2vec_validation.png', dpi=180)
     plt.close(figure)
     # 每次实验保存源码和配置，重现时不依赖后续可能改动的工作区。
     sources = ['news_classifier/experiments/controlled.py', 'news_classifier/experiments/word2vec.py',

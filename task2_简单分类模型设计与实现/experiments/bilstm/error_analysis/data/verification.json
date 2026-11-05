@@ -1,0 +1,75 @@
+{
+  "verified_at_utc": "2026-11-03T12:14:20.366551+00:00",
+  "status": "passed",
+  "rows": 7600,
+  "groups": {
+    "both_correct": 6827,
+    "fixed": 192,
+    "new_errors": 166,
+    "both_wrong": 415
+  },
+  "errors": 581,
+  "checks": [
+    "independent CSV groups and confusion matrices",
+    "macro-F1 and accuracy",
+    "exact paired binomial probability using math.comb",
+    "checkpoint SHA256",
+    "all error appendix entries",
+    "probe probabilities and original predictions",
+    "PNG integrity and SVG XML",
+    "local report and index links",
+    "UTF8 without BOM",
+    "analysis script syntax",
+    "no PDF or HTML in report folder"
+  ],
+  "checkpoint_sha256": {
+    "textcnn": "1d4ddd8cb68a8462577b9b35519c454513176843ed6b295ddb3e65682441f712",
+    "bilstm": "db43028c8d110035a95144dbb7c17855b0b1cd6a3fafe893c6d11c4b4bac9c6a"
+  },
+  "report_sha256": "c1703bae0f46a0343739de9c6c091438b18cf5c8118f8e0256e5cdd8060e1c08",
+  "script_sha256": {
+    "analyze_bilstm_errors.py": "734c9aeedf427d8cdd3697c69441db1d57f6259ab04cc976b53fd538eee0f12a",
+    "probe_bilstm_errors.py": "7109e70fca4dbb092fec399dc93e401dc9b3c89fc038115a38d79d074b1454cb",
+    "plot_bilstm_errors.py": "a2814a36d01b35f502c86dd592bd90fc955e491bbbf7ee37945f7189c987a858"
+  },
+  "images": {
+    "confusion_comparison.png": [
+      2610,
+      1224
+    ],
+    "confusion_delta.png": [
+      1710,
+      1368
+    ],
+    "feature_segment_errors.png": [
+      2790,
+      1152
+    ],
+    "paired_error_groups.png": [
+      2610,
+      1080
+    ]
+  },
+  "checked_local_links": 43,
+  "checked_text_files": [
+    "2026-11-03_best_bilstm_vs_textcnn.md",
+    "README.md",
+    "assets/confusion_comparison.svg",
+    "assets/confusion_delta.svg",
+    "assets/feature_segment_errors.svg",
+    "assets/paired_error_groups.svg",
+    "data/bilstm_all_errors.csv",
+    "data/bilstm_all_errors.md",
+    "data/both_wrong.csv",
+    "data/case_candidates.json",
+    "data/confidence_segments.csv",
+    "data/feature_segments.csv",
+    "data/fixed.csv",
+    "data/masking_probes.json",
+    "data/new_errors.csv",
+    "data/paired_predictions.csv",
+    "data/per_class.csv",
+    "data/summary.json"
+  ],
+  "figure_visual_review": "All four PNGs inspected; labels, numbers, scales and footnotes readable."
+}

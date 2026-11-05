@@ -1,0 +1,6 @@
+{
+  "rule": "max validation accuracy; ties choose lower validation loss",
+  "selected_run_id": "dropout02",
+  "selected_checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_es_dropout02_20261103\\best_accuracy.pt",
+  "test_used_for_selection": false
+}

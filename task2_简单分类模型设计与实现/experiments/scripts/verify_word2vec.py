@@ -24,7 +24,7 @@ from news_classifier.models import TextCNN
 def main():
     sys.stdout.reconfigure(encoding='utf-8')
     torch.set_num_threads(4)
-    data = PROJECT / 'experiments/error_analysis/data'
+    data = PROJECT / 'experiments/textcnn/error_analysis/data'
     summary = json.loads((data / 'word2vec128/summary.json').read_text(encoding='utf-8'))
     official = cached_split('test')
     labels = np.asarray(official['label'])
@@ -146,9 +146,9 @@ def main():
         assert summary['common_490_followup'][name]['corrected'] == int((pred[common] == labels[common]).sum())
     verification_path = data / 'word2vec128/verification.json'
     write_json(verification_path, dict(status='checking_report_links'))
-    checked_files = [PROJECT / 'news_classifier/README.md', PROJECT / 'experiments/error_analysis/README.md',
-                     PROJECT / 'experiments/error_analysis/2026-11-03_word2vec_textcnn.md',
-                     PROJECT / 'experiments/error_analysis/2026-11-03_error_analysis.md', PROJECT / 'docs/report.md']
+    checked_files = [PROJECT / 'news_classifier/README.md', PROJECT / 'experiments/textcnn/error_analysis/README.md',
+                     PROJECT / 'experiments/textcnn/error_analysis/2026-11-03_word2vec_textcnn.md',
+                     PROJECT / 'experiments/textcnn/error_analysis/2026-11-03_error_analysis.md', PROJECT / 'docs/report.md']
     for path in checked_files:
         content = path.read_bytes()
         assert not content.startswith(b'\xef\xbb\xbf')

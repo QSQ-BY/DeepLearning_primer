@@ -21,7 +21,7 @@ from news_classifier.models import TextCNN
 
 def main():
     sys.stdout.reconfigure(encoding='utf-8');torch.set_num_threads(4)
-    data=PROJECT/'experiments/error_analysis/data'
+    data=PROJECT/'experiments/textcnn/error_analysis/data'
     source=cached_split('test')
     kernel=json.loads((data/'kernel_comparison/summary.json').read_text(encoding='utf-8'))
     checks={};split_reference=None;initial100=None
@@ -91,7 +91,7 @@ def main():
     assert not list((PROJECT/'experiments').rglob('*.pdf'))
     assert not (PROJECT/'news_classifier/data.py').exists()
     assert (PROJECT/'news_classifier/data/dataset.py').is_file()
-    assert len(list((PROJECT/'experiments/tuning').glob('2026-11-01*.md')))==11
+    assert len(list((PROJECT/'experiments/textcnn/tuning').glob('2026-11-01*.md')))==11
     result=dict(status='passed',models=checks,source_rows_compared=7600*6,
                 all_three_new_runs_completed_20_epochs=True,shared_train_validation_indices=True,
                 random100_glove100_non_embedding_initialization_identical=True,missing_markdown_links=0,

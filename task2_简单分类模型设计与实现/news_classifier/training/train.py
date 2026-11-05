@@ -5,18 +5,20 @@ import argparse
 import csv
 import json
 import random
+import hashlib
 import torch
 from ..data import prepare_data
-from ..models import TextCNN
+from ..models import build_model
 from ..training.engine import train_one_epoch,evaluate
 from ..config import DEFAULT_CONFIG, load_config
 from pathlib import Path
+from .early_stopping import EarlyStopping, build_early_stopping
 
-def train(config: dict) -> None:
+def train(config: dict) -> dict:
     """组装数据、模型、训练循环和实验记录。
 
     1. 固定 Python/PyTorch 随机种子，解析 auto/cpu/cuda 设备。
-    2. prepare_data(config)，据词表大小创建 TextCNN 和 Adam。
+    2. prepare_data(config)，据配置创建分类模型和 Adam。
     3. 逐轮训练和验证，可根据验证损失调整下一轮的学习率。
     4. 保存每轮指标，分别保留最低验证损失和最高验证准确率模型。
     5. 权重文件一并保存词表、类别名称、配置和最佳轮次。
@@ -25,10 +27,24 @@ def train(config: dict) -> None:
     if config.get("experiment"):
         raise ValueError("清洗或预训练词向量配置请使用 news_classifier.experiments.controlled，以恢复对应的预处理与初始化规则")
     training_config = config["training"]
+    early_stopping = build_early_stopping(training_config.get("early_stopping"))
+    epochs = training_config["epochs"]
+    if type(epochs) is not int or epochs < 1:
+        raise ValueError("training.epochs 必须是正整数")
     scheduler_config = training_config.get("scheduler", {})
     scheduler_name = scheduler_config.get("name", "none")
     if scheduler_name not in ("none", "reduce_on_plateau"):
         raise ValueError(f"不支持的 training.scheduler.name：{scheduler_name}")
+
+    # 在读取数据前拒绝覆盖历史模型和日志。
+    run_dir = Path(config["output"]["run_dir"])
+    checkpoint_path = run_dir / config["output"]["checkpoint_name"]
+    accuracy_checkpoint_path = run_dir / config["output"].get("accuracy_checkpoint_name", "best_accuracy.pt")
+    metrics_path = run_dir / config["output"]["log_name"]
+    if accuracy_checkpoint_path == checkpoint_path:
+        raise ValueError("两种最佳模型必须使用不同的权重文件名")
+    if any(path.exists() for path in (checkpoint_path, accuracy_checkpoint_path, metrics_path, run_dir / "config.json")):
+        raise FileExistsError(f"保留已有实验，请配置新的 output.run_dir：{run_dir}")
 
     #固定随机种子
     seed = config["seed"]
@@ -47,11 +63,15 @@ def train(config: dict) -> None:
 
     #创建数据、模型以及优化器
     data = prepare_data(config)
-    model = TextCNN(
+    model = build_model(
         vocab_size = len(data.vocab),
         model_config = config["model"],
         pad_id = config["data"]["pad_id"],
     ).to(device)
+    initial_hash = hashlib.sha256()
+    for name, tensor in sorted(model.state_dict().items()):
+        initial_hash.update(name.encode("utf-8"))
+        initial_hash.update(tensor.detach().cpu().numpy().tobytes())
     optimizer = torch.optim.Adam(
         model.parameters(),
         lr = training_config["learning_rate"],
@@ -70,23 +90,22 @@ def train(config: dict) -> None:
     print(f"训练样本：{len(data.train_loader.dataset)}")
     print(f"验证样本：{len(data.val_loader.dataset)}")
     print(f"测试样本：{len(data.test_loader.dataset)}")
+    print(f"模型：{type(model).__name__}，参数：{sum(p.numel() for p in model.parameters())}")
+    if early_stopping is not None:
+        print(f"早停：val_loss，patience={early_stopping.patience}，min_delta={early_stopping.min_delta}")
 
 
     run_dir = Path(config["output"]["run_dir"])
     run_dir.mkdir(parents=True, exist_ok=True)
 
-    checkpoint_path = run_dir / config["output"]["checkpoint_name"]
-    accuracy_checkpoint_path = run_dir / config["output"].get(
-        "accuracy_checkpoint_name", "best_accuracy.pt"
+    (run_dir / "config.json").write_text(
+        json.dumps(config, ensure_ascii=False, indent=2) + "\n", encoding="utf-8",
     )
-    if accuracy_checkpoint_path == checkpoint_path:
-        raise ValueError("两种最佳模型必须使用不同的权重文件名")
 
     best_val_loss = float("inf")
     best_val_accuracy = float("-inf")
     best_accuracy_loss = float("inf")
 
-    metrics_path = run_dir / config["output"]["log_name"]
     fieldnames = [
         "epoch",
         "train_loss",
@@ -102,7 +121,7 @@ def train(config: dict) -> None:
         writer.writeheader()
 
     #正式开始训练循环
-    epochs = training_config["epochs"]
+    stopped_early = False
 
     for epoch in range(1,epochs+1):
         epoch_lr = optimizer.param_groups[0]["lr"]
@@ -187,9 +206,33 @@ def train(config: dict) -> None:
             if next_lr != epoch_lr:
                 print(f"  学习率调整：{epoch_lr:.6g} -> {next_lr:.6g}（下一轮生效）")
 
+        # 权重先按真实指标保存；min_delta 只影响早停的改善计数。
+        if early_stopping is not None and early_stopping.step(val_metrics.loss):
+            stopped_early = epoch < epochs
+            print(f"早停触发：第 {epoch} 轮，连续 {early_stopping.bad_epochs} 轮无有效验证损失改善。")
+            break
+
+    summary = {
+        "completed_epochs": epoch,
+        "max_epochs": epochs,
+        "stopped_early": stopped_early,
+        "best_val_loss": best_val_loss,
+        "best_val_accuracy": best_val_accuracy,
+        "initial_parameter_sha256": initial_hash.hexdigest(),
+        "early_stopping": None if early_stopping is None else {
+            "monitor": "val_loss", "patience": early_stopping.patience,
+            "min_delta": early_stopping.min_delta, "reference_loss": early_stopping.best,
+            "bad_epochs": early_stopping.bad_epochs,
+        },
+    }
+    (run_dir / "training_summary.json").write_text(
+        json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8",
+    )
+    return summary
+
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Task 2 AG-news TextCNN 训练入口")
+    parser = argparse.ArgumentParser(description="Task 2 AG-news TextCNN / BiLSTM 训练入口")
     parser.add_argument("--config", default=str(DEFAULT_CONFIG), help="实验 JSON 配置")
     parser.add_argument(
         "--check-config", action="store_true", help="仅读取并打印配置，不下载数据或训练"

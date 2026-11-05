@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-11-03T12:45:14.305225+00:00",
+  "source_prediction_rows": 45600,
+  "paired_rows": 22800,
+  "report_files": 4,
+  "image_pairs": 10,
+  "checked_local_links": 65,
+  "checked_text_files": 63,
+  "checks": [
+    "CSV confusion matrices, error groups, accuracy and macro-F1 independently reconstructed",
+    "statistics.mean and statistics.stdev agree with aggregate",
+    "math.comb exact paired tests",
+    "cross-seed error frequencies",
+    "checkpoint SHA256",
+    "Markdown local links",
+    "UTF8 without BOM",
+    "PNG integrity and SVG XML",
+    "script syntax",
+    "no PDF"
+  ],
+  "report_sha256": {
+    "2026-11-03_random_seed_summary.md": "638463034a5e9c969e4c010b86cb9d4ab1982070f0febc1ca5cf2c3ed93d14ac",
+    "README.md": "cefec71919a98d0d4acc446de6508405ec0fc0652bd0c381af67a4d99013553f",
+    "seed_17\\2026-11-03_textcnn_vs_bilstm.md": "4de2842ffbb8144ee0b478cfa6850a9c6392d733c469c4d770667efd4466f8f4",
+    "seed_17\\README.md": "db9a621be376bb6e713517c78d9e9f8b399240a48b8c9b4700649f76e4705d69",
+    "seed_2024\\2026-11-03_textcnn_vs_bilstm.md": "d2e7663080956b44e0a0a851ff51573428bdaed97395112a3c490f875ed4985d",
+    "seed_2024\\README.md": "6f396dde88667b178d1f3dd8401efaef11ef36767ff78ba7df6d4abaa9a3f39c",
+    "seed_3407\\2026-11-03_textcnn_vs_bilstm.md": "573f3e8493573220c7636dfe06d6febc3401eab14e999da70d0bd4c82d94e221",
+    "seed_3407\\README.md": "0d88fbe6c9948e33a04d4513fb0dddb3abf2910592df49f66ddf568e1ecd688b"
+  },
+  "images": {
+    "assets\\accuracy_by_seed.png": [
+      1955,
+      952
+    ],
+    "assets\\error_frequency.png": [
+      1785,
+      850
+    ],
+    "assets\\mean_std.png": [
+      2040,
+      816
+    ],
+    "assets\\paired_errors.png": [
+      1955,
+      850
+    ],
+    "seed_17\\assets\\confusion.png": [
+      2210,
+      1020
+    ],
+    "seed_17\\assets\\training_curves.png": [
+      2295,
+      901
+    ],
+    "seed_2024\\assets\\confusion.png": [
+      2210,
+      1020
+    ],
+    "seed_2024\\assets\\training_curves.png": [
+      2295,
+      901
+    ],
+    "seed_3407\\assets\\confusion.png": [
+      2210,
+      1020
+    ],
+    "seed_3407\\assets\\training_curves.png": [
+      2295,
+      901
+    ]
+  },
+  "visual_review": "All ten PNGs inspected: labels, legends, scales, annotations and footnotes readable."
+}

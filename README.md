@@ -31,14 +31,21 @@
 - [实验报告与运行方式](task1_简单神经网络运算框架的实现/docs/lab_report.md)
 - [AIGC 协作文档](task1_简单神经网络运算框架的实现/docs/AIGC/)
 
-## Task 2：TextCNN 新闻分类
+## Task 2：TextCNN 与 BiLSTM 新闻分类
 
 用 PyTorch 搭建 TextCNN，完成 AG-news 英文新闻四分类，包括数据处理、训练、评估和单条预测。经过多组调参，最终单次实验的测试准确率为 **92.0132%（6993 / 7600）**。
 
+TextCNN 已独立归档，BiLSTM 基线已完成 20 轮正式训练，使用独立配置和输出目录；本次测试准确率为 **92.0789%（6998 / 7600）**，比原最佳 TextCNN 多判对 5 条。
+
+后续加入早停并分别比较 WD 和词嵌入 Dropout，验证集选出的 `WD=1e-4、embedding_dropout=0.2` 方案测试准确率为 **92.3553%（7019 / 7600）**。
+
 - [项目代码](task2_简单分类模型设计与实现/)
 - [实验报告与运行方式](task2_简单分类模型设计与实现/docs/report.md)
-- [调参实验记录](task2_简单分类模型设计与实现/experiments/tuning/README.md)
-- [错误分析与后续对照](task2_简单分类模型设计与实现/experiments/error_analysis/README.md)
+- [调参实验记录](task2_简单分类模型设计与实现/experiments/textcnn/tuning/README.md)
+- [错误分析与后续对照](task2_简单分类模型设计与实现/experiments/textcnn/error_analysis/README.md)
+- [BiLSTM 实验与 TextCNN 归档](task2_简单分类模型设计与实现/experiments/bilstm/README.md)
+- [TextCNN 与 BiLSTM 正式对比图](task2_简单分类模型设计与实现/experiments/bilstm/2026-11-03_textcnn_vs_bilstm.md)
+- [BiLSTM 早停、WD 与 Dropout 对比图](task2_简单分类模型设计与实现/experiments/bilstm/regularization/README.md)
 
 ## 目录
 
@@ -69,7 +76,7 @@ DeepLearning/
 │   ├── configs/                             # 实验配置
 │   ├── docs/                                # 实验报告
 │   ├── experiments/                         # 调参记录与对比图
-│   ├── news_classifier/                     # TextCNN 完整分类流程
+│   ├── news_classifier/                     # TextCNN / BiLSTM 分类流程
 │   └── tests/
 └── README.md
 ```

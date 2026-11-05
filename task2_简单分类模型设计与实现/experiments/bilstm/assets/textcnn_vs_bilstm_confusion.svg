@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1044pt" height="489.6pt" viewBox="0 0 1044 489.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-03T19:00:23.642113</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 489.6 
+L 1044 489.6 
+L 1044 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 94.486024 432.936077 
+L 469.721479 432.936077 
+L 469.721479 57.700622 
+L 94.486024 57.700622 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p9a7f468dc6)">
+    <image xlink:href="data:image/png;base64,
+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ShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAACl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VAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAMCq5Bf/VR8of2UQXAAAAABJRU5ErkJggg==" id="imagece2242d3ae" transform="scale(1 -1) translate(0 -375.2)" x="94.4" y="-57.6" width="375.2" height="375.2"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="141.390456" y="449.868206" transform="rotate(-0 141.390456 449.868206)">World</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="235.19932" y="449.868206" transform="rotate(-0 235.19932 449.868206)">Sports</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="329.008184" y="449.868206" transform="rotate(-0 329.008184 449.868206)">Business</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="422.817047" y="449.868206" transform="rotate(-0 422.817047 449.868206)">Sci/Tech</text>
+     </g>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="282.103752" y="465.770335" transform="rotate(-0 282.103752 465.770335)">预测类别</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_5"/>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: end" x="86.486024" y="109.071119" transform="rotate(-0 86.486024 109.071119)">World</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_6"/>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: end" x="86.486024" y="202.879982" transform="rotate(-0 86.486024 202.879982)">Sports</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_7"/>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: end" x="86.486024" y="296.688846" transform="rotate(-0 86.486024 296.688846)">Business</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_8"/>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: end" x="86.486024" y="390.49771" transform="rotate(-0 86.486024 390.49771)">Sci/Tech</text>
+     </g>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="34.792646" y="245.31835" transform="rotate(-90 34.792646 245.31835)">真实类别</text>
+    </g>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #ffffff" x="141.390456" y="108.235914" transform="rotate(-0 141.390456 108.235914)">1734</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="235.19932" y="108.235914" transform="rotate(-0 235.19932 108.235914)">45</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="329.008184" y="108.235914" transform="rotate(-0 329.008184 108.235914)">66</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="422.817047" y="108.235914" transform="rotate(-0 422.817047 108.235914)">55</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="141.390456" y="202.044777" transform="rotate(-0 141.390456 202.044777)">21</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #ffffff" x="235.19932" y="202.044777" transform="rotate(-0 235.19932 202.044777)">1859</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="329.008184" y="202.044777" transform="rotate(-0 329.008184 202.044777)">12</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="422.817047" y="202.044777" transform="rotate(-0 422.817047 202.044777)">8</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="141.390456" y="295.853641" transform="rotate(-0 141.390456 295.853641)">61</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="235.19932" y="295.853641" transform="rotate(-0 235.19932 295.853641)">12</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #ffffff" x="329.008184" y="295.853641" transform="rotate(-0 329.008184 295.853641)">1676</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="422.817047" y="295.853641" transform="rotate(-0 422.817047 295.853641)">151</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="141.390456" y="389.662504" transform="rotate(-0 141.390456 389.662504)">55</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="235.19932" y="389.662504" transform="rotate(-0 235.19932 389.662504)">13</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="329.008184" y="389.662504" transform="rotate(-0 329.008184 389.662504)">108</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #ffffff" x="422.817047" y="389.662504" transform="rotate(-0 422.817047 389.662504)">1724</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 14px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="282.103752" y="43.700622" transform="rotate(-0 282.103752 43.700622)">TextCNN · 第 8 轮 · 准确率 92.013%</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_3">
+    <path d="M 571.647264 432.936077 
+L 946.882718 432.936077 
+L 946.882718 57.700622 
+L 571.647264 57.700622 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p7bcba475a5)">
+    <image xlink:href="data:image/png;base64,
+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AAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQA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FAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAAJAiVAEAAEgRqgAAAKQIVQAAAFKEKgAAAClCFQAAgBShCgAAQIpQBQAAIEWoAgAAkCJUAQAASBGqAAAApAhVAAAAUoQqAAAAKUIVAACAFKEKAABAilAFAAAgRagCAACQIlQBAABIEaoAAACkCFUAAABShCoAAAApQhUAAIAUoQoAAECKUAUAACBFqAIAALAp+QWXPCAfHY8wIgAAAABJRU5ErkJggg==" id="image8e17454fbd" transform="scale(1 -1) translate(0 -375.2)" x="571.6" y="-57.6" width="375.2" height="375.2"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_5">
+     <g id="line2d_9"/>
+     <g id="text_28">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="618.551695" y="449.868206" transform="rotate(-0 618.551695 449.868206)">World</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_10"/>
+     <g id="text_29">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="712.360559" y="449.868206" transform="rotate(-0 712.360559 449.868206)">Sports</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_11"/>
+     <g id="text_30">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="806.169423" y="449.868206" transform="rotate(-0 806.169423 449.868206)">Business</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_12"/>
+     <g id="text_31">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="899.978286" y="449.868206" transform="rotate(-0 899.978286 449.868206)">Sci/Tech</text>
+     </g>
+    </g>
+    <g id="text_32">
+     <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="759.264991" y="465.770335" transform="rotate(-0 759.264991 465.770335)">预测类别</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_5">
+     <g id="line2d_13"/>
+     <g id="text_33">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: end" x="563.647264" y="109.071119" transform="rotate(-0 563.647264 109.071119)">World</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_14"/>
+     <g id="text_34">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: end" x="563.647264" y="202.879982" transform="rotate(-0 563.647264 202.879982)">Sports</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_15"/>
+     <g id="text_35">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: end" x="563.647264" y="296.688846" transform="rotate(-0 563.647264 296.688846)">Business</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_16"/>
+     <g id="text_36">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: end" x="563.647264" y="390.49771" transform="rotate(-0 563.647264 390.49771)">Sci/Tech</text>
+     </g>
+    </g>
+    <g id="text_37">
+     <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="511.953885" y="245.31835" transform="rotate(-90 511.953885 245.31835)">真实类别</text>
+    </g>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #ffffff" x="618.551695" y="108.235914" transform="rotate(-0 618.551695 108.235914)">1742</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="712.360559" y="108.235914" transform="rotate(-0 712.360559 108.235914)">36</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="806.169423" y="108.235914" transform="rotate(-0 806.169423 108.235914)">59</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="899.978286" y="108.235914" transform="rotate(-0 899.978286 108.235914)">63</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="618.551695" y="202.044777" transform="rotate(-0 618.551695 202.044777)">27</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #ffffff" x="712.360559" y="202.044777" transform="rotate(-0 712.360559 202.044777)">1846</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="806.169423" y="202.044777" transform="rotate(-0 806.169423 202.044777)">11</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="899.978286" y="202.044777" transform="rotate(-0 899.978286 202.044777)">16</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="618.551695" y="295.853641" transform="rotate(-0 618.551695 295.853641)">47</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="712.360559" y="295.853641" transform="rotate(-0 712.360559 295.853641)">18</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #ffffff" x="806.169423" y="295.853641" transform="rotate(-0 806.169423 295.853641)">1682</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="899.978286" y="295.853641" transform="rotate(-0 899.978286 295.853641)">153</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="618.551695" y="389.662504" transform="rotate(-0 618.551695 389.662504)">52</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="712.360559" y="389.662504" transform="rotate(-0 712.360559 389.662504)">18</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #172b4d" x="806.169423" y="389.662504" transform="rotate(-0 806.169423 389.662504)">102</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 13px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #ffffff" x="899.978286" y="389.662504" transform="rotate(-0 899.978286 389.662504)">1728</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 14px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="759.264991" y="43.700622" transform="rotate(-0 759.264991 43.700622)">BiLSTM · 第 8 轮 · 准确率 92.079%</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_4">
+    <path d="M 978.787422 380.403113 
+L 992.295898 380.403113 
+L 992.295898 110.233586 
+L 978.787422 110.233586 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAACIAAAKjCAYAAAB4NN2WAAAEjElEQVR4nO3cwY1cMRAD0TLB/NP1wcCXz9MR1IEvAoNNtTS7s/7z9997CASJIFHHYDAlgiOSIBEkKpkMmkSCRCWTQZTIQyFIBIluxR/brOayOgSJINGt+GOb9VpZtYkEiSARJLrN6h0NjhdJkAgS3ak59nj2lhXHGsGTyJNEEiSCRLdZvaPBIUhUskbQJBIkuhXvHc1DIUhUEgiaRIJEV1btaJBcv0GiK6t3NDgEiSDRnZpjj2dvWZEskiBRSSBoEgkS3Wb1jgbHuQkSlQSCJpEgUclk0CQSJLoVf2yzesuKZJEEiSBRyWQQJfJQCBJBons8H9us5rI6BIkg0a34Y5vVW1YkiyRIBIlKJoMokYdCkAgS3eNZOxp2an5ts3rL+lbWX9us3rKyslpH83AIEt1m9Y4GR12DRJCoZDJ4Enk4BIkg0a1472hwnJsgUUkgaBIJEpVMBk8in2S1BokgUcdg8CQSJCo5NIgSwRFJkAgS/RyTQZNIkOhOzbHNeq2s2kSCRLfij21Wb1nf3iO/NhpvIt8+11hH87ZHfu3Su1ZWbSJBolvxxzart6wPhyARJPokD5Ig0Q+HIBEkurJ6R4NDkOjKqh3Nh0OQ6MoqHg0KQSJIVDIZPIl8krYGiSBRx2DwJBIkutv32AvNXFYUgkSQ6G7fY2W9VlZzIigEiSDRXXra0Xz7stOvlVVc1odCkAgS3eP52B4xlxWFIBEkuh/mHSurt6zf9sivfR39Wlm1iQSJ7ucjxz5OeMv67dKzjuZtNL+2R66VVZtIkOi+4Xtsj3jL+nbpWUfzbTS/9uPNa2W9log2kSDR/ZpEO5oPhyDRlVU8GhSCRJDovlFzrKzesj7JIgkSQaKSyeBJ5JNEEiSCRB2DwZTIc2QSJIJE9+NN7WjeTs2vPQOulVWbSJDoVvyxzeot68MhSASJ7iPnsfeIt6xvj+dfK6u3rN/Kah3NkzxIgkS3WbWj+VZW62je/o+aX9us4rI+xyIJEkGiW/HHyuot63OsETyJfJJIgkSQqGQyaBIJEt175FhZr5VVm0iQ6Fb8sc1qLuvDIEgEiUomgymRh0GQCBKVTAZNIkGiOzXHynqtrOZEUAgSQaLbrOLRoBAkurKKR4NCkAgS3ak5VtZrZdUmovmHdHvk2B65VlZzIigEiSDRT/JlxSARJLpTc+wZcK2s2kSCRPd4PrZZr5VVm0iQ6PbIUcnfC6LpSJDoynoskWtl1SYSJLo9cuzSu1ZWbSJBotsjxxLxlpV9rrGO5kl+KxAkukSOjeZaItpEgkR36WlH83bp/Voi18qqTSRIdCv+2B7xlvXt0vu10VxLRJtIkOguPe1o3lb8ryVyrazXEtEmEiS6S087mrdL79cS8ZaVldU7mg+DINGVVTyaD4MgESS6U3OsrOayfhgEie74ikfzYRAkgkR3ao6V9VpZtYkEiW7FH9us18qqTSRIdO+RY5tVXNZvf4P1Y2UVl/XtQ7h2NA+DINGVVTyah0GQCBLdqTlW1mtl1SYSJLoVf2yzXiurNpEg0b1Hjm3Wa2W9NIn8B/4yHgKUG3yVAAAAAElFTkSuQmCC" id="image0caed263f2" transform="scale(1 -1) translate(0 -270)" x="978.8" y="-110.4" width="13.6" height="270"/>
+   <g id="matplotlib.axis_5"/>
+   <g id="matplotlib.axis_6">
+    <g id="ytick_9">
+     <g id="line2d_17">
+      <defs>
+       <path id="m5f5ca10d11" d="M 0 0 
+L 3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m5f5ca10d11" x="992.295898" y="380.403113" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_55">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: start" x="999.295898" y="384.869178" transform="rotate(-0 999.295898 384.869178)">0</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m5f5ca10d11" x="992.295898" y="344.854491" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_56">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: start" x="999.295898" y="349.320556" transform="rotate(-0 999.295898 349.320556)">250</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#m5f5ca10d11" x="992.295898" y="309.305869" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_57">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: start" x="999.295898" y="313.771934" transform="rotate(-0 999.295898 313.771934)">500</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m5f5ca10d11" x="992.295898" y="273.757247" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_58">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: start" x="999.295898" y="278.223312" transform="rotate(-0 999.295898 278.223312)">750</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#m5f5ca10d11" x="992.295898" y="238.208625" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_59">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: start" x="999.295898" y="242.67469" transform="rotate(-0 999.295898 242.67469)">1000</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m5f5ca10d11" x="992.295898" y="202.660003" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_60">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: start" x="999.295898" y="207.126068" transform="rotate(-0 999.295898 207.126068)">1250</text>
+     </g>
+    </g>
+    <g id="ytick_15">
+     <g id="line2d_23">
+      <g>
+       <use xlink:href="#m5f5ca10d11" x="992.295898" y="167.111381" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_61">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: start" x="999.295898" y="171.577446" transform="rotate(-0 999.295898 171.577446)">1500</text>
+     </g>
+    </g>
+    <g id="ytick_16">
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m5f5ca10d11" x="992.295898" y="131.562759" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_62">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: start" x="999.295898" y="136.028824" transform="rotate(-0 999.295898 136.028824)">1750</text>
+     </g>
+    </g>
+    <g id="text_63">
+     <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="1038.351523" y="245.31835" transform="rotate(-90 1038.351523 245.31835)">样本数（两图共用 0—1900 色标）</text>
+    </g>
+   </g>
+   <g id="LineCollection_1"/>
+   <g id="patch_5">
+    <path d="M 978.787422 380.403113 
+L 985.54166 380.403113 
+L 992.295898 380.403113 
+L 992.295898 110.233586 
+L 985.54166 110.233586 
+L 978.787422 110.233586 
+L 978.787422 380.403113 
+z
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+  <g id="text_64">
+   <text style="font-weight: 700; font-size: 21px; font-family: 'Microsoft YaHei'; text-anchor: middle" x="522" y="20.627115" transform="rotate(-0 522 20.627115)">TextCNN 与 BiLSTM：测试集混淆矩阵</text>
+  </g>
+  <g id="text_65">
+   <text style="font-size: 11px; font-family: 'Microsoft YaHei'; text-anchor: middle; fill: #475569" x="522" y="483.812162" transform="rotate(-0 522 483.812162)">每行 1900 条，合计 7600 条；对角线表示分类正确的样本。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p9a7f468dc6">
+   <rect x="94.486024" y="57.700622" width="375.235455" height="375.235455"/>
+  </clipPath>
+  <clipPath id="p7bcba475a5">
+   <rect x="571.647264" y="57.700622" width="375.235455" height="375.235455"/>
+  </clipPath>
+ </defs>
+</svg>

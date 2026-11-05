@@ -1,0 +1,321 @@
+{
+  "textcnn": {
+    "num_samples": 7600,
+    "correct": 6993,
+    "errors": 607,
+    "accuracy": 0.9201315789473684,
+    "macro_f1": 0.9200151651525473,
+    "business_scitech_confusions": 259,
+    "confusion_matrix": [
+      [
+        1734,
+        45,
+        66,
+        55
+      ],
+      [
+        21,
+        1859,
+        12,
+        8
+      ],
+      [
+        61,
+        12,
+        1676,
+        151
+      ],
+      [
+        55,
+        13,
+        108,
+        1724
+      ]
+    ],
+    "per_class": [
+      {
+        "label": "World",
+        "support": 1900,
+        "errors": 166,
+        "precision": 0.9267771245323356,
+        "recall": 0.9126315789473685,
+        "f1": 0.9196499602227527
+      },
+      {
+        "label": "Sports",
+        "support": 1900,
+        "errors": 41,
+        "precision": 0.9637117677553136,
+        "recall": 0.978421052631579,
+        "f1": 0.9710107077565945
+      },
+      {
+        "label": "Business",
+        "support": 1900,
+        "errors": 224,
+        "precision": 0.9001074113856069,
+        "recall": 0.8821052631578947,
+        "f1": 0.8910154173312068
+      },
+      {
+        "label": "Sci/Tech",
+        "support": 1900,
+        "errors": 176,
+        "precision": 0.8895768833849329,
+        "recall": 0.9073684210526316,
+        "f1": 0.8983845752996352
+      }
+    ],
+    "loss": 0.24954499304294586,
+    "epoch": 8,
+    "val_accuracy": 0.92025,
+    "parameters": 5625220,
+    "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\textcnn_k237_plateau20\\best_accuracy.pt",
+    "checkpoint_sha256": "1d4ddd8cb68a8462577b9b35519c454513176843ed6b295ddb3e65682441f712"
+  },
+  "bilstm": {
+    "num_samples": 7600,
+    "correct": 7019,
+    "errors": 581,
+    "accuracy": 0.9235526315789474,
+    "macro_f1": 0.9234082103410697,
+    "business_scitech_confusions": 250,
+    "confusion_matrix": [
+      [
+        1737,
+        44,
+        58,
+        61
+      ],
+      [
+        14,
+        1868,
+        9,
+        9
+      ],
+      [
+        56,
+        11,
+        1680,
+        153
+      ],
+      [
+        45,
+        24,
+        97,
+        1734
+      ]
+    ],
+    "per_class": [
+      {
+        "label": "World",
+        "support": 1900,
+        "errors": 163,
+        "precision": 0.9379049676025918,
+        "recall": 0.9142105263157895,
+        "f1": 0.9259061833688699
+      },
+      {
+        "label": "Sports",
+        "support": 1900,
+        "errors": 32,
+        "precision": 0.9594247560349255,
+        "recall": 0.9831578947368421,
+        "f1": 0.9711463478034832
+      },
+      {
+        "label": "Business",
+        "support": 1900,
+        "errors": 220,
+        "precision": 0.911062906724512,
+        "recall": 0.8842105263157894,
+        "f1": 0.8974358974358975
+      },
+      {
+        "label": "Sci/Tech",
+        "support": 1900,
+        "errors": 166,
+        "precision": 0.8860500766479305,
+        "recall": 0.9126315789473685,
+        "f1": 0.899144412756028
+      }
+    ],
+    "loss": 0.23367063701152802,
+    "epoch": 8,
+    "val_accuracy": 0.923,
+    "parameters": 5691908,
+    "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_es_dropout02_20261103\\best_accuracy.pt",
+    "checkpoint_sha256": "db43028c8d110035a95144dbb7c17855b0b1cd6a3fafe893c6d11c4b4bac9c6a"
+  },
+  "selection": {
+    "rule": "max validation accuracy; ties choose lower validation loss",
+    "selected_run_id": "dropout02",
+    "selected_checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_es_dropout02_20261103\\best_accuracy.pt",
+    "test_used_for_selection": false
+  },
+  "groups": {
+    "both_correct": 6827,
+    "fixed": 192,
+    "both_wrong": 415,
+    "new_errors": 166
+  },
+  "per_class": [
+    {
+      "label": "World",
+      "samples": 1900,
+      "textcnn_errors": 166,
+      "bilstm_errors": 163,
+      "fixed": 35,
+      "new_errors": 32,
+      "both_wrong": 131,
+      "textcnn_precision": 0.9267771245323356,
+      "bilstm_precision": 0.9379049676025918,
+      "textcnn_recall": 0.9126315789473685,
+      "bilstm_recall": 0.9142105263157895,
+      "textcnn_f1": 0.9196499602227527,
+      "bilstm_f1": 0.9259061833688699
+    },
+    {
+      "label": "Sports",
+      "samples": 1900,
+      "textcnn_errors": 41,
+      "bilstm_errors": 32,
+      "fixed": 21,
+      "new_errors": 12,
+      "both_wrong": 20,
+      "textcnn_precision": 0.9637117677553136,
+      "bilstm_precision": 0.9594247560349255,
+      "textcnn_recall": 0.978421052631579,
+      "bilstm_recall": 0.9831578947368421,
+      "textcnn_f1": 0.9710107077565945,
+      "bilstm_f1": 0.9711463478034832
+    },
+    {
+      "label": "Business",
+      "samples": 1900,
+      "textcnn_errors": 224,
+      "bilstm_errors": 220,
+      "fixed": 69,
+      "new_errors": 65,
+      "both_wrong": 155,
+      "textcnn_precision": 0.9001074113856069,
+      "bilstm_precision": 0.911062906724512,
+      "textcnn_recall": 0.8821052631578947,
+      "bilstm_recall": 0.8842105263157894,
+      "textcnn_f1": 0.8910154173312068,
+      "bilstm_f1": 0.8974358974358975
+    },
+    {
+      "label": "Sci/Tech",
+      "samples": 1900,
+      "textcnn_errors": 176,
+      "bilstm_errors": 166,
+      "fixed": 67,
+      "new_errors": 57,
+      "both_wrong": 109,
+      "textcnn_precision": 0.8895768833849329,
+      "bilstm_precision": 0.8860500766479305,
+      "textcnn_recall": 0.9073684210526316,
+      "bilstm_recall": 0.9126315789473685,
+      "textcnn_f1": 0.8983845752996352,
+      "bilstm_f1": 0.899144412756028
+    }
+  ],
+  "segments": [
+    {
+      "segment": "不超过20词",
+      "samples": 162,
+      "textcnn_errors": 28,
+      "bilstm_errors": 26,
+      "textcnn_error_rate": 0.1728395061728395,
+      "bilstm_error_rate": 0.16049382716049382,
+      "fixed": 11,
+      "new_errors": 9
+    },
+    {
+      "segment": "21至40词",
+      "samples": 4300,
+      "textcnn_errors": 361,
+      "bilstm_errors": 346,
+      "textcnn_error_rate": 0.08395348837209303,
+      "bilstm_error_rate": 0.08046511627906977,
+      "fixed": 105,
+      "new_errors": 90
+    },
+    {
+      "segment": "超过40词",
+      "samples": 3138,
+      "textcnn_errors": 218,
+      "bilstm_errors": 209,
+      "textcnn_error_rate": 0.06947100063734862,
+      "bilstm_error_rate": 0.06660293180369663,
+      "fixed": 76,
+      "new_errors": 67
+    },
+    {
+      "segment": "没有未知词",
+      "samples": 5825,
+      "textcnn_errors": 432,
+      "bilstm_errors": 402,
+      "textcnn_error_rate": 0.07416309012875537,
+      "bilstm_error_rate": 0.06901287553648068,
+      "fixed": 141,
+      "new_errors": 111
+    },
+    {
+      "segment": "至少一个未知词",
+      "samples": 1775,
+      "textcnn_errors": 175,
+      "bilstm_errors": 179,
+      "textcnn_error_rate": 0.09859154929577464,
+      "bilstm_error_rate": 0.10084507042253521,
+      "fixed": 51,
+      "new_errors": 55
+    }
+  ],
+  "confidence": [
+    {
+      "model": "TextCNN",
+      "segment": "置信度低于0.6",
+      "samples": 371,
+      "errors": 165,
+      "error_rate": 0.444743935309973
+    },
+    {
+      "model": "TextCNN",
+      "segment": "置信度至少0.9",
+      "samples": 6095,
+      "errors": 170,
+      "error_rate": 0.02789171452009844
+    },
+    {
+      "model": "BiLSTM",
+      "segment": "置信度低于0.6",
+      "samples": 291,
+      "errors": 140,
+      "error_rate": 0.48109965635738833
+    },
+    {
+      "model": "BiLSTM",
+      "segment": "置信度至少0.9",
+      "samples": 6225,
+      "errors": 175,
+      "error_rate": 0.028112449799196786
+    }
+  ],
+  "common_errors_same_wrong_label": 378,
+  "common_errors_different_wrong_label": 37,
+  "accuracy_delta_percentage_points": 0.34210526315789913,
+  "relative_error_reduction": 0.042833607907743,
+  "mcnemar_exact_two_sided": {
+    "fixed": 192,
+    "new_errors": 166,
+    "discordant": 358,
+    "p_value": 0.18632810478187833
+  },
+  "truncation": {
+    "max_tokens": 145,
+    "over_max_length": 0
+  },
+  "no_oov_bilstm_errors": 402
+}

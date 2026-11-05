@@ -2,8 +2,8 @@
 import torch
 import argparse
 from pathlib import Path
-from ..models import TextCNN
-from ..config import project_path
+from ..models import build_model
+from ..config import project_path, min_sequence_length
 from functools import partial
 from datasets import load_dataset
 from torch.utils.data import DataLoader
@@ -26,7 +26,7 @@ def evaluate_checkpoint(checkpoint_path: Path) -> dict[str, float|int]:
     print(f"词表大小：{len(vocab)}")
     print(f"类别名称：{label_names}")
 
-    model = TextCNN(
+    model = build_model(
         vocab_size = len(vocab),
         model_config = config["model"],
         pad_id = config["data"]["pad_id"]
@@ -66,7 +66,7 @@ def evaluate_checkpoint(checkpoint_path: Path) -> dict[str, float|int]:
 
     collate_fn = partial(
         collate_batch,
-        min_length=max(config["model"]["kernel_sizes"]),
+        min_length=min_sequence_length(config["model"]),
     )
 
     test_loader = DataLoader(

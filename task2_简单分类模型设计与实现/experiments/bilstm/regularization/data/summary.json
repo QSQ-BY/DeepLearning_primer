@@ -1,0 +1,268 @@
+{
+  "runs": {
+    "baseline": {
+      "run_id": "baseline",
+      "label": "早停基线",
+      "weight_decay": 0.0001,
+      "embedding_dropout": 0.0,
+      "completed_epochs": 11,
+      "selected_epoch": 8,
+      "val_accuracy": 0.9200833333333334,
+      "selected_val_loss": 0.2375455383459727,
+      "min_val_loss": 0.2375455383459727,
+      "train_accuracy_at_selected": 0.9521018518518518,
+      "initial_parameter_sha256": "e1ef372b6dedcc69776e537958269e3c65e9bbe3cb9bd23e7d490caeaf15f57f",
+      "elapsed_seconds": 440.5200317000272,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_es_baseline_20261103\\best_accuracy.pt"
+    },
+    "wd3e4": {
+      "run_id": "wd3e4",
+      "label": "WD=3e-4",
+      "weight_decay": 0.0003,
+      "embedding_dropout": 0.0,
+      "completed_epochs": 14,
+      "selected_epoch": 12,
+      "val_accuracy": 0.9148333333333334,
+      "selected_val_loss": 0.25812817601362864,
+      "min_val_loss": 0.25620778163274127,
+      "train_accuracy_at_selected": 0.9334722222222223,
+      "initial_parameter_sha256": "e1ef372b6dedcc69776e537958269e3c65e9bbe3cb9bd23e7d490caeaf15f57f",
+      "elapsed_seconds": 548.1238845000044,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_es_wd3e4_20261103\\best_accuracy.pt"
+    },
+    "wd1e3": {
+      "run_id": "wd1e3",
+      "label": "WD=1e-3",
+      "weight_decay": 0.001,
+      "embedding_dropout": 0.0,
+      "completed_epochs": 16,
+      "selected_epoch": 14,
+      "val_accuracy": 0.9119166666666667,
+      "selected_val_loss": 0.26277621161937714,
+      "min_val_loss": 0.2613615445693334,
+      "train_accuracy_at_selected": 0.9363425925925926,
+      "initial_parameter_sha256": "e1ef372b6dedcc69776e537958269e3c65e9bbe3cb9bd23e7d490caeaf15f57f",
+      "elapsed_seconds": 604.0926696999813,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_es_wd1e3_20261103\\best_accuracy.pt"
+    },
+    "dropout01": {
+      "run_id": "dropout01",
+      "label": "Embedding Dropout=0.1",
+      "weight_decay": 0.0001,
+      "embedding_dropout": 0.1,
+      "completed_epochs": 11,
+      "selected_epoch": 8,
+      "val_accuracy": 0.9194166666666667,
+      "selected_val_loss": 0.23803245226542155,
+      "min_val_loss": 0.23803245226542155,
+      "train_accuracy_at_selected": 0.9507777777777778,
+      "initial_parameter_sha256": "e1ef372b6dedcc69776e537958269e3c65e9bbe3cb9bd23e7d490caeaf15f57f",
+      "elapsed_seconds": 431.2979411999695,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_es_dropout01_20261103\\best_accuracy.pt"
+    },
+    "dropout02": {
+      "run_id": "dropout02",
+      "label": "Embedding Dropout=0.2",
+      "weight_decay": 0.0001,
+      "embedding_dropout": 0.2,
+      "completed_epochs": 11,
+      "selected_epoch": 8,
+      "val_accuracy": 0.923,
+      "selected_val_loss": 0.23255155777931213,
+      "min_val_loss": 0.23255155777931213,
+      "train_accuracy_at_selected": 0.9512222222222222,
+      "initial_parameter_sha256": "e1ef372b6dedcc69776e537958269e3c65e9bbe3cb9bd23e7d490caeaf15f57f",
+      "elapsed_seconds": 437.9660123999929,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_es_dropout02_20261103\\best_accuracy.pt"
+    },
+    "dropout03": {
+      "run_id": "dropout03",
+      "label": "Embedding Dropout=0.3",
+      "weight_decay": 0.0001,
+      "embedding_dropout": 0.3,
+      "completed_epochs": 11,
+      "selected_epoch": 7,
+      "val_accuracy": 0.9208333333333333,
+      "selected_val_loss": 0.2395650509595871,
+      "min_val_loss": 0.23706283378601073,
+      "train_accuracy_at_selected": 0.944462962962963,
+      "initial_parameter_sha256": "e1ef372b6dedcc69776e537958269e3c65e9bbe3cb9bd23e7d490caeaf15f57f",
+      "elapsed_seconds": 425.9190965999733,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_es_dropout03_20261103\\best_accuracy.pt"
+    }
+  },
+  "selection": {
+    "rule": "max validation accuracy; ties choose lower validation loss",
+    "selected_run_id": "dropout02",
+    "selected_checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_es_dropout02_20261103\\best_accuracy.pt",
+    "test_used_for_selection": false
+  },
+  "final_test": {
+    "num_samples": 7600,
+    "correct": 7019,
+    "errors": 581,
+    "accuracy": 0.9235526315789474,
+    "macro_f1": 0.9234082103410697,
+    "business_scitech_confusions": 250,
+    "confusion_matrix": [
+      [
+        1737,
+        44,
+        58,
+        61
+      ],
+      [
+        14,
+        1868,
+        9,
+        9
+      ],
+      [
+        56,
+        11,
+        1680,
+        153
+      ],
+      [
+        45,
+        24,
+        97,
+        1734
+      ]
+    ],
+    "per_class": [
+      {
+        "label": "World",
+        "support": 1900,
+        "errors": 163,
+        "precision": 0.9379049676025918,
+        "recall": 0.9142105263157895,
+        "f1": 0.9259061833688699
+      },
+      {
+        "label": "Sports",
+        "support": 1900,
+        "errors": 32,
+        "precision": 0.9594247560349255,
+        "recall": 0.9831578947368421,
+        "f1": 0.9711463478034832
+      },
+      {
+        "label": "Business",
+        "support": 1900,
+        "errors": 220,
+        "precision": 0.911062906724512,
+        "recall": 0.8842105263157894,
+        "f1": 0.8974358974358975
+      },
+      {
+        "label": "Sci/Tech",
+        "support": 1900,
+        "errors": 166,
+        "precision": 0.8860500766479305,
+        "recall": 0.9126315789473685,
+        "f1": 0.899144412756028
+      }
+    ],
+    "loss": 0.23367063701152802,
+    "epoch": 8,
+    "val_accuracy": 0.923,
+    "parameters": 5691908,
+    "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_es_dropout02_20261103\\best_accuracy.pt",
+    "checkpoint_sha256": "db43028c8d110035a95144dbb7c17855b0b1cd6a3fafe893c6d11c4b4bac9c6a"
+  },
+  "original_bilstm_test": {
+    "num_samples": 7600,
+    "correct": 6998,
+    "errors": 602,
+    "accuracy": 0.9207894736842105,
+    "macro_f1": 0.9207686203245116,
+    "business_scitech_confusions": 255,
+    "confusion_matrix": [
+      [
+        1742,
+        36,
+        59,
+        63
+      ],
+      [
+        27,
+        1846,
+        11,
+        16
+      ],
+      [
+        47,
+        18,
+        1682,
+        153
+      ],
+      [
+        52,
+        18,
+        102,
+        1728
+      ]
+    ],
+    "per_class": [
+      {
+        "label": "World",
+        "support": 1900,
+        "errors": 158,
+        "precision": 0.9325481798715204,
+        "recall": 0.9168421052631579,
+        "f1": 0.9246284501061572
+      },
+      {
+        "label": "Sports",
+        "support": 1900,
+        "errors": 54,
+        "precision": 0.9624608967674662,
+        "recall": 0.9715789473684211,
+        "f1": 0.9669984284965951
+      },
+      {
+        "label": "Business",
+        "support": 1900,
+        "errors": 218,
+        "precision": 0.9072276159654801,
+        "recall": 0.8852631578947369,
+        "f1": 0.8961108151305275
+      },
+      {
+        "label": "Sci/Tech",
+        "support": 1900,
+        "errors": 172,
+        "precision": 0.8816326530612245,
+        "recall": 0.9094736842105263,
+        "f1": 0.8953367875647669
+      }
+    ],
+    "loss": 0.24025413393974304,
+    "epoch": 8,
+    "val_accuracy": 0.9200833333333334,
+    "parameters": 5691908,
+    "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_baseline_20261103\\best_accuracy.pt",
+    "checkpoint_sha256": "a23b03fe96adae1cdca085154b000aca3b0e91d64871c807439c6fa805fabf8c"
+  },
+  "early_stopping_baseline_prefix_max_metric_difference": 0.0,
+  "test_accuracy_delta_percentage_points": 0.2763157894736912,
+  "controls": {
+    "seed": 42,
+    "train_samples": 108000,
+    "validation_samples": 12000,
+    "test_samples": 7600,
+    "common_initial_parameters": true,
+    "dropout_location": "after embedding before packing",
+    "classifier_dropout": 0.5,
+    "monitor": "val_loss",
+    "patience": 3,
+    "min_delta": 0.001,
+    "max_epochs": 20,
+    "max_concurrent_processes": 2
+  },
+  "factor_best": {
+    "weight_decay": "baseline",
+    "embedding_dropout": "dropout02"
+  }
+}

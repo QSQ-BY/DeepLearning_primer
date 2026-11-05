@@ -1,4 +1,4 @@
-"""TextCNN逐样本预测导出、指标统计和错误集合比较。"""
+"""分类模型逐样本预测导出、指标统计和错误集合比较。"""
 import csv
 from functools import partial
 import hashlib
@@ -11,7 +11,8 @@ from datasets import Dataset
 from torch.utils.data import DataLoader
 
 from ..data import LABEL_NAMES, collate_batch, encode
-from ..models import TextCNN
+from ..models import build_model
+from ..config import min_sequence_length
 from ..data.preprocessing import clean_text
 
 ROOT=Path(__file__).resolve().parents[3]
@@ -79,9 +80,9 @@ def infer_checkpoint(path,output):
     process=partial(clean_text,version=experiment.get('cleaning_version','legacy_all_tags_v1')) if experiment.get('clean_text',False) else lambda text:text
     samples=[(encode(process(text),vocab,config['data']['max_length']),y) for text,y in zip(texts,labels)]
     loader=DataLoader(samples,batch_size=config['training']['batch_size'],shuffle=False,num_workers=0,
-                      collate_fn=partial(collate_batch,min_length=max(config['model']['kernel_sizes'])))
+                      collate_fn=partial(collate_batch,min_length=min_sequence_length(config['model'])))
     device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model=TextCNN(len(vocab),config['model'],config['data']['pad_id']).to(device)
+    model=build_model(len(vocab),config['model'],config['data']['pad_id']).to(device)
     model.load_state_dict(checkpoint['model_state_dict']);model.eval()
     logits=[]
     with torch.inference_mode():

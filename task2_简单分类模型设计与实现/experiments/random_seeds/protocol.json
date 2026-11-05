@@ -1,0 +1,25 @@
+{
+  "training_seeds": [
+    17,
+    2024,
+    3407
+  ],
+  "split_seed": 42,
+  "historical_seed": 42,
+  "training_count": 6,
+  "dataset": "fancyzhx/ag_news",
+  "max_parallel": 2,
+  "selection": "max val_accuracy; tie chooses lower val_loss",
+  "test_policy": "Evaluate each fixed configuration once, after all six training runs complete. No seed selection.",
+  "comparison": "Previously selected final recipes, including BiLSTM embedding dropout and early stopping; not architecture-only ablation.",
+  "sources": {
+    "textcnn": {
+      "config": "D:\\code\\DeepLearning\\task2_简单分类模型设计与实现\\configs\\textcnn_ag_news_k237_plateau20.json",
+      "sha256": "5326f43ac708334e5e72e87ad11a4a04dee9476484c77ecd9642fef7601482fe"
+    },
+    "bilstm": {
+      "config": "D:\\code\\DeepLearning\\task2_简单分类模型设计与实现\\configs\\bilstm_es_dropout02_20261103.json",
+      "sha256": "f9fc0275bee5c1aafea4dcee36abb8418e72bbeb5186c6779fd3d50406262cfa"
+    }
+  }
+}

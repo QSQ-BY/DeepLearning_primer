@@ -136,7 +136,7 @@ def run(mode,epochs=None,smoke=False,output_dir=None,vectors=None):
     write_json(run_dir/'training_execution.json',dict(elapsed_seconds=time.perf_counter()-started,completed_epochs=config['training']['epochs']))
     assert source_hash==hashlib.sha256(source.read_bytes()).hexdigest()
     if not smoke:
-        output=(run_dir/'evaluation') if output_dir else ROOT/'task2_简单分类模型设计与实现/experiments/error_analysis/data'/mode
+        output=(run_dir/'evaluation') if output_dir else ROOT/'task2_简单分类模型设计与实现/experiments/textcnn/error_analysis/data'/mode
         infer_checkpoint(run_dir/'best_accuracy.pt',output)
     return run_dir
 

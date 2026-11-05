@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "runs": 6,
+  "fixed_data_audit": {
+    "split_seed": 42,
+    "vocab_size": 42396,
+    "vocab_sha256": "27823966617ebe76b5ba353ad602a5b74a94c6cf356052b79380903b6fdede92",
+    "train_samples": 108000,
+    "train_encoded_sha256": "191ab845d5ee6a6a567b8c0b65de443fc03fdb89005f72ff2fe4eb1f8aa72366",
+    "val_samples": 12000,
+    "val_encoded_sha256": "bb58f0e971b9c4b19dc9efdf9ffd442520b03908b8ef964424e16b78bc96705a",
+    "test_samples": 7600,
+    "test_encoded_sha256": "12b98f3b06832a3ffbd493ed43e9ea7d54c8ff99d542bd30d2297e5a2de72dc3"
+  },
+  "initial_hashes": {
+    "textcnn": [
+      "641ad84290069152acc67bffcdeb6625482f44b07e562225f3b416480df61329",
+      "571a4fe06cdbbc85d6f033f1b45ae0cb386b670b99c41ba8697f01d01e650a2c",
+      "f15fcbc180b5f9adca254af5609093905bdb81dd328ba131f6da0fa8a780471e"
+    ],
+    "bilstm": [
+      "e793c8c75c506b7d93e81351df341113d00029d8fb68da0506d90d118f4ff232",
+      "48bed1ba07bb0f09b31c87f1bc31b6feb7dc820ef6a91c7772935a5ed7be45e4",
+      "d4e3e353df4f4c44b974278ca5c1377f63b58adc2119c645150954f665172020"
+    ]
+  }
+}

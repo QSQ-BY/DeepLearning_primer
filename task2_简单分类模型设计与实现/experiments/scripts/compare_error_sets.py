@@ -15,7 +15,7 @@ from news_classifier.evaluation.analysis import infer_checkpoint,write_csv,write
 
 def main():
     sys.stdout.reconfigure(encoding='utf-8');torch.set_num_threads(4)
-    output=PROJECT/'experiments/error_analysis/data/kernel_comparison'
+    output=PROJECT/'experiments/textcnn/error_analysis/data/kernel_comparison'
     output.mkdir(parents=True,exist_ok=True)
     models={'k345':'textcnn_plateau20','k246':'textcnn_k246_plateau20','k237':'textcnn_k237_plateau20'}
     metrics={};predictions={};source=None;all_rows=None

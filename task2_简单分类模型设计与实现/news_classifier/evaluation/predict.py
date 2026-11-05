@@ -3,8 +3,8 @@
 import argparse
 from pathlib import Path
 import torch
-from ..models import TextCNN
-from ..config import project_path
+from ..models import build_model
+from ..config import project_path, min_sequence_length
 from ..data import encode,collate_batch
 from ..data.preprocessing import clean_text
 
@@ -18,7 +18,7 @@ def predict(checkpoint_path: Path, text: str) -> tuple[str, list[float]]:
     config = checkpoint["config"]
     vocab = checkpoint["vocab"]
     label_names = checkpoint["label_names"]
-    model = TextCNN(
+    model = build_model(
         vocab_size=len(vocab),
         model_config=config["model"],
         pad_id=config["data"]["pad_id"],
@@ -40,7 +40,7 @@ def predict(checkpoint_path: Path, text: str) -> tuple[str, list[float]]:
     # 组成只有一条样本的批次。
     input_ids, lengths, _ = collate_batch(
         [(token_ids, 0)],
-        min_length=max(config["model"]["kernel_sizes"]),
+        min_length=min_sequence_length(config["model"]),
     )
     input_ids = input_ids.to(device)
     lengths = lengths.to(device)

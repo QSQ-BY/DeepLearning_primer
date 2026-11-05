@@ -1,0 +1,74 @@
+{
+  "num_samples": 7600,
+  "correct": 7008,
+  "errors": 592,
+  "accuracy": 0.9221052631578948,
+  "macro_f1": 0.921917616189879,
+  "business_scitech_confusions": 256,
+  "confusion_matrix": [
+    [
+      1752,
+      46,
+      51,
+      51
+    ],
+    [
+      20,
+      1861,
+      8,
+      11
+    ],
+    [
+      57,
+      18,
+      1672,
+      153
+    ],
+    [
+      53,
+      21,
+      103,
+      1723
+    ]
+  ],
+  "per_class": [
+    {
+      "label": "World",
+      "support": 1900,
+      "errors": 148,
+      "precision": 0.9309245483528161,
+      "recall": 0.9221052631578948,
+      "f1": 0.9264939185616076
+    },
+    {
+      "label": "Sports",
+      "support": 1900,
+      "errors": 39,
+      "precision": 0.9563206577595067,
+      "recall": 0.9794736842105263,
+      "f1": 0.9677587103484139
+    },
+    {
+      "label": "Business",
+      "support": 1900,
+      "errors": 228,
+      "precision": 0.9116684841875682,
+      "recall": 0.88,
+      "f1": 0.8955543652919121
+    },
+    {
+      "label": "Sci/Tech",
+      "support": 1900,
+      "errors": 177,
+      "precision": 0.8890608875128999,
+      "recall": 0.9068421052631579,
+      "f1": 0.8978634705575821
+    }
+  ],
+  "loss": 0.23877421021461487,
+  "epoch": 9,
+  "val_accuracy": 0.9204166666666667,
+  "parameters": 5691908,
+  "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\random_seeds_20261103\\seed_2024\\bilstm\\best_accuracy.pt",
+  "checkpoint_sha256": "c7ded7678d427ba450b6cd1cd65a6cd3b4a2c3e5aa94659505f4630da261eff7"
+}

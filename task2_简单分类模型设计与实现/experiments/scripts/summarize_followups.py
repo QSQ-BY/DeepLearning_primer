@@ -14,8 +14,8 @@ sys.path.insert(0,str(PROJECT))
 from news_classifier.data import LABEL_NAMES,tokenize
 from news_classifier.evaluation.analysis import classification_metrics,error_groups,write_csv,write_json
 
-DATA=PROJECT/'experiments/error_analysis/data'
-REPORT=PROJECT/'experiments/error_analysis/2026-11-03_error_analysis.md'
+DATA=PROJECT/'experiments/textcnn/error_analysis/data'
+REPORT=PROJECT/'experiments/textcnn/error_analysis/2026-11-03_error_analysis.md'
 
 
 def table(headers,rows):

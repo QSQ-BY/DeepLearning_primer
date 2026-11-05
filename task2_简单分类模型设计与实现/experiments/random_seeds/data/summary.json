@@ -1,0 +1,1002 @@
+{
+  "new_seeds": [
+    17,
+    2024,
+    3407
+  ],
+  "primary": {
+    "textcnn": {
+      "accuracy": {
+        "n": 3,
+        "mean": 0.9174122807017543,
+        "sample_std": 0.0006752107157166718,
+        "min": 0.9168421052631579,
+        "max": 0.9181578947368421,
+        "values": [
+          0.9172368421052631,
+          0.9168421052631579,
+          0.9181578947368421
+        ]
+      },
+      "macro_f1": {
+        "n": 3,
+        "mean": 0.9172286583271018,
+        "sample_std": 0.0007536660041472867,
+        "min": 0.916640854051082,
+        "max": 0.9180783275436859,
+        "values": [
+          0.9169667933865373,
+          0.916640854051082,
+          0.9180783275436859
+        ]
+      },
+      "loss": {
+        "n": 3,
+        "mean": 0.2620411316553752,
+        "sample_std": 0.011016901950984407,
+        "min": 0.25438588857650757,
+        "max": 0.2746676206588745,
+        "values": [
+          0.2570698857307434,
+          0.25438588857650757,
+          0.2746676206588745
+        ]
+      },
+      "errors": {
+        "n": 3,
+        "mean": 627.6666666666666,
+        "sample_std": 5.131601439446884,
+        "min": 622.0,
+        "max": 632.0,
+        "values": [
+          629.0,
+          632.0,
+          622.0
+        ]
+      }
+    },
+    "bilstm": {
+      "accuracy": {
+        "n": 3,
+        "mean": 0.9207894736842105,
+        "sample_std": 0.0012059409723568061,
+        "min": 0.9197368421052632,
+        "max": 0.9221052631578948,
+        "values": [
+          0.9197368421052632,
+          0.9221052631578948,
+          0.9205263157894736
+        ]
+      },
+      "macro_f1": {
+        "n": 3,
+        "mean": 0.9205724909295124,
+        "sample_std": 0.0012322948459920031,
+        "min": 0.91949802145328,
+        "max": 0.921917616189879,
+        "values": [
+          0.91949802145328,
+          0.921917616189879,
+          0.920301835145378
+        ]
+      },
+      "loss": {
+        "n": 3,
+        "mean": 0.24505911767482758,
+        "sample_std": 0.006191459621004564,
+        "min": 0.23877421021461487,
+        "max": 0.2511526942253113,
+        "values": [
+          0.24525044858455658,
+          0.23877421021461487,
+          0.2511526942253113
+        ]
+      },
+      "errors": {
+        "n": 3,
+        "mean": 602.0,
+        "sample_std": 9.16515138991168,
+        "min": 592.0,
+        "max": 610.0,
+        "values": [
+          610.0,
+          592.0,
+          604.0
+        ]
+      }
+    }
+  },
+  "accuracy_delta_pp": {
+    "n": 3,
+    "mean": 0.33771929824561636,
+    "sample_std": 0.16346179959284357,
+    "min": 0.23684210526315752,
+    "max": 0.5263157894736858,
+    "values": [
+      0.2500000000000058,
+      0.5263157894736858,
+      0.23684210526315752
+    ]
+  },
+  "bilstm_wins": 3,
+  "ties": 0,
+  "historical_seed42": {
+    "textcnn": {
+      "num_samples": 7600,
+      "correct": 6993,
+      "errors": 607,
+      "accuracy": 0.9201315789473684,
+      "macro_f1": 0.9200151651525473,
+      "business_scitech_confusions": 259,
+      "confusion_matrix": [
+        [
+          1734,
+          45,
+          66,
+          55
+        ],
+        [
+          21,
+          1859,
+          12,
+          8
+        ],
+        [
+          61,
+          12,
+          1676,
+          151
+        ],
+        [
+          55,
+          13,
+          108,
+          1724
+        ]
+      ],
+      "per_class": [
+        {
+          "label": "World",
+          "support": 1900,
+          "errors": 166,
+          "precision": 0.9267771245323356,
+          "recall": 0.9126315789473685,
+          "f1": 0.9196499602227527
+        },
+        {
+          "label": "Sports",
+          "support": 1900,
+          "errors": 41,
+          "precision": 0.9637117677553136,
+          "recall": 0.978421052631579,
+          "f1": 0.9710107077565945
+        },
+        {
+          "label": "Business",
+          "support": 1900,
+          "errors": 224,
+          "precision": 0.9001074113856069,
+          "recall": 0.8821052631578947,
+          "f1": 0.8910154173312068
+        },
+        {
+          "label": "Sci/Tech",
+          "support": 1900,
+          "errors": 176,
+          "precision": 0.8895768833849329,
+          "recall": 0.9073684210526316,
+          "f1": 0.8983845752996352
+        }
+      ],
+      "loss": 0.24954499304294586,
+      "epoch": 8,
+      "val_accuracy": 0.92025,
+      "parameters": 5625220,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\textcnn_k237_plateau20\\best_accuracy.pt",
+      "checkpoint_sha256": "1d4ddd8cb68a8462577b9b35519c454513176843ed6b295ddb3e65682441f712"
+    },
+    "bilstm": {
+      "num_samples": 7600,
+      "correct": 7019,
+      "errors": 581,
+      "accuracy": 0.9235526315789474,
+      "macro_f1": 0.9234082103410697,
+      "business_scitech_confusions": 250,
+      "confusion_matrix": [
+        [
+          1737,
+          44,
+          58,
+          61
+        ],
+        [
+          14,
+          1868,
+          9,
+          9
+        ],
+        [
+          56,
+          11,
+          1680,
+          153
+        ],
+        [
+          45,
+          24,
+          97,
+          1734
+        ]
+      ],
+      "per_class": [
+        {
+          "label": "World",
+          "support": 1900,
+          "errors": 163,
+          "precision": 0.9379049676025918,
+          "recall": 0.9142105263157895,
+          "f1": 0.9259061833688699
+        },
+        {
+          "label": "Sports",
+          "support": 1900,
+          "errors": 32,
+          "precision": 0.9594247560349255,
+          "recall": 0.9831578947368421,
+          "f1": 0.9711463478034832
+        },
+        {
+          "label": "Business",
+          "support": 1900,
+          "errors": 220,
+          "precision": 0.911062906724512,
+          "recall": 0.8842105263157894,
+          "f1": 0.8974358974358975
+        },
+        {
+          "label": "Sci/Tech",
+          "support": 1900,
+          "errors": 166,
+          "precision": 0.8860500766479305,
+          "recall": 0.9126315789473685,
+          "f1": 0.899144412756028
+        }
+      ],
+      "loss": 0.23367063701152802,
+      "epoch": 8,
+      "val_accuracy": 0.923,
+      "parameters": 5691908,
+      "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\bilstm_es_dropout02_20261103\\best_accuracy.pt",
+      "checkpoint_sha256": "db43028c8d110035a95144dbb7c17855b0b1cd6a3fafe893c6d11c4b4bac9c6a"
+    }
+  },
+  "including_historical_seed42_accuracy": {
+    "textcnn": {
+      "n": 4,
+      "mean": 0.9180921052631578,
+      "sample_std": 0.0014671691827787467,
+      "min": 0.9168421052631579,
+      "max": 0.9201315789473684,
+      "values": [
+        0.9172368421052631,
+        0.9168421052631579,
+        0.9181578947368421,
+        0.9201315789473684
+      ]
+    },
+    "bilstm": {
+      "n": 4,
+      "mean": 0.9214802631578947,
+      "sample_std": 0.0016965522313457566,
+      "min": 0.9197368421052632,
+      "max": 0.9235526315789474,
+      "values": [
+        0.9197368421052632,
+        0.9221052631578948,
+        0.9205263157894736,
+        0.9235526315789474
+      ]
+    }
+  },
+  "error_frequency_new_seeds": {
+    "textcnn": {
+      "0": 6720,
+      "1": 282,
+      "2": 193,
+      "3": 405
+    },
+    "bilstm": {
+      "0": 6776,
+      "1": 243,
+      "2": 180,
+      "3": 401
+    }
+  },
+  "both_models_wrong_all_three": 275,
+  "runs": [
+    {
+      "seed": 17,
+      "metrics": {
+        "textcnn": {
+          "num_samples": 7600,
+          "correct": 6971,
+          "errors": 629,
+          "accuracy": 0.9172368421052631,
+          "macro_f1": 0.9169667933865373,
+          "business_scitech_confusions": 267,
+          "confusion_matrix": [
+            [
+              1742,
+              55,
+              58,
+              45
+            ],
+            [
+              17,
+              1865,
+              11,
+              7
+            ],
+            [
+              67,
+              18,
+              1683,
+              132
+            ],
+            [
+              63,
+              21,
+              135,
+              1681
+            ]
+          ],
+          "per_class": [
+            {
+              "label": "World",
+              "support": 1900,
+              "errors": 158,
+              "precision": 0.9221810481736369,
+              "recall": 0.9168421052631579,
+              "f1": 0.9195038268672472
+            },
+            {
+              "label": "Sports",
+              "support": 1900,
+              "errors": 35,
+              "precision": 0.9520163348647269,
+              "recall": 0.9815789473684211,
+              "f1": 0.9665716506867065
+            },
+            {
+              "label": "Business",
+              "support": 1900,
+              "errors": 217,
+              "precision": 0.8918918918918919,
+              "recall": 0.8857894736842106,
+              "f1": 0.8888302086083971
+            },
+            {
+              "label": "Sci/Tech",
+              "support": 1900,
+              "errors": 219,
+              "precision": 0.9013404825737266,
+              "recall": 0.8847368421052632,
+              "f1": 0.8929614873837982
+            }
+          ],
+          "loss": 0.2570698857307434,
+          "epoch": 9,
+          "val_accuracy": 0.9201666666666667,
+          "parameters": 5625220,
+          "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\random_seeds_20261103\\seed_17\\textcnn\\best_accuracy.pt",
+          "checkpoint_sha256": "c01c2a8571178a0424bed2d7825914dc2b15d3ee294be73c2e710f2796ce9adb"
+        },
+        "bilstm": {
+          "num_samples": 7600,
+          "correct": 6990,
+          "errors": 610,
+          "accuracy": 0.9197368421052632,
+          "macro_f1": 0.91949802145328,
+          "business_scitech_confusions": 262,
+          "confusion_matrix": [
+            [
+              1749,
+              47,
+              52,
+              52
+            ],
+            [
+              12,
+              1865,
+              12,
+              11
+            ],
+            [
+              60,
+              16,
+              1641,
+              183
+            ],
+            [
+              65,
+              21,
+              79,
+              1735
+            ]
+          ],
+          "per_class": [
+            {
+              "label": "World",
+              "support": 1900,
+              "errors": 151,
+              "precision": 0.9273594909862142,
+              "recall": 0.9205263157894736,
+              "f1": 0.9239302694136291
+            },
+            {
+              "label": "Sports",
+              "support": 1900,
+              "errors": 35,
+              "precision": 0.956900974858902,
+              "recall": 0.9815789473684211,
+              "f1": 0.9690828786697845
+            },
+            {
+              "label": "Business",
+              "support": 1900,
+              "errors": 259,
+              "precision": 0.9198430493273543,
+              "recall": 0.8636842105263158,
+              "f1": 0.8908794788273616
+            },
+            {
+              "label": "Sci/Tech",
+              "support": 1900,
+              "errors": 165,
+              "precision": 0.8758202927814235,
+              "recall": 0.9131578947368421,
+              "f1": 0.8940994589023447
+            }
+          ],
+          "loss": 0.24525044858455658,
+          "epoch": 8,
+          "val_accuracy": 0.9199166666666667,
+          "parameters": 5691908,
+          "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\random_seeds_20261103\\seed_17\\bilstm\\best_accuracy.pt",
+          "checkpoint_sha256": "eea3c6deaccf093f770d5f4480d6ecfadeac50a3474440a410c181c349f5f652"
+        }
+      },
+      "training": {
+        "textcnn": {
+          "selected_epoch": 9,
+          "elapsed_seconds": 216.31312160001835,
+          "val_accuracy": 0.9201666666666667,
+          "val_loss": 0.24111006542046864,
+          "summary": {
+            "completed_epochs": 20,
+            "max_epochs": 20,
+            "stopped_early": false,
+            "best_val_loss": 0.24111006542046864,
+            "best_val_accuracy": 0.9201666666666667,
+            "initial_parameter_sha256": "641ad84290069152acc67bffcdeb6625482f44b07e562225f3b416480df61329",
+            "early_stopping": null
+          },
+          "data_audit": {
+            "split_seed": 42,
+            "vocab_size": 42396,
+            "vocab_sha256": "27823966617ebe76b5ba353ad602a5b74a94c6cf356052b79380903b6fdede92",
+            "train_samples": 108000,
+            "train_encoded_sha256": "191ab845d5ee6a6a567b8c0b65de443fc03fdb89005f72ff2fe4eb1f8aa72366",
+            "train_sampler_seed": 17,
+            "val_samples": 12000,
+            "val_encoded_sha256": "bb58f0e971b9c4b19dc9efdf9ffd442520b03908b8ef964424e16b78bc96705a",
+            "val_sampler_seed": 17,
+            "test_samples": 7600,
+            "test_encoded_sha256": "12b98f3b06832a3ffbd493ed43e9ea7d54c8ff99d542bd30d2297e5a2de72dc3",
+            "test_sampler_seed": 17
+          }
+        },
+        "bilstm": {
+          "selected_epoch": 8,
+          "elapsed_seconds": 321.7900738000171,
+          "val_accuracy": 0.9199166666666667,
+          "val_loss": 0.237934963007768,
+          "summary": {
+            "completed_epochs": 8,
+            "max_epochs": 20,
+            "stopped_early": true,
+            "best_val_loss": 0.2319434539079666,
+            "best_val_accuracy": 0.9199166666666667,
+            "initial_parameter_sha256": "e793c8c75c506b7d93e81351df341113d00029d8fb68da0506d90d118f4ff232",
+            "early_stopping": {
+              "monitor": "val_loss",
+              "patience": 3,
+              "min_delta": 0.001,
+              "reference_loss": 0.2319434539079666,
+              "bad_epochs": 3
+            }
+          },
+          "data_audit": {
+            "split_seed": 42,
+            "vocab_size": 42396,
+            "vocab_sha256": "27823966617ebe76b5ba353ad602a5b74a94c6cf356052b79380903b6fdede92",
+            "train_samples": 108000,
+            "train_encoded_sha256": "191ab845d5ee6a6a567b8c0b65de443fc03fdb89005f72ff2fe4eb1f8aa72366",
+            "train_sampler_seed": 17,
+            "val_samples": 12000,
+            "val_encoded_sha256": "bb58f0e971b9c4b19dc9efdf9ffd442520b03908b8ef964424e16b78bc96705a",
+            "val_sampler_seed": 17,
+            "test_samples": 7600,
+            "test_encoded_sha256": "12b98f3b06832a3ffbd493ed43e9ea7d54c8ff99d542bd30d2297e5a2de72dc3",
+            "test_sampler_seed": 17
+          }
+        }
+      },
+      "groups": {
+        "both_correct": 6778,
+        "fixed": 212,
+        "both_wrong": 417,
+        "new_errors": 193
+      },
+      "accuracy_delta_pp": 0.2500000000000058,
+      "macro_f1_delta_pp": 0.25312280667426634,
+      "mcnemar_exact_p": 0.3711133923224497
+    },
+    {
+      "seed": 2024,
+      "metrics": {
+        "textcnn": {
+          "num_samples": 7600,
+          "correct": 6968,
+          "errors": 632,
+          "accuracy": 0.9168421052631579,
+          "macro_f1": 0.916640854051082,
+          "business_scitech_confusions": 270,
+          "confusion_matrix": [
+            [
+              1736,
+              55,
+              48,
+              61
+            ],
+            [
+              28,
+              1853,
+              11,
+              8
+            ],
+            [
+              70,
+              17,
+              1656,
+              157
+            ],
+            [
+              44,
+              20,
+              113,
+              1723
+            ]
+          ],
+          "per_class": [
+            {
+              "label": "World",
+              "support": 1900,
+              "errors": 164,
+              "precision": 0.9243876464323749,
+              "recall": 0.9136842105263158,
+              "f1": 0.9190047644256221
+            },
+            {
+              "label": "Sports",
+              "support": 1900,
+              "errors": 47,
+              "precision": 0.9526992287917738,
+              "recall": 0.9752631578947368,
+              "f1": 0.963849154746424
+            },
+            {
+              "label": "Business",
+              "support": 1900,
+              "errors": 244,
+              "precision": 0.9059080962800875,
+              "recall": 0.871578947368421,
+              "f1": 0.8884120171673818
+            },
+            {
+              "label": "Sci/Tech",
+              "support": 1900,
+              "errors": 177,
+              "precision": 0.8840430990251411,
+              "recall": 0.9068421052631579,
+              "f1": 0.8952974798648999
+            }
+          ],
+          "loss": 0.25438588857650757,
+          "epoch": 9,
+          "val_accuracy": 0.9193333333333333,
+          "parameters": 5625220,
+          "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\random_seeds_20261103\\seed_2024\\textcnn\\best_accuracy.pt",
+          "checkpoint_sha256": "49e66da584c109fc08adf94a9cb046e822d935b875536802ea2bbfac64660742"
+        },
+        "bilstm": {
+          "num_samples": 7600,
+          "correct": 7008,
+          "errors": 592,
+          "accuracy": 0.9221052631578948,
+          "macro_f1": 0.921917616189879,
+          "business_scitech_confusions": 256,
+          "confusion_matrix": [
+            [
+              1752,
+              46,
+              51,
+              51
+            ],
+            [
+              20,
+              1861,
+              8,
+              11
+            ],
+            [
+              57,
+              18,
+              1672,
+              153
+            ],
+            [
+              53,
+              21,
+              103,
+              1723
+            ]
+          ],
+          "per_class": [
+            {
+              "label": "World",
+              "support": 1900,
+              "errors": 148,
+              "precision": 0.9309245483528161,
+              "recall": 0.9221052631578948,
+              "f1": 0.9264939185616076
+            },
+            {
+              "label": "Sports",
+              "support": 1900,
+              "errors": 39,
+              "precision": 0.9563206577595067,
+              "recall": 0.9794736842105263,
+              "f1": 0.9677587103484139
+            },
+            {
+              "label": "Business",
+              "support": 1900,
+              "errors": 228,
+              "precision": 0.9116684841875682,
+              "recall": 0.88,
+              "f1": 0.8955543652919121
+            },
+            {
+              "label": "Sci/Tech",
+              "support": 1900,
+              "errors": 177,
+              "precision": 0.8890608875128999,
+              "recall": 0.9068421052631579,
+              "f1": 0.8978634705575821
+            }
+          ],
+          "loss": 0.23877421021461487,
+          "epoch": 9,
+          "val_accuracy": 0.9204166666666667,
+          "parameters": 5691908,
+          "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\random_seeds_20261103\\seed_2024\\bilstm\\best_accuracy.pt",
+          "checkpoint_sha256": "c7ded7678d427ba450b6cd1cd65a6cd3b4a2c3e5aa94659505f4630da261eff7"
+        }
+      },
+      "training": {
+        "textcnn": {
+          "selected_epoch": 9,
+          "elapsed_seconds": 219.02287079999223,
+          "val_accuracy": 0.9193333333333333,
+          "val_loss": 0.24048573303222656,
+          "summary": {
+            "completed_epochs": 20,
+            "max_epochs": 20,
+            "stopped_early": false,
+            "best_val_loss": 0.24048573303222656,
+            "best_val_accuracy": 0.9193333333333333,
+            "initial_parameter_sha256": "571a4fe06cdbbc85d6f033f1b45ae0cb386b670b99c41ba8697f01d01e650a2c",
+            "early_stopping": null
+          },
+          "data_audit": {
+            "split_seed": 42,
+            "vocab_size": 42396,
+            "vocab_sha256": "27823966617ebe76b5ba353ad602a5b74a94c6cf356052b79380903b6fdede92",
+            "train_samples": 108000,
+            "train_encoded_sha256": "191ab845d5ee6a6a567b8c0b65de443fc03fdb89005f72ff2fe4eb1f8aa72366",
+            "train_sampler_seed": 2024,
+            "val_samples": 12000,
+            "val_encoded_sha256": "bb58f0e971b9c4b19dc9efdf9ffd442520b03908b8ef964424e16b78bc96705a",
+            "val_sampler_seed": 2024,
+            "test_samples": 7600,
+            "test_encoded_sha256": "12b98f3b06832a3ffbd493ed43e9ea7d54c8ff99d542bd30d2297e5a2de72dc3",
+            "test_sampler_seed": 2024
+          }
+        },
+        "bilstm": {
+          "selected_epoch": 9,
+          "elapsed_seconds": 464.8322313000099,
+          "val_accuracy": 0.9204166666666667,
+          "val_loss": 0.23933472140630085,
+          "summary": {
+            "completed_epochs": 12,
+            "max_epochs": 20,
+            "stopped_early": true,
+            "best_val_loss": 0.23933472140630085,
+            "best_val_accuracy": 0.9204166666666667,
+            "initial_parameter_sha256": "48bed1ba07bb0f09b31c87f1bc31b6feb7dc820ef6a91c7772935a5ed7be45e4",
+            "early_stopping": {
+              "monitor": "val_loss",
+              "patience": 3,
+              "min_delta": 0.001,
+              "reference_loss": 0.23933472140630085,
+              "bad_epochs": 3
+            }
+          },
+          "data_audit": {
+            "split_seed": 42,
+            "vocab_size": 42396,
+            "vocab_sha256": "27823966617ebe76b5ba353ad602a5b74a94c6cf356052b79380903b6fdede92",
+            "train_samples": 108000,
+            "train_encoded_sha256": "191ab845d5ee6a6a567b8c0b65de443fc03fdb89005f72ff2fe4eb1f8aa72366",
+            "train_sampler_seed": 2024,
+            "val_samples": 12000,
+            "val_encoded_sha256": "bb58f0e971b9c4b19dc9efdf9ffd442520b03908b8ef964424e16b78bc96705a",
+            "val_sampler_seed": 2024,
+            "test_samples": 7600,
+            "test_encoded_sha256": "12b98f3b06832a3ffbd493ed43e9ea7d54c8ff99d542bd30d2297e5a2de72dc3",
+            "test_sampler_seed": 2024
+          }
+        }
+      },
+      "groups": {
+        "both_correct": 6797,
+        "fixed": 211,
+        "both_wrong": 421,
+        "new_errors": 171
+      },
+      "accuracy_delta_pp": 0.5263157894736858,
+      "macro_f1_delta_pp": 0.527676213879702,
+      "mcnemar_exact_p": 0.04585611745952777
+    },
+    {
+      "seed": 3407,
+      "metrics": {
+        "textcnn": {
+          "num_samples": 7600,
+          "correct": 6978,
+          "errors": 622,
+          "accuracy": 0.9181578947368421,
+          "macro_f1": 0.9180783275436859,
+          "business_scitech_confusions": 275,
+          "confusion_matrix": [
+            [
+              1744,
+              45,
+              56,
+              55
+            ],
+            [
+              25,
+              1852,
+              14,
+              9
+            ],
+            [
+              64,
+              11,
+              1682,
+              143
+            ],
+            [
+              58,
+              10,
+              132,
+              1700
+            ]
+          ],
+          "per_class": [
+            {
+              "label": "World",
+              "support": 1900,
+              "errors": 156,
+              "precision": 0.9222633527234267,
+              "recall": 0.9178947368421052,
+              "f1": 0.9200738591400685
+            },
+            {
+              "label": "Sports",
+              "support": 1900,
+              "errors": 48,
+              "precision": 0.9655891553701773,
+              "recall": 0.9747368421052631,
+              "f1": 0.9701414353064431
+            },
+            {
+              "label": "Business",
+              "support": 1900,
+              "errors": 218,
+              "precision": 0.8927813163481954,
+              "recall": 0.8852631578947369,
+              "f1": 0.8890063424947147
+            },
+            {
+              "label": "Sci/Tech",
+              "support": 1900,
+              "errors": 200,
+              "precision": 0.8914525432616676,
+              "recall": 0.8947368421052632,
+              "f1": 0.8930916732335172
+            }
+          ],
+          "loss": 0.2746676206588745,
+          "epoch": 12,
+          "val_accuracy": 0.9190833333333334,
+          "parameters": 5625220,
+          "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\random_seeds_20261103\\seed_3407\\textcnn\\best_accuracy.pt",
+          "checkpoint_sha256": "0c817e653727621ac9b7bf463b67e589df623a1e6a81e6149eeef83939a44566"
+        },
+        "bilstm": {
+          "num_samples": 7600,
+          "correct": 6996,
+          "errors": 604,
+          "accuracy": 0.9205263157894736,
+          "macro_f1": 0.920301835145378,
+          "business_scitech_confusions": 263,
+          "confusion_matrix": [
+            [
+              1756,
+              42,
+              53,
+              49
+            ],
+            [
+              16,
+              1867,
+              11,
+              6
+            ],
+            [
+              69,
+              15,
+              1678,
+              138
+            ],
+            [
+              63,
+              17,
+              125,
+              1695
+            ]
+          ],
+          "per_class": [
+            {
+              "label": "World",
+              "support": 1900,
+              "errors": 144,
+              "precision": 0.9222689075630253,
+              "recall": 0.9242105263157895,
+              "f1": 0.9232386961093586
+            },
+            {
+              "label": "Sports",
+              "support": 1900,
+              "errors": 33,
+              "precision": 0.9618753219989696,
+              "recall": 0.9826315789473684,
+              "f1": 0.9721426711793804
+            },
+            {
+              "label": "Business",
+              "support": 1900,
+              "errors": 222,
+              "precision": 0.8987680771290841,
+              "recall": 0.8831578947368421,
+              "f1": 0.8908946110963633
+            },
+            {
+              "label": "Sci/Tech",
+              "support": 1900,
+              "errors": 205,
+              "precision": 0.8977754237288136,
+              "recall": 0.8921052631578947,
+              "f1": 0.8949313621964098
+            }
+          ],
+          "loss": 0.2511526942253113,
+          "epoch": 11,
+          "val_accuracy": 0.922,
+          "parameters": 5691908,
+          "checkpoint": "D:\\code\\DeepLearning\\.build\\task2\\runs\\random_seeds_20261103\\seed_3407\\bilstm\\best_accuracy.pt",
+          "checkpoint_sha256": "2902dc0d787a8d38a3a9a6f9d9e7dbef830c2dd7fa2d1c3de062eee37912a64e"
+        }
+      },
+      "training": {
+        "textcnn": {
+          "selected_epoch": 12,
+          "elapsed_seconds": 229.9678389999899,
+          "val_accuracy": 0.9190833333333334,
+          "val_loss": 0.2603903320233027,
+          "summary": {
+            "completed_epochs": 20,
+            "max_epochs": 20,
+            "stopped_early": false,
+            "best_val_loss": 0.24297989575068155,
+            "best_val_accuracy": 0.9190833333333334,
+            "initial_parameter_sha256": "f15fcbc180b5f9adca254af5609093905bdb81dd328ba131f6da0fa8a780471e",
+            "early_stopping": null
+          },
+          "data_audit": {
+            "split_seed": 42,
+            "vocab_size": 42396,
+            "vocab_sha256": "27823966617ebe76b5ba353ad602a5b74a94c6cf356052b79380903b6fdede92",
+            "train_samples": 108000,
+            "train_encoded_sha256": "191ab845d5ee6a6a567b8c0b65de443fc03fdb89005f72ff2fe4eb1f8aa72366",
+            "train_sampler_seed": 3407,
+            "val_samples": 12000,
+            "val_encoded_sha256": "bb58f0e971b9c4b19dc9efdf9ffd442520b03908b8ef964424e16b78bc96705a",
+            "val_sampler_seed": 3407,
+            "test_samples": 7600,
+            "test_encoded_sha256": "12b98f3b06832a3ffbd493ed43e9ea7d54c8ff99d542bd30d2297e5a2de72dc3",
+            "test_sampler_seed": 3407
+          }
+        },
+        "bilstm": {
+          "selected_epoch": 11,
+          "elapsed_seconds": 322.6986135999905,
+          "val_accuracy": 0.922,
+          "val_loss": 0.24189033257961273,
+          "summary": {
+            "completed_epochs": 11,
+            "max_epochs": 20,
+            "stopped_early": true,
+            "best_val_loss": 0.23072685853640237,
+            "best_val_accuracy": 0.922,
+            "initial_parameter_sha256": "d4e3e353df4f4c44b974278ca5c1377f63b58adc2119c645150954f665172020",
+            "early_stopping": {
+              "monitor": "val_loss",
+              "patience": 3,
+              "min_delta": 0.001,
+              "reference_loss": 0.23072685853640237,
+              "bad_epochs": 3
+            }
+          },
+          "data_audit": {
+            "split_seed": 42,
+            "vocab_size": 42396,
+            "vocab_sha256": "27823966617ebe76b5ba353ad602a5b74a94c6cf356052b79380903b6fdede92",
+            "train_samples": 108000,
+            "train_encoded_sha256": "191ab845d5ee6a6a567b8c0b65de443fc03fdb89005f72ff2fe4eb1f8aa72366",
+            "train_sampler_seed": 3407,
+            "val_samples": 12000,
+            "val_encoded_sha256": "bb58f0e971b9c4b19dc9efdf9ffd442520b03908b8ef964424e16b78bc96705a",
+            "val_sampler_seed": 3407,
+            "test_samples": 7600,
+            "test_encoded_sha256": "12b98f3b06832a3ffbd493ed43e9ea7d54c8ff99d542bd30d2297e5a2de72dc3",
+            "test_sampler_seed": 3407
+          }
+        }
+      },
+      "groups": {
+        "both_correct": 6779,
+        "fixed": 217,
+        "both_wrong": 405,
+        "new_errors": 199
+      },
+      "accuracy_delta_pp": 0.23684210526315752,
+      "macro_f1_delta_pp": 0.22235076016920985,
+      "mcnemar_exact_p": 0.4045954769139296
+    }
+  ]
+}
