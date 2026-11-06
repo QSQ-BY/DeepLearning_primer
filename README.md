@@ -41,11 +41,6 @@ TextCNN 已独立归档，BiLSTM 基线已完成 20 轮正式训练，使用独�
 
 - [项目代码](task2_简单分类模型设计与实现/)
 - [实验报告与运行方式](task2_简单分类模型设计与实现/docs/report.md)
-- [调参实验记录](task2_简单分类模型设计与实现/experiments/textcnn/tuning/README.md)
-- [错误分析与后续对照](task2_简单分类模型设计与实现/experiments/textcnn/error_analysis/README.md)
-- [BiLSTM 实验与 TextCNN 归档](task2_简单分类模型设计与实现/experiments/bilstm/README.md)
-- [TextCNN 与 BiLSTM 正式对比图](task2_简单分类模型设计与实现/experiments/bilstm/2026-11-03_textcnn_vs_bilstm.md)
-- [BiLSTM 早停、WD 与 Dropout 对比图](task2_简单分类模型设计与实现/experiments/bilstm/regularization/README.md)
 
 ## 目录
 
